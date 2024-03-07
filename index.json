@@ -1,0 +1,167 @@
+{
+  "bitcoin": {
+    "icon": "BTC.png"
+  },
+  "arbitrum": {
+    "icon": "ETH.png"
+  },
+  "base": {
+    "icon": "ETH.png"
+  },
+  "boba": {
+    "icon": "ETH.png"
+  },
+  "ethereum": {
+    "icon": "ETH.png"
+  },
+  "linea": {
+    "icon": "ETH.png"
+  },
+  "optimism": {
+    "icon": "ETH.png"
+  },
+  "algorand/asa/312769": {
+    "icon": "USDT.png"
+  },
+  "avalanche_c_chain/erc20/tethertoken": {
+    "icon": "USDT.png"
+  },
+  "ethereum/erc20/usd_tether__erc20_": {
+    "icon": "USDT.png"
+  },
+  "solana/spl/es9vmfrzacermjfrf4h2fyd4kconky11mcce8benwnyb": {
+    "icon": "USDT.png"
+  },
+  "tron/trc20/tr7nhqjekqxgtci8q8zy4pl8otszgjlj6t": {
+    "icon": "USDT.png"
+  },
+  "binance_beacon_chain": {
+    "icon": "BNB.png"
+  },
+  "bsc": {
+    "icon": "BNB.png"
+  },
+  "ethereum/erc20/bnb": {
+    "icon": "BNB.png"
+  },
+  "solana": {
+    "icon": "SOL.png"
+  },
+  "ethereum/erc20/steth": {
+    "icon": "STETH.png"
+  },
+  "ripple": {
+    "icon": "XRP.png"
+  },
+  "algorand/asa/31566704": {
+    "icon": "USDC.png"
+  },
+  "arbitrum/erc20/usd_coin": {
+    "icon": "USDC.png"
+  },
+  "avalanche_c_chain/erc20/usd_coin": {
+    "icon": "USDC.png"
+  },
+  "base/erc20/usd_coin": {
+    "icon": "USDC.png"
+  },
+  "elrond/esdt/555344432d633736663166": {
+    "icon": "USDC.png"
+  },
+  "moonbeam/erc20/usd_coin": {
+    "icon": "USDC.png"
+  },
+  "optimism/erc20/usd_coin": {
+    "icon": "USDC.png"
+  },
+  "polygon/erc20/usd_coin": {
+    "icon": "USDC.png"
+  },
+  "solana/spl/epjfwdd5aufqssqem2qn1xzybapc8g4weggkzwytdt1v": {
+    "icon": "USDC.png"
+  },
+  "stellar/asset/usdc:ga5zsejyb37jrc5avcia5mop4rhtm335x2kgx3ihojapp5re34k4kzvn": {
+    "icon": "USDC.png"
+  },
+  "tron/trc20/tekxitehnzsmse2xqrbj4w32run966rdz8": {
+    "icon": "USDC.png"
+  },
+  "cardano": {
+    "icon": "ADA.png"
+  },
+  "dogecoin": {
+    "icon": "DOGE.png"
+  },
+  "bsc/bep20/shiba_inu": {
+    "icon": "SHIBA.png"
+  },
+  "ethereum/erc20/shiba_inu": {
+    "icon": "SHIBA.png"
+  },
+  "linea/erc20/shiba_inu": {
+    "icon": "SHIBA.png"
+  },
+  "avalanche_c_chain": {
+    "icon": "AVAX.png"
+  },
+  "polkadot": {
+    "icon": "DOT.png"
+  },
+  "tron": {
+    "icon": "TRX.png"
+  },
+  "arbitrum/erc20/chainlink_token": {
+    "icon": "LINK.png"
+  },
+  "avalanche_c_chain/erc20/chainlink_token_(bridged)": {
+    "icon": "LINK.png"
+  },
+  "bsc/bep20/binance-peg_chainlink_token": {
+    "icon": "LINK.png"
+  },
+  "cronos/erc20/chainlink_token": {
+    "icon": "LINK.png"
+  },
+  "ethereum/erc20/link_chainlink": {
+    "icon": "LINK.png"
+  },
+  "fantom/erc20/chainlink": {
+    "icon": "LINK.png"
+  },
+  "linea/erc20/chainlink_token": {
+    "icon": "LINK.png"
+  },
+  "optimism/erc20/chainlink_token": {
+    "icon": "LINK.png"
+  },
+  "polygon/erc20/chainlink_token": {
+    "icon": "LINK.png"
+  },
+  "polygon_zk_evm/erc20/chainlink_token": {
+    "icon": "LINK.png"
+  },
+  "telos_evm/erc20/chainlink_token": {
+    "icon": "LINK.png"
+  },
+  "arbitrum/erc20/uniswap": {
+    "icon": "UNI.png"
+  },
+  "avalanche_c_chain/erc20/uniswap_(bridged)": {
+    "icon": "LINK.png"
+  },
+  "bsc/bep20/binance-peg_uniswap": {
+    "icon": "UNI.png"
+  },
+  "ethereum/erc20/uniswap": {
+    "icon": "UNI.png"
+  },
+  "linea/erc20/uniswap": {
+    "icon": "UNI.png"
+  },
+  "optimism/erc20/uniswap": {
+    "icon": "UNI.png"
+  },
+  "lpolygon/erc20/uniswap_(pos)": {
+    "icon": "UNI.png"
+  }
+}
