@@ -163,5 +163,98 @@
   },
   "lpolygon/erc20/uniswap_(pos)": {
     "icon": "UNI.png"
+  },
+  "bsc/bep20/matic_token": {
+    "icon": "MATIC.png"
+  },
+  "ethereum/erc20/matic": {
+    "icon": "MATIC.png"
+  },
+  "moonbeam/erc20/matic": {
+    "icon": "MATIC.png"
+  },
+  "polygon/erc20/matic_token": {
+    "icon": "MATIC.png"
+  },
+  "polygon": {
+    "icon": "MATIC.png"
+  },
+  "arbitrum/erc20/wrapped_btc": {
+    "icon": "WBTC.png"
+  },
+  "astar/erc20/wrapped_btc": {
+    "icon": "WBTC.png"
+  },
+  "avalanche_c_chain/erc20/wrapped_btc_(bridged)": {
+    "icon": "WBTC.png"
+  },
+  "cronos/erc20/wrapped_btc": {
+    "icon": "WBTC.png"
+  },
+  "ethereum/erc20/wrapped_bitcoin": {
+    "icon": "WBTC.png"
+  },
+  "fantom/erc20/bitcoin": {
+    "icon": "WBTC.png"
+  },
+  "linea/erc20/wrapped_btc": {
+    "icon": "WBTC.png"
+  },
+  "neon_evm/erc20/wrapped_bitcoin": {
+    "icon": "WBTC.png"
+  },
+  "optimism/erc20/wrapped_btc": {
+    "icon": "WBTC.png"
+  },
+  "polygon/erc20/(pos)_wrapped_btc": {
+    "icon": "WBTC.png"
+  },
+  "polygon_zk_evm/erc20/wrapped_btc": {
+    "icon": "WBTC.png"
+  },
+  "syscoin/erc20/wrapped_bitcoin_(multichain)": {
+    "icon": "WBTC.png"
+  },
+  "telos_evm/erc20/wrapped_bitcoin": {
+    "icon": "WBTC.png"
+  },
+  "bsc/bep20/wrapped_ton_coin": {
+    "icon": "TONCOIN.png"
+  },
+  "ethereum/erc20/wrapped_ton_coin": {
+    "icon": "TONCOIN.png"
+  },
+  "ton": {
+    "icon": "TONCOIN.png"
+  },
+  "bitcoin_cash": {
+    "icon": "BCH.png"
+  },
+  "internet_computer": {
+    "icon": "ICP.png"
+  },
+  "litecoin": {
+    "icon": "LTC.png"
+  },
+  "near": {
+    "icon": "NEAR.png"
+  },
+  "ethereum_classic": {
+    "icon": "ETC.png"
+  },
+  "bsc/bep20/binance-peg_cosmos_token": {
+    "icon": "ATOM.png"
+  },
+  "cosmos": {
+    "icon": "ATOM.png"
+  },
+  "filecoin": {
+    "icon": "FIL.png"
+  },
+  "ethereum/erc20/leo_token": {
+    "icon": "LEO.png"
+  },
+  "aptos": {
+    "icon": "APT.png"
   }
 }
