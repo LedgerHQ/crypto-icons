@@ -2,21 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import { CryptoIconProps } from '../CryptoIcon/CryptoIcon.types';
 
-type FallbackIconProps = Pick<CryptoIconProps, 'size' | 'ticker'>;
+type FallbackIconProps = Pick<CryptoIconProps, 'ticker'>;
 
-const Icon = styled.div<{ size: FallbackIconProps['size'] }>`
-  border: 1px solid;
-  border-radius: 50%;
-  border-color: red;
-  height: ${({ size }) => size};
-  width: ${({ size }) => size};
+const Icon = styled.div`
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #717070;
+  color: #ffffff;
 `;
+//needs responsive font size
 
-const FallbackIcon = ({ ticker, size = '32px' }: FallbackIconProps) => (
-  <Icon size={size}>{ticker[0]}</Icon>
+const FallbackIcon = ({ ticker }: FallbackIconProps) => (
+  <Icon data-testid="fallback-icon">{ticker[0]}</Icon>
 );
 
 export default FallbackIcon;

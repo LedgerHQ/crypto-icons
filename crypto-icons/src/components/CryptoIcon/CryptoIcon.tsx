@@ -2,14 +2,12 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import useCryptoIcons from '../../hooks/useCryptoIcons';
 import FallbackIcon from '../FallbackIcon/FallbackIcon';
+import IconWrapper from '../IconWrapper/IconWrapper';
 import { CryptoIconProps } from './CryptoIcon.types';
 
-const Icon = styled.img<{ size: CryptoIconProps['size'] }>`
-  border: 1px solid;
-  border-radius: 50%;
-  border-color: red;
-  height: ${({ size }) => size};
-  width: ${({ size }) => size};
+const Icon = styled.img`
+  height: 100%;
+  width: 100%;
 `;
 
 const CryptoIcon: FC<CryptoIconProps> = ({
@@ -17,17 +15,14 @@ const CryptoIcon: FC<CryptoIconProps> = ({
   ticker,
   size = '32px',
 }) => {
-  const { icon, loading, error } = useCryptoIcons(ledgerId);
+  const { icon, error } = useCryptoIcons(ledgerId);
 
-  if (loading) return null;
-
-  if (icon) {
-    return <Icon src={icon} size={size} />;
-  }
-
-  if (error) {
-    return <FallbackIcon ticker={ticker} size={size} />;
-  }
+  return (
+    <IconWrapper size={size}>
+      {icon && <Icon data-testid="icon" src={icon} alt={ticker} />}
+      {error && <FallbackIcon ticker={ticker} />}
+    </IconWrapper>
+  );
 };
 
 export default CryptoIcon;

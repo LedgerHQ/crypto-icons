@@ -1,26 +1,51 @@
-import { render } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
+import { rest } from 'msw';
 import React from 'react';
+import { CRYPTO_ICONS_CDN_BASE } from '../../constants';
+import { server } from '../../mocks/node';
 import CryptoIcon from './CryptoIcon';
 
 describe('CryptoIcon', () => {
-  describe('ledger icon', () => {
-    it('should fetch index.json containing icon mapping and render icon from CDN', () => {
+  describe('Ledger icon', () => {
+    it('should fetch index.json containing icon mapping and render icon from CDN', async () => {
       render(<CryptoIcon ledgerId="bitcoin" ticker="BTC" />);
 
-      //expect
+      await waitFor(() => {
+        expect(screen.getByTestId('icon')).toBeInTheDocument();
+      });
+
+      expect(screen.getByTestId('icon')).toHaveAttribute(
+        'src',
+        `${CRYPTO_ICONS_CDN_BASE}/BTC.png`,
+      );
     });
   });
 
-  describe('icon gecko fallback', () => {
+  describe('CoinGecko fallback', () => {
     it.todo(
-      'should fetch from icon gecko and render fallback icon if not found in Ledger CDN',
+      'should fetch from CoinGecko and render fallback icon if request to Ledger CDN fails',
+    );
+
+    it.todo(
+      'should fetch from CoinGecko and render fallback icon if not found in Ledger CDN',
     );
   });
 
   describe('ticker icon fallback', () => {
-    it.todo(
-      'should use ticker icon fallback if both ledger and icon gecko are not found',
-    );
-    it.todo('should render first letter of currency ticker');
+    it('should use ticker icon fallback if both Ledger and CoinGecko icons are not available', async () => {
+      server.use(
+        rest.get(`${CRYPTO_ICONS_CDN_BASE}/index.json`, (_, res, ctx) => {
+          return res(ctx.status(500));
+        }),
+      );
+
+      render(<CryptoIcon ledgerId="bitcoin" ticker="BTC" />);
+
+      await waitFor(() => {
+        expect(screen.getByTestId('fallback-icon')).toBeInTheDocument();
+      });
+
+      expect(screen.getByTestId('fallback-icon')).toHaveTextContent('B');
+    });
   });
 });

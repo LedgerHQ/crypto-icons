@@ -1,8 +1,8 @@
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import typescript from 'rollup-plugin-typescript2';
+import resolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import typescript from 'rollup-plugin-typescript2';
 
 import pkg from './package.json' assert { type: 'json' };
 
@@ -27,7 +27,7 @@ export default {
     commonjs(),
     typescript({
       useTsconfigDeclarationDir: true,
-      exclude: ['jest.config.js', '**/*.stories.tsx', '**/*.test.tsx'],
+      exclude: ['**/*.stories.tsx', '**/*.test.tsx'],
     }),
     terser(),
   ],

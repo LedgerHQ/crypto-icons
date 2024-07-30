@@ -1,8 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
+import iconsObj from '../../../../assets/index.json';
 import CryptoIcon from './CryptoIcon';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const json = require('../../../../assets/index.json');
 
 const meta = {
   title: 'CryptoIcon',
@@ -13,16 +12,18 @@ export default meta;
 
 const Template: StoryFn = () => (
   <div>
-    {Object.keys(json).map((key) => (
+    <h3>Ledger icon | Fallback | LedgerId</h3>
+    {Object.entries(iconsObj).map(([key, value]) => (
       <div
         key={key}
         style={{ display: 'flex', alignItems: 'center', gap: '10px' }}
       >
-        <CryptoIcon ledgerId={key} ticker="abc" />
+        <CryptoIcon ledgerId={key} ticker={value.icon} />
+        <CryptoIcon ledgerId={'none'} ticker={value.icon} />
         <p>{key}</p>
       </div>
     ))}
   </div>
 );
 
-export const AllLedgerIcons: StoryFn = Template.bind({});
+export const AllIcons: StoryFn = Template.bind({});
