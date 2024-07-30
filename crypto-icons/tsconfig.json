@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "jsx": "react",
+    "declaration": true,
+    "declarationDir": "dist",
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "types": ["@testing-library/jest-dom"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
