@@ -1,1 +1,10 @@
 .DS_Store
+
+*storybook.log
+storybook-static
+
+node_modules
+
+dist
+
+*.tgz
