@@ -13,14 +13,15 @@ const Icon = styled.img`
 const CryptoIcon: FC<CryptoIconProps> = ({
   ledgerId,
   ticker,
-  size = '32px',
+  size = '16px',
+  theme,
 }) => {
   const { icon, error } = useCryptoIcons(ledgerId);
 
   return (
-    <IconWrapper size={size}>
+    <IconWrapper size={size} theme={theme}>
       {icon && <Icon data-testid="icon" src={icon} alt={ticker} />}
-      {error && <FallbackIcon ticker={ticker} />}
+      {error && <FallbackIcon ticker={ticker} size={size} />}
     </IconWrapper>
   );
 };

@@ -19,6 +19,7 @@
     "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix"
   },
   "devDependencies": {
+    "@ledgerhq/ui-shared": "^0.2.1",
     "@ledgerhq/wallet-api-client": "^1.5.9",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",

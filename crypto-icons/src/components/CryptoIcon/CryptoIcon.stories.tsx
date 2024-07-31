@@ -12,15 +12,45 @@ export default meta;
 
 const Template: StoryFn = () => (
   <div>
-    <h3>Ledger icon | Fallback | LedgerId</h3>
     {Object.entries(iconsObj).map(([key, value]) => (
-      <div
-        key={key}
-        style={{ display: 'flex', alignItems: 'center', gap: '10px' }}
-      >
-        <CryptoIcon ledgerId={key} ticker={value.icon} />
-        <CryptoIcon ledgerId={'none'} ticker={value.icon} />
+      <div key={key}>
         <p>{key}</p>
+        <div
+          style={{
+            marginBottom: '20px',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              marginBottom: '10px',
+            }}
+          >
+            <CryptoIcon ledgerId={key} ticker={value.icon} size="56px" />
+            <CryptoIcon ledgerId={key} ticker={value.icon} size="48px" />
+            <CryptoIcon ledgerId={key} ticker={value.icon} size="40px" />
+            <CryptoIcon ledgerId={key} ticker={value.icon} size="32px" />
+            <CryptoIcon ledgerId={key} ticker={value.icon} size="24px" />
+            <CryptoIcon ledgerId={key} ticker={value.icon} />
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              marginBottom: '10px',
+            }}
+          >
+            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="56px" />
+            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="48px" />
+            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="40px" />
+            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="32px" />
+            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="24px" />
+            <CryptoIcon ledgerId={'none'} ticker={value.icon} />
+          </div>
+        </div>
       </div>
     ))}
   </div>
