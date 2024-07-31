@@ -2,12 +2,15 @@ name: Run Tests
 
 on:
   pull_request:
-    branches:
-      - main
+    branches: ["main"]
+    paths: ["./lib"]
 
 jobs:
   lint-and-test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./lib
 
     strategy:
       matrix:
@@ -26,7 +29,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install
