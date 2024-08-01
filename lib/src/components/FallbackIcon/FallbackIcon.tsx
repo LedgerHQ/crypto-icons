@@ -28,7 +28,7 @@ const Icon = styled.div<Partial<FallbackIconProps>>`
 `;
 
 const FallbackIcon = ({ ticker, size }: FallbackIconProps) => (
-  <Icon data-testid="fallback-icon" size={size}>
+  <Icon size={size} role="img">
     {ticker[0]}
   </Icon>
 );

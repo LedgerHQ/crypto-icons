@@ -11,10 +11,10 @@ describe('CryptoIcon', () => {
       render(<CryptoIcon ledgerId="bitcoin" ticker="BTC" />);
 
       await waitFor(() => {
-        expect(screen.getByTestId('icon')).toBeInTheDocument();
+        expect(screen.getByRole('img')).toBeInTheDocument();
       });
 
-      expect(screen.getByTestId('icon')).toHaveAttribute(
+      expect(screen.getByRole('img')).toHaveAttribute(
         'src',
         `${CRYPTO_ICONS_CDN_BASE}/BTC.png`,
       );
@@ -42,10 +42,10 @@ describe('CryptoIcon', () => {
       render(<CryptoIcon ledgerId="bitcoin" ticker="BTC" />);
 
       await waitFor(() => {
-        expect(screen.getByTestId('fallback-icon')).toBeInTheDocument();
+        expect(screen.getByRole('img')).toBeInTheDocument();
       });
 
-      expect(screen.getByTestId('fallback-icon')).toHaveTextContent('B');
+      expect(screen.getByRole('img')).toHaveTextContent('B');
     });
   });
 });

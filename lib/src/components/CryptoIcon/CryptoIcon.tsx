@@ -20,7 +20,7 @@ const CryptoIcon: FC<CryptoIconProps> = ({
 
   return (
     <IconWrapper size={size} theme={theme}>
-      {icon && <Icon data-testid="icon" src={icon} alt={ticker} />}
+      {icon && <Icon src={icon} alt={ticker} />}
       {error && <FallbackIcon ticker={ticker} size={size} />}
     </IconWrapper>
   );
