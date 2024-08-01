@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-// import iconsObj from '../../../assets/index.json';
 import { CRYPTO_ICONS_CDN_BASE } from '../constants';
 
 const useCryptoIcons = (ledgerId: string) => {
@@ -15,12 +14,6 @@ const useCryptoIcons = (ledgerId: string) => {
         setIcon(`${CRYPTO_ICONS_CDN_BASE}/${response.data[ledgerId].icon}`);
         return;
       }
-
-      // if (iconsObj[ledgerId]) {
-      //   setIcon(`${CRYPTO_ICONS_CDN_BASE}/${iconsObj[ledgerId].icon}`);
-      //   setLoading(false);
-      //   return;
-      // }
 
       throw new Error();
     } catch (e) {
