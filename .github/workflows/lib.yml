@@ -3,8 +3,7 @@ name: Run Tests
 on:
   pull_request:
     branches: ["main"]
-    # paths: ["./lib"]
-  workflow_dispatch:
+    paths: ["./lib/"]
 
 jobs:
   lint-and-test:
