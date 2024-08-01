@@ -18,8 +18,10 @@
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix"
   },
+  "dependencies": {
+    "@ledgerhq/ui-shared": "^0.2.1"
+  },
   "devDependencies": {
-    "@ledgerhq/ui-shared": "^0.2.1",
     "@ledgerhq/wallet-api-client": "^1.5.9",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -62,5 +64,5 @@
     "react-dom": "^18.3.1",
     "styled-components": "^6.1.12"
   },
-  "packageManager": "pnpm@8.15.7"
+  "packageManager": "pnpm@9.6.0"
 }
