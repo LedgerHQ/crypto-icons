@@ -13,8 +13,7 @@ const Wrapper = styled.div<IconWrapperProps>`
   overflow: hidden;
   border: 1px solid;
   border-radius: 50%;
-  border-color: ${({ theme }: IconWrapperProps) =>
-    palettes[theme!].opacityDefault.c05};
+  border-color: ${({ theme }: IconWrapperProps) => palettes[theme!].opacityDefault.c05};
 `;
 
 const IconWrapper = ({ children, size, theme = 'dark' }: IconWrapperProps) => (
