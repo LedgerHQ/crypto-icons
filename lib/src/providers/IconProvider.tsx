@@ -82,14 +82,14 @@ export const IconProvider = ({ children }: { children: ReactNode }) => {
       return cache[ledgerId];
     }
 
-    if (ledgerMapping && ledgerMapping[ledgerId]) {
+    if (ledgerMapping[ledgerId]) {
       cache[ledgerId] = `${CRYPTO_ICONS_CDN_BASE}/${ledgerMapping[ledgerId].icon}`;
       return cache[ledgerId];
     }
 
     const coinGeckoURL = coinGeckoMapping?.find((i) => i.ledgerId === ledgerId)?.data.img;
 
-    if (coinGeckoMapping && coinGeckoURL) {
+    if (coinGeckoURL) {
       cache[ledgerId] = coinGeckoURL;
       return cache[ledgerId];
     }
