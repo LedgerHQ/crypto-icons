@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
-import iconsObj from '../../../../assets/index.json';
-import CryptoIcon from './CryptoIcon';
+import iconsObj from '../../assets/index.json';
+import CryptoIcon from '../src/components/CryptoIcon';
 
 const meta = {
   title: 'CryptoIcon',
@@ -56,4 +56,4 @@ const Template: StoryFn = () => (
   </div>
 );
 
-export const AllIcons: StoryFn = Template.bind({});
+export const AllLedgerIcons: StoryFn = Template.bind({});

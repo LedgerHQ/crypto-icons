@@ -1,7 +1,8 @@
 import { rest } from 'msw';
-import { COINGECKO_MAPPED_ASSETS_URL, CRYPTO_ICONS_CDN_BASE } from '../constants';
+import { COINGECKO_MAPPED_ASSETS_URL, CRYPTO_ICONS_CDN_BASE } from '../src/constants';
+import { CoinGeckoMapping, LedgerMapping } from '../src/iconMapping';
 
-export const ledgerCDNMock = {
+export const ledgerCDNMock: LedgerMapping = {
   bitcoin: {
     icon: 'BTC.png',
   },
@@ -13,44 +14,23 @@ export const ledgerCDNMock = {
   },
 };
 
-export const coinGeckoMock = [
+export const coinGeckoMock: CoinGeckoMapping = [
   {
-    $type: 'Coin',
     ledgerId: 'bitcoin',
-    providerId: 'bitcoin',
-    name: 'Bitcoin',
-    ticker: 'BTC',
-    status: 'Ok',
-    reason: null,
     data: {
       img: 'https://proxycgassets.api.live.ledger.com/coins/images/1/large/bitcoin.png',
-      marketCapRank: 1,
     },
   },
   {
-    $type: 'Coin',
     ledgerId: 'arbitrum',
-    providerId: 'ethereum',
-    name: 'Arbitrum',
-    ticker: 'ETH',
-    status: 'Ok',
-    reason: 'Overridden',
     data: {
       img: 'https://proxycgassets.api.live.ledger.com/coins/images/279/large/ethereum.png',
-      marketCapRank: 2,
     },
   },
   {
-    $type: 'Coin',
     ledgerId: 'decred',
-    providerId: 'decred',
-    name: 'Decred',
-    ticker: 'DCR',
-    status: 'Ok',
-    reason: null,
     data: {
       img: 'https://proxycgassets.api.live.ledger.com/coins/images/329/large/decred.png',
-      marketCapRank: 253,
     },
   },
 ];

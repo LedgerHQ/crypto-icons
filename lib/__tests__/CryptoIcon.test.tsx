@@ -1,11 +1,13 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { rest } from 'msw';
 import React from 'react';
-import { COINGECKO_MAPPED_ASSETS_URL, CRYPTO_ICONS_CDN_BASE } from '../../constants';
-import { resetIconCacheForTesting } from '../../iconMapping';
-import { coinGeckoMock } from '../../mocks/handlers';
-import { server } from '../../mocks/node';
-import CryptoIcon from './CryptoIcon';
+import { coinGeckoMock } from '../__mocks__/handlers';
+import { server } from '../__mocks__/node';
+import CryptoIcon from '../src/components/CryptoIcon';
+import { COINGECKO_MAPPED_ASSETS_URL, CRYPTO_ICONS_CDN_BASE } from '../src/constants';
+import { resetIconCacheForTesting } from '../src/iconMapping';
+
+console.error = jest.fn();
 
 describe('CryptoIcon', () => {
   beforeEach(() => {
@@ -40,7 +42,7 @@ describe('CryptoIcon', () => {
 
       expect(screen.getByRole('img')).toHaveAttribute(
         'src',
-        coinGeckoMock.find((i) => i.ledgerId === 'bitcoin')?.data.img
+        coinGeckoMock?.find((i) => i.ledgerId === 'bitcoin')?.data.img
       );
     });
 
@@ -53,7 +55,7 @@ describe('CryptoIcon', () => {
 
       expect(screen.getByRole('img')).toHaveAttribute(
         'src',
-        coinGeckoMock.find((i) => i.ledgerId === 'decred')?.data.img
+        coinGeckoMock?.find((i) => i.ledgerId === 'decred')?.data.img
       );
     });
   });

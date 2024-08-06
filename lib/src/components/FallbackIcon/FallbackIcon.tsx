@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 import { CryptoIconProps } from '../CryptoIcon/CryptoIcon.types';
 
@@ -27,7 +27,7 @@ const Icon = styled.div<Partial<FallbackIconProps>>`
   font-size: ${({ size }) => iconSizeToFontSize[size!]};
 `;
 
-const FallbackIcon = ({ ticker, size }: FallbackIconProps) => (
+const FallbackIcon: FC<FallbackIconProps> = ({ ticker, size }) => (
   <Icon size={size} role="img">
     {ticker[0]}
   </Icon>

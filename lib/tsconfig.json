@@ -18,5 +18,5 @@
     "types": ["@testing-library/jest-dom"]
   },
   "include": ["src"],
-  "exclude": ["node_modules", "src/mocks"]
+  "exclude": ["node_modules"]
 }

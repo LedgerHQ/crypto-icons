@@ -19,6 +19,8 @@ const CryptoIcon: FC<CryptoIconProps> = ({ ledgerId, ticker, size = '16px', them
       try {
         const url = await getIconUrl(ledgerId);
         setIconUrl(url);
+      } catch (e) {
+        console.error(e);
       } finally {
         setLoading(false);
       }

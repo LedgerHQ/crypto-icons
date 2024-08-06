@@ -2,13 +2,13 @@ import { Currency } from '@ledgerhq/wallet-api-client';
 import axios from 'axios';
 import { COINGECKO_MAPPED_ASSETS_URL, CRYPTO_ICONS_CDN_BASE } from './constants';
 
-type LedgerMapping = {
+export type LedgerMapping = {
   [key: Currency['id']]: {
     icon: string;
   };
 } | null;
 
-type CoinGeckoMapping =
+export type CoinGeckoMapping =
   | {
       ledgerId: Currency['id'];
       data: {
@@ -46,7 +46,8 @@ const setLedgerIconMapping = async () => {
       ledgerMapping = data;
       return ledgerMapping;
     })
-    .catch(() => {
+    .catch((e) => {
+      console.error(e);
       return null;
     })
     .finally(() => {
@@ -66,12 +67,14 @@ const setCoinGeckoIconMapping = async () => {
   }
 
   fetchingCoinGeckoMapping = true;
+
   cryptoIconsFetchPromise = fetchIconMapping(COINGECKO_MAPPED_ASSETS_URL)
     .then((data) => {
       coinGeckoMapping = data;
       return coinGeckoMapping;
     })
-    .catch(() => {
+    .catch((e) => {
+      console.error(e);
       return null;
     })
     .finally(() => {
