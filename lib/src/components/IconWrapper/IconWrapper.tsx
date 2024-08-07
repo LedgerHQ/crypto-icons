@@ -16,7 +16,7 @@ const Wrapper = styled.div<IconWrapperProps>`
   border-color: ${({ theme }: { theme: 'dark' | 'light' }) => palettes[theme].opacityDefault.c05};
 `;
 
-const IconWrapper: FC<IconWrapperProps> = ({ children, size, theme = 'light' }) => (
+const IconWrapper: FC<IconWrapperProps> = ({ children, size, theme = 'dark' }) => (
   <Wrapper size={size} theme={theme}>
     {children}
   </Wrapper>
