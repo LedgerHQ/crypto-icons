@@ -33,6 +33,12 @@ export const coinGeckoMock: CoinGeckoMapping = [
       img: 'https://proxycgassets.api.live.ledger.com/coins/images/329/large/decred.png',
     },
   },
+  {
+    ledgerId: 'particl',
+    data: {
+      img: 'https://proxycgassets.api.live.ledger.com/coins/images/839/large/Particl.png',
+    },
+  },
 ];
 
 export const handlers = [
