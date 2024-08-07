@@ -2,7 +2,7 @@
 
 A package which provides a `<CryptoIcon />` component that can be consumed by Ledger applications in a React environment and used with a `ledgerId` to render icons.
 
----
+<!-- TODO: add Storybook link -->
 
 ## Installation
 

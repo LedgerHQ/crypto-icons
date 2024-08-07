@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import InterBold from '../../assets/Inter-Bold.woff2';
+import InterBold from '../../fonts/Inter-Bold.woff2';
 import { CryptoIconProps } from '../CryptoIcon/CryptoIcon.types';
 
 type FallbackIconProps = Pick<CryptoIconProps, 'ticker' | 'size'>;
@@ -29,7 +29,7 @@ const Icon = styled.div<Partial<FallbackIconProps>>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #717070;
+  background-color: #757575;
   color: #ffffff;
   font-weight: 700;
   font-size: ${({ size }) => iconSizeToFontSize[size!]};
