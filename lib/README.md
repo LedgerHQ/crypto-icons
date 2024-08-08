@@ -8,7 +8,7 @@ A package which provides a `<CryptoIcon />` component that can be consumed by Le
 
 ```bash
 pnpm i @ledgerhq/crypto-icons
-#or
+# or
 yarn add @ledgerhq/crypto-icons
 ```
 
@@ -67,8 +67,8 @@ pnpm i
 
 ```bash
 pnpm test
-#or
-pnpm test:watch #to run in watch mode
+# or
+pnpm test:watch # to run in watch mode
 ```
 
 ### Run storybook
@@ -80,9 +80,9 @@ pnpm storybook
 ### Lint
 
 ```bash
-pnpm lint #to find issues
-#or
-pnpm lint:fix #to find and fix issues
+pnpm lint # to find issues
+# or
+pnpm lint:fix # to find and fix issues
 ```
 
 ### Build package with Rollup
