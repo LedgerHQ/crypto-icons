@@ -1,11 +1,7 @@
 name: Release crypto-icons package
 
 on:
-  push:
-    branches:
-      - main
-    paths: 
-      - "lib/**"
+  pull_request:
 
 jobs:
   publish-gpr:
@@ -21,7 +17,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          registry-url: https://registry.npmjs.org/
+      
+      - run: npm install --frozen-lockfile
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
           registry-url: https://npm.pkg.github.com/
+
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.CI_BOT_TOKEN }}
