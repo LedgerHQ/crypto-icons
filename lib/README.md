@@ -4,15 +4,16 @@ A package which provides a `<CryptoIcon />` component that can be consumed by Le
 
 ## Installation
 
+Get package source URL with Github API:
+
 ```bash
-# get package source URL with Github API:
 curl -H "Authorization: token <GITHUB_TOKEN>" -H "Accept: application/vnd.github.v3+json" -L https://npm.pkg.github.com/@ledgerhq%2fcrypto-icons | jq '.versions[].dist.tarball'
 ```
 
-This will return URLs for all available package versions which can then be used in `package.json`:
+This will return URLs for all available package versions which can then be used in `package.json` e.g:
 
 ```bash
-  "@ledgerhq/crypto-icons": "https://npm.pkg.github.com/download/@ledgerhq/crypto-icons/1.0.1/8e6a0e1f4dd462745521dfaa729ae653a9c2950c"
+"@ledgerhq/crypto-icons": "https://npm.pkg.github.com/download/@ledgerhq/crypto-icons/1.0.1/8e6a0e1f4dd462745521dfaa729ae653a9c2950c"
 ```
 
 ### Usage example
