@@ -1,6 +1,6 @@
 {
   "name": "@ledgerhq/crypto-icons",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Crypto icons by Ledger",
   "license": "MIT",
   "main": "dist/index.js",
@@ -16,7 +16,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
-    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix"
+    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
     "@ledgerhq/ui-shared": "^0.2.1"
