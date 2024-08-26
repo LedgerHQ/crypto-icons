@@ -27,7 +27,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
         
       - name: Setup node to publish in Github package
         uses: actions/setup-node@v4
