@@ -37,7 +37,7 @@ env:
   GITHUB_PKG_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-### Usage example
+## Usage example
 
 ```JSX
 import { CryptoIcon } from '@ledgerhq/crypto-icons';
