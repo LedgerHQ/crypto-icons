@@ -1,6 +1,6 @@
 {
   "name": "@ledgerhq/crypto-icons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Crypto icons by Ledger",
   "license": "MIT",
   "main": "dist/index.js",
