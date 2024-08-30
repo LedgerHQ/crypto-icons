@@ -20,13 +20,13 @@ To install the package you first need to [authenticate to the GitHub Packages re
 
 ```bash
 # .npmrc
-//npm.pkg.github.com/:_authToken=${GITHUB_PKG_TOKEN}
+//npm.pkg.github.com/:_authToken=${GITHUB_NPM_TOKEN}
 ```
 
 ### Locally
 
 - Create a [Personal Access Token (Classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic) with a `read:packages` scope.
-- Add a new variable `export GITHUB_PKG_TOKEN=<TOKEN_VALUE>` to your `~/.zshrc` or equivalent
+- Add a new variable `export GITHUB_NPM_TOKEN=<PAT_VALUE>` to your `~/.zshrc` or equivalent
 
 ### In a GitHub workflow
 
@@ -34,7 +34,7 @@ Set the variable in your workflow env setup as the [`GITHUB_TOKEN`](https://docs
 
 ```bash
 env:
-  GITHUB_PKG_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ## Usage example
