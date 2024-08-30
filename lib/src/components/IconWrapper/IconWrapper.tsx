@@ -14,6 +14,10 @@ const Wrapper = styled.div<IconWrapperProps>`
   border: 1px solid;
   border-radius: 50%;
   border-color: ${({ theme }: { theme: 'dark' | 'light' }) => palettes[theme].opacityDefault.c05};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 `;
 
 const IconWrapper: FC<IconWrapperProps> = ({ children, size, theme = 'dark' }) => (

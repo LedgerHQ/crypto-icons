@@ -7,7 +7,7 @@ A package which provides a `<CryptoIcon />` component that can be consumed by Le
 Get package source URL with Github API:
 
 ```bash
-curl -H "Authorization: token <GITHUB_TOKEN>" -H "Accept: application/vnd.github.v3+json" -L https://npm.pkg.github.com/@ledgerhq%2fcrypto-icons | jq '.versions[].dist.tarball'
+curl -H "Authorization: token <GITHUB_PAT_TOKEN>" -H "Accept: application/vnd.github.v3+json" -L https://npm.pkg.github.com/@ledgerhq%2fcrypto-icons | jq '.versions[].dist.tarball'
 ```
 
 This will return URLs for all available package versions which can then be used in `package.json` e.g:
@@ -16,7 +16,28 @@ This will return URLs for all available package versions which can then be used 
 "@ledgerhq/crypto-icons": "https://npm.pkg.github.com/download/@ledgerhq/crypto-icons/1.0.1/8e6a0e1f4dd462745521dfaa729ae653a9c2950c"
 ```
 
-### Usage example
+To install the package you first need to [authenticate to the GitHub Packages registry](https://docs.github.com/en/packages/learn-github-packages/introduction-to-github-packages#authenticating-to-github-packages). This can be set in an `.npmrc` file in the root of your repository:
+
+```bash
+# .npmrc
+//npm.pkg.github.com/:_authToken=${GITHUB_NPM_TOKEN}
+```
+
+### Locally
+
+- Create a [Personal Access Token (Classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#personal-access-tokens-classic) with a `read:packages` scope.
+- Add a new variable `export GITHUB_NPM_TOKEN=<PAT_VALUE>` to your `~/.zshrc` or equivalent
+
+### In a GitHub workflow
+
+Set the variable in your workflow env setup as the [`GITHUB_TOKEN`](https://docs.github.com/en/actions/security-for-github-actions/security-guides/automatic-token-authentication#about-the-github_token-secret) secret:
+
+```bash
+env:
+  GITHUB_NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+## Usage example
 
 ```JSX
 import { CryptoIcon } from '@ledgerhq/crypto-icons';
