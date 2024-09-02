@@ -3,22 +3,16 @@
     "icon": "BTC.png"
   },
   "arbitrum": {
-    "icon": "ETH.png"
-  },
-  "base": {
-    "icon": "ETH.png"
-  },
-  "boba": {
-    "icon": "ETH.png"
+    "icon": "ARB.png"
   },
   "ethereum": {
     "icon": "ETH.png"
   },
-  "linea": {
-    "icon": "ETH.png"
+  "mantle": {
+    "icon": "MNT.png"
   },
   "optimism": {
-    "icon": "ETH.png"
+    "icon": "OP.png"
   },
   "algorand/asa/312769": {
     "icon": "USDT.png"
@@ -147,7 +141,7 @@
     "icon": "UNI.png"
   },
   "avalanche_c_chain/erc20/uniswap_(bridged)": {
-    "icon": "LINK.png"
+    "icon": "UNI.png"
   },
   "bsc/bep20/binance-peg_uniswap": {
     "icon": "UNI.png"
@@ -256,5 +250,98 @@
   },
   "aptos": {
     "icon": "APT.png"
+  },
+  "ethereum/erc20/dai_stablecoin_v2_0": {
+    "icon": "DAI.png"
+  },
+  "kaspa": {
+    "icon": "KAS.png"
+  },
+  "monero": {
+    "icon": "XMR.png"
+  },
+  "bsc/bep20/fetch": {
+    "icon": "FET.png"
+  },
+  "ethereum/erc20/fetch": {
+    "icon": "FET.png"
+  },
+  "polygon/erc20/fetch": {
+    "icon": "FET.png"
+  },
+  "bsc/bep20/first_digital_usd": {
+    "icon": "FDUSD.png"
+  },
+  "ethereum/erc20/first_digital_usd": {
+    "icon": "FDUSD.png"
+  },
+  "ethereum/erc20/usde": {
+    "icon": "USDe.png"
+  },
+  "stellar": {
+    "icon": "XLM.png"
+  },
+  "ethereum/erc20/okb": {
+    "icon": "OKB.png"
+  },
+  "stacks": {
+    "icon": "STX.png"
+  },
+  "cronos": {
+    "icon": "CRO.png"
+  },
+  "crypto_org": {
+    "icon": "CRO.png"
+  },
+  "ethereum/erc20/cro": {
+    "icon": "CRO.png"
+  },
+  "sui": {
+    "icon": "SUI.png"
+  },
+  "bittensor": {
+    "icon": "TAO.png"
+  },
+  "ethereum/erc20/immutable_x": {
+    "icon": "IMX.png"
+  },
+  "ethereum/erc20/render_token": {
+    "icon": "RNDR.png"
+  },
+  "polygon/erc20/render_token": {
+    "icon": "RNDR.png"
+  },
+  "solana/spl/rndrizkt3mk1iimdxrdwabcf7zg7ar5t4nud4ekhbof": {
+    "icon": "RNDR.png"
+  },
+  "ethereum/erc20/mantle": {
+    "icon": "MNT.png"
+  },
+  "avalanche_c_chain/erc20/aave_token_(bridged)": {
+    "icon": "AAVE.png"
+  },
+  "bsc/bep20/binance-peg_aave_token": {
+    "icon": "AAVE.png"
+  },
+  "ethereum/erc20/aave": {
+    "icon": "AAVE.png"
+  },
+  "fantom/erc20/aave": {
+    "icon": "AAVE.png"
+  },
+  "optimism/erc20/aave_token": {
+    "icon": "AAVE.png"
+  },
+  "polygon/erc20/aave_(pos)": {
+    "icon": "AAVE.png"
+  },
+  "arbitrum/erc20/arbitrum": {
+    "icon": "ARB.png"
+  },
+  "ethereum/erc20/arbitrum": {
+    "icon": "ARB.png"
+  },
+  "hedera": {
+    "icon": "HBAR.png"
   }
 }
