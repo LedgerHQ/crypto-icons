@@ -27,6 +27,9 @@ importers:
       '@rollup/plugin-url':
         specifier: ^8.0.2
         version: 8.0.2(rollup@4.19.0)
+      '@storybook/addon-controls':
+        specifier: 8.2.6
+        version: 8.2.6(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))
       '@storybook/addon-webpack5-compiler-swc':
         specifier: ^1.0.4
         version: 1.0.4(webpack@5.93.0(@swc/core@1.5.7)(esbuild@0.21.5))
@@ -1241,6 +1244,11 @@ packages:
 
   '@sinonjs/fake-timers@10.3.0':
     resolution: {integrity: sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==}
+
+  '@storybook/addon-controls@8.2.6':
+    resolution: {integrity: sha512-EHUwHy+oZZv3pXzN7fuXWrS/meHFjqcELY3RBvOyEkGf21agl6co6R1tnf6d5N5QoYAGfIbDO7dkauSL2RfNAw==}
+    peerDependencies:
+      storybook: ^8.2.6
 
   '@storybook/addon-webpack5-compiler-swc@1.0.4':
     resolution: {integrity: sha512-S/ypdAK9oqwUAt3ZOn44qi3RWdH5uBLbBgtfHSXckqTpQRu7F7A9bRzjK+H5ti4xVADRhxu/xzIBwxWgcCeIXA==}
@@ -6250,6 +6258,13 @@ snapshots:
   '@sinonjs/fake-timers@10.3.0':
     dependencies:
       '@sinonjs/commons': 3.0.1
+
+  '@storybook/addon-controls@8.2.6(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))':
+    dependencies:
+      dequal: 2.0.3
+      lodash: 4.17.21
+      storybook: 8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9))
+      ts-dedent: 2.2.0
 
   '@storybook/addon-webpack5-compiler-swc@1.0.4(webpack@5.93.0(@swc/core@1.5.7)(esbuild@0.21.5))':
     dependencies:
