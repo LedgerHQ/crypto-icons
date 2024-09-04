@@ -6,15 +6,31 @@ import CryptoIcon from '../src/components/CryptoIcon';
 const meta = {
   title: 'CryptoIcon',
   component: CryptoIcon,
+  argTypes: {
+    theme: {
+      control: {
+        type: 'radio',
+      },
+      options: ['dark', 'light'],
+      table: {
+        type: {
+          summary: 'radio',
+        },
+        defaultValue: {
+          summary: 'light',
+        },
+      },
+    },
+  },
 } satisfies Meta<typeof CryptoIcon>;
 
 export default meta;
 
-const Template: StoryFn = () => (
-  <div>
+const Template: StoryFn = ({ theme = 'light' }) => (
+  <div style={{ padding: '0.5rem', backgroundColor: theme === 'light' ? '#FFFFFF' : '#1C1D1F' }}>
     {Object.entries(iconsObj).map(([key, value]) => (
       <div key={key}>
-        <p>{key}</p>
+        <p style={{ color: theme === 'light' ? '#1C1D1F' : '#FFFFFF' }}>{key}</p>
         <div
           style={{
             marginBottom: '20px',
@@ -28,12 +44,12 @@ const Template: StoryFn = () => (
               marginBottom: '10px',
             }}
           >
-            <CryptoIcon ledgerId={key} ticker={value.icon} size="56px" />
-            <CryptoIcon ledgerId={key} ticker={value.icon} size="48px" />
-            <CryptoIcon ledgerId={key} ticker={value.icon} size="40px" />
-            <CryptoIcon ledgerId={key} ticker={value.icon} size="32px" />
-            <CryptoIcon ledgerId={key} ticker={value.icon} size="24px" />
-            <CryptoIcon ledgerId={key} ticker={value.icon} />
+            <CryptoIcon ledgerId={key} ticker={value.icon} size="56px" theme={theme} />
+            <CryptoIcon ledgerId={key} ticker={value.icon} size="48px" theme={theme} />
+            <CryptoIcon ledgerId={key} ticker={value.icon} size="40px" theme={theme} />
+            <CryptoIcon ledgerId={key} ticker={value.icon} size="32px" theme={theme} />
+            <CryptoIcon ledgerId={key} ticker={value.icon} size="24px" theme={theme} />
+            <CryptoIcon ledgerId={key} ticker={value.icon} theme={theme} />
           </div>
           <div
             style={{
@@ -43,12 +59,12 @@ const Template: StoryFn = () => (
               marginBottom: '10px',
             }}
           >
-            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="56px" />
-            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="48px" />
-            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="40px" />
-            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="32px" />
-            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="24px" />
-            <CryptoIcon ledgerId={'none'} ticker={value.icon} />
+            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="56px" theme={theme} />
+            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="48px" theme={theme} />
+            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="40px" theme={theme} />
+            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="32px" theme={theme} />
+            <CryptoIcon ledgerId={'none'} ticker={value.icon} size="24px" theme={theme} />
+            <CryptoIcon ledgerId={'none'} ticker={value.icon} theme={theme} />
           </div>
         </div>
       </div>

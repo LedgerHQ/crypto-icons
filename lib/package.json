@@ -28,6 +28,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-url": "^8.0.2",
+    "@storybook/addon-controls": "8.2.6",
     "@storybook/addon-webpack5-compiler-swc": "^1.0.4",
     "@storybook/react": "^8.2.6",
     "@storybook/react-webpack5": "^8.2.6",
