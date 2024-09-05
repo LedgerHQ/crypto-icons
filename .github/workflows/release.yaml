@@ -8,12 +8,13 @@ on:
       - "lib/**"
 
 jobs:
-  publish-gpr:
-    runs-on: ubuntu-latest
+  publish:
+    runs-on: ledgerhq-shared-medium
     defaults:
       run:
         working-directory: ./lib/
     permissions:
+      id-token: write
       packages: write
       contents: read
     steps:
@@ -28,14 +29,20 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-        
-      - name: Setup node to publish in Github package
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          registry-url: https://npm.pkg.github.com/
+      
+      - name: Login to JFrog Ledger
+        id: jfrog-login
+        uses: LedgerHQ/actions-security/actions/jfrog-login@actions/jfrog-login-1
 
+      - name: Setup npm config for JFrog
+        env:
+          NPM_REGISTRY: jfrog.ledgerlabs.net/artifactory/api/npm/ledgerlive-npm-prod-public
+          NPM_REGISTRY_TOKEN: ${{ steps.jfrog-login.outputs.oidc-token }}
+        run: |
+          cat << EOF | tee .npmrc
+          registry=https://${NPM_REGISTRY}/
+          //${NPM_REGISTRY}/:_authToken=${NPM_REGISTRY_TOKEN}
+          EOF
+      
       - name: Publish package 
         run: pnpm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.CI_BOT_TOKEN }}
