@@ -2,9 +2,9 @@
 
 Provide crypto icons assets by ledgerId
 
-## How to contribute ?
+# Disclaimer
 
-TODO
+Some of the icons provided are trademarks: they are the property of their respective owners.
 
 ## How to find the ledgerId ?
 
