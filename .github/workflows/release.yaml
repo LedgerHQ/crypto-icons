@@ -46,7 +46,7 @@ jobs:
       - name: Attest
         uses: LedgerHQ/actions-security/actions/attest@actions/attest-1
         with:
-          subject-path: dist/*
+          subject-path: dist
 
       - name: Sign
         uses: LedgerHQ/actions-security/actions/sign-blob@actions/sign-blob-1
