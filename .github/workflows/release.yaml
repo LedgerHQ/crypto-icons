@@ -7,15 +7,21 @@ on:
     paths: 
       - "lib/**"
 
+permissions:
+  id-token: write
+  packages: write
+  contents: read
+  attestations: write
+
+env:
+  NPM_REGISTRY: jfrog.ledgerlabs.net/artifactory/api/npm/ledgerlive-npm-prod-public
+
 jobs:
-  publish-gpr:
-    runs-on: ubuntu-latest
+  publish:
+    runs-on: ledgerhq-shared-medium
     defaults:
       run:
         working-directory: ./lib/
-    permissions:
-      packages: write
-      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
@@ -28,14 +34,36 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-        
-      - name: Setup node to publish in Github package
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          registry-url: https://npm.pkg.github.com/
+      
+      - name: Build project
+        run: pnpm run build
 
-      - name: Publish package 
-        run: pnpm publish
+      - name: Create tarball for attestation
+        run: |
+          echo "TARBALL=$(pnpm pack --pack-destination dist)" >> $GITHUB_ENV
+
+      - name: Attest tarball
+        uses: LedgerHQ/actions-security/actions/attest@actions/attest-1
+        with:
+          subject-path: ./lib/dist
+
+      - name: Sign tarball
+        uses: LedgerHQ/actions-security/actions/sign-blob@actions/sign-blob-1
+        with:
+          path: ./lib/dist
+
+      - name: Login to JFrog Ledger
+        id: jfrog-login
+        uses: LedgerHQ/actions-security/actions/jfrog-login@actions/jfrog-login-1
+
+      - name: Setup npm config for JFrog
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.CI_BOT_TOKEN }}
+          NPM_REGISTRY_TOKEN: ${{ steps.jfrog-login.outputs.oidc-token }}
+        run: |
+          cat << EOF | tee .npmrc
+          registry=https://${NPM_REGISTRY}/
+          //${NPM_REGISTRY}/:_authToken=${NPM_REGISTRY_TOKEN}
+          EOF
+
+      - name: Publish package to JFrog
+        run: pnpm publish $TARBALL
