@@ -2,7 +2,7 @@
 
 Provide crypto icons assets by ledgerId
 
-# Disclaimer
+## Disclaimer
 
 Some of the icons provided are trademarks: they are the property of their respective owners.
 

@@ -124,6 +124,6 @@ pnpm build
 
 Package can be tested locally with `pnpm-link` or `file:` protocol. Details can be found here: [https://pnpm.io/cli/link#whats-the-difference-between-pnpm-link-and-using-the-file-protocol](https://pnpm.io/cli/link#whats-the-difference-between-pnpm-link-and-using-the-file-protocol).
 
-# Disclaimer
+### Disclaimer
 
 Some of the icons provided are trademarks: they are the property of their respective owners.
