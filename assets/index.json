@@ -158,6 +158,9 @@
   "lpolygon/erc20/uniswap_(pos)": {
     "icon": "UNI.png"
   },
+  "ethereum/erc20/polygon_ecosystem_token": {
+    "icon": "MATIC.png"
+  },
   "bsc/bep20/matic_token": {
     "icon": "MATIC.png"
   },
