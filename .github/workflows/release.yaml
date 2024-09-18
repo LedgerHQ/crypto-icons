@@ -43,6 +43,10 @@ jobs:
         run: |
           ls -la
           ls -la dist 
+
+      - name: Pack npm
+        run: pnpm pack
+        
       - name: Attest
         uses: LedgerHQ/actions-security/actions/attest@actions/attest-1
         with:
