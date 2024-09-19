@@ -66,4 +66,4 @@ jobs:
           EOF
 
       - name: Publish package to JFrog
-        run: pnpm publish $TARBALL
+        run: pnpm publish $TARBALL --no-git-checks
