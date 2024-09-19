@@ -26,6 +26,11 @@ const meta = {
 
 export default meta;
 
+const getNetworkFormLedgerId = (ledgerId: string) => {
+  const ledgerIdSplit = ledgerId.split('/');
+  return ledgerIdSplit.length > 1 ? ledgerIdSplit[0] : undefined;
+};
+
 const Template: StoryFn = ({ theme = 'light' }) => (
   <div style={{ padding: '0.5rem', backgroundColor: theme === 'light' ? '#FFFFFF' : '#1C1D1F' }}>
     {Object.entries(iconsObj).map(([key, value]) => (
@@ -44,12 +49,47 @@ const Template: StoryFn = ({ theme = 'light' }) => (
               marginBottom: '10px',
             }}
           >
-            <CryptoIcon ledgerId={key} ticker={value.icon} size="56px" theme={theme} />
-            <CryptoIcon ledgerId={key} ticker={value.icon} size="48px" theme={theme} />
-            <CryptoIcon ledgerId={key} ticker={value.icon} size="40px" theme={theme} />
-            <CryptoIcon ledgerId={key} ticker={value.icon} size="32px" theme={theme} />
-            <CryptoIcon ledgerId={key} ticker={value.icon} size="24px" theme={theme} />
-            <CryptoIcon ledgerId={key} ticker={value.icon} theme={theme} />
+            <CryptoIcon
+              ledgerId={key}
+              ticker={value.icon}
+              size="56px"
+              theme={theme}
+              network={getNetworkFormLedgerId(key)}
+            />
+            <CryptoIcon
+              ledgerId={key}
+              ticker={value.icon}
+              size="48px"
+              theme={theme}
+              network={getNetworkFormLedgerId(key)}
+            />
+            <CryptoIcon
+              ledgerId={key}
+              ticker={value.icon}
+              size="40px"
+              theme={theme}
+              network={getNetworkFormLedgerId(key)}
+            />
+            <CryptoIcon
+              ledgerId={key}
+              ticker={value.icon}
+              size="32px"
+              theme={theme}
+              network={getNetworkFormLedgerId(key)}
+            />
+            <CryptoIcon
+              ledgerId={key}
+              ticker={value.icon}
+              size="24px"
+              theme={theme}
+              network={getNetworkFormLedgerId(key)}
+            />
+            <CryptoIcon
+              ledgerId={key}
+              ticker={value.icon}
+              theme={theme}
+              network={getNetworkFormLedgerId(key)}
+            />
           </div>
           <div
             style={{

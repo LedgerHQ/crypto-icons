@@ -6,4 +6,5 @@ export type CryptoIconProps = {
   ticker: Currency['ticker'];
   theme?: ThemeNames;
   size?: '16px' | '24px' | '32px' | '40px' | '48px' | '56px';
+  network?: Currency['id'];
 };

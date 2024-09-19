@@ -600,7 +600,7 @@
     "icon": "XTZ.png"
   },
   "ethereum/erc20/tether_gold": {
-    "icon": "xAUt.png"
+    "icon": "XAUt.png"
   },
   "arbitrum/erc20/wrapped_ether": {
     "icon": "WETH.png"
