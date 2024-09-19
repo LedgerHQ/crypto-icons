@@ -11,16 +11,22 @@ const Wrapper = styled.div<IconWrapperProps>`
   height: ${({ size }) => size};
   width: ${({ size }) => size};
   overflow: hidden;
-  border: 1px solid;
+  position: relative;
+`;
+
+export const RoundedIcon = styled.img<Pick<CryptoIconProps, 'theme'>>`
   border-radius: 50%;
-  border-color: ${({ theme }: { theme: 'dark' | 'light' }) => palettes[theme].opacityDefault.c05};
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  outline: 1px auto ${({ theme }: { theme: 'dark' | 'light' }) => palettes[theme].opacityDefault.c05};
+  outline-offset: -1px;
+  outline-style: solid;
+}
 `;
 
-const IconWrapper: FC<IconWrapperProps> = ({ children, size, theme = 'dark' }) => (
+const IconWrapper: FC<IconWrapperProps> = ({ children, size, theme }) => (
   <Wrapper size={size} theme={theme}>
     {children}
   </Wrapper>
