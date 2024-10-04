@@ -5,6 +5,7 @@ A package which provides a `<CryptoIcon />` component that can be consumed by Le
 ## Installation
 
 TBC
+<!-- TODO: Add detailed installation instructions -->
 
 ## Usage example
 
