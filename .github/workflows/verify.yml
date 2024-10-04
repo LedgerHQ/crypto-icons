@@ -40,3 +40,6 @@ jobs:
 
       - name: Run Jest tests
         run: pnpm test
+
+      - name: Check unused png files
+        run: pnpm checkMapping
