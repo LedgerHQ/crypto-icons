@@ -4,8 +4,9 @@ A package which provides a `<CryptoIcon />` component that can be consumed by Le
 
 ## Installation
 
-TBC
-<!-- TODO: Add detailed installation instructions -->
+```bash
+npm install @ledgerhq/crypto-icons
+```
 
 ## Usage example
 
@@ -18,6 +19,7 @@ const Page = () => {
       <CryptoIcon ledgerId="bitcoin" ticker="BTC" />
       <CryptoIcon ledgerId="ethereum" ticker="ETH" size="32px" />
       <CryptoIcon ledgerId="solana" ticker="SOL" size="48px" theme="light" />
+      <CryptoIcon ledgerId="ethereum/erc20/usd_tether__erc20_" ticker="USDT" network="ethereum"/>
     </>
   )
 }

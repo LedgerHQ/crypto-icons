@@ -35,6 +35,7 @@ const CryptoIcon: FC<CryptoIconProps> = ({
 
   useEffect(() => {
     const loadIcon = async () => {
+      setNetworkUrl(null);
       const iconsToResolve = [getIconUrl(ledgerId)];
       if (network) iconsToResolve.push(getIconUrl(network));
       try {
