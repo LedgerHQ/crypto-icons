@@ -46,8 +46,7 @@ const setLedgerIconMapping = async () => {
       ledgerMapping = data;
       return ledgerMapping;
     })
-    .catch((e) => {
-      console.error(e);
+    .catch(() => {
       return null;
     })
     .finally(() => {
@@ -73,8 +72,7 @@ const setCoinGeckoIconMapping = async () => {
       coinGeckoMapping = data;
       return coinGeckoMapping;
     })
-    .catch((e) => {
-      console.error(e);
+    .catch(() => {
       return null;
     })
     .finally(() => {
