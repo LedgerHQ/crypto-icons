@@ -18,7 +18,7 @@ const iconSizeToFontSize: {
 const IconWrapper = styled.View`
   height: 100%;
   width: 100%;
-  border-radius: 50%;
+  border-radius: 50px;
   background-color: #757575;
 `;
 
@@ -28,16 +28,18 @@ const Icon = styled.View<Partial<FallbackIconProps>>`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+const IconText = styled.Text<Partial<FallbackIconProps>>`
   color: #ffffff;
   font-weight: 700;
   font-size: ${({ size }) => iconSizeToFontSize[size!]};
-  font-family: 'Inter', sans-serif;
 `;
 
 const FallbackIcon: React.FC<FallbackIconProps> = ({ ticker, size }) => (
   <IconWrapper>
     <Icon size={size} accessibilityRole="image">
-      {ticker[0]}
+      <IconText size={size}>{ticker[0]}</IconText>
     </Icon>
   </IconWrapper>
 );

@@ -14,7 +14,7 @@ const Wrapper = styled.View<IconWrapperProps>`
 `;
 
 export const RoundedIcon = styled.Image<Pick<CryptoIconProps, 'theme'>>`
-  border-radius: 50%;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;

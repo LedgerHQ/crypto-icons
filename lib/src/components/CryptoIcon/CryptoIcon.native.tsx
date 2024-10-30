@@ -8,18 +8,20 @@ import { CryptoIconProps } from './CryptoIcon.types';
 const Icon = styled(RoundedIcon)<{ hasNetwork: boolean }>`
   height: 100%;
   width: 100%;
-  ${({ hasNetwork }) =>
-    hasNetwork
-      ? 'mask-image: radial-gradient(circle closest-side at 81.5% 81.5%, transparent 125%, white 130%);'
-      : ''}
 `;
 
-const NetworkIcon = styled(RoundedIcon)<Pick<CryptoIconProps, 'size'>>`
-  height: calc(${({ size }) => size} / 2.8);
-  width: calc(${({ size }) => size} / 2.8);
+const NetworkIcon = styled(RoundedIcon)<{ size: number }>`
+  height: ${({ size }) => size}px;
+  width: ${({ size }) => size}px;
   position: absolute;
   right: 0px;
   bottom: 0px;
+`;
+
+const SkeletonIcon = styled(RoundedIcon)`
+  background-color: #c71616;
+  height: 100%;
+  width: 100%;
 `;
 
 const CryptoIcon: React.FC<CryptoIconProps> = ({
@@ -52,7 +54,14 @@ const CryptoIcon: React.FC<CryptoIconProps> = ({
     loadIcon();
   }, [network, ledgerId]);
 
-  if (loading) return null;
+  const networkIconSize = parseInt(size, 10) / 2.8;
+
+  if (loading)
+    return (
+      <IconWrapper size={size} theme={theme}>
+        <SkeletonIcon />
+      </IconWrapper>
+    );
 
   return (
     <IconWrapper size={size} theme={theme}>
@@ -66,7 +75,13 @@ const CryptoIcon: React.FC<CryptoIconProps> = ({
       ) : (
         <FallbackIcon ticker={ticker} size={size} />
       )}
-      {networkUrl ? <NetworkIcon theme={theme} size={size} source={{ uri: networkUrl }} /> : null}
+      {networkUrl ? (
+        <NetworkIcon
+          theme={theme}
+          size={networkIconSize}
+          source={{ uri: networkUrl, cache: 'only-if-cached' }}
+        />
+      ) : null}
     </IconWrapper>
   );
 };
