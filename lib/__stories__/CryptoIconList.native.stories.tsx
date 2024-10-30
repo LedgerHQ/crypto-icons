@@ -1,12 +1,27 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
+import { View } from 'react-native';
 import iconsObj from '../../assets/index.json';
-import CryptoIcon from '../src/components/CryptoIcon';
+import CryptoIcon from '../src/components/CryptoIcon/CryptoIcon.native';
 
 const meta = {
-  title: 'CryptoIconListWeb',
+  title: 'CryptoIconListNative',
   component: CryptoIcon,
   argTypes: {
+    size: {
+      control: {
+        type: 'select',
+      },
+      options: ['16px', '24px', '32px', '40px', '56px', '64px'],
+      table: {
+        type: {
+          summary: 'radio',
+        },
+        defaultValue: {
+          summary: '56px',
+        },
+      },
+    },
     theme: {
       control: {
         type: 'radio',
@@ -33,10 +48,10 @@ const getNetworkFormLedgerId = (ledgerId: string) => {
   return ledgerIdSplit.length > 1 ? ledgerIdSplit[0] : undefined;
 };
 
-const Template: StoryFn = ({ theme = 'light' }) => {
+const Template: StoryFn = ({ theme = 'light', size = '56px' }) => {
   const [iconList, setIconList] = React.useState(ICONS);
   return (
-    <div style={{ backgroundColor: theme === 'light' ? '#FFFFFF' : '#1C1D1F' }}>
+    <View style={{ backgroundColor: theme === 'light' ? '#FFFFFF' : '#1C1D1F' }}>
       <input
         style={{
           margin: '40px',
@@ -49,44 +64,37 @@ const Template: StoryFn = ({ theme = 'light' }) => {
         placeholder="Search by ledger ID"
         onChange={(event) => setIconList(ICONS.filter(([key]) => key.includes(event.target.value)))}
       />
-      <div
-        style={{
-          padding: '0.5rem',
+        <View style={{
           display: 'flex',
           flexWrap: 'wrap',
           gap: '20px',
-          margin: '0px 40px',
-        }}
-      >
+          flexDirection: 'row',
+          margin: 40,
+          padding: 10,
+
+        }}>
         {iconList.map(([key, value]) => (
-          <div key={key}>
-            <div
-              style={{
-                marginBottom: '10px',
-              }}
-            >
-              <div
+          <View key={key}>
+            <View>
+              <View
                 style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: '10px',
-                  marginBottom: '10px',
-                }}
-                title={key}
-              >
+                }}>
                 <CryptoIcon
                   ledgerId={key}
                   ticker={value.icon}
-                  size="56px"
+                  size={size}
                   theme={theme}
                   network={getNetworkFormLedgerId(key)}
                 />
-              </div>
-            </div>
-          </div>
+              </View>
+            </View>
+          </View>
         ))}
-      </div>
-    </div>
+        </View>
+    </View>
   );
 };
 

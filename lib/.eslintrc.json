@@ -10,13 +10,7 @@
     "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "react",
-    "react-hooks",
-    "@typescript-eslint",
-    "import",
-    "prettier"
-  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "import", "prettier"],
   "rules": {
     "prettier/prettier": "warn",
     "react/react-in-jsx-scope": "off",
@@ -34,20 +28,14 @@
     "import/order": [
       "warn",
       {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index"
-        ]
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"]
       }
     ]
   },
   "settings": {
     "react": {
       "version": "detect"
-    }
+    },
+    "import/ignore": ["react-native"]
   }
 }
