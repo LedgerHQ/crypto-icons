@@ -2,11 +2,6 @@ name: Publish branch with JFrog
 
 on:
   workflow_dispatch:
-    inputs:
-      branch:
-        description: "Branch to publish"
-        required: true
-        default: "main"
 
 permissions:
   id-token: write
@@ -42,15 +37,6 @@ jobs:
       - name: Create tarball for attestation
         run: |
           echo "TARBALL=$(pnpm pack --pack-destination dist)" >> $GITHUB_ENV
-
-      - name: Get PR name
-        id: get-pr-name
-        run: echo "PR_NAME=${{ github.event.inputs.branch }}" >> $GITHUB_ENV
-
-      - name: Rename tarball with PR name
-        run: |
-          TARBALL=$(echo $TARBALL | sed "s/\.tgz/-${PR_NAME}.tgz/")
-          echo "TARBALL=${TARBALL}" >> $GITHUB_ENV
 
       - name: Attest tarball
         uses: LedgerHQ/actions-security/actions/attest@actions/attest-1
