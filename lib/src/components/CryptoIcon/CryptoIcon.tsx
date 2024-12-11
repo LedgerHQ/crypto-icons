@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { getIconUrl } from '../../iconMapping';
 import FallbackIcon from '../FallbackIcon/FallbackIcon';
-import IconWrapper, { RoundedIcon } from '../IconWrapper/IconWrapper';
+import IconWrapper, { RoundedIcon, Skeleton } from '../IconWrapper/IconWrapper';
 import { CryptoIconProps } from './CryptoIcon.types';
 
 const Icon = styled(RoundedIcon)<{ hasNetwork: boolean }>`
@@ -52,7 +52,7 @@ const CryptoIcon: FC<CryptoIconProps> = ({
     loadIcon();
   }, [network, ledgerId]);
 
-  if (loading) return null;
+  if (loading) return <Skeleton size={size} theme={theme} />;
 
   return (
     <IconWrapper size={size} theme={theme}>

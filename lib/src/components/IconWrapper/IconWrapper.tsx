@@ -26,6 +26,14 @@ export const RoundedIcon = styled.img<Pick<CryptoIconProps, 'theme'>>`
 }
 `;
 
+export const Skeleton = styled.div<Pick<CryptoIconProps, 'size' | 'theme'>>`
+  height: ${({ size }) => size};
+  width: ${({ size }) => size};
+  border-radius: 50%;
+  background-color: ${({ theme }: { theme: 'dark' | 'light' }) =>
+    palettes[theme].opacityDefault.c05};
+`;
+
 const IconWrapper: FC<IconWrapperProps> = ({ children, size, theme }) => (
   <Wrapper size={size} theme={theme}>
     {children}
