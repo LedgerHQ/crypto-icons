@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "lib/**"
+  workflow_dispatch:
 
 permissions:
   id-token: write
