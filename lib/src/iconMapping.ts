@@ -1,5 +1,4 @@
 import { Currency } from '@ledgerhq/wallet-api-client';
-import axios from 'axios';
 import { COINGECKO_MAPPED_ASSETS_URL, CRYPTO_ICONS_CDN_BASE } from './constants';
 
 export type LedgerMapping = {
@@ -26,8 +25,13 @@ let fetchingCoinGeckoMapping: boolean = false;
 let cryptoIconsFetchPromise: CryptoIconsFetchPromise = null;
 
 const fetchIconMapping = async (url: string) => {
-  const { data } = await axios.get(url);
-  return data;
+  const res = await fetch(url);
+
+  if (!res.ok) {
+    throw new Error(`Response status: ${res.status}`);
+  }
+
+  return res.json();
 };
 
 const setLedgerIconMapping = async () => {

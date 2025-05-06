@@ -63,9 +63,6 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^7.17.0
         version: 7.17.0(eslint@8.57.0)(typescript@5.5.4)
-      axios:
-        specifier: ^1.6.0
-        version: 1.7.2
       eslint:
         specifier: ^8.0
         version: 8.57.0
@@ -126,6 +123,9 @@ importers:
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
+      whatwg-fetch:
+        specifier: ^3.6.20
+        version: 3.6.20
 
 packages:
 
@@ -1900,9 +1900,6 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axios@1.7.2:
-    resolution: {integrity: sha512-2A8QhOMrbomlDuiLeK9XibIBzuHeRcqqNOHp0Cyp5EoJ1IFDh+XZH3A6BkXtv0K4gFGCI0Y4BM7B1wOEi0Rmgw==}
-
   babel-core@7.0.0-bridge.0:
     resolution: {integrity: sha512-poPX9mZH/5CSanm50Q+1toVci6pv5KSRv/5TWCwtzQS5XEwn40BcCrgIeMFWP9CKKIniKXNxoIOnOq4VVlGXhg==}
     peerDependencies:
@@ -2747,15 +2744,6 @@ packages:
   flow-parser@0.241.0:
     resolution: {integrity: sha512-82yKXpz7iWknWFsognZUf5a6mBQLnVrYoYSU9Nbu7FTOpKlu3v9ehpiI9mYXuaIO3J0ojX1b83M/InXvld9HUw==}
     engines: {node: '>=0.4.0'}
-
-  follow-redirects@1.15.6:
-    resolution: {integrity: sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
 
   for-each@0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
@@ -4025,9 +4013,6 @@ packages:
     resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==}
     engines: {node: '>= 0.10'}
 
-  proxy-from-env@1.1.0:
-    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
-
   psl@1.9.0:
     resolution: {integrity: sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==}
 
@@ -4811,6 +4796,9 @@ packages:
   whatwg-encoding@2.0.0:
     resolution: {integrity: sha512-p41ogyeMUrw3jWclHWTQg1k05DSVXPLcVxRTYsXUk+ZooOCZLcoYgPZ/HL/D/N+uQPOtcp1me1WhBEaX02mhWg==}
     engines: {node: '>=12'}
+
+  whatwg-fetch@3.6.20:
+    resolution: {integrity: sha512-EqhiFU6daOA8kpjOWTL0olhVOF3i7OrFzSYiGsEMB8GcXS+RrzauAERX65xMeNWVqxA6HXH2m69Z9LaKKdisfg==}
 
   whatwg-mimetype@3.0.0:
     resolution: {integrity: sha512-nt+N2dzIutVRxARx1nghPKGv1xHikU7HKdfafKkLNLindmPU/ch3U31NOCGGA/dmPcmb1VlofO0vnKAcsm0o/Q==}
@@ -7106,14 +7094,6 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  axios@1.7.2:
-    dependencies:
-      follow-redirects: 1.15.6
-      form-data: 4.0.0
-      proxy-from-env: 1.1.0
-    transitivePeerDependencies:
-      - debug
-
   babel-core@7.0.0-bridge.0(@babel/core@7.24.9):
     dependencies:
       '@babel/core': 7.24.9
@@ -8159,8 +8139,6 @@ snapshots:
   flatted@3.3.1: {}
 
   flow-parser@0.241.0: {}
-
-  follow-redirects@1.15.6: {}
 
   for-each@0.3.3:
     dependencies:
@@ -9642,8 +9620,6 @@ snapshots:
       forwarded: 0.2.0
       ipaddr.js: 1.9.1
 
-  proxy-from-env@1.1.0: {}
-
   psl@1.9.0: {}
 
   punycode@1.4.1: {}
@@ -10550,6 +10526,8 @@ snapshots:
   whatwg-encoding@2.0.0:
     dependencies:
       iconv-lite: 0.6.3
+
+  whatwg-fetch@3.6.20: {}
 
   whatwg-mimetype@3.0.0: {}
 
