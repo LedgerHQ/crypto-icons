@@ -11,6 +11,9 @@
   "mantle": {
     "icon": "MNT.png"
   },
+  "polygon_zk_evm": {
+    "icon": "MATIC.png"
+  },
   "optimism": {
     "icon": "OP.png"
   },
@@ -19,6 +22,27 @@
   },
   "zksync": {
     "icon": "ZKSYNC.png"
+  },
+  "centrifuge": {
+    "icon": "CFG.png"
+  },
+  "ethereum_pow": {
+    "icon": "ETHW.png"
+  },
+  "terra": {
+    "icon": "LUNA.png"
+  },
+  "hive": {
+    "icon": "HIVE.png"
+  },
+  "kadena": {
+    "icon": "KDA.png"
+  },
+  "neutron": {
+    "icon": "NTRN.png"
+  },
+  "nem": {
+    "icon": "XEM.png"
   },
   "scroll": {
     "icon": "SCROLL.png"
@@ -50,7 +74,40 @@
   "waves": {
     "icon": "WAVES.png"
   },
+  "ethereum/erc20/waves": {
+    "icon": "WAVES.png"
+  },
+  "babylon": {
+    "icon": "BABY.png"
+  },
+  "aleph_zero": {
+    "icon": "AZERO.png"
+  },
+  "peercoin": {
+    "icon": "PPC.png"
+  },
+  "qtum": {
+    "icon": "QTUM.png"
+  },
+  "ravencoin": {
+    "icon": "RVN.png"
+  },
+  "siacoin": {
+    "icon": "SC.png"
+  },
+  "stride": {
+    "icon": "STRD.png"
+  },
+  "radix": {
+    "icon": "XRD.png"
+  },
+  "zilliqa": {
+    "icon": "ZIL.png"
+  },
   "algorand/asa/312769": {
+    "icon": "USDT.png"
+  },
+  "aptos/fungible_asset/tether_usd_0x357b0b74bc833e95a115ad22604854d6b0fca151cecd94111770e5d6ffc9dc2b": {
     "icon": "USDT.png"
   },
   "avalanche_c_chain/erc20/tethertoken": {
@@ -63,6 +120,45 @@
     "icon": "USDT.png"
   },
   "tron/trc20/tr7nhqjekqxgtci8q8zy4pl8otszgjlj6t": {
+    "icon": "USDT.png"
+  },
+  "arbitrum/erc20/tether_usd": {
+    "icon": "USDT.png"
+  },
+  "astar/erc20/tether_usd": {
+    "icon": "USDT.png"
+  },
+  "bsc/bep20/binance-peg_bsc-usd": {
+    "icon": "USDT.png"
+  },
+  "celo/erc20/tether_usd_0x48065fbbe25f71c9282ddf5e1cd6d6a887483d5e": {
+    "icon": "USDT.png"
+  },
+  "cronos/erc20/tether_usd": {
+    "icon": "USDT.png"
+  },
+  "fantom/erc20/tether_usd": {
+    "icon": "USDT.png"
+  },
+  "linea/erc20/tether_usd": {
+    "icon": "USDT.png"
+  },
+  "neon_evm/erc20/usdt": {
+    "icon": "USDT.png"
+  },
+  "optimism/erc20/tether_usd": {
+    "icon": "USDT.png"
+  },
+  "polygon/erc20/(pos)_tether_usd": {
+    "icon": "USDT.png"
+  },
+  "polygon_zk_evm/erc20/tether_usd": {
+    "icon": "USDT.png"
+  },
+  "scroll/erc20/tether_usd": {
+    "icon": "USDT.png"
+  },
+  "ton/jetton/eqcxe6mutqjkfngfarotkot1lzbdiix1kcixrv7nw2id_sds": {
     "icon": "USDT.png"
   },
   "binance_beacon_chain": {
@@ -191,8 +287,11 @@
   "optimism/erc20/uniswap": {
     "icon": "UNI.png"
   },
-  "lpolygon/erc20/uniswap_(pos)": {
+  "polygon/erc20/uniswap_(pos)": {
     "icon": "UNI.png"
+  },
+  "polygon": {
+    "icon": "MATIC.png"
   },
   "ethereum/erc20/polygon_ecosystem_token": {
     "icon": "MATIC.png"
@@ -207,9 +306,6 @@
     "icon": "MATIC.png"
   },
   "polygon/erc20/matic_token": {
-    "icon": "MATIC.png"
-  },
-  "polygon": {
     "icon": "MATIC.png"
   },
   "arbitrum/erc20/wrapped_btc": {
@@ -374,6 +470,12 @@
   "polygon/erc20/aave_(pos)": {
     "icon": "AAVE.png"
   },
+  "base/erc20/aave_token_0x63706e401c06ac8513145b7687a14804d17f814b": {
+    "icon": "AAVE.png"
+  },
+  "arbitrum/erc20/aave_token_0xba5ddd1f9d7f570dc94a51479a000e3bce967196": {
+    "icon": "AAVE.png"
+  },
   "arbitrum/erc20/arbitrum": {
     "icon": "ARB.png"
   },
@@ -418,9 +520,6 @@
   },
   "ethereum/erc20/wbt": {
     "icon": "WBT.png"
-  },
-  "bsc/bep20/binance-peg_ethereum_token": {
-    "icon": "WETH.png"
   },
   "arbitrum/erc20/rocket_pool_eth": {
     "icon": "RETH.png"
@@ -519,6 +618,24 @@
     "icon": "LDO.png"
   },
   "WETH": {
+    "icon": "WETH.png"
+  },
+  "arbitrum/erc20/wrapped_ether": {
+    "icon": "WETH.png"
+  },
+  "bsc/bep20/binance-peg_ethereum_token": {
+    "icon": "WETH.png"
+  },
+  "neon_evm/erc20/wrapped_eth": {
+    "icon": "WETH.png"
+  },
+  "blast/erc20/weth": {
+    "icon": "WETH.png"
+  },
+  "polygon/erc20/wrapped_ether": {
+    "icon": "WETH.png"
+  },
+  "base/erc20/wrapped_ether": {
     "icon": "WETH.png"
   },
   "ethereum/erc20/quant": {
@@ -638,9 +755,6 @@
   "ethereum/erc20/tether_gold": {
     "icon": "XAUt.png"
   },
-  "arbitrum/erc20/wrapped_ether": {
-    "icon": "WETH.png"
-  },
   "bsc/bep20/binance-peg_ecash_token": {
     "icon": "XEC.png"
   },
@@ -731,9 +845,6 @@
   "polygon/erc20/decentraland": {
     "icon": "MANA.png"
   },
-  "blast/erc20/weth": {
-    "icon": "WETH.png"
-  },
   "ethereum/erc20/paxos_gold": {
     "icon": "PAXG.png"
   },
@@ -768,6 +879,24 @@
     "icon": "CAKE.png"
   },
   "ethereum/erc20/pancakeswap_token": {
+    "icon": "CAKE.png"
+  },
+  "aptos/coin/pancakeswap_token_0x159df6b7689437016108a019fd5bef736bac692b6d4a1f10c941f6fbb9a74ca6::oft::cakeoft": {
+    "icon": "CAKE.png"
+  },
+  "arbitrum/erc20/pancakeswap_token": {
+    "icon": "CAKE.png"
+  },
+  "polygon_zk_evm/erc20/pancakeswap_token_0x0d1e753a25ebda689453309112904807625befbe": {
+    "icon": "CAKE.png"
+  },
+  "zksync/erc20/pancakeswap_token_0x3a287a06c66f9e95a56327185ca2bdf5f031cecd": {
+    "icon": "CAKE.png"
+  },
+  "linea/erc20/pancakeswap_token": {
+    "icon": "CAKE.png"
+  },
+  "base/erc20/pancakeswap_token": {
     "icon": "CAKE.png"
   },
   "zcash": {
@@ -839,9 +968,6 @@
   "polygon/erc20/usd_coin_(pos)": {
     "icon": "USDC.png"
   },
-  "polygon/erc20/wrapped_ether": {
-    "icon": "WETH.png"
-  },
   "bitcoin_gold": {
     "icon": "BTG.png"
   },
@@ -850,9 +976,6 @@
   },
   "ethereum/erc20/safepaltoken": {
     "icon": "SFP.png"
-  },
-  "base/erc20/wrapped_ether": {
-    "icon": "WETH.png"
   },
   "arbitrum/erc20/sweth": {
     "icon": "SWETH.png"
@@ -941,7 +1064,10 @@
   "avalanche_c_chain/erc20/wootrade_network": {
     "icon": "WOO.png"
   },
-  "sc/bep20/wootrade_network": {
+  "bsc/bep20/wootrade_network": {
+    "icon": "WOO.png"
+  },
+  "linea/erc20/woo_0xf3df0a31ec5ea438150987805e841f960b9471b6": {
     "icon": "WOO.png"
   },
   "ethereum/erc20/wootrade_network": {
@@ -1154,10 +1280,10 @@
   "polygon_zk_evm/erc20/kyber_network_crystal_v2_0x6a80a465409ce8d36c513129c0feea61bed579ba": {
     "icon": "KNC.png"
   },
-  "solana/spl/jupyiwryjfskupiha7hker8vutaefosybkedznsdvcn": {
+  "bsc/bep20/bsc_wrapped_jupiter": {
     "icon": "JUP.png"
   },
-  "solana/spl/27g8mtk7vttcchkpasjsddkwwyfoqt6ggeukidvjidd4": {
+  "ethereum/erc20/jupiter": {
     "icon": "JUP.png"
   },
   "arbitrum/erc20/kujira_native_asset": {
@@ -1247,17 +1373,11 @@
   "ethereum/erc20/spectre_ai": {
     "icon": "SPECTRE.png"
   },
-  "ethereum/erc20/waves": {
-    "icon": "WAVES.png"
-  },
   "bsc/bep20/zeta": {
     "icon": "ZETA.png"
   },
   "ethereum/erc20/zeta": {
     "icon": "ZETA.png"
-  },
-  "ethereum/erc20/nexus_mutual": {
-    "icon": "NXM.png"
   },
   "ethereum/erc20/_pixel": {
     "icon": "PIXEL.png"
@@ -1294,5 +1414,134 @@
   },
   "ethereum/erc20/skale": {
     "icon": "SKL.png"
+  },
+  "arbitrum/erc20/savings_usds_0xddb46999f8891663a8f2828d25298f70416d7610": {
+    "icon": "SUSDS.png"
+  },
+  "base/erc20/savings_usds_0x5875eee11cf8398102fdad704c9e96607675467a": {
+    "icon": "SUSDS.png"
+  },
+  "ethereum/erc20/savings_usds_0xa3931d71877c0e7a3148cb7eb4463524fec27fbd": {
+    "icon": "SUSDS.png"
+  },
+  "ethereum/erc20/dexe": {
+    "icon": "DEXE.png"
+  },
+  "ethereum/erc20/aragon_network_token": {
+    "icon": "ANT.png"
+  },
+  "avalanche_c_chain/erc20/basic_attention_token_(bridged)": {
+    "icon": "BAT.png"
+  },
+  "bsc/bep20/binance-peg_basic_attention_token": {
+    "icon": "BAT.png"
+  },
+  "ethereum/erc20/bat": {
+    "icon": "BAT.png"
+  },
+  "polygon/erc20/bat": {
+    "icon": "BAT.png"
+  },
+  "ethereum/erc20/wrapped_centrifuge": {
+    "icon": "CFG.png"
+  },
+  "bsc/bep20/murasaki": {
+    "icon": "MURA.png"
+  },
+  "solana/spl/hhjpbhrrn4g56vsylut8dl5bv31hkxqsrahttuczezg4": {
+    "icon": "MIRO.png"
+  },
+  "bsc/bep20/nfprompt_ai_token_0x551897f8203bd131b350601d3ac0679ba0fc0136": {
+    "icon": "NFP.png"
+  },
+  "ethereum/erc20/nexus_mutual": {
+    "icon": "nxm.png"
+  },
+  "ethereum/erc20/omg": {
+    "icon": "OMG.png"
+  },
+  "ethereum/erc20/orbler": {
+    "icon": "ORBR.png"
+  },
+  "ethereum/erc20/open_exchange_token": {
+    "icon": "OX.png"
+  },
+  "polygon/erc20/open_exchange_token": {
+    "icon": "OX.png"
+  },
+  "ethereum/erc20/paxos_standard__pax_": {
+    "icon": "PAX.png"
+  },
+  "linea/erc20/pax_dollar": {
+    "icon": "PAX.png"
+  },
+  "ethereum/erc20/_portal": {
+    "icon": "PORTAL.png"
+  },
+  "ethereum/erc20/powerledger": {
+    "icon": "POWR.png"
+  },
+  "ethereum/erc20/ribbon": {
+    "icon": "RBN.png"
+  },
+  "ethereum/erc20/request_network": {
+    "icon": "REQ.png"
+  },
+  "polygon/erc20/request": {
+    "icon": "REQ.png"
+  },
+  "bsc/bep20/wrapped_rose": {
+    "icon": "ROSE.png"
+  },
+  "ethereum/erc20/oasis_labs": {
+    "icon": "ROSE.png"
+  },
+  "ethereum/erc20/dai_stablecoin_v1_0": {
+    "icon": "SAI.png"
+  },
+  "ethereum/erc20/status_network_token": {
+    "icon": "SNT.png"
+  },
+  "ethereum/erc20/ssv_token": {
+    "icon": "SSV.png"
+  },
+  "base/erc20/threshold_network_token_0x26f3901ac8a79c50fb0d8289c74f0d09adc42e29": {
+    "icon": "T.png"
+  },
+  "ethereum/erc20/threshold_network_token": {
+    "icon": "T.png"
+  },
+  "optimism/erc20/threshold_network_token_0x747e42eb0591547a0ab429b3627816208c734ea7": {
+    "icon": "T.png"
+  },
+  "base/erc20/telcoin_0x09be1692ca16e06f536f0038ff11d1da8524adb1": {
+    "icon": "TEL.png"
+  },
+  "ethereum/erc20/telcoin": {
+    "icon": "TEL.png"
+  },
+  "polygon/erc20/telcoin": {
+    "icon": "TEL.png"
+  },
+  "ethereum/erc20/yieldly": {
+    "icon": "YLDY.png"
+  },
+  "base/erc20/zeebu": {
+    "icon": "ZBU.png"
+  },
+  "bsc/bep20/zeebu": {
+    "icon": "ZBU.png"
+  },
+  "bsc/bep20/zilliqa": {
+    "icon": "ZIL.png"
+  },
+  "ethereum/erc20/runesbridge": {
+    "icon": "RB.png"
+  },
+  "ethereum/erc20/eigen": {
+    "icon": "EIGEN.png"
+  },
+  "arbitrum/erc20/stargatetoken": {
+    "icon": "STG.png"
   }
 }
