@@ -16,6 +16,7 @@ const iconSizeToFontSize: {
   [key in NonNullable<FallbackIconProps['size']>]: string;
 } = {
   '16px': '10px',
+  '20px': '12px',
   '24px': '14px',
   '32px': '16px',
   '40px': '18px',
