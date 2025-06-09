@@ -2,6 +2,8 @@ import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 import iconsObj from '../../assets/index.json';
 import CryptoIcon from '../src/components/CryptoIcon';
+import type { CryptoIconProps } from '../src/components/CryptoIcon/CryptoIcon.types';
+import type { AssertExhaustive } from '../src/helpers.types';
 
 const meta = {
   title: 'CryptoIconList',
@@ -237,6 +239,21 @@ const SingleIcon: StoryFn<typeof CryptoIcon> = (args) => {
   );
 };
 
+const CRYPTO_ICON_SIZE_OPTIONS = [
+  undefined,
+  '16px',
+  '20px',
+  '24px',
+  '32px',
+  '40px',
+  '48px',
+  '56px',
+] as const satisfies CryptoIconProps['size'][];
+const _assertCryptoIconSizeOptions: AssertExhaustive<
+  (typeof CRYPTO_ICON_SIZE_OPTIONS)[number],
+  CryptoIconProps['size']
+> = true;
+
 export const AllLedgerIcons: StoryFn = Template.bind({});
 export const OrderedLedgerIcons: StoryFn = OrderedTemplate.bind({});
 export const SingleLedgerIcon: StoryFn = SingleIcon.bind({});
@@ -257,7 +274,8 @@ SingleLedgerIcon.argTypes = {
     description: 'The ticker symbol of the icon',
   },
   size: {
-    control: 'text',
+    control: 'select',
+    options: CRYPTO_ICON_SIZE_OPTIONS,
     description: 'The size of the icon',
     defaultValue: '56px',
   },
