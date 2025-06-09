@@ -3,7 +3,7 @@ import React from 'react';
 import iconsObj from '../../assets/index.json';
 import CryptoIcon from '../src/components/CryptoIcon';
 import type { CryptoIconProps } from '../src/components/CryptoIcon/CryptoIcon.types';
-import type { AssertExhaustive } from '../src/typing.types';
+import type { AssertExhaustive } from '../src/helpers.types';
 
 const meta = {
   title: 'CryptoIconList',
