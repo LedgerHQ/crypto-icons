@@ -18,5 +18,5 @@ export type AssertExhaustive<
 > = [A] extends [B]
   ? [B] extends [A]
     ? true
-    : `Type B is missing: ${Exclude<B, A>}`
-  : `Type A is missing: ${Exclude<A, B>}`;
+    : `Type A is missing: ${Exclude<B, A>}`
+  : `Type B is missing: ${Exclude<A, B>}`;
