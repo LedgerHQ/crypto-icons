@@ -6,18 +6,26 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "react-native": "dist/index.native.js",
   "files": [
-    "dist"
+    "dist",
+    "native.js",
+    "native.d.ts"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "npm run build:web && npm run build:native",
+    "build:web": "rollup -c rollup.config.mjs",
+    "build:native": "rollup -c rollup.config.native.mjs",
     "test": "jest",
     "test:watch": "jest --watch",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "storybook:react": "storybook dev -p 6006",
+    "storybook:native": "storybook dev -p 6007 -c .storybook-rn",
+    "build-storybook:react": "storybook build",
+    "build-storybook:native": "storybook build -c .storybook-rn",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
-    "checkMapping": "node scripts/checkMapping.js"
+    "checkMapping": "node scripts/checkMapping.js",
+    "storybook-generate": "sb-rn-get-stories"
   },
   "dependencies": {
     "@ledgerhq/ui-shared": "^0.2.1"
@@ -29,6 +37,8 @@
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-url": "^8.0.2",
     "@storybook/addon-controls": "8.2.6",
+    "@storybook/addon-essentials": "8.2.6",
+    "@storybook/addon-react-native-web": "^0.0.21",
     "@storybook/addon-webpack5-compiler-swc": "^1.0.4",
     "@storybook/react": "^8.2.6",
     "@storybook/react-webpack5": "^8.2.6",
@@ -40,6 +50,7 @@
     "@types/styled-components": "^5.1.34",
     "@typescript-eslint/eslint-plugin": "^7.17.0",
     "@typescript-eslint/parser": "^7.17.0",
+    "babel-loader": "^10.0.0",
     "eslint": "^8.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
@@ -53,6 +64,8 @@
     "prettier-plugin-organize-imports": "^4.0.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-native-svg": "^15.12.0",
+    "react-native-web": "^0.20.0",
     "rollup": "^4.19.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.36.0",
@@ -65,7 +78,19 @@
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18",
+    "react-native": ">=0.70",
     "styled-components": ">=5.3.3"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": {
+      "optional": true
+    },
+    "styled-components": {
+      "optional": true
+    },
+    "react-native": {
+      "optional": true
+    }
   },
   "packageManager": "pnpm@9.6.0"
 }
