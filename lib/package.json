@@ -13,7 +13,7 @@
     "native.d.ts"
   ],
   "scripts": {
-    "build": "npm run build:web && npm run build:native",
+    "build": "pnpm build:web && pnpm build:native",
     "build:web": "rollup -c rollup.config.mjs",
     "build:native": "rollup -c rollup.config.native.mjs",
     "test": "jest",
@@ -64,7 +64,6 @@
     "prettier-plugin-organize-imports": "^4.0.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-native-svg": "^15.12.0",
     "react-native-web": "^0.20.0",
     "rollup": "^4.19.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",

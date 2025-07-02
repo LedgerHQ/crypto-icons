@@ -21,4 +21,5 @@ export type CryptoIconNativeProps = {
   theme?: ThemeNames;
   size?: 16 | 20 | 24 | 32 | 40 | 48 | 56;
   network?: Currency['id'];
+  backgroundColor?: string;
 };

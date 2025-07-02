@@ -40,6 +40,8 @@ const MyComponent = () => {
       <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={32} />
       <CryptoIcon ledgerId="ethereum" ticker="ETH" size={48} theme="dark" />
       <CryptoIcon ledgerId="ethereum/erc20/usd_tether__erc20_" ticker="USDT" network="ethereum"/>
+      {/* Custom background color for network badge (React Native only) */}
+      <CryptoIcon ledgerId="ethereum/erc20/usd_tether__erc20_" ticker="USDT" network="ethereum" backgroundColor="#FF6B6B"/>
     </>
   )
 }
@@ -125,7 +127,14 @@ pnpm lint:fix # to find and fix issues
 ### Build package with Rollup
 
 ```bash
+# Build both platforms
 pnpm build
+
+# Build web only
+pnpm build:web
+
+# Build React Native only
+pnpm build:native
 ```
 
 ### Test locally

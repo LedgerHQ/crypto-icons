@@ -1,7 +1,7 @@
 import { palettes } from '@ledgerhq/ui-shared';
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import { ActivityIndicator, Image, ImageStyle, View, ViewStyle } from 'react-native';
-import { getIconUrl } from '../../iconMapping';
+import { useCryptoIcon } from '../../hooks/useCryptoIcon';
 import FallbackIconNative from '../FallbackIcon/FallbackIcon.native';
 import { CryptoIconNativeProps } from './CryptoIcon.types';
 
@@ -11,33 +11,15 @@ const CryptoIconNative: FC<CryptoIconNativeProps> = ({
   size = 16,
   theme = 'dark',
   network,
+  backgroundColor,
 }) => {
-  const [iconUrl, setIconUrl] = useState<string | null>(null);
-  const [networkUrl, setNetworkUrl] = useState<string | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [hasError, setHasError] = useState<boolean>(false);
+  const { iconUrl, networkUrl, loading, hasError, setHasError } = useCryptoIcon({
+    ledgerId,
+    network,
+  });
 
-  useEffect(() => {
-    const loadIcon = async () => {
-      setNetworkUrl(null);
-      setHasError(false);
-      const iconsToResolve = [getIconUrl(ledgerId)];
-      if (network) iconsToResolve.push(getIconUrl(network));
-
-      try {
-        const [url, networkUrlResolved] = await Promise.all(iconsToResolve);
-        setIconUrl(url);
-        if (network && networkUrlResolved) setNetworkUrl(networkUrlResolved);
-      } catch (e) {
-        console.error(e);
-        setHasError(true);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadIcon();
-  }, [network, ledgerId]);
+  const defaultBackgroundColor = palettes[theme].background.main;
+  const finalBackgroundColor = backgroundColor || defaultBackgroundColor;
 
   const containerStyle: ViewStyle = {
     width: size,
@@ -62,7 +44,7 @@ const CryptoIconNative: FC<CryptoIconNativeProps> = ({
     width: container,
     height: container,
     borderRadius: (networkIconSize + 8) / 2,
-    backgroundColor: palettes[theme].background.main,
+    backgroundColor: finalBackgroundColor,
   };
 
   const networkIconStyle: ImageStyle = {
