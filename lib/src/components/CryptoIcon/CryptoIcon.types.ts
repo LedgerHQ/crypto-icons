@@ -11,3 +11,15 @@ export type CryptoIconProps = {
   size?: '16px' | '20px' | '24px' | '32px' | '40px' | '48px' | '56px';
   network?: Currency['id'];
 };
+
+/**
+ * React Native specific props with numeric sizes
+ */
+export type CryptoIconNativeProps = {
+  ledgerId: Currency['id'];
+  ticker: Currency['ticker'];
+  theme?: ThemeNames;
+  size?: 16 | 20 | 24 | 32 | 40 | 48 | 56;
+  network?: Currency['id'];
+  backgroundColor?: string;
+};

@@ -25,6 +25,40 @@ const Page = () => {
 }
 ```
 
+## React Native Usage
+
+The package supports React Native through platform-specific components and automatic resolution:
+
+### Automatic Import (Recommended)
+
+```JSX
+import { CryptoIcon } from '@ledgerhq/crypto-icons';
+
+const MyComponent = () => {
+  return (
+    <>
+      <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={32} />
+      <CryptoIcon ledgerId="ethereum" ticker="ETH" size={48} theme="dark" />
+      <CryptoIcon ledgerId="ethereum/erc20/usd_tether__erc20_" ticker="USDT" network="ethereum"/>
+      {/* Custom background color for network badge (React Native only) */}
+      <CryptoIcon ledgerId="ethereum/erc20/usd_tether__erc20_" ticker="USDT" network="ethereum" backgroundColor="#FF6B6B"/>
+    </>
+  )
+}
+```
+
+### Explicit React Native Import
+
+```JSX
+import CryptoIcon from '@ledgerhq/crypto-icons/native';
+
+const MyComponent = () => {
+  return (
+    <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={32} theme="light" />
+  )
+}
+```
+
 ## Icon sources
 
 The component's primary source of icons is Ledger's CDN which contains the [assets](../assets/index.json) from this repository. It attempts to fetch a [mapping from Ledger's CDN](https://crypto-icons.ledger.com/index.json) and if the ledgerId that is passed in as a prop to the component is found, the URL for that key is used as the image source. You can see an up-to-date list of all available Ledger icons in this [Storybook](https://crypto-icons-storybook.pages.dev).
@@ -75,7 +109,11 @@ pnpm test:watch # to run in watch mode
 ### Run storybook
 
 ```bash
-pnpm storybook
+# React Web Storybook
+pnpm storybook:react
+
+# React Native Storybook
+pnpm storybook:native
 ```
 
 ### Lint
@@ -89,7 +127,14 @@ pnpm lint:fix # to find and fix issues
 ### Build package with Rollup
 
 ```bash
+# Build both platforms
 pnpm build
+
+# Build web only
+pnpm build:web
+
+# Build React Native only
+pnpm build:native
 ```
 
 ### Test locally
