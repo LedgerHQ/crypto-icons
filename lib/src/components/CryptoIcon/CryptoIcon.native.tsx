@@ -1,6 +1,6 @@
 import { palettes } from '@ledgerhq/ui-shared';
 import React, { FC } from 'react';
-import { ActivityIndicator, Image, ImageStyle, View, ViewStyle } from 'react-native';
+import { Image, ImageStyle, View, ViewStyle } from 'react-native';
 import { useCryptoIcon } from '../../hooks/useCryptoIcon';
 import FallbackIconNative from '../FallbackIcon/FallbackIcon.native';
 import { CryptoIconNativeProps } from './CryptoIcon.types';
@@ -13,7 +13,7 @@ const CryptoIconNative: FC<CryptoIconNativeProps> = ({
   network,
   backgroundColor,
 }) => {
-  const { iconUrl, networkUrl, loading, hasError, setHasError } = useCryptoIcon({
+  const { iconUrl, networkUrl, loading, error } = useCryptoIcon({
     ledgerId,
     network,
   });
@@ -63,19 +63,19 @@ const CryptoIconNative: FC<CryptoIconNativeProps> = ({
   };
 
   if (loading) {
-    return (
-      <View style={skeletonStyle}>
-        <ActivityIndicator size="small" color={palettes[theme].opacityDefault.c50} />
-      </View>
-    );
+    return <View style={skeletonStyle} />;
+  }
+
+  if (error) {
+    return <FallbackIconNative ticker={ticker} size={size} />;
   }
 
   return (
     <View style={containerStyle}>
-      {iconUrl && !hasError ? (
-        <Image source={{ uri: iconUrl }} style={iconStyle} onError={() => setHasError(true)} />
+      {iconUrl ? (
+        <Image source={{ uri: iconUrl }} style={iconStyle} />
       ) : (
-        <FallbackIconNative ticker={ticker} size={size} theme={theme} />
+        <FallbackIconNative ticker={ticker} size={size} />
       )}
       {networkUrl && (
         <View style={networkContainerStyle}>

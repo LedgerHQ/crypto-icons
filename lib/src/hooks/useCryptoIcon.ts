@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { getIconUrl } from '../iconMapping';
 
 interface UseCryptoIconProps {
@@ -10,43 +10,44 @@ interface UseCryptoIconReturn {
   iconUrl: string | null;
   networkUrl: string | null;
   loading: boolean;
-  hasError: boolean;
-  setHasError: (error: boolean) => void;
+  error: Error | null;
 }
 
 export const useCryptoIcon = ({ ledgerId, network }: UseCryptoIconProps): UseCryptoIconReturn => {
   const [iconUrl, setIconUrl] = useState<string | null>(null);
   const [networkUrl, setNetworkUrl] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
-  const [hasError, setHasError] = useState<boolean>(false);
+  const [error, setError] = useState<Error | null>(null);
+
+  const loadIcon = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    setNetworkUrl(null);
+
+    const iconsToResolve = [getIconUrl(ledgerId)];
+    if (network) iconsToResolve.push(getIconUrl(network));
+
+    try {
+      const [url, networkUrlResolved] = await Promise.all(iconsToResolve);
+      setIconUrl(url);
+      if (network && networkUrlResolved) setNetworkUrl(networkUrlResolved);
+    } catch (e) {
+      const errorInstance = e instanceof Error ? e : new Error('Failed to load icon');
+      setError(errorInstance);
+      console.error('Failed to load crypto icon:', errorInstance);
+    } finally {
+      setLoading(false);
+    }
+  }, [ledgerId, network]);
 
   useEffect(() => {
-    const loadIcon = async () => {
-      setNetworkUrl(null);
-      setHasError(false);
-      const iconsToResolve = [getIconUrl(ledgerId)];
-      if (network) iconsToResolve.push(getIconUrl(network));
-
-      try {
-        const [url, networkUrlResolved] = await Promise.all(iconsToResolve);
-        setIconUrl(url);
-        if (network && networkUrlResolved) setNetworkUrl(networkUrlResolved);
-      } catch (e) {
-        console.error(e);
-        setHasError(true);
-      } finally {
-        setLoading(false);
-      }
-    };
-
     loadIcon();
-  }, [network, ledgerId]);
+  }, [loadIcon]);
 
   return {
     iconUrl,
     networkUrl,
     loading,
-    hasError,
-    setHasError,
+    error,
   };
 };
