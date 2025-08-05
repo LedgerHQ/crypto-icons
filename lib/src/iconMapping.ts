@@ -86,7 +86,7 @@ const setCoinGeckoIconMapping = async () => {
   return cryptoIconsFetchPromise;
 };
 
-export const getIconUrl = async (ledgerId: Currency['id']) => {
+export const getIconUrl = async (ledgerId: Currency['id']): Promise<string | null> => {
   if (!ledgerMapping) {
     await setLedgerIconMapping();
   }
@@ -99,9 +99,9 @@ export const getIconUrl = async (ledgerId: Currency['id']) => {
     await setCoinGeckoIconMapping();
   }
 
-  const coinGeckoURL = coinGeckoMapping?.find((i) => i.ledgerId === ledgerId)?.data.img;
-  if (coinGeckoURL) {
-    return coinGeckoURL;
+  const coinGeckoAsset = coinGeckoMapping?.find((asset) => asset.ledgerId === ledgerId);
+  if (coinGeckoAsset?.data?.img) {
+    return coinGeckoAsset.data.img;
   }
 
   return null;
