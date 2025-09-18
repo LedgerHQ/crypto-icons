@@ -1,8 +1,15 @@
 import { Meta, StoryFn } from '@storybook/react';
-import React from 'react';
+import { useMemo, useState } from 'react';
 import iconsObj from '../../assets/index.json';
 import CryptoIconNative from '../src/components/CryptoIcon/CryptoIcon.native';
-import { Theme, dedupeByIcon, getNetworkFormLedgerId } from './common';
+import type { CryptoIconNativeProps } from '../src/components/CryptoIcon/CryptoIcon.types';
+import {
+  Theme,
+  dedupeByIcon,
+  filterIconsByQuery,
+  getNetworkFormLedgerId,
+  groupByTickerInitial,
+} from './common';
 import { styles, themedStyles } from './style';
 
 const meta = {
@@ -17,73 +24,105 @@ const meta = {
     },
   },
   argTypes: {
-    ledgerId: { control: { type: 'text' }, description: 'Ledger ID of the cryptocurrency' },
-    ticker: { control: { type: 'text' }, description: 'Ticker symbol of the cryptocurrency' },
-    size: {
-      control: { type: 'select' },
-      options: [16, 20, 24, 32, 40, 48, 56],
-      description: 'Icon size in pixels',
+    theme: {
+      control: { type: 'radio' },
+      options: ['dark', 'light'],
+      description: 'Icon theme',
+      table: {
+        type: { summary: 'radio' },
+        defaultValue: { summary: 'light' },
+      },
     },
-    theme: { control: { type: 'radio' }, options: ['dark', 'light'], description: 'Icon theme' },
-    network: { control: { type: 'text' }, description: 'Cryptocurrency network (optional)' },
+    showLabels: {
+      control: { type: 'boolean' },
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+      },
+      description: 'Show name, ticker, and network labels below icons',
+    },
   },
-} satisfies Meta<typeof CryptoIconNative>;
+} as Meta<any>;
 
 export default meta;
 
 const ICONS = Object.entries(iconsObj);
 
-const AllIconsTemplate: StoryFn<typeof CryptoIconNative> = ({ theme = 'light' as Theme }) => {
-  const [iconList, setIconList] = React.useState(ICONS);
+const AllIconsTemplate: StoryFn<CryptoIconNativeProps & { showLabels?: boolean }> = ({
+  theme = 'light' as Theme,
+  showLabels = false,
+}) => {
+  const [iconList, setIconList] = useState(ICONS);
 
   return (
     <div style={themedStyles.pageBg(theme)}>
       <input
         style={styles.searchInput}
         type="search"
-        placeholder="Search by ledger ID"
-        onChange={(event) => setIconList(ICONS.filter(([key]) => key.includes(event.target.value)))}
+        placeholder="Search by ledger ID or ticker"
+        onChange={(e) => setIconList(filterIconsByQuery(ICONS, e.target.value))}
       />
       <div style={styles.pageMargin}>
         <div style={styles.iconGrid}>
-          {iconList.map(([key, value]) => (
-            <div key={key}>
-              <div style={styles.iconCard}>
-                <div style={styles.iconRow} title={key}>
-                  <CryptoIconNative
-                    ledgerId={key}
-                    ticker={value.icon}
-                    size={56}
-                    theme={theme}
-                    network={getNetworkFormLedgerId(key)}
-                  />
+          {iconList.map(([key, value]) => {
+            const network = getNetworkFormLedgerId(key);
+            return (
+              <div key={key}>
+                <div style={styles.iconCard}>
+                  <div style={styles.iconRow} title={key}>
+                    <CryptoIconNative
+                      ledgerId={key}
+                      ticker={value.icon}
+                      size={56}
+                      theme={theme}
+                      network={network}
+                    />
+                  </div>
+                  {showLabels && (
+                    <div style={themedStyles.labelContainer()}>
+                      <div style={themedStyles.labelText(theme)} title={key}>
+                        {key}
+                      </div>
+                      <div style={themedStyles.labelText(theme)} title={value.icon}>
+                        {value.icon}
+                      </div>
+                      {network && (
+                        <div style={themedStyles.labelTextNetwork(theme)} title={network}>
+                          {network}
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
   );
 };
 
-const NoNetworkTemplate: StoryFn<typeof CryptoIconNative> = ({ theme = 'light' as Theme }) => {
-  const [search, setSearch] = React.useState('');
+const NoNetworkTemplate: StoryFn<CryptoIconNativeProps & { showLabels?: boolean }> = ({
+  theme = 'light' as Theme,
+  showLabels = false,
+}) => {
+  const [search, setSearch] = useState('');
 
-  const iconList = React.useMemo(() => {
-    return dedupeByIcon(
-      ICONS.filter(([key]) => key.includes(search)).filter(([key]) =>
-        Boolean(getNetworkFormLedgerId(key))
-      )
-    );
-  }, [search]);
+  const iconList = useMemo(
+    () =>
+      dedupeByIcon(
+        filterIconsByQuery(ICONS, search).filter(([key]) => Boolean(getNetworkFormLedgerId(key)))
+      ),
+    [search]
+  );
 
   return (
     <div style={themedStyles.pageBg(theme)}>
       <input
         style={styles.searchInput}
         type="search"
-        placeholder="Search by ledger ID"
+        placeholder="Search by ledger ID or ticker"
         onChange={(e) => setSearch(e.target.value)}
       />
       <div style={styles.pageMargin}>
@@ -94,6 +133,16 @@ const NoNetworkTemplate: StoryFn<typeof CryptoIconNative> = ({ theme = 'light' a
                 <div style={styles.iconRow} title={key}>
                   <CryptoIconNative ledgerId={key} ticker={value.icon} size={56} theme={theme} />
                 </div>
+                {showLabels && (
+                  <div style={themedStyles.labelContainer()}>
+                    <div style={themedStyles.labelText(theme)} title={key}>
+                      {key}
+                    </div>
+                    <div style={themedStyles.labelText(theme)} title={value.icon}>
+                      {value.icon}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -103,28 +152,21 @@ const NoNetworkTemplate: StoryFn<typeof CryptoIconNative> = ({ theme = 'light' a
   );
 };
 
-const OrderedTemplate: StoryFn<typeof CryptoIconNative> = ({ theme = 'light' as Theme }) => {
-  const [iconList, setIconList] = React.useState(ICONS);
+const OrderedTemplate: StoryFn<CryptoIconNativeProps & { showLabels?: boolean }> = ({
+  theme = 'light' as Theme,
+  showLabels = false,
+}) => {
+  const [iconList, setIconList] = useState(ICONS);
 
-  const groupedIcons = React.useMemo(() => {
-    return iconList.reduce(
-      (acc, [key, value]) => {
-        const firstLetter = value.icon[0].toUpperCase();
-        if (!acc[firstLetter]) acc[firstLetter] = [];
-        acc[firstLetter].push([key, value]);
-        return acc;
-      },
-      {} as Record<string, typeof ICONS>
-    );
-  }, [iconList]);
+  const groupedIcons = useMemo(() => groupByTickerInitial(iconList), [iconList]);
 
   return (
     <div style={themedStyles.pageBg(theme)}>
       <input
         style={styles.searchInput}
         type="search"
-        placeholder="Search by ledger ID"
-        onChange={(event) => setIconList(ICONS.filter(([key]) => key.includes(event.target.value)))}
+        placeholder="Search by ledger ID or ticker"
+        onChange={(event) => setIconList(filterIconsByQuery(ICONS, event.target.value))}
       />
       <div style={styles.pageMargin}>
         {Object.keys(groupedIcons)
@@ -147,6 +189,16 @@ const OrderedTemplate: StoryFn<typeof CryptoIconNative> = ({ theme = 'light' as 
                           network={getNetworkFormLedgerId(key)}
                         />
                       </div>
+                      {showLabels && (
+                        <div style={themedStyles.labelContainer()}>
+                          <div style={themedStyles.labelText(theme)} title={key}>
+                            {key}
+                          </div>
+                          <div style={themedStyles.labelText(theme)} title={value.icon}>
+                            {value.icon}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -158,7 +210,7 @@ const OrderedTemplate: StoryFn<typeof CryptoIconNative> = ({ theme = 'light' as 
   );
 };
 
-const SingleIconTemplate: StoryFn<typeof CryptoIconNative> = (args) => {
+const SingleIconTemplate: StoryFn<CryptoIconNativeProps> = (args) => {
   const theme = (args.theme as Theme) ?? 'light';
   return (
     <div style={styles.viewportCenter}>
@@ -195,16 +247,15 @@ const SingleIconTemplate: StoryFn<typeof CryptoIconNative> = (args) => {
   );
 };
 
-export const AllLedgerIcons: StoryFn<typeof CryptoIconNative> = AllIconsTemplate.bind({});
-AllLedgerIcons.args = { theme: 'light' };
+export const AllLedgerIcons = AllIconsTemplate.bind({});
+AllLedgerIcons.args = { theme: 'light', showLabels: false };
 
-export const AllLedgerIconsWithoutNetwork: StoryFn<typeof CryptoIconNative> =
-  NoNetworkTemplate.bind({});
+export const AllLedgerIconsWithoutNetwork = NoNetworkTemplate.bind({});
 AllLedgerIconsWithoutNetwork.storyName = 'All Ledger Icons (Without Network)';
-AllLedgerIconsWithoutNetwork.args = { theme: 'light' };
+AllLedgerIconsWithoutNetwork.args = { theme: 'light', showLabels: false };
 
-export const OrderedLedgerIcons: StoryFn<typeof CryptoIconNative> = OrderedTemplate.bind({});
-OrderedLedgerIcons.args = { theme: 'light' };
+export const OrderedLedgerIcons = OrderedTemplate.bind({});
+OrderedLedgerIcons.args = { theme: 'light', showLabels: false };
 
 export const SingleLedgerIcon: StoryFn<typeof CryptoIconNative> = SingleIconTemplate.bind({});
 SingleLedgerIcon.args = {
@@ -213,4 +264,15 @@ SingleLedgerIcon.args = {
   size: 56,
   theme: 'light',
   network: undefined,
+};
+SingleLedgerIcon.argTypes = {
+  ledgerId: { control: { type: 'text' }, description: 'Ledger ID of the cryptocurrency' },
+  ticker: { control: { type: 'text' }, description: 'Ticker symbol of the cryptocurrency' },
+  size: {
+    control: { type: 'select' },
+    options: [16, 20, 24, 32, 40, 48, 56],
+    description: 'Icon size in pixels',
+  },
+  theme: { control: { type: 'radio' }, options: ['dark', 'light'], description: 'Icon theme' },
+  network: { control: { type: 'text' }, description: 'Cryptocurrency network (optional)' },
 };

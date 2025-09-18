@@ -1,10 +1,16 @@
 import { Meta, StoryFn } from '@storybook/react';
-import React from 'react';
+import { useMemo, useState } from 'react';
 import iconsObj from '../../assets/index.json';
 import CryptoIcon from '../src/components/CryptoIcon';
 import type { CryptoIconProps } from '../src/components/CryptoIcon/CryptoIcon.types';
 import type { AssertExhaustive } from '../src/helpers.types';
-import { Theme, dedupeByIcon, getNetworkFormLedgerId } from './common';
+import {
+  Theme,
+  dedupeByIcon,
+  filterIconsByQuery,
+  getNetworkFormLedgerId,
+  groupByTickerInitial,
+} from './common';
 import { styles, themedStyles } from './style';
 
 const meta = {
@@ -19,64 +25,96 @@ const meta = {
         defaultValue: { summary: 'light' },
       },
     },
+    showLabels: {
+      control: { type: 'boolean' },
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+      },
+      description: 'Show name, ticker, and network labels below icons',
+    },
   },
-} satisfies Meta<typeof CryptoIcon>;
+} as Meta<any>;
 
 export default meta;
 
 const ICONS = Object.entries(iconsObj);
 
-const Template: StoryFn<typeof CryptoIcon> = ({ theme = 'light' as Theme }) => {
-  const [iconList, setIconList] = React.useState(ICONS);
+const Template: StoryFn<CryptoIconProps & { showLabels?: boolean }> = ({
+  theme = 'light' as Theme,
+  showLabels = false,
+}) => {
+  const [iconList, setIconList] = useState(ICONS);
 
   return (
     <div style={themedStyles.pageBg(theme)}>
       <input
         style={styles.searchInput}
         type="search"
-        placeholder="Search by ledger ID"
-        onChange={(event) => setIconList(ICONS.filter(([key]) => key.includes(event.target.value)))}
+        placeholder="Search by ledger ID or ticker"
+        onChange={(e) => setIconList(filterIconsByQuery(ICONS, e.target.value))}
       />
       <div style={styles.pageMargin}>
         <div style={styles.iconGrid}>
-          {iconList.map(([key, value]) => (
-            <div key={key}>
-              <div style={styles.iconCard}>
-                <div style={styles.iconRow} title={key}>
-                  <CryptoIcon
-                    ledgerId={key}
-                    ticker={value.icon}
-                    size="56px"
-                    theme={theme}
-                    network={getNetworkFormLedgerId(key)}
-                  />
+          {iconList.map(([key, value]) => {
+            const network = getNetworkFormLedgerId(key);
+            return (
+              <div key={key}>
+                <div style={styles.iconCard}>
+                  <div style={styles.iconRow} title={key}>
+                    <CryptoIcon
+                      ledgerId={key}
+                      ticker={value.icon}
+                      size="56px"
+                      theme={theme}
+                      network={network}
+                    />
+                  </div>
+                  {showLabels && (
+                    <div style={themedStyles.labelContainer()}>
+                      <div style={themedStyles.labelText(theme)} title={key}>
+                        {key}
+                      </div>
+                      <div style={themedStyles.labelText(theme)} title={value.icon}>
+                        {value.icon}
+                      </div>
+                      {network && (
+                        <div style={themedStyles.labelTextNetwork(theme)} title={network}>
+                          {network}
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
   );
 };
 
-const NoNetworkTemplate: StoryFn<typeof CryptoIcon> = ({ theme = 'light' as Theme }) => {
-  const [search, setSearch] = React.useState('');
+const NoNetworkTemplate: StoryFn<CryptoIconProps & { showLabels?: boolean }> = ({
+  theme = 'light' as Theme,
+  showLabels = false,
+}) => {
+  const [search, setSearch] = useState('');
 
-  const iconList = React.useMemo(() => {
-    return dedupeByIcon(
-      ICONS.filter(([key]) => key.includes(search)).filter(([key]) =>
-        Boolean(getNetworkFormLedgerId(key))
-      )
-    );
-  }, [search]);
+  const iconList = useMemo(
+    () =>
+      dedupeByIcon(
+        filterIconsByQuery(ICONS, search).filter(([key]) => Boolean(getNetworkFormLedgerId(key)))
+      ),
+    [search]
+  );
 
   return (
     <div style={themedStyles.pageBg(theme)}>
       <input
         style={styles.searchInput}
         type="search"
-        placeholder="Search by ledger ID"
+        placeholder="Search by ledger ID or ticker"
         onChange={(event) => setSearch(event.target.value)}
       />
       <div style={styles.pageMargin}>
@@ -87,6 +125,16 @@ const NoNetworkTemplate: StoryFn<typeof CryptoIcon> = ({ theme = 'light' as Them
                 <div style={styles.iconRow} title={key}>
                   <CryptoIcon ledgerId={key} ticker={value.icon} size="56px" theme={theme} />
                 </div>
+                {showLabels && (
+                  <div style={themedStyles.labelContainer()}>
+                    <div style={themedStyles.labelText(theme)} title={key}>
+                      {key}
+                    </div>
+                    <div style={themedStyles.labelText(theme)} title={value.icon}>
+                      {value.icon}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -96,28 +144,21 @@ const NoNetworkTemplate: StoryFn<typeof CryptoIcon> = ({ theme = 'light' as Them
   );
 };
 
-const OrderedTemplate: StoryFn<typeof CryptoIcon> = ({ theme = 'light' as Theme }) => {
-  const [iconList, setIconList] = React.useState(ICONS);
+const OrderedTemplate: StoryFn<CryptoIconProps & { showLabels?: boolean }> = ({
+  theme = 'light' as Theme,
+  showLabels = false,
+}) => {
+  const [iconList, setIconList] = useState(ICONS);
 
-  const groupedIcons = React.useMemo(() => {
-    return iconList.reduce(
-      (acc, [key, value]) => {
-        const firstLetter = value.icon[0].toUpperCase();
-        if (!acc[firstLetter]) acc[firstLetter] = [];
-        acc[firstLetter].push([key, value]);
-        return acc;
-      },
-      {} as Record<string, typeof ICONS>
-    );
-  }, [iconList]);
+  const groupedIcons = useMemo(() => groupByTickerInitial(iconList), [iconList]);
 
   return (
     <div style={themedStyles.pageBg(theme)}>
       <input
         style={styles.searchInput}
         type="search"
-        placeholder="Search by ledger ID"
-        onChange={(event) => setIconList(ICONS.filter(([key]) => key.includes(event.target.value)))}
+        placeholder="Search by ledger ID or ticker"
+        onChange={(event) => setIconList(filterIconsByQuery(ICONS, event.target.value))}
       />
       <div style={styles.pageMargin}>
         {Object.keys(groupedIcons)
@@ -128,21 +169,34 @@ const OrderedTemplate: StoryFn<typeof CryptoIcon> = ({ theme = 'light' as Theme 
                 {letter}
               </h2>
               <div style={styles.iconGrid}>
-                {groupedIcons[letter].map(([key, value]) => (
-                  <div key={key}>
-                    <div style={styles.iconCard}>
-                      <div style={styles.iconRow} title={key}>
-                        <CryptoIcon
-                          ledgerId={key}
-                          ticker={value.icon}
-                          size="56px"
-                          theme={theme}
-                          network={getNetworkFormLedgerId(key)}
-                        />
+                {groupedIcons[letter].map(([key, value]) => {
+                  const network = getNetworkFormLedgerId(key);
+                  return (
+                    <div key={key}>
+                      <div style={styles.iconCard}>
+                        <div style={styles.iconRow} title={key}>
+                          <CryptoIcon
+                            ledgerId={key}
+                            ticker={value.icon}
+                            size="56px"
+                            theme={theme}
+                            network={network}
+                          />
+                        </div>
+                        {showLabels && (
+                          <div style={themedStyles.labelContainer()}>
+                            <div style={themedStyles.labelText(theme)} title={key}>
+                              {key}
+                            </div>
+                            <div style={themedStyles.labelText(theme)} title={value.icon}>
+                              {value.icon}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ))}
@@ -204,12 +258,9 @@ const _assertCryptoIconSizeOptions: AssertExhaustive<
 > = true;
 
 export const AllLedgerIcons: StoryFn<typeof CryptoIcon> = Template.bind({});
-
 export const AllLedgerIconsWithoutNetwork: StoryFn<typeof CryptoIcon> = NoNetworkTemplate.bind({});
 AllLedgerIconsWithoutNetwork.storyName = 'All Ledger Icons (Without Network)';
-
 export const OrderedLedgerIcons: StoryFn<typeof CryptoIcon> = OrderedTemplate.bind({});
-
 export const SingleLedgerIcon: StoryFn<typeof CryptoIcon> = SingleIcon.bind({});
 SingleLedgerIcon.args = {
   ledgerId: 'bitcoin',
