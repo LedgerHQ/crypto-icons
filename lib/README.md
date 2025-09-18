@@ -116,6 +116,49 @@ pnpm storybook:react
 pnpm storybook:native
 ```
 
+### Adding New Icons
+
+1. **Prepare the PNG**
+
+   - Size: **144×144 px**
+   - Format: **PNG**
+   - Artwork should **fill the entire canvas** (no padding or borders).
+
+2. **Lossless compression**
+
+   - Place the PNGs in the `/compress/` folder.
+   - Run:
+
+     ```bash
+     pnpm compress
+     ```
+
+     ⚠️ _The compression algorithm is very thorough and can be quite slow, especially when processing multiple files._
+
+   - Optimized files will be output to `/compress/out/`.
+
+3. **Move to assets**
+
+   - Copy the optimized PNGs into the `/assets/` directory.
+
+4. **Register the icons**
+
+   - Add the corresponding entries to `/assets/_record.json` so the new files are indexed.
+
+5. **Regenerate the index**
+
+   - Run:
+     ```bash
+     pnpm generate:index
+     ```
+   - This updates `/assets/index.json` with the new records.
+
+6. **Verify**
+   - Start Storybook and check the **All Ledger Icons** stories to ensure:
+     - The icons render correctly.
+     - The background is filled.
+     - They appear under the expected ledger IDs.
+
 ### Lint
 
 ```bash
