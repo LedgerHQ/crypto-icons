@@ -1,5 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react';
-import { useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import iconsObj from '../../assets/index.json';
 import CryptoIcon from '../src/components/CryptoIcon';
 import type { CryptoIconProps } from '../src/components/CryptoIcon/CryptoIcon.types';
