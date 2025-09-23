@@ -42,4 +42,12 @@ jobs:
         run: pnpm test
 
       - name: Check unused png files
-        run: pnpm checkMapping
+        run: pnpm check:mapping
+
+      - name: Verify index.json is committed and up to date
+        run: |
+          pnpm generate:index
+          git diff --exit-code -- ../assets/index.json || {
+            echo "::error file=assets/index.json::index.json is out of date. Run 'pnpm generate:index' locally and commit the changes.";
+            exit 1;
+          }
