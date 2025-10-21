@@ -527,6 +527,15 @@
   "bsc/bep20/zilliqa": {
     "icon": "ZIL.png"
   },
+  "canton_network": {
+    "icon": "CANTON.png"
+  },
+  "canton_network_devnet": {
+    "icon": "CANTON.png"
+  },
+  "canton_network_testnet": {
+    "icon": "CANTON.png"
+  },
   "cardano": {
     "icon": "ADA.png"
   },
