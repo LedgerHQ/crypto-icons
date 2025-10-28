@@ -1,7 +1,4 @@
 {
-  "WETH": {
-    "icon": "WETH.png"
-  },
   "aleph_zero": {
     "icon": "AZERO.png"
   },
@@ -91,6 +88,9 @@
   },
   "arbitrum/erc20/magic": {
     "icon": "MAGIC.png"
+  },
+  "arbitrum/erc20/morpho_token_0x40bd670a58238e6e230c430bbb5ce6ec0d40df48": {
+    "icon": "MORPHO.png"
   },
   "arbitrum/erc20/pancakeswap_token": {
     "icon": "CAKE.png"
@@ -221,6 +221,9 @@
   "avalanche_c_chain/erc20/wrapped_btc_(bridged)": {
     "icon": "WBTC.png"
   },
+  "avalanche_c_chain/erc20/wrapped_eeth_0xa3d68b74bf0528fdd07263c60d6488749044914b": {
+    "icon": "WEETH.png"
+  },
   "babylon": {
     "icon": "BABY.png"
   },
@@ -244,6 +247,9 @@
   },
   "base/erc20/mog_coin": {
     "icon": "MOG.png"
+  },
+  "base/erc20/morpho_token_0xbaa5cc21fd487b8fcc2f632f3f4e8d37262a0842": {
+    "icon": "MORPHO.png"
   },
   "base/erc20/pancakeswap_token": {
     "icon": "CAKE.png"
@@ -277,6 +283,9 @@
   },
   "base/erc20/virtual_protocol": {
     "icon": "VIRTUAL.png"
+  },
+  "base/erc20/wrapped_eeth": {
+    "icon": "WEETH.png"
   },
   "base/erc20/wrapped_ether": {
     "icon": "WETH.png"
@@ -316,6 +325,9 @@
   },
   "blast/erc20/weth": {
     "icon": "WETH.png"
+  },
+  "blast/erc20/wrapped_eeth_0x04c0599ae5a44757c0af6f9ec3b93da8976c150a": {
+    "icon": "WEETH.png"
   },
   "boba": {
     "icon": "BOBA.png"
@@ -511,6 +523,12 @@
   },
   "bsc/bep20/wootrade_network": {
     "icon": "WOO.png"
+  },
+  "bsc/bep20/world_liberty_financial_usd_0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d": {
+    "icon": "USD1.png"
+  },
+  "bsc/bep20/wrapped_eeth_0x04c0599ae5a44757c0af6f9ec3b93da8976c150a": {
+    "icon": "WEETH.png"
   },
   "bsc/bep20/wrapped_rose": {
     "icon": "ROSE.png"
@@ -731,6 +749,9 @@
   "ethereum/erc20/ethena": {
     "icon": "ENA.png"
   },
+  "ethereum/erc20/ether_fi_eigen_0xe77076518a813616315eaaba6ca8e595e845eee9": {
+    "icon": "EEIGEN.png"
+  },
   "ethereum/erc20/ethereum_name_service": {
     "icon": "ENS.png"
   },
@@ -856,6 +877,9 @@
   },
   "ethereum/erc20/mog_coin": {
     "icon": "MOG.png"
+  },
+  "ethereum/erc20/morpho_token_0x58d97b57bb95320f9a05dc918aef65434969c2b2": {
+    "icon": "MORPHO.png"
   },
   "ethereum/erc20/must": {
     "icon": "MUST.png"
@@ -1034,11 +1058,17 @@
   "ethereum/erc20/wbt": {
     "icon": "WBT.png"
   },
+  "ethereum/erc20/weth": {
+    "icon": "WETH.png"
+  },
   "ethereum/erc20/wootrade_network": {
     "icon": "WOO.png"
   },
   "ethereum/erc20/world_liberty_financial_0xda5e1988097297dcdc1f90d4dfe7909e847cbef6": {
     "icon": "WLFI.png"
+  },
+  "ethereum/erc20/world_liberty_financial_usd_0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d": {
+    "icon": "USD1.png"
   },
   "ethereum/erc20/worldcoin": {
     "icon": "WLD.png"
@@ -1051,6 +1081,9 @@
   },
   "ethereum/erc20/wrapped_centrifuge": {
     "icon": "CFG.png"
+  },
+  "ethereum/erc20/wrapped_eeth": {
+    "icon": "WEETH.png"
   },
   "ethereum/erc20/wrapped_ton_coin": {
     "icon": "TONCOIN.png"
@@ -1145,6 +1178,9 @@
   "kaspa": {
     "icon": "KAS.png"
   },
+  "katana/erc20/morpho_token_0x1e5efca3d0db2c6d5c67a4491845c43253eb9e4e": {
+    "icon": "MORPHO.png"
+  },
   "kava_evm": {
     "icon": "KAVA.png"
   },
@@ -1207,6 +1243,9 @@
   },
   "linea/erc20/wrapped_btc": {
     "icon": "WBTC.png"
+  },
+  "linea/erc20/wrapped_eeth": {
+    "icon": "WEETH.png"
   },
   "litecoin": {
     "icon": "LTC.png"
@@ -1336,6 +1375,9 @@
   },
   "optimism/erc20/wrapped_btc": {
     "icon": "WBTC.png"
+  },
+  "optimism/erc20/wrapped_eeth_0x5a7facb970d094b6c7ff1df0ea68d99e6e73cbff": {
+    "icon": "WEETH.png"
   },
   "osmo": {
     "icon": "OSMO.png"
@@ -1520,6 +1562,9 @@
   "scroll/erc20/usde_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
     "icon": "USDE.png"
   },
+  "scroll/erc20/wrapped_eeth_0x01f0a31698c4d065659b9bdc21b3610292a1c506": {
+    "icon": "WEETH.png"
+  },
   "siacoin": {
     "icon": "SC.png"
   },
@@ -1591,6 +1636,9 @@
   },
   "sonic": {
     "icon": "S.png"
+  },
+  "sonic/erc20/wrapped_eeth_0xa3d68b74bf0528fdd07263c60d6488749044914b": {
+    "icon": "WEETH.png"
   },
   "stacks": {
     "icon": "STX.png"
@@ -1670,6 +1718,9 @@
   "waves": {
     "icon": "WAVES.png"
   },
+  "weth": {
+    "icon": "WETH.png"
+  },
   "zcash": {
     "icon": "ZEC.png"
   },
@@ -1687,5 +1738,8 @@
   },
   "zksync/erc20/woo": {
     "icon": "WOO.png"
+  },
+  "zksync/erc20/wrapped_eeth_0xc1fa6e2e8667d9be0ca938a54c7e0285e9df924a": {
+    "icon": "WEETH.png"
   }
 }

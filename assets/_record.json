@@ -263,6 +263,11 @@
   "EIGEN": {
     "ids": ["ethereum/erc20/eigen"]
   },
+  "EEIGEN": {
+    "ids": [
+      "ethereum/erc20/ether_fi_eigen_0xe77076518a813616315eaaba6ca8e595e845eee9"
+    ]
+  },
   "ELF": {
     "ids": ["bsc/bep20/binance-peg_elf_token", "ethereum/erc20/elf_token"]
   },
@@ -614,6 +619,14 @@
   "MOG": {
     "ids": ["base/erc20/mog_coin", "ethereum/erc20/mog_coin"]
   },
+  "MORPHO": {
+    "ids": [
+      "arbitrum/erc20/morpho_token_0x40bd670a58238e6e230c430bbb5ce6ec0d40df48",
+      "base/erc20/morpho_token_0xbaa5cc21fd487b8fcc2f632f3f4e8d37262a0842",
+      "ethereum/erc20/morpho_token_0x58d97b57bb95320f9a05dc918aef65434969c2b2",
+      "katana/erc20/morpho_token_0x1e5efca3d0db2c6d5c67a4491845c43253eb9e4e"
+    ]
+  },
   "MSOL": {
     "ids": ["solana/spl/msolzycxhdygdzu16g5qsh3i5k3z3kzk7ytfqcjm7so"]
   },
@@ -948,6 +961,12 @@
       "polygon/erc20/uniswap_(pos)"
     ]
   },
+  "USD1": {
+    "ids": [
+      "bsc/bep20/world_liberty_financial_usd_0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d",
+      "ethereum/erc20/world_liberty_financial_usd_0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d"
+    ]
+  },
   "USDC": {
     "ids": [
       "algorand/asa/31566704",
@@ -1054,7 +1073,8 @@
   },
   "WETH": {
     "ids": [
-      "WETH",
+      "weth",
+      "ethereum/erc20/weth",
       "arbitrum/erc20/wrapped_ether",
       "base/erc20/wrapped_ether",
       "blast/erc20/weth",
@@ -1133,5 +1153,19 @@
   },
   "nxm": {
     "ids": ["ethereum/erc20/nexus_mutual"]
+  },
+  "WEETH": {
+    "ids": [
+      "avalanche_c_chain/erc20/wrapped_eeth_0xa3d68b74bf0528fdd07263c60d6488749044914b",
+      "base/erc20/wrapped_eeth",
+      "blast/erc20/wrapped_eeth_0x04c0599ae5a44757c0af6f9ec3b93da8976c150a",
+      "bsc/bep20/wrapped_eeth_0x04c0599ae5a44757c0af6f9ec3b93da8976c150a",
+      "ethereum/erc20/wrapped_eeth",
+      "linea/erc20/wrapped_eeth",
+      "optimism/erc20/wrapped_eeth_0x5a7facb970d094b6c7ff1df0ea68d99e6e73cbff",
+      "scroll/erc20/wrapped_eeth_0x01f0a31698c4d065659b9bdc21b3610292a1c506",
+      "sonic/erc20/wrapped_eeth_0xa3d68b74bf0528fdd07263c60d6488749044914b",
+      "zksync/erc20/wrapped_eeth_0xc1fa6e2e8667d9be0ca938a54c7e0285e9df924a"
+    ]
   }
 }
