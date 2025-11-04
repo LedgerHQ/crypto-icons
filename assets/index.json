@@ -1262,6 +1262,9 @@
   "mantle/erc20/usde_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
     "icon": "USDE.png"
   },
+  "monad": {
+    "icon": "MON.png"
+  },
   "monero": {
     "icon": "XMR.png"
   },

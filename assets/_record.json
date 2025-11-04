@@ -619,6 +619,9 @@
   "MOG": {
     "ids": ["base/erc20/mog_coin", "ethereum/erc20/mog_coin"]
   },
+  "MON": {
+    "ids": ["monad"]
+  },
   "MORPHO": {
     "ids": [
       "arbitrum/erc20/morpho_token_0x40bd670a58238e6e230c430bbb5ce6ec0d40df48",
