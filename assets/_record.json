@@ -252,7 +252,7 @@
     "ids": ["dogecoin"]
   },
   "DOT": {
-    "ids": ["polkadot"]
+    "ids": ["polkadot", "assethub_polkadot"]
   },
   "DYDX": {
     "ids": ["dydx", "ethereum/erc20/dydx"]

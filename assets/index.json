@@ -146,6 +146,9 @@
   "arweave": {
     "icon": "AR.png"
   },
+  "assethub_polkadot": {
+    "icon": "DOT.png"
+  },
   "astar": {
     "icon": "ASTR.png"
   },
