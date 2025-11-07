@@ -1,4 +1,7 @@
 {
+  "0G": {
+    "ids": ["zero_gravity"]
+  },
   "0x": {
     "ids": [
       "avalanche_c_chain/erc20/0x_protocol_token",
