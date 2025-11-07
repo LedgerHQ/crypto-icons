@@ -1,16 +1,8 @@
 import React, { FC } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
-import InterBold from '../../fonts/Inter-Bold.woff2';
+import styled from 'styled-components';
 import { CryptoIconProps } from '../CryptoIcon/CryptoIcon.types';
 
 type FallbackIconProps = Pick<CryptoIconProps, 'ticker' | 'size'>;
-
-const InterBoldFont = createGlobalStyle`
-  @font-face {
-    font-family: 'Inter';
-    src: url(${InterBold}) format('woff2');
-  }
-`;
 
 const iconSizeToFontSize: {
   [key in NonNullable<FallbackIconProps['size']>]: string;
@@ -45,7 +37,6 @@ const IconWrapper = styled.div`
 
 const FallbackIcon: FC<FallbackIconProps> = ({ ticker, size }) => (
   <IconWrapper>
-    <InterBoldFont />
     <Icon size={size} role="img">
       {ticker[0]}
     </Icon>
