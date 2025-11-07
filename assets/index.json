@@ -1730,6 +1730,9 @@
   "zcash": {
     "icon": "ZEC.png"
   },
+  "zero_gravity": {
+    "icon": "0G.png"
+  },
   "zilliqa": {
     "icon": "ZIL.png"
   },
