@@ -5,11 +5,11 @@ import FallbackIcon from '../FallbackIcon/FallbackIcon';
 import IconWrapper, { RoundedIcon, Skeleton } from '../IconWrapper/IconWrapper';
 import { CryptoIconProps } from './CryptoIcon.types';
 
-const Icon = styled(RoundedIcon)<{ hasNetwork: boolean }>`
+const Icon = styled(RoundedIcon)<{ $hasNetwork: boolean }>`
   height: 100%;
   width: 100%;
-  ${({ hasNetwork }) =>
-    hasNetwork
+  ${({ $hasNetwork }) =>
+    $hasNetwork
       ? 'mask-image: radial-gradient(circle closest-side at 81.5% 81.5%, transparent 125%, white 130%);'
       : ''}
 `;
@@ -36,7 +36,7 @@ const CryptoIcon: FC<CryptoIconProps> = ({
   return (
     <IconWrapper size={size} theme={theme}>
       {iconUrl ? (
-        <Icon theme={theme} src={iconUrl} alt={ticker} hasNetwork={!!networkUrl} />
+        <Icon theme={theme} src={iconUrl} alt={ticker} $hasNetwork={!!networkUrl} />
       ) : (
         <FallbackIcon ticker={ticker} size={size} />
       )}
