@@ -338,6 +338,9 @@
   "bsc": {
     "icon": "BNB.png"
   },
+  "bsc/bep20/0g_0x4b948d64de1f71fcd12fb586f4c776421a35b3ee": {
+    "icon": "0G.png"
+  },
   "bsc/bep20/1inch_token": {
     "icon": "1INCH.png"
   },
