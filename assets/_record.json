@@ -846,6 +846,9 @@
   "SOL": {
     "ids": ["solana"]
   },
+  "SOMI": {
+    "ids": ["somnia"]
+  },
   "SPECTRE": {
     "ids": ["ethereum/erc20/spectre_ai"]
   },
