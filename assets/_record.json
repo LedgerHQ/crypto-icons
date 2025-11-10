@@ -1,6 +1,9 @@
 {
   "0G": {
-    "ids": ["zero_gravity"]
+    "ids": [
+      "zero_gravity",
+      "bsc/bep20/0g_0x4b948d64de1f71fcd12fb586f4c776421a35b3ee"
+    ]
   },
   "0x": {
     "ids": [
