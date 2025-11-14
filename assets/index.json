@@ -1271,6 +1271,9 @@
   "monad": {
     "icon": "MON.png"
   },
+  "monad_testnet": {
+    "icon": "MON.png"
+  },
   "monero": {
     "icon": "XMR.png"
   },

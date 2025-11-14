@@ -626,7 +626,7 @@
     "ids": ["base/erc20/mog_coin", "ethereum/erc20/mog_coin"]
   },
   "MON": {
-    "ids": ["monad"]
+    "ids": ["monad", "monad_testnet"]
   },
   "MORPHO": {
     "ids": [
