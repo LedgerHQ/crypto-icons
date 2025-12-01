@@ -10,6 +10,7 @@ export type CryptoIconProps = {
   theme?: ThemeNames;
   size?: '16px' | '20px' | '24px' | '32px' | '40px' | '48px' | '56px';
   network?: Currency['id'];
+  overridesRadius?: string;
 };
 
 /**
@@ -22,4 +23,5 @@ export type CryptoIconNativeProps = {
   size?: 16 | 20 | 24 | 32 | 40 | 48 | 56;
   network?: Currency['id'];
   backgroundColor?: string;
+  overridesRadius?: number;
 };

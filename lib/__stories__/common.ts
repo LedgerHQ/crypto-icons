@@ -30,7 +30,7 @@ function tokenizeLedgerId(ledgerId: string): string[] {
   }
   // dedupe while preserving order
   const seen = new Set<string>();
-  return parts.filter(p => {
+  return parts.filter((p) => {
     const k = p.toLowerCase();
     if (seen.has(k)) return false;
     seen.add(k);
@@ -48,9 +48,7 @@ export function filterIconsByQuery(entries: IconEntry[], rawQuery: string): Icon
   // We'll treat the first word that is one of the known networks (present in data) as the filter.
   // (Heuristic: derive known networks from the dataset.)
   const knownNetworks = new Set(
-    entries
-      .map(([id]) => getNetworkFromLedgerId(id)?.toLowerCase())
-      .filter((n): n is string => !!n)
+    entries.map(([id]) => getNetworkFromLedgerId(id)?.toLowerCase()).filter((n): n is string => !!n)
   );
 
   let networkFilter: string | undefined;
@@ -76,14 +74,14 @@ export function filterIconsByQuery(entries: IconEntry[], rawQuery: string): Icon
     // Fields to match against (partial, case-insensitive)
     const hayLedger = ledgerId.toLowerCase();
     const hayTicker = (icon || '').toLowerCase();
-    const haySegments = tokenizeLedgerId(ledgerId).map(s => s.toLowerCase());
+    const haySegments = tokenizeLedgerId(ledgerId).map((s) => s.toLowerCase());
 
     // AND over all non-network words
     for (const w of nonNetworkWords) {
       const match =
         hayLedger.includes(w) ||
         hayTicker.includes(w) ||
-        haySegments.some(seg => seg.includes(w));
+        haySegments.some((seg) => seg.includes(w));
 
       if (!match) return false; // this word didn't match any field → exclude
     }

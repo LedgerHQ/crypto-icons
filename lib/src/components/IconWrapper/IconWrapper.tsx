@@ -14,8 +14,8 @@ const Wrapper = styled.div<IconWrapperProps>`
   position: relative;
 `;
 
-export const RoundedIcon = styled.img<Pick<CryptoIconProps, 'theme'>>`
-  border-radius: 50%;
+export const RoundedIcon = styled.img<Pick<CryptoIconProps, 'theme' | 'overridesRadius'>>`
+  border-radius: ${({ overridesRadius }) => (overridesRadius ? overridesRadius : '50%')};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,10 +26,10 @@ export const RoundedIcon = styled.img<Pick<CryptoIconProps, 'theme'>>`
 }
 `;
 
-export const Skeleton = styled.div<Pick<CryptoIconProps, 'size' | 'theme'>>`
+export const Skeleton = styled.div<Pick<CryptoIconProps, 'size' | 'theme' | 'overridesRadius'>>`
   height: ${({ size }) => size};
   width: ${({ size }) => size};
-  border-radius: 50%;
+  border-radius: ${({ overridesRadius }) => (overridesRadius ? overridesRadius : '50%')};
   background-color: ${({ theme }: { theme: 'dark' | 'light' }) =>
     palettes[theme].opacityDefault.c05};
 `;

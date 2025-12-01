@@ -5,7 +5,9 @@ import FallbackIcon from '../FallbackIcon/FallbackIcon';
 import IconWrapper, { RoundedIcon, Skeleton } from '../IconWrapper/IconWrapper';
 import { CryptoIconProps } from './CryptoIcon.types';
 
-const Icon = styled(RoundedIcon)<{ $hasNetwork: boolean }>`
+const Icon = styled(RoundedIcon)<
+  { $hasNetwork: boolean } & Pick<CryptoIconProps, 'overridesRadius'>
+>`
   height: 100%;
   width: 100%;
   ${({ $hasNetwork }) =>
@@ -28,17 +30,24 @@ const CryptoIcon: FC<CryptoIconProps> = ({
   size = '16px',
   theme = 'dark',
   network,
+  overridesRadius,
 }) => {
   const { iconUrl, networkUrl, loading } = useCryptoIcon({ ledgerId, network });
 
-  if (loading) return <Skeleton size={size} theme={theme} />;
+  if (loading) return <Skeleton size={size} theme={theme} overridesRadius={overridesRadius} />;
 
   return (
     <IconWrapper size={size} theme={theme}>
       {iconUrl ? (
-        <Icon theme={theme} src={iconUrl} alt={ticker} $hasNetwork={!!networkUrl} />
+        <Icon
+          theme={theme}
+          src={iconUrl}
+          alt={ticker}
+          $hasNetwork={!!networkUrl}
+          overridesRadius={overridesRadius}
+        />
       ) : (
-        <FallbackIcon ticker={ticker} size={size} />
+        <FallbackIcon ticker={ticker} size={size} overridesRadius={overridesRadius} />
       )}
       {networkUrl ? <NetworkIcon theme={theme} src={networkUrl} size={size} /> : null}
     </IconWrapper>

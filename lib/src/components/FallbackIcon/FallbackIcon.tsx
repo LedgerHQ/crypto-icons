@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { CryptoIconProps } from '../CryptoIcon/CryptoIcon.types';
 
-type FallbackIconProps = Pick<CryptoIconProps, 'ticker' | 'size'>;
+type FallbackIconProps = Pick<CryptoIconProps, 'ticker' | 'size' | 'overridesRadius'>;
 
 const iconSizeToFontSize: {
   [key in NonNullable<FallbackIconProps['size']>]: string;
@@ -28,15 +28,15 @@ const Icon = styled.div<Partial<FallbackIconProps>>`
   font-family: 'Inter', sans-serif;
 `;
 
-const IconWrapper = styled.div`
+const IconWrapper = styled.div<Pick<FallbackIconProps, 'overridesRadius'>>`
   height: 100%;
   width: 100%;
-  border-radius: 50%;
+  border-radius: ${({ overridesRadius }) => (overridesRadius ? overridesRadius : '50%')};
   background-color: #757575;
 `;
 
-const FallbackIcon: FC<FallbackIconProps> = ({ ticker, size }) => (
-  <IconWrapper>
+const FallbackIcon: FC<FallbackIconProps> = ({ ticker, size, overridesRadius }) => (
+  <IconWrapper overridesRadius={overridesRadius}>
     <Icon size={size} role="img">
       {ticker[0]}
     </Icon>
