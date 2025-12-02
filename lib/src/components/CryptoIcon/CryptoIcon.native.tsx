@@ -12,6 +12,7 @@ const CryptoIconNative: FC<CryptoIconNativeProps> = ({
   theme = 'dark',
   network,
   backgroundColor,
+  overridesRadius,
 }) => {
   const { iconUrl, networkUrl, loading, error } = useCryptoIcon({
     ledgerId,
@@ -20,6 +21,9 @@ const CryptoIconNative: FC<CryptoIconNativeProps> = ({
 
   const defaultBackgroundColor = palettes[theme].background.main;
   const finalBackgroundColor = backgroundColor || defaultBackgroundColor;
+
+  const defaultRadius = size / 2;
+  const borderRadius = overridesRadius !== undefined ? overridesRadius : defaultRadius;
 
   const containerStyle: ViewStyle = {
     width: size,
@@ -30,7 +34,7 @@ const CryptoIconNative: FC<CryptoIconNativeProps> = ({
   const iconStyle: ImageStyle = {
     width: size,
     height: size,
-    borderRadius: size / 2,
+    borderRadius: borderRadius,
   };
 
   const networkIconSize = size / 2.8;
@@ -56,7 +60,7 @@ const CryptoIconNative: FC<CryptoIconNativeProps> = ({
   const skeletonStyle: ViewStyle = {
     width: size,
     height: size,
-    borderRadius: size / 2,
+    borderRadius: borderRadius,
     backgroundColor: palettes[theme].opacityDefault.c05,
     justifyContent: 'center',
     alignItems: 'center',
@@ -67,7 +71,7 @@ const CryptoIconNative: FC<CryptoIconNativeProps> = ({
   }
 
   if (error) {
-    return <FallbackIconNative ticker={ticker} size={size} />;
+    return <FallbackIconNative ticker={ticker} size={size} overridesRadius={overridesRadius} />;
   }
 
   return (
@@ -75,7 +79,7 @@ const CryptoIconNative: FC<CryptoIconNativeProps> = ({
       {iconUrl ? (
         <Image source={{ uri: iconUrl }} style={iconStyle} />
       ) : (
-        <FallbackIconNative ticker={ticker} size={size} />
+        <FallbackIconNative ticker={ticker} size={size} overridesRadius={overridesRadius} />
       )}
       {networkUrl && (
         <View style={networkContainerStyle}>

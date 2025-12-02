@@ -2,7 +2,10 @@ import React, { FC } from 'react';
 import { Text, TextStyle, View, ViewStyle } from 'react-native';
 import { CryptoIconNativeProps } from '../CryptoIcon/CryptoIcon.types';
 
-type FallbackIconNativeProps = Pick<CryptoIconNativeProps, 'ticker' | 'size' | 'theme'>;
+type FallbackIconNativeProps = Pick<
+  CryptoIconNativeProps,
+  'ticker' | 'size' | 'theme' | 'overridesRadius'
+>;
 
 const iconSizeToFontSize = (size: number): number => {
   if (size <= 16) return 10;
@@ -13,14 +16,20 @@ const iconSizeToFontSize = (size: number): number => {
   return 24;
 };
 
-const FallbackIconNative: FC<FallbackIconNativeProps> = ({ ticker, size = 16 }) => {
+const FallbackIconNative: FC<FallbackIconNativeProps> = ({
+  ticker,
+  size = 16,
+  overridesRadius,
+}) => {
   const sizeNumber = size;
   const fontSize = iconSizeToFontSize(size);
+  const defaultRadius = sizeNumber / 2;
+  const borderRadius = overridesRadius !== undefined ? overridesRadius : defaultRadius;
 
   const containerStyle: ViewStyle = {
     width: sizeNumber,
     height: sizeNumber,
-    borderRadius: sizeNumber / 2,
+    borderRadius: borderRadius,
     backgroundColor: '#757575',
     justifyContent: 'center',
     alignItems: 'center',

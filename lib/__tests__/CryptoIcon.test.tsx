@@ -83,4 +83,30 @@ describe('CryptoIcon', () => {
       expect(screen.getByRole('img')).toHaveTextContent('B');
     });
   });
+
+  describe('overridesRadius', () => {
+    it('should apply custom border radius when overridesRadius is provided', async () => {
+      render(<CryptoIcon ledgerId="bitcoin" ticker="BTC" overridesRadius="12px" />);
+
+      await waitFor(() => {
+        expect(screen.getByRole('img')).toBeInTheDocument();
+      });
+
+      const img = screen.getByRole('img');
+      const computedStyle = window.getComputedStyle(img);
+      expect(computedStyle.borderRadius).toBe('12px');
+    });
+
+    it('should use default circular border radius (50%) when overridesRadius is not provided', async () => {
+      render(<CryptoIcon ledgerId="bitcoin" ticker="BTC" />);
+
+      await waitFor(() => {
+        expect(screen.getByRole('img')).toBeInTheDocument();
+      });
+
+      const img = screen.getByRole('img');
+      const computedStyle = window.getComputedStyle(img);
+      expect(computedStyle.borderRadius).toBe('50%');
+    });
+  });
 });

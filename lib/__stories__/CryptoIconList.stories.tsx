@@ -286,3 +286,70 @@ SingleLedgerIcon.argTypes = {
   },
   network: { control: 'text', description: 'The network associated with the icon' },
 };
+
+// Main currencies without network (for square icons)
+const MAIN_CURRENCIES: Array<{ ledgerId: string; ticker: string }> = [
+  { ledgerId: 'bitcoin', ticker: 'BTC' },
+  { ledgerId: 'ethereum', ticker: 'ETH' },
+  { ledgerId: 'ripple', ticker: 'XRP' },
+  { ledgerId: 'cardano', ticker: 'ADA' },
+  { ledgerId: 'solana', ticker: 'SOL' },
+  { ledgerId: 'polkadot', ticker: 'DOT' },
+  { ledgerId: 'dogecoin', ticker: 'DOGE' },
+  { ledgerId: 'polygon', ticker: 'MATIC' },
+  { ledgerId: 'litecoin', ticker: 'LTC' },
+  { ledgerId: 'avalanche_c_chain', ticker: 'AVAX' },
+  { ledgerId: 'cosmos', ticker: 'ATOM' },
+  { ledgerId: 'algorand', ticker: 'ALGO' },
+  { ledgerId: 'stellar', ticker: 'XLM' },
+  { ledgerId: 'vechain', ticker: 'VET' },
+  { ledgerId: 'filecoin', ticker: 'FIL' },
+  { ledgerId: 'tron', ticker: 'TRX' },
+  { ledgerId: 'ethereum_classic', ticker: 'ETC' },
+  { ledgerId: 'tezos', ticker: 'XTZ' },
+];
+
+const SquareIconsTemplate: StoryFn<CryptoIconProps & { showLabels?: boolean }> = ({
+  theme = 'light' as Theme,
+  showLabels = false,
+}) => {
+  return (
+    <div style={themedStyles.pageBg(theme)}>
+      <div style={styles.pageMargin}>
+        <h2 style={{ ...themedStyles.headingColor(theme), marginBottom: '20px', marginTop: '40px' }}>
+          Square Icons (16px radius) - Main Currencies
+        </h2>
+        <div style={styles.iconGrid}>
+          {MAIN_CURRENCIES.map(({ ledgerId, ticker }) => (
+            <div key={ledgerId}>
+              <div style={styles.iconCard}>
+                <div style={styles.iconRow} title={ledgerId}>
+                  <CryptoIcon
+                    ledgerId={ledgerId}
+                    ticker={ticker}
+                    size="56px"
+                    theme={theme}
+                    overridesRadius="16px"
+                  />
+                </div>
+                {showLabels && (
+                  <div style={themedStyles.labelContainer()}>
+                    <div style={themedStyles.labelText(theme)} title={ledgerId}>
+                      {ledgerId}
+                    </div>
+                    <div style={themedStyles.labelText(theme)} title={ticker}>
+                      {ticker}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const SquareIcons: StoryFn<typeof CryptoIcon> = SquareIconsTemplate.bind({});
+SquareIcons.storyName = 'Square Icons (Main Currencies)';
