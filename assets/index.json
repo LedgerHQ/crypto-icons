@@ -605,6 +605,12 @@
   "centrifuge": {
     "icon": "CFG.png"
   },
+  "concordium": {
+    "icon": "CCD.png"
+  },
+  "concordium_testnet": {
+    "icon": "CCD.png"
+  },
   "conflux": {
     "icon": "BCFX.png"
   },
