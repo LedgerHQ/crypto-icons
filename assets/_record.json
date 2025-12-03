@@ -19,7 +19,9 @@
       "avalanche_c_chain/erc20/1inch_token_(bridged)",
       "bsc/bep20/1inch_token",
       "ethereum/erc20/1inch_token",
-      "polygon/erc20/1inch_token"
+      "polygon/erc20/1inch_token",
+      "base/erc20/1inch_token_0xc5fecc3a29fb57b5024eec8a2239d4621e111cbe",
+      "energi/erc20/1inch_0xdda6205dc3f47e5280eb726613b27374eee9d130"
     ]
   },
   "AAVE": {
@@ -64,6 +66,9 @@
   "ANT": {
     "ids": ["ethereum/erc20/aragon_network_token"]
   },
+  "APPC": {
+    "ids": ["ethereum/erc20/appcoins"]
+  },
   "APE": {
     "ids": [
       "bsc/bep20/apecoin",
@@ -87,6 +92,9 @@
   "ASTR": {
     "ids": ["astar"]
   },
+  "ASTER": {
+    "ids": ["bsc/bep20/aster_0x000ae314e2a2172a039b26378814c252734f556a"]
+  },
   "ATOM": {
     "ids": ["bsc/bep20/binance-peg_cosmos_token", "cosmos"]
   },
@@ -94,7 +102,7 @@
     "ids": ["ethereum/erc20/audius"]
   },
   "AVAX": {
-    "ids": ["avalanche_c_chain"]
+    "ids": ["avalanche_c_chain", "bsc/bep20/binance-peg_avalanche_token"]
   },
   "AXS": {
     "ids": [
@@ -366,6 +374,13 @@
   "FTN": {
     "ids": ["ethereum/erc20/fasttoken"]
   },
+  "FTT": {
+    "ids": [
+      "energi/erc20/ftx_token_0xda79dcf81c948dfb85cbda738bc898195a2ba861",
+      "ethereum/erc20/ftx_token",
+      "solana/spl/wrapped_ftt_sollet_agfead2et2zjif9jagpdmixqqvw5i81abdvke7phnfz3"
+    ]
+  },
   "FXS": {
     "ids": [
       "arbitrum/erc20/frax_share",
@@ -463,6 +478,9 @@
   "IOTX": {
     "ids": ["base/erc20/iotex_network", "ethereum/erc20/iotex_network"]
   },
+  "IP": {
+    "ids": ["story"]
+  },
   "JST": {
     "ids": ["tron/trc20/tcfll5dx5zjdknwuesxxi1vpwjlvmwzzy9"]
   },
@@ -551,6 +569,11 @@
       "telos_evm/erc20/chainlink_token"
     ]
   },
+  "LIQUIDETH": {
+    "ids": [
+      "ethereum/erc20/ether_fi_liquid_eth_0xf0bb20865277abd641a307ece5ee04e79073416c"
+    ]
+  },
   "LPT": {
     "ids": ["arbitrum/erc20/livepeer_token", "ethereum/erc20/livepeer"]
   },
@@ -603,6 +626,11 @@
   },
   "MEME": {
     "ids": ["ethereum/erc20/memecoin_meme"]
+  },
+  "MEW": {
+    "ids": [
+      "solana/spl/cat_in_a_dogs_world_mew1gqwj3nexg2qgeriku7fafj79phvqvrequzscpp5"
+    ]
   },
   "METH": {
     "ids": ["ethereum/erc20/meth", "mantle/erc20/mantle_staked_ether"]
@@ -680,6 +708,13 @@
       "polygon/erc20/ocean_token"
     ]
   },
+  "OHM": {
+    "ids": [
+      "base/erc20/olympus_0x060cb087a9730e13aa191f31a6d86bff8dfcdcc0",
+      "berachain/erc20/ohm",
+      "ethereum/erc20/olympus"
+    ]
+  },
   "OKB": {
     "ids": ["ethereum/erc20/okb"]
   },
@@ -694,6 +729,9 @@
   },
   "ORBR": {
     "ids": ["ethereum/erc20/orbler"]
+  },
+  "ORDI": {
+    "ids": ["solana/spl/ordinals_u9nmk5sqovm6acvcqbbq8xumpfqdpsyxdxvwxux4sjy"]
   },
   "OSMO": {
     "ids": ["osmo"]
@@ -833,6 +871,11 @@
   "SKL": {
     "ids": ["ethereum/erc20/skale"]
   },
+  "SKY": {
+    "ids": [
+      "ethereum/erc20/sky_governance_token_0x56072c95faa701256059aa122697b133aded9279"
+    ]
+  },
   "SNT": {
     "ids": ["ethereum/erc20/status_network_token"]
   },
@@ -897,7 +940,8 @@
     "ids": [
       "arbitrum/erc20/savings_usds_0xddb46999f8891663a8f2828d25298f70416d7610",
       "base/erc20/savings_usds_0x5875eee11cf8398102fdad704c9e96607675467a",
-      "ethereum/erc20/savings_usds_0xa3931d71877c0e7a3148cb7eb4463524fec27fbd"
+      "ethereum/erc20/savings_usds_0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+      "optimism/erc20/savings_usds_0xb5b2dc7fd34c249f4be7fb1fcea07950784229e0"
     ]
   },
   "SUSHI": {
@@ -923,6 +967,16 @@
   },
   "TAO": {
     "ids": ["bittensor"]
+  },
+  "TBTC": {
+    "ids": [
+      "arbitrum/erc20/arbitrum_tbtc_v2",
+      "base/erc20/base_tbtc_v2",
+      "ethereum/erc20/tbtc",
+      "optimism/erc20/optimism_tbtc_v2",
+      "polygon/erc20/polygon_tbtc_v2",
+      "solana/spl/tbtc_v2_6dnsn2bjsapfdffc1zp37kkene4usc1sqkzr9c9vpwcu"
+    ]
   },
   "TEL": {
     "ids": [
@@ -1019,6 +1073,14 @@
       "solana/spl/usde_dekqhypn7gmrj5cartqfawefqbzb33hyf6s5icwjeont"
     ]
   },
+  "USDT0": {
+    "ids": [
+      "arbitrum/erc20/tether_usd",
+      "berachain/erc20/usdt0",
+      "hyperevm/erc20/usd_0_0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+      "mantle/erc20/usdt0_0x779ded0c9e1022225f8e0630b35a9b54be713736"
+    ]
+  },
   "USDT": {
     "ids": [
       "algorand/asa/312769",
@@ -1040,6 +1102,13 @@
       "solana/spl/es9vmfrzacermjfrf4h2fyd4kconky11mcce8benwnyb",
       "ton/jetton/eqcxe6mutqjkfngfarotkot1lzbdiix1kcixrv7nw2id_sds",
       "tron/trc20/tr7nhqjekqxgtci8q8zy4pl8otszgjlj6t"
+    ]
+  },
+  "USDS": {
+    "ids": [
+      "base/erc20/usds_stablecoin_0x820c137fa70c8691f0e44dc420a5e53c168921dc",
+      "ethereum/erc20/usds_stablecoin_0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+      "solana/spl/usds_usdswr9apdhk5bvjkmjzff41ffux8bsxdkcr81vtwca"
     ]
   },
   "VET": {
@@ -1135,6 +1204,9 @@
   },
   "XMR": {
     "ids": ["monero"]
+  },
+  "XPL": {
+    "ids": ["bsc/bep20/plasma_0x405fbc9004d857903bfd6b3357792d71a50726b0"]
   },
   "XRD": {
     "ids": ["radix"]
