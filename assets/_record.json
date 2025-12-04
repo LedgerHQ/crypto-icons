@@ -211,6 +211,9 @@
       "polygon/erc20/coinbase_wrapped_staked_eth_fxerc20"
     ]
   },
+  "CCD": {
+    "ids": ["concordium", "concordium_testnet"]
+  },
   "CELO": {
     "ids": ["celo"]
   },
