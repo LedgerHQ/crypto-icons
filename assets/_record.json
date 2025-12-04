@@ -36,8 +36,17 @@
       "polygon/erc20/aave_(pos)"
     ]
   },
+  "ABTC": {
+    "ids": ["stacks/sip10/abtc"]
+  },
   "ADA": {
     "ids": ["cardano"]
+  },
+  "AEUSDC": {
+    "ids": ["stacks/sip10/aeusdc"]
+  },
+  "AEWBTC": {
+    "ids": ["stacks/sip10/aewbtc"]
   },
   "AIOZ": {
     "ids": ["bsc/bep20/aioz_network", "ethereum/erc20/aioz_network"]
@@ -100,6 +109,9 @@
   },
   "AUDIO": {
     "ids": ["ethereum/erc20/audius"]
+  },
+  "AUSD": {
+    "ids": ["stacks/sip10/ausd"]
   },
   "AVAX": {
     "ids": ["avalanche_c_chain", "bsc/bep20/binance-peg_avalanche_token"]
@@ -170,6 +182,9 @@
       "solana/spl/dezxaz8z7pnrnrjjz3wxborgixca6xjnb7yab1ppb263"
     ]
   },
+  "BRC20-TRIO": {
+    "ids": ["stacks/sip10/brc20-trio"]
+  },
   "BRETT": {
     "ids": ["base/erc20/brett"]
   },
@@ -220,6 +235,9 @@
   "CFG": {
     "ids": ["centrifuge", "ethereum/erc20/wrapped_centrifuge"]
   },
+  "CHARISMA": {
+    "ids": ["stacks/sip10/charisma"]
+  },
   "CHEEL": {
     "ids": ["bsc/bep20/cheelee"]
   },
@@ -264,6 +282,9 @@
   },
   "DEXE": {
     "ids": ["ethereum/erc20/dexe"]
+  },
+  "DIKO": {
+    "ids": ["stacks/sip10/diko"]
   },
   "DOGE": {
     "ids": ["dogecoin"]
@@ -557,6 +578,15 @@
   "LEO": {
     "ids": ["ethereum/erc20/leo_token"]
   },
+  "LIABTC": {
+    "ids": ["stacks/sip10/liabtc"]
+  },
+  "LIALEX": {
+    "ids": ["stacks/sip10/lialex"]
+  },
+  "LISTX": {
+    "ids": ["stacks/sip10/listx"]
+  },
   "LINEA": {
     "ids": ["linea"]
   },
@@ -630,6 +660,9 @@
   "MAVIA": {
     "ids": ["base/erc20/heroes_of_mavia", "ethereum/erc20/heroes_of_mavia"]
   },
+  "MEGA": {
+    "ids": ["stacks/sip10/mega"]
+  },
   "MEME": {
     "ids": ["ethereum/erc20/memecoin_meme"]
   },
@@ -696,6 +729,9 @@
       "bsc/bep20/nfprompt_ai_token_0x551897f8203bd131b350601d3ac0679ba0fc0136"
     ]
   },
+  "NOT": {
+    "ids": ["stacks/sip10/not"]
+  },
   "NFT": {
     "ids": [
       "bsc/bep20/binance-peg_apenft_token",
@@ -756,6 +792,9 @@
   },
   "PAXG": {
     "ids": ["ethereum/erc20/paxos_gold"]
+  },
+  "PBTC": {
+    "ids": ["stacks/sip10/pbtc"]
   },
   "PENDLE": {
     "ids": [
@@ -829,6 +868,9 @@
   "RLB": {
     "ids": ["ethereum/erc20/rollbit_coin"]
   },
+  "ROO": {
+    "ids": ["stacks/sip10/roo"]
+  },
   "RNDR": {
     "ids": [
       "ethereum/erc20/render_token",
@@ -858,6 +900,9 @@
       "polygon/erc20/sand"
     ]
   },
+  "SBTC": {
+    "ids": ["stacks/sip10/sbtc"]
+  },
   "SC": {
     "ids": ["siacoin"]
   },
@@ -869,6 +914,9 @@
   },
   "SFP": {
     "ids": ["bsc/bep20/safepal_token", "ethereum/erc20/safepaltoken"]
+  },
+  "SKULL": {
+    "ids": ["stacks/sip10/skull"]
   },
   "SHIBA": {
     "ids": [
@@ -932,8 +980,20 @@
   "STRK": {
     "ids": ["ethereum/erc20/starknet", "starknet"]
   },
+  "STSTX": {
+    "ids": ["stacks/sip10/ststx"]
+  },
+  "STSTXBTC": {
+    "ids": ["stacks/sip10/ststxbtc"]
+  },
   "STX": {
     "ids": ["stacks"]
+  },
+  "stacks_ALEX": {
+    "ids": ["stacks/sip10/alex"]
+  },
+  "stacks_LEO": {
+    "ids": ["stacks/sip10/leo"]
   },
   "SUI": {
     "ids": ["sui"]
@@ -1039,6 +1099,9 @@
       "ethereum/erc20/world_liberty_financial_usd_0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d"
     ]
   },
+  "USDA": {
+    "ids": ["stacks/sip10/usda"]
+  },
   "USDC": {
     "ids": [
       "algorand/asa/31566704",
@@ -1054,6 +1117,9 @@
       "stellar/asset/usdc:ga5zsejyb37jrc5avcia5mop4rhtm335x2kgx3ihojapp5re34k4kzvn",
       "tron/trc20/tekxitehnzsmse2xqrbj4w32run966rdz8"
     ]
+  },
+  "USDH": {
+    "ids": ["stacks/sip10/usdh"]
   },
   "USDD": {
     "ids": [
@@ -1117,6 +1183,9 @@
       "solana/spl/usds_usdswr9apdhk5bvjkmjzff41ffux8bsxdkcr81vtwca"
     ]
   },
+  "VELAR": {
+    "ids": ["stacks/sip10/velar"]
+  },
   "VET": {
     "ids": ["bsc/bep20/vechain", "vechain"]
   },
@@ -1130,6 +1199,9 @@
   "VITA": {
     "ids": ["ethereum/erc20/vitadao_token"]
   },
+  "VLISTX": {
+    "ids": ["stacks/sip10/vlistx"]
+  },
   "WAL": {
     "ids": [
       "sui/coin/wal_token_0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59::wal::wal"
@@ -1137,6 +1209,9 @@
   },
   "WAVES": {
     "ids": ["ethereum/erc20/waves", "waves"]
+  },
+  "WELSH": {
+    "ids": ["stacks/sip10/welsh"]
   },
   "WBT": {
     "ids": ["ethereum/erc20/wbt"]
