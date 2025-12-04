@@ -24,10 +24,12 @@ describe('iconMapping', () => {
     expect(ledgerIconUrl).toBe(`${CRYPTO_ICONS_CDN_BASE}/${ledgerCDNMock?.['bitcoin'].icon}`);
 
     const coinGeckoIconUrl = await getIconUrl('decred');
-    expect(coinGeckoIconUrl).toBe(coinGeckoMock?.find((i) => i.ledgerId === 'decred')?.data.img);
+    const expectedDecredUrl = coinGeckoMock.find((i) => i.ledgerId === 'decred')?.data.img;
+    expect(coinGeckoIconUrl).toBe(expectedDecredUrl);
 
     const coinGeckoIconUrl2 = await getIconUrl('particl');
-    expect(coinGeckoIconUrl2).toBe(coinGeckoMock?.find((i) => i.ledgerId === 'particl')?.data.img);
+    const expectedParticlUrl = coinGeckoMock.find((i) => i.ledgerId === 'particl')?.data.img;
+    expect(coinGeckoIconUrl2).toBe(expectedParticlUrl);
   });
 
   it('should return null if icon is not found in either data', async () => {

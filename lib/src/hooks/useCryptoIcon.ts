@@ -13,13 +13,43 @@ interface UseCryptoIconReturn {
   error: Error | null;
 }
 
+interface CachedResult {
+  iconUrl: string | null;
+  networkUrl: string | null;
+}
+
+// Lightweight in-memory cache for resolved icon URLs
+const iconCache = new Map<string, CachedResult>();
+
+const getCacheKey = (ledgerId: string, network?: string): string => {
+  return `${ledgerId}:${network || ''}`;
+};
+
+// Jest test helper
+export const resetIconCacheForTesting = () => {
+  iconCache.clear();
+};
+
 export const useCryptoIcon = ({ ledgerId, network }: UseCryptoIconProps): UseCryptoIconReturn => {
-  const [iconUrl, setIconUrl] = useState<string | null>(null);
-  const [networkUrl, setNetworkUrl] = useState<string | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  const cacheKey = getCacheKey(ledgerId, network);
+  const cached = iconCache.get(cacheKey);
+
+  const [iconUrl, setIconUrl] = useState<string | null>(cached?.iconUrl ?? null);
+  const [networkUrl, setNetworkUrl] = useState<string | null>(cached?.networkUrl ?? null);
+  const [loading, setLoading] = useState<boolean>(!cached);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
+    // Check cache again inside effect (in case it was populated by another instance)
+    const cachedResult = iconCache.get(cacheKey);
+    if (cachedResult) {
+      setIconUrl(cachedResult.iconUrl);
+      setNetworkUrl(cachedResult.networkUrl);
+      setLoading(false);
+      setError(null);
+      return;
+    }
+
     let cancelled = false;
 
     const loadIcon = async () => {
@@ -34,8 +64,16 @@ export const useCryptoIcon = ({ ledgerId, network }: UseCryptoIconProps): UseCry
         const [url, networkUrlResolved] = await Promise.all(iconsToResolve);
         if (cancelled) return;
 
-        setIconUrl(url);
-        if (network && networkUrlResolved) setNetworkUrl(networkUrlResolved);
+        const result: CachedResult = {
+          iconUrl: url,
+          networkUrl: network && networkUrlResolved ? networkUrlResolved : null,
+        };
+
+        // Cache the result
+        iconCache.set(cacheKey, result);
+
+        setIconUrl(result.iconUrl);
+        if (result.networkUrl) setNetworkUrl(result.networkUrl);
       } catch (e) {
         if (cancelled) return;
 
@@ -54,7 +92,7 @@ export const useCryptoIcon = ({ ledgerId, network }: UseCryptoIconProps): UseCry
     return () => {
       cancelled = true;
     };
-  }, [ledgerId, network]);
+  }, [ledgerId, network, cacheKey]);
 
   return {
     iconUrl,
