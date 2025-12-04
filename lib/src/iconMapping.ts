@@ -16,13 +16,12 @@ type CoinGeckoRawData = Array<{
   };
 }>;
 
-
 let ledgerMapping: LedgerMapping = null;
 let coinGeckoMapping: CoinGeckoMapping = null;
 let fetchingLedgerMapping: boolean = false;
 let fetchingCoinGeckoMapping: boolean = false;
-let iconMappingFetchPromise: Promise<LedgerMapping> | null;
-let coinGeckoIconMappingFetchPromise: Promise<CoinGeckoMapping> | null;
+let iconMappingFetchPromise: Promise<LedgerMapping> | null = null;
+let coinGeckoIconMappingFetchPromise: Promise<CoinGeckoMapping> | null = null;
 
 const fetchIconMapping = async <T>(url: string): Promise<T> => {
   const res = await fetch(url);
