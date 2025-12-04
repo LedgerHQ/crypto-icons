@@ -1,6 +1,7 @@
+import { Currency } from '@ledgerhq/wallet-api-client';
 import { rest } from 'msw';
 import { COINGECKO_MAPPED_ASSETS_URL, CRYPTO_ICONS_CDN_BASE } from '../src/constants';
-import { CoinGeckoMapping, LedgerMapping } from '../src/iconMapping';
+import { LedgerMapping } from '../src/iconMapping';
 
 export const ledgerCDNMock: LedgerMapping = {
   bitcoin: {
@@ -14,7 +15,8 @@ export const ledgerCDNMock: LedgerMapping = {
   },
 };
 
-export const coinGeckoMock: CoinGeckoMapping = [
+// Mock data in API format (array), which gets transformed to map internally
+export const coinGeckoMock: Array<{ ledgerId: Currency['id']; data: { img: string } }> = [
   {
     ledgerId: 'bitcoin',
     data: {

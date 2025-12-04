@@ -5,13 +5,15 @@ import { coinGeckoMock } from '../__mocks__/handlers';
 import { server } from '../__mocks__/node';
 import CryptoIcon from '../src/components/CryptoIcon';
 import { COINGECKO_MAPPED_ASSETS_URL, CRYPTO_ICONS_CDN_BASE } from '../src/constants';
-import { resetIconCacheForTesting } from '../src/iconMapping';
+import { resetIconCacheForTesting as resetHookCache } from '../src/hooks/useCryptoIcon';
+import { resetIconCacheForTesting as resetIconMappingCache } from '../src/iconMapping';
 
 console.error = jest.fn();
 
 describe('CryptoIcon', () => {
   beforeEach(() => {
-    resetIconCacheForTesting();
+    resetIconMappingCache();
+    resetHookCache();
   });
 
   describe('Ledger icon', () => {

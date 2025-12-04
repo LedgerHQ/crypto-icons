@@ -7,24 +7,23 @@ export type LedgerMapping = {
   };
 } | null;
 
-export type CoinGeckoMapping =
-  | {
-      ledgerId: Currency['id'];
-      data: {
-        img: string;
-      };
-    }[]
-  | null;
+export type CoinGeckoMapping = Record<string, string> | null;
 
-type CryptoIconsFetchPromise = Promise<LedgerMapping | CoinGeckoMapping> | null;
+type CoinGeckoRawData = Array<{
+  ledgerId: Currency['id'];
+  data: {
+    img: string;
+  };
+}>;
 
 let ledgerMapping: LedgerMapping = null;
 let coinGeckoMapping: CoinGeckoMapping = null;
 let fetchingLedgerMapping: boolean = false;
 let fetchingCoinGeckoMapping: boolean = false;
-let cryptoIconsFetchPromise: CryptoIconsFetchPromise = null;
+let iconMappingFetchPromise: Promise<LedgerMapping> | null = null;
+let coinGeckoIconMappingFetchPromise: Promise<CoinGeckoMapping> | null = null;
 
-const fetchIconMapping = async (url: string) => {
+const fetchIconMapping = async <T>(url: string): Promise<T> => {
   const res = await fetch(url);
 
   if (!res.ok) {
@@ -34,18 +33,18 @@ const fetchIconMapping = async (url: string) => {
   return res.json();
 };
 
-const setLedgerIconMapping = async () => {
+const initLedgerIconMapping = async () => {
   if (ledgerMapping) {
     return ledgerMapping;
   }
 
   if (fetchingLedgerMapping) {
-    return cryptoIconsFetchPromise;
+    return iconMappingFetchPromise;
   }
 
   fetchingLedgerMapping = true;
 
-  cryptoIconsFetchPromise = fetchIconMapping(`${CRYPTO_ICONS_CDN_BASE}/index.json`)
+  iconMappingFetchPromise = fetchIconMapping<LedgerMapping>(`${CRYPTO_ICONS_CDN_BASE}/index.json`)
     .then((data) => {
       ledgerMapping = data;
       return ledgerMapping;
@@ -55,25 +54,33 @@ const setLedgerIconMapping = async () => {
     })
     .finally(() => {
       fetchingLedgerMapping = false;
+      iconMappingFetchPromise = null;
     });
 
-  return cryptoIconsFetchPromise;
+  return iconMappingFetchPromise;
 };
 
-const setCoinGeckoIconMapping = async () => {
+const initCoinGeckoIconMapping = async () => {
   if (coinGeckoMapping) {
     return coinGeckoMapping;
   }
 
   if (fetchingCoinGeckoMapping) {
-    return cryptoIconsFetchPromise;
+    return coinGeckoIconMappingFetchPromise;
   }
 
   fetchingCoinGeckoMapping = true;
 
-  cryptoIconsFetchPromise = fetchIconMapping(COINGECKO_MAPPED_ASSETS_URL)
+  coinGeckoIconMappingFetchPromise = fetchIconMapping<CoinGeckoRawData>(COINGECKO_MAPPED_ASSETS_URL)
     .then((data) => {
-      coinGeckoMapping = data;
+      // Transform array into map for O(1) lookup
+      const mapping: Record<string, string> = {};
+      for (const asset of data) {
+        if (asset.ledgerId && asset.data?.img) {
+          mapping[asset.ledgerId] = asset.data.img;
+        }
+      }
+      coinGeckoMapping = mapping;
       return coinGeckoMapping;
     })
     .catch(() => {
@@ -81,27 +88,28 @@ const setCoinGeckoIconMapping = async () => {
     })
     .finally(() => {
       fetchingCoinGeckoMapping = false;
+      coinGeckoIconMappingFetchPromise = null;
     });
 
-  return cryptoIconsFetchPromise;
+  return coinGeckoIconMappingFetchPromise;
 };
 
 export const getIconUrl = async (ledgerId: Currency['id']): Promise<string | null> => {
   if (!ledgerMapping) {
-    await setLedgerIconMapping();
+    await initLedgerIconMapping();
   }
 
-  if (ledgerMapping?.[ledgerId]) {
-    return `${CRYPTO_ICONS_CDN_BASE}/${ledgerMapping[ledgerId].icon}`;
+  const maybeLedgerIcon = ledgerMapping?.[ledgerId];
+  if (maybeLedgerIcon) {
+    return `${CRYPTO_ICONS_CDN_BASE}/${maybeLedgerIcon.icon}`;
   }
 
   if (!coinGeckoMapping) {
-    await setCoinGeckoIconMapping();
+    await initCoinGeckoIconMapping();
   }
 
-  const coinGeckoAsset = coinGeckoMapping?.find((asset) => asset.ledgerId === ledgerId);
-  if (coinGeckoAsset?.data?.img) {
-    return coinGeckoAsset.data.img;
+  if (coinGeckoMapping?.[ledgerId]) {
+    return coinGeckoMapping[ledgerId];
   }
 
   return null;
@@ -111,4 +119,8 @@ export const getIconUrl = async (ledgerId: Currency['id']): Promise<string | nul
 export const resetIconCacheForTesting = () => {
   ledgerMapping = null;
   coinGeckoMapping = null;
+  fetchingLedgerMapping = false;
+  fetchingCoinGeckoMapping = false;
+  iconMappingFetchPromise = null;
+  coinGeckoIconMappingFetchPromise = null;
 };

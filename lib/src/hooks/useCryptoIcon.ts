@@ -6,6 +6,11 @@ interface UseCryptoIconProps {
   network?: string;
 }
 
+type IconState =
+  | { status: 'loading' }
+  | { status: 'success'; iconUrl: string | null; networkUrl: string | null }
+  | { status: 'error'; error: Error };
+
 interface UseCryptoIconReturn {
   iconUrl: string | null;
   networkUrl: string | null;
@@ -13,19 +18,57 @@ interface UseCryptoIconReturn {
   error: Error | null;
 }
 
+interface CachedResult {
+  iconUrl: string | null;
+  networkUrl: string | null;
+}
+
+// Lightweight in-memory cache for resolved icon URLs
+const iconCache = new Map<string, CachedResult>();
+
+const getCacheKey = (ledgerId: string, network?: string): string => {
+  return `${ledgerId}:${network || ''}`;
+};
+
+// Jest test helper
+export const resetIconCacheForTesting = () => {
+  iconCache.clear();
+};
+
 export const useCryptoIcon = ({ ledgerId, network }: UseCryptoIconProps): UseCryptoIconReturn => {
-  const [iconUrl, setIconUrl] = useState<string | null>(null);
-  const [networkUrl, setNetworkUrl] = useState<string | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<Error | null>(null);
+  const cacheKey = getCacheKey(ledgerId, network);
+  const cached = iconCache.get(cacheKey);
+
+  const [iconState, setIconState] = useState<IconState>(() => {
+    if (cached) {
+      return {
+        status: 'success',
+        iconUrl: cached.iconUrl,
+        networkUrl: cached.networkUrl,
+      };
+    }
+    return { status: 'loading' };
+  });
 
   useEffect(() => {
+    // Recalculate cacheKey inside effect (it's a derived value from ledgerId and network)
+    const effectCacheKey = getCacheKey(ledgerId, network);
+
+    // Check cache again inside effect (in case it was populated by another instance)
+    const cachedResult = iconCache.get(effectCacheKey);
+    if (cachedResult) {
+      setIconState({
+        status: 'success',
+        iconUrl: cachedResult.iconUrl,
+        networkUrl: cachedResult.networkUrl,
+      });
+      return;
+    }
+
     let cancelled = false;
 
     const loadIcon = async () => {
-      setLoading(true);
-      setError(null);
-      setNetworkUrl(null);
+      setIconState({ status: 'loading' });
 
       const iconsToResolve = [getIconUrl(ledgerId)];
       if (network) iconsToResolve.push(getIconUrl(network));
@@ -34,18 +77,28 @@ export const useCryptoIcon = ({ ledgerId, network }: UseCryptoIconProps): UseCry
         const [url, networkUrlResolved] = await Promise.all(iconsToResolve);
         if (cancelled) return;
 
-        setIconUrl(url);
-        if (network && networkUrlResolved) setNetworkUrl(networkUrlResolved);
+        const result: CachedResult = {
+          iconUrl: url,
+          networkUrl: network && networkUrlResolved ? networkUrlResolved : null,
+        };
+
+        // Cache the result
+        iconCache.set(effectCacheKey, result);
+
+        setIconState({
+          status: 'success',
+          iconUrl: result.iconUrl,
+          networkUrl: result.networkUrl,
+        });
       } catch (e) {
         if (cancelled) return;
 
         const errorInstance = e instanceof Error ? e : new Error('Failed to load icon');
-        setError(errorInstance);
         console.error('Failed to load crypto icon:', errorInstance);
-      } finally {
-        if (!cancelled) {
-          setLoading(false);
-        }
+        setIconState({
+          status: 'error',
+          error: errorInstance,
+        });
       }
     };
 
@@ -56,10 +109,26 @@ export const useCryptoIcon = ({ ledgerId, network }: UseCryptoIconProps): UseCry
     };
   }, [ledgerId, network]);
 
+  if (iconState.status === 'loading') {
+    return {
+      iconUrl: null,
+      networkUrl: null,
+      loading: true,
+      error: null,
+    };
+  }
+  if (iconState.status === 'error') {
+    return {
+      iconUrl: null,
+      networkUrl: null,
+      loading: false,
+      error: iconState.error,
+    };
+  }
   return {
-    iconUrl,
-    networkUrl,
-    loading,
-    error,
+    iconUrl: iconState.iconUrl,
+    networkUrl: iconState.networkUrl,
+    loading: false,
+    error: null,
   };
 };
