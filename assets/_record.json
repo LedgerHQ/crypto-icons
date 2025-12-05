@@ -435,6 +435,9 @@
   "HNT": {
     "ids": ["solana/spl/hntyvp6yfm1hg25tn9wglqm12b8tqmcknkrdu1oxwux"]
   },
+  "HOODI": {
+    "ids": ["ethereum_hoodi"]
+  },
   "HOT": {
     "ids": ["ethereum/erc20/holotoken"]
   },
