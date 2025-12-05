@@ -1754,6 +1754,81 @@
   "stacks": {
     "icon": "STX.png"
   },
+  "stacks/sip10/abtc": {
+    "icon": "ABTC.png"
+  },
+  "stacks/sip10/aeusdc": {
+    "icon": "AEUSDC.png"
+  },
+  "stacks/sip10/aewbtc": {
+    "icon": "AEWBTC.png"
+  },
+  "stacks/sip10/alex": {
+    "icon": "stacks_ALEX.png"
+  },
+  "stacks/sip10/ausd": {
+    "icon": "AUSD.png"
+  },
+  "stacks/sip10/brc20-trio": {
+    "icon": "BRC20-TRIO.png"
+  },
+  "stacks/sip10/charisma": {
+    "icon": "CHARISMA.png"
+  },
+  "stacks/sip10/diko": {
+    "icon": "DIKO.png"
+  },
+  "stacks/sip10/leo": {
+    "icon": "stacks_LEO.png"
+  },
+  "stacks/sip10/liabtc": {
+    "icon": "LIABTC.png"
+  },
+  "stacks/sip10/lialex": {
+    "icon": "LIALEX.png"
+  },
+  "stacks/sip10/listx": {
+    "icon": "LISTX.png"
+  },
+  "stacks/sip10/mega": {
+    "icon": "MEGA.png"
+  },
+  "stacks/sip10/not": {
+    "icon": "NOT.png"
+  },
+  "stacks/sip10/pbtc": {
+    "icon": "PBTC.png"
+  },
+  "stacks/sip10/roo": {
+    "icon": "ROO.png"
+  },
+  "stacks/sip10/sbtc": {
+    "icon": "SBTC.png"
+  },
+  "stacks/sip10/skull": {
+    "icon": "SKULL.png"
+  },
+  "stacks/sip10/ststx": {
+    "icon": "STSTX.png"
+  },
+  "stacks/sip10/ststxbtc": {
+    "icon": "STSTXBTC.png"
+  },
+  "stacks/sip10/usda": {
+    "icon": "USDA.png"
+  },
+  "stacks/sip10/usdh": {
+    "icon": "USDH.png"
+  },
+  "stacks/sip10/velar": {
+    "icon": "VELAR.png"
+  },
+  "stacks/sip10/vlistx": {
+    "icon": "VLISTX.png"
+  },
+  "stacks/sip10/welsh": {
+    "icon": "WELSH.png"
+  },
   "starknet": {
     "icon": "STRK.png"
   },
