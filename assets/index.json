@@ -1166,6 +1166,9 @@
   "ethereum_classic": {
     "icon": "ETC.png"
   },
+  "ethereum_hoodi": {
+    "icon": "HOODI.png"
+  },
   "ethereum_pow": {
     "icon": "ETHW.png"
   },
