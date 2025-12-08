@@ -1754,79 +1754,79 @@
   "stacks": {
     "icon": "STX.png"
   },
-  "stacks/sip10/abtc": {
+  "stacks/sip010/abtc_sp2xd7417hgprtremkf748vneqpdrr0rmanb7x1nk.token-abtc::bridged-btc": {
     "icon": "ABTC.png"
   },
-  "stacks/sip10/aeusdc": {
-    "icon": "AEUSDC.png"
+  "stacks/sip010/alex_token_sp102v8p0f7jx67arq77wea3d3cfb5xw39redt0am.token-alex::alex": {
+    "icon": "STACKS_ALEX.png"
   },
-  "stacks/sip10/aewbtc": {
-    "icon": "AEWBTC.png"
-  },
-  "stacks/sip10/alex": {
-    "icon": "stacks_ALEX.png"
-  },
-  "stacks/sip10/ausd": {
-    "icon": "AUSD.png"
-  },
-  "stacks/sip10/brc20-trio": {
-    "icon": "BRC20-TRIO.png"
-  },
-  "stacks/sip10/charisma": {
-    "icon": "CHARISMA.png"
-  },
-  "stacks/sip10/diko": {
+  "stacks/sip010/arkadiko_token_sp2c2yfp12ajzb4mabjbaj55xecvs7e4pmmz89yzr.arkadiko-token::diko": {
     "icon": "DIKO.png"
   },
-  "stacks/sip10/leo": {
-    "icon": "stacks_LEO.png"
+  "stacks/sip010/charisma_sp2zngj85endy6qrhq5p2d4fxkgzwcktb2t0z55ks.charisma-token::charisma": {
+    "icon": "CHARISMA.png"
   },
-  "stacks/sip10/liabtc": {
-    "icon": "LIABTC.png"
+  "stacks/sip010/ethereum_usdc_via_allbridge_sp3y2zsh8p7d50b0vbtsx11s7xsg24m1vb9yfqa4k.token-aeusdc::aeusdc": {
+    "icon": "AEUSDC.png"
   },
-  "stacks/sip10/lialex": {
-    "icon": "LIALEX.png"
+  "stacks/sip010/ethereum_wbtc_via_allbridge_sp3y2zsh8p7d50b0vbtsx11s7xsg24m1vb9yfqa4k.token-aewbtc::aewbtc": {
+    "icon": "AEWBTC.png"
   },
-  "stacks/sip10/listx": {
-    "icon": "LISTX.png"
-  },
-  "stacks/sip10/mega": {
-    "icon": "MEGA.png"
-  },
-  "stacks/sip10/not": {
-    "icon": "NOT.png"
-  },
-  "stacks/sip10/pbtc": {
-    "icon": "PBTC.png"
-  },
-  "stacks/sip10/roo": {
-    "icon": "ROO.png"
-  },
-  "stacks/sip10/sbtc": {
-    "icon": "SBTC.png"
-  },
-  "stacks/sip10/skull": {
-    "icon": "SKULL.png"
-  },
-  "stacks/sip10/ststx": {
-    "icon": "STSTX.png"
-  },
-  "stacks/sip10/ststxbtc": {
-    "icon": "STSTXBTC.png"
-  },
-  "stacks/sip10/usda": {
-    "icon": "USDA.png"
-  },
-  "stacks/sip10/usdh": {
+  "stacks/sip010/hermetica_usdh_spn5akg35qzsk2m8gamr4afx45659rjhdw353hsg.usdh-token-v1::usdh": {
     "icon": "USDH.png"
   },
-  "stacks/sip10/velar": {
+  "stacks/sip010/kangaroo_the_jumping_coin_sp2c1wrehgm75c7tgfaejpfktftegzkf6dft6e2ge.kangaroo::kangaroo": {
+    "icon": "ROO.png"
+  },
+  "stacks/sip010/leo_sp1ay6k3pqv5mrt6r4s671nww2frvpkm0br162ct6.leo-token::leo": {
+    "icon": "STACKS_LEO.png"
+  },
+  "stacks/sip010/liabtc_sp673z4bpb4r73359k9he55f2x91v5bjtn5sxz5t.token-liabtc::liabtc": {
+    "icon": "LIABTC.png"
+  },
+  "stacks/sip010/lialex_sp102v8p0f7jx67arq77wea3d3cfb5xw39redt0am.auto-alex-v3::auto-alex-v3": {
+    "icon": "LIALEX.png"
+  },
+  "stacks/sip010/listx_sm26nbc8sfhnw4p1y4dfh27974p56wn86c92hpehh.token-lqstx::lqstx": {
+    "icon": "LISTX.png"
+  },
+  "stacks/sip010/mega_sp3d6pv2acbpekyjtcmh7hen02kp87qsp8kteh335.mega::mega": {
+    "icon": "MEGA.png"
+  },
+  "stacks/sip010/nothing_sp32aeef6ww5y0nmj1s8sbszday8r5j32nbzfpkkz.nope::not": {
+    "icon": "NOT.png"
+  },
+  "stacks/sip010/pontis_bitcoin_sp14ns8mvbrhxmm96bqy0727aj59swpv7rmhc0ncg.pontis-bridge-pbtc::bridge-token": {
+    "icon": "PBTC.png"
+  },
+  "stacks/sip010/sbtc_sm3vdxk3wzzsa84xxfkafaf15nnzx32ctsg82jfq4.sbtc-token::sbtc-token": {
+    "icon": "SBTC.png"
+  },
+  "stacks/sip010/skullcoin_sp3brxz9y7p5yp28psr8yjt39rt51zzbsectcadgr.skullcoin-stxcity::skull": {
+    "icon": "SKULL.png"
+  },
+  "stacks/sip010/stacked_stx_btc_token_sp4sze494vc2yc5jyg7ayfq44f5q4pyv7dvmdpbg.ststxbtc-token-v2::ststxbtc": {
+    "icon": "STSTXBTC.png"
+  },
+  "stacks/sip010/stacked_stx_token_sp4sze494vc2yc5jyg7ayfq44f5q4pyv7dvmdpbg.ststx-token::ststx": {
+    "icon": "STSTX.png"
+  },
+  "stacks/sip010/susdt_sp2xd7417hgprtremkf748vneqpdrr0rmanb7x1nk.token-susdt::bridged-usdt": {
+    "icon": "AUSD.png"
+  },
+  "stacks/sip010/trio_brc20_sp3k8bc0ppevcv7nz6qsrwpq2je9e5b6n3pa0kbr9.brc20-trio::brc20-trio": {
+    "icon": "BRC20-TRIO.png"
+  },
+  "stacks/sip010/usda_sp2c2yfp12ajzb4mabjbaj55xecvs7e4pmmz89yzr.usda-token::usda": {
+    "icon": "USDA.png"
+  },
+  "stacks/sip010/velar_sp1y5ystahz88xyk1vpdh24gy0hpx5j4jectmy4a1.velar-token::velar": {
     "icon": "VELAR.png"
   },
-  "stacks/sip10/vlistx": {
+  "stacks/sip010/vlistx_sm26nbc8sfhnw4p1y4dfh27974p56wn86c92hpehh.token-vlqstx::vlqstx": {
     "icon": "VLISTX.png"
   },
-  "stacks/sip10/welsh": {
+  "stacks/sip010/welshcorgicoin_sp3ne50gexfg9szgtt51p40x2ckysz5cc4ztz7a2g.welshcorgicoin-token::welshcorgicoin": {
     "icon": "WELSH.png"
   },
   "starknet": {
