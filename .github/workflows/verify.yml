@@ -3,7 +3,7 @@ name: Verify package
 on:
   pull_request:
     branches: ["main"]
-    paths: ["lib/**"]
+    paths: ["lib/**", "assets/**", "scripts/**"]
 
 jobs:
   lint-and-test:
@@ -51,3 +51,6 @@ jobs:
             echo "::error file=assets/index.json::index.json is out of date. Run 'pnpm generate:index' locally and commit the changes.";
             exit 1;
           }
+
+      - name: Verify icons mapping
+        run: node ../scripts/verify-icons.js --concurrency 5

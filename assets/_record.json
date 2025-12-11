@@ -212,7 +212,7 @@
     ]
   },
   "CCD": {
-    "ids": ["concordium", "concordium_testnet"]
+    "ids": ["concordium"]
   },
   "CELO": {
     "ids": ["celo"]
@@ -971,9 +971,6 @@
       "optimism/erc20/threshold_network_token_0x747e42eb0591547a0ab429b3627816208c734ea7"
     ]
   },
-  "TAO": {
-    "ids": ["bittensor"]
-  },
   "TBTC": {
     "ids": [
       "arbitrum/erc20/arbitrum_tbtc_v2",
@@ -1160,7 +1157,6 @@
   },
   "WETH": {
     "ids": [
-      "weth",
       "ethereum/erc20/weth",
       "arbitrum/erc20/wrapped_ether",
       "base/erc20/wrapped_ether",

@@ -332,9 +332,6 @@
   "bitcoin_gold": {
     "icon": "BTG.png"
   },
-  "bittensor": {
-    "icon": "TAO.png"
-  },
   "bittorrent": {
     "icon": "BTT.png"
   },
@@ -606,9 +603,6 @@
     "icon": "CFG.png"
   },
   "concordium": {
-    "icon": "CCD.png"
-  },
-  "concordium_testnet": {
     "icon": "CCD.png"
   },
   "conflux": {
@@ -1831,9 +1825,6 @@
   },
   "waves": {
     "icon": "WAVES.png"
-  },
-  "weth": {
-    "icon": "WETH.png"
   },
   "zcash": {
     "icon": "ZEC.png"
