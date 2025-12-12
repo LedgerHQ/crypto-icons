@@ -864,6 +864,9 @@
   "SCROLL": {
     "ids": ["scroll"]
   },
+  "SEI": {
+    "ids": ["sei_evm", "ethereum/erc20/sei_0xbdf43ecadc5cef51b7d1772f722e40596bc1788b"]
+  },
   "SFP": {
     "ids": ["bsc/bep20/safepal_token", "ethereum/erc20/safepaltoken"]
   },

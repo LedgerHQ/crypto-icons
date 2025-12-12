@@ -1031,6 +1031,9 @@
   "ethereum/erc20/savings_usds_0xa3931d71877c0e7a3148cb7eb4463524fec27fbd": {
     "icon": "SUSDS.png"
   },
+  "ethereum/erc20/sei_0xbdf43ecadc5cef51b7d1772f722e40596bc1788b": {
+    "icon": "SEI.png"
+  },
   "ethereum/erc20/shiba_inu": {
     "icon": "SHIBA.png"
   },
@@ -1651,6 +1654,9 @@
   },
   "scroll/erc20/wrapped_eeth_0x01f0a31698c4d065659b9bdc21b3610292a1c506": {
     "icon": "WEETH.png"
+  },
+  "sei_evm": {
+    "icon": "SEI.png"
   },
   "siacoin": {
     "icon": "SC.png"
