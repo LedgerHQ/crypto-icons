@@ -605,6 +605,9 @@
   "concordium": {
     "icon": "CCD.png"
   },
+  "concordium_testnet": {
+    "icon": "CCD_TESNET.png"
+  },
   "conflux": {
     "icon": "BCFX.png"
   },
