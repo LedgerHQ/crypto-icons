@@ -57,7 +57,7 @@ This script validates:
 
 **Options:**
 
-- `--max-size <KB>`: Set custom file size limit (default: 41 KB)
+- `--max-size <KB>`: Set custom file size limit (default: 50 KB)
 - `--concurrency <N>`: Set API request concurrency (default: 5)
 
 **Example:**
