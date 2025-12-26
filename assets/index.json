@@ -332,6 +332,9 @@
   "bitcoin_gold": {
     "icon": "BTG.png"
   },
+  "bitcoin_testnet": {
+    "icon": "BTC_Testnet.png"
+  },
   "bittorrent": {
     "icon": "BTT.png"
   },
@@ -582,13 +585,16 @@
     "icon": "CANTON.png"
   },
   "canton_network_devnet": {
-    "icon": "CANTON.png"
+    "icon": "CANTON_Testnet.png"
   },
   "canton_network_testnet": {
-    "icon": "CANTON.png"
+    "icon": "CANTON_Testnet.png"
   },
   "cardano": {
     "icon": "ADA.png"
+  },
+  "cardano_testnet": {
+    "icon": "ADA_Testnet.png"
   },
   "casper": {
     "icon": "CSPR.png"
@@ -616,6 +622,9 @@
   },
   "cosmos": {
     "icon": "ATOM.png"
+  },
+  "cosmos_testnet": {
+    "icon": "ATOM_Testnet.png"
   },
   "cronos": {
     "icon": "CRO.png"
@@ -1166,11 +1175,17 @@
   "ethereum_classic": {
     "icon": "ETC.png"
   },
+  "ethereum_holesky": {
+    "icon": "ETH_Testnet.png"
+  },
   "ethereum_hoodi": {
-    "icon": "HOODI.png"
+    "icon": "ETH_Testnet.png"
   },
   "ethereum_pow": {
     "icon": "ETHW.png"
+  },
+  "ethereum_sepolia": {
+    "icon": "ETH_Testnet.png"
   },
   "fantom": {
     "icon": "FTM.png"
@@ -1469,6 +1484,9 @@
   "optimism/erc20/wrapped_eeth_0x5a7facb970d094b6c7ff1df0ea68d99e6e73cbff": {
     "icon": "WEETH.png"
   },
+  "optimism_sepolia": {
+    "icon": "OP_Testnet.png"
+  },
   "osmo": {
     "icon": "OSMO.png"
   },
@@ -1631,6 +1649,9 @@
   "polygon_zk_evm/erc20/wrapped_btc": {
     "icon": "WBTC.png"
   },
+  "polygon_zk_evm_testnet": {
+    "icon": "POL_Testnet.png"
+  },
   "qtum": {
     "icon": "QTUM.png"
   },
@@ -1744,6 +1765,12 @@
   },
   "solana/spl/wrapped_ftt_sollet_agfead2et2zjif9jagpdmixqqvw5i81abdvke7phnfz3": {
     "icon": "FTT.png"
+  },
+  "solana_devnet": {
+    "icon": "SOL_Testnet.png"
+  },
+  "solana_testnet": {
+    "icon": "SOL_Testnet.png"
   },
   "somnia": {
     "icon": "SOMI.png"
@@ -1909,6 +1936,9 @@
   },
   "waves": {
     "icon": "WAVES.png"
+  },
+  "westend": {
+    "icon": "DOT_Testnet.png"
   },
   "zcash": {
     "icon": "ZEC.png"

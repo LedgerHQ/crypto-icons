@@ -37,16 +37,25 @@
     ]
   },
   "ABTC": {
-    "ids": ["stacks/sip010/abtc_sp2xd7417hgprtremkf748vneqpdrr0rmanb7x1nk.token-abtc::bridged-btc"]
+    "ids": [
+      "stacks/sip010/abtc_sp2xd7417hgprtremkf748vneqpdrr0rmanb7x1nk.token-abtc::bridged-btc"
+    ]
   },
   "ADA": {
     "ids": ["cardano"]
   },
+  "ADA_Testnet": {
+    "ids": ["cardano_testnet"]
+  },
   "AEUSDC": {
-    "ids": ["stacks/sip010/ethereum_usdc_via_allbridge_sp3y2zsh8p7d50b0vbtsx11s7xsg24m1vb9yfqa4k.token-aeusdc::aeusdc"]
+    "ids": [
+      "stacks/sip010/ethereum_usdc_via_allbridge_sp3y2zsh8p7d50b0vbtsx11s7xsg24m1vb9yfqa4k.token-aeusdc::aeusdc"
+    ]
   },
   "AEWBTC": {
-    "ids": ["stacks/sip010/ethereum_wbtc_via_allbridge_sp3y2zsh8p7d50b0vbtsx11s7xsg24m1vb9yfqa4k.token-aewbtc::aewbtc"]
+    "ids": [
+      "stacks/sip010/ethereum_wbtc_via_allbridge_sp3y2zsh8p7d50b0vbtsx11s7xsg24m1vb9yfqa4k.token-aewbtc::aewbtc"
+    ]
   },
   "AIOZ": {
     "ids": ["bsc/bep20/aioz_network", "ethereum/erc20/aioz_network"]
@@ -107,11 +116,16 @@
   "ATOM": {
     "ids": ["bsc/bep20/binance-peg_cosmos_token", "cosmos"]
   },
+  "ATOM_Testnet": {
+    "ids": ["cosmos_testnet"]
+  },
   "AUDIO": {
     "ids": ["ethereum/erc20/audius"]
   },
   "AUSD": {
-    "ids": ["stacks/sip010/susdt_sp2xd7417hgprtremkf748vneqpdrr0rmanb7x1nk.token-susdt::bridged-usdt"]
+    "ids": [
+      "stacks/sip010/susdt_sp2xd7417hgprtremkf748vneqpdrr0rmanb7x1nk.token-susdt::bridged-usdt"
+    ]
   },
   "AVAX": {
     "ids": ["avalanche_c_chain", "bsc/bep20/binance-peg_avalanche_token"]
@@ -183,13 +197,18 @@
     ]
   },
   "BRC20-TRIO": {
-    "ids": ["stacks/sip010/trio_brc20_sp3k8bc0ppevcv7nz6qsrwpq2je9e5b6n3pa0kbr9.brc20-trio::brc20-trio"]
+    "ids": [
+      "stacks/sip010/trio_brc20_sp3k8bc0ppevcv7nz6qsrwpq2je9e5b6n3pa0kbr9.brc20-trio::brc20-trio"
+    ]
   },
   "BRETT": {
     "ids": ["base/erc20/brett"]
   },
   "BTC": {
     "ids": ["bitcoin"]
+  },
+  "BTC_Testnet": {
+    "ids": ["bitcoin_testnet"]
   },
   "BTG": {
     "ids": ["bitcoin_gold"]
@@ -215,7 +234,10 @@
     ]
   },
   "CANTON": {
-    "ids": ["canton_network", "canton_network_devnet", "canton_network_testnet"]
+    "ids": ["canton_network"]
+  },
+  "CANTON_Testnet": {
+    "ids": ["canton_network_devnet", "canton_network_testnet"]
   },
   "CBETH": {
     "ids": [
@@ -239,7 +261,9 @@
     "ids": ["centrifuge", "ethereum/erc20/wrapped_centrifuge"]
   },
   "CHARISMA": {
-    "ids": ["stacks/sip010/charisma_sp2zngj85endy6qrhq5p2d4fxkgzwcktb2t0z55ks.charisma-token::charisma"]
+    "ids": [
+      "stacks/sip010/charisma_sp2zngj85endy6qrhq5p2d4fxkgzwcktb2t0z55ks.charisma-token::charisma"
+    ]
   },
   "CHEEL": {
     "ids": ["bsc/bep20/cheelee"]
@@ -287,13 +311,18 @@
     "ids": ["ethereum/erc20/dexe"]
   },
   "DIKO": {
-    "ids": ["stacks/sip010/arkadiko_token_sp2c2yfp12ajzb4mabjbaj55xecvs7e4pmmz89yzr.arkadiko-token::diko"]
+    "ids": [
+      "stacks/sip010/arkadiko_token_sp2c2yfp12ajzb4mabjbaj55xecvs7e4pmmz89yzr.arkadiko-token::diko"
+    ]
   },
   "DOGE": {
     "ids": ["dogecoin"]
   },
   "DOT": {
     "ids": ["polkadot", "assethub_polkadot"]
+  },
+  "DOT_Testnet": {
+    "ids": ["westend"]
   },
   "DYDX": {
     "ids": ["dydx", "ethereum/erc20/dydx"]
@@ -477,8 +506,8 @@
   "HNT": {
     "ids": ["solana/spl/hntyvp6yfm1hg25tn9wglqm12b8tqmcknkrdu1oxwux"]
   },
-  "HOODI": {
-    "ids": ["ethereum_hoodi"]
+  "ETH_Testnet": {
+    "ids": ["ethereum_hoodi", "ethereum_sepolia", "ethereum_holesky"]
   },
   "HOT": {
     "ids": ["ethereum/erc20/holotoken"]
@@ -582,13 +611,19 @@
     "ids": ["ethereum/erc20/leo_token"]
   },
   "LIABTC": {
-    "ids": ["stacks/sip010/liabtc_sp673z4bpb4r73359k9he55f2x91v5bjtn5sxz5t.token-liabtc::liabtc"]
+    "ids": [
+      "stacks/sip010/liabtc_sp673z4bpb4r73359k9he55f2x91v5bjtn5sxz5t.token-liabtc::liabtc"
+    ]
   },
   "LIALEX": {
-    "ids": ["stacks/sip010/lialex_sp102v8p0f7jx67arq77wea3d3cfb5xw39redt0am.auto-alex-v3::auto-alex-v3"]
+    "ids": [
+      "stacks/sip010/lialex_sp102v8p0f7jx67arq77wea3d3cfb5xw39redt0am.auto-alex-v3::auto-alex-v3"
+    ]
   },
   "LISTX": {
-    "ids": ["stacks/sip010/listx_sm26nbc8sfhnw4p1y4dfh27974p56wn86c92hpehh.token-lqstx::lqstx"]
+    "ids": [
+      "stacks/sip010/listx_sm26nbc8sfhnw4p1y4dfh27974p56wn86c92hpehh.token-lqstx::lqstx"
+    ]
   },
   "LINEA": {
     "ids": ["linea"]
@@ -664,7 +699,9 @@
     "ids": ["base/erc20/heroes_of_mavia", "ethereum/erc20/heroes_of_mavia"]
   },
   "MEGA": {
-    "ids": ["stacks/sip010/mega_sp3d6pv2acbpekyjtcmh7hen02kp87qsp8kteh335.mega::mega"]
+    "ids": [
+      "stacks/sip010/mega_sp3d6pv2acbpekyjtcmh7hen02kp87qsp8kteh335.mega::mega"
+    ]
   },
   "MEME": {
     "ids": ["ethereum/erc20/memecoin_meme"]
@@ -733,7 +770,9 @@
     ]
   },
   "NOT": {
-    "ids": ["stacks/sip010/nothing_sp32aeef6ww5y0nmj1s8sbszday8r5j32nbzfpkkz.nope::not"]
+    "ids": [
+      "stacks/sip010/nothing_sp32aeef6ww5y0nmj1s8sbszday8r5j32nbzfpkkz.nope::not"
+    ]
   },
   "NFT": {
     "ids": [
@@ -772,6 +811,9 @@
   "OP": {
     "ids": ["optimism", "optimism/erc20/optimism"]
   },
+  "OP_Testnet": {
+    "ids": ["optimism_sepolia"]
+  },
   "ORBR": {
     "ids": ["ethereum/erc20/orbler"]
   },
@@ -797,7 +839,9 @@
     "ids": ["ethereum/erc20/paxos_gold"]
   },
   "PBTC": {
-    "ids": ["stacks/sip010/pontis_bitcoin_sp14ns8mvbrhxmm96bqy0727aj59swpv7rmhc0ncg.pontis-bridge-pbtc::bridge-token"]
+    "ids": [
+      "stacks/sip010/pontis_bitcoin_sp14ns8mvbrhxmm96bqy0727aj59swpv7rmhc0ncg.pontis-bridge-pbtc::bridge-token"
+    ]
   },
   "PENDLE": {
     "ids": [
@@ -818,6 +862,9 @@
   },
   "PIXEL": {
     "ids": ["ethereum/erc20/_pixel"]
+  },
+  "POL_Testnet": {
+    "ids": ["polygon_zk_evm_testnet"]
   },
   "PORTAL": {
     "ids": ["ethereum/erc20/_portal"]
@@ -872,7 +919,9 @@
     "ids": ["ethereum/erc20/rollbit_coin"]
   },
   "ROO": {
-    "ids": ["stacks/sip010/kangaroo_the_jumping_coin_sp2c1wrehgm75c7tgfaejpfktftegzkf6dft6e2ge.kangaroo::kangaroo"]
+    "ids": [
+      "stacks/sip010/kangaroo_the_jumping_coin_sp2c1wrehgm75c7tgfaejpfktftegzkf6dft6e2ge.kangaroo::kangaroo"
+    ]
   },
   "RNDR": {
     "ids": [
@@ -904,7 +953,9 @@
     ]
   },
   "SBTC": {
-    "ids": ["stacks/sip010/sbtc_sm3vdxk3wzzsa84xxfkafaf15nnzx32ctsg82jfq4.sbtc-token::sbtc-token"]
+    "ids": [
+      "stacks/sip010/sbtc_sm3vdxk3wzzsa84xxfkafaf15nnzx32ctsg82jfq4.sbtc-token::sbtc-token"
+    ]
   },
   "SC": {
     "ids": ["siacoin"]
@@ -913,13 +964,18 @@
     "ids": ["scroll"]
   },
   "SEI": {
-    "ids": ["sei_evm", "ethereum/erc20/sei_0xbdf43ecadc5cef51b7d1772f722e40596bc1788b"]
+    "ids": [
+      "sei_evm",
+      "ethereum/erc20/sei_0xbdf43ecadc5cef51b7d1772f722e40596bc1788b"
+    ]
   },
   "SFP": {
     "ids": ["bsc/bep20/safepal_token", "ethereum/erc20/safepaltoken"]
   },
   "SKULL": {
-    "ids": ["stacks/sip010/skullcoin_sp3brxz9y7p5yp28psr8yjt39rt51zzbsectcadgr.skullcoin-stxcity::skull"]
+    "ids": [
+      "stacks/sip010/skullcoin_sp3brxz9y7p5yp28psr8yjt39rt51zzbsectcadgr.skullcoin-stxcity::skull"
+    ]
   },
   "SHIBA": {
     "ids": [
@@ -951,6 +1007,9 @@
   },
   "SOL": {
     "ids": ["solana"]
+  },
+  "SOL_Testnet": {
+    "ids": ["solana_testnet", "solana_devnet"]
   },
   "SOMI": {
     "ids": ["somnia"]
@@ -984,19 +1043,27 @@
     "ids": ["ethereum/erc20/starknet", "starknet"]
   },
   "STSTX": {
-    "ids": ["stacks/sip010/stacked_stx_token_sp4sze494vc2yc5jyg7ayfq44f5q4pyv7dvmdpbg.ststx-token::ststx"]
+    "ids": [
+      "stacks/sip010/stacked_stx_token_sp4sze494vc2yc5jyg7ayfq44f5q4pyv7dvmdpbg.ststx-token::ststx"
+    ]
   },
   "STSTXBTC": {
-    "ids": ["stacks/sip010/stacked_stx_btc_token_sp4sze494vc2yc5jyg7ayfq44f5q4pyv7dvmdpbg.ststxbtc-token-v2::ststxbtc"]
+    "ids": [
+      "stacks/sip010/stacked_stx_btc_token_sp4sze494vc2yc5jyg7ayfq44f5q4pyv7dvmdpbg.ststxbtc-token-v2::ststxbtc"
+    ]
   },
   "STX": {
     "ids": ["stacks"]
   },
   "STACKS_ALEX": {
-    "ids": ["stacks/sip010/alex_token_sp102v8p0f7jx67arq77wea3d3cfb5xw39redt0am.token-alex::alex"]
+    "ids": [
+      "stacks/sip010/alex_token_sp102v8p0f7jx67arq77wea3d3cfb5xw39redt0am.token-alex::alex"
+    ]
   },
   "STACKS_LEO": {
-    "ids": ["stacks/sip010/leo_sp1ay6k3pqv5mrt6r4s671nww2frvpkm0br162ct6.leo-token::leo"]
+    "ids": [
+      "stacks/sip010/leo_sp1ay6k3pqv5mrt6r4s671nww2frvpkm0br162ct6.leo-token::leo"
+    ]
   },
   "SUI": {
     "ids": ["sui"]
@@ -1103,7 +1170,9 @@
     ]
   },
   "USDA": {
-    "ids": ["stacks/sip010/usda_sp2c2yfp12ajzb4mabjbaj55xecvs7e4pmmz89yzr.usda-token::usda"]
+    "ids": [
+      "stacks/sip010/usda_sp2c2yfp12ajzb4mabjbaj55xecvs7e4pmmz89yzr.usda-token::usda"
+    ]
   },
   "USDC": {
     "ids": [
@@ -1122,7 +1191,9 @@
     ]
   },
   "USDH": {
-    "ids": ["stacks/sip010/hermetica_usdh_spn5akg35qzsk2m8gamr4afx45659rjhdw353hsg.usdh-token-v1::usdh"]
+    "ids": [
+      "stacks/sip010/hermetica_usdh_spn5akg35qzsk2m8gamr4afx45659rjhdw353hsg.usdh-token-v1::usdh"
+    ]
   },
   "USDD": {
     "ids": [
@@ -1187,7 +1258,9 @@
     ]
   },
   "VELAR": {
-    "ids": ["stacks/sip010/velar_sp1y5ystahz88xyk1vpdh24gy0hpx5j4jectmy4a1.velar-token::velar"]
+    "ids": [
+      "stacks/sip010/velar_sp1y5ystahz88xyk1vpdh24gy0hpx5j4jectmy4a1.velar-token::velar"
+    ]
   },
   "VET": {
     "ids": ["bsc/bep20/vechain", "vechain"]
@@ -1203,7 +1276,9 @@
     "ids": ["ethereum/erc20/vitadao_token"]
   },
   "VLISTX": {
-    "ids": ["stacks/sip010/vlistx_sm26nbc8sfhnw4p1y4dfh27974p56wn86c92hpehh.token-vlqstx::vlqstx"]
+    "ids": [
+      "stacks/sip010/vlistx_sm26nbc8sfhnw4p1y4dfh27974p56wn86c92hpehh.token-vlqstx::vlqstx"
+    ]
   },
   "WAL": {
     "ids": [
@@ -1214,7 +1289,9 @@
     "ids": ["ethereum/erc20/waves", "waves"]
   },
   "WELSH": {
-    "ids": ["stacks/sip010/welshcorgicoin_sp3ne50gexfg9szgtt51p40x2ckysz5cc4ztz7a2g.welshcorgicoin-token::welshcorgicoin"]
+    "ids": [
+      "stacks/sip010/welshcorgicoin_sp3ne50gexfg9szgtt51p40x2ckysz5cc4ztz7a2g.welshcorgicoin-token::welshcorgicoin"
+    ]
   },
   "WBT": {
     "ids": ["ethereum/erc20/wbt"]
