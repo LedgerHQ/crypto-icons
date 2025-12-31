@@ -107,6 +107,9 @@
   "arbitrum/erc20/pepe": {
     "icon": "PEPE.png"
   },
+  "arbitrum/erc20/rbtc_0x441fcb23dfe8289cf572126fedcf450974adc891": {
+    "icon": "RBTC.png"
+  },
   "arbitrum/erc20/rocket_pool_eth": {
     "icon": "RETH.png"
   },
@@ -124,6 +127,9 @@
   },
   "arbitrum/erc20/tether_usd": {
     "icon": "USDT0.png"
+  },
+  "arbitrum/erc20/tlos": {
+    "icon": "TELOS.png"
   },
   "arbitrum/erc20/uniswap": {
     "icon": "UNI.png"
@@ -272,6 +278,9 @@
   "base/erc20/prime": {
     "icon": "PRIME.png"
   },
+  "base/erc20/rbtc_0x441fcb23dfe8289cf572126fedcf450974adc891": {
+    "icon": "RBTC.png"
+  },
   "base/erc20/rocket_pool_eth": {
     "icon": "RETH.png"
   },
@@ -289,6 +298,9 @@
   },
   "base/erc20/threshold_network_token_0x26f3901ac8a79c50fb0d8289c74f0d09adc42e29": {
     "icon": "T.png"
+  },
+  "base/erc20/tlos_0x7252c865c05378ffc15120f428dd65804dd0ce63": {
+    "icon": "TELOS.png"
   },
   "base/erc20/usd_coin": {
     "icon": "USDC.png"
@@ -310,6 +322,9 @@
   },
   "base/erc20/zeebu": {
     "icon": "ZBU.png"
+  },
+  "berachain": {
+    "icon": "BERACHAIN.png"
   },
   "berachain/erc20/ohm": {
     "icon": "OHM.png"
@@ -1016,6 +1031,9 @@
   "ethereum/erc20/quant": {
     "icon": "QNT.png"
   },
+  "ethereum/erc20/rbtc_0x1e44f98cc78d505a61f63b26d13b116cf51dbb87": {
+    "icon": "RBTC.png"
+  },
   "ethereum/erc20/render_token": {
     "icon": "RNDR.png"
   },
@@ -1186,6 +1204,9 @@
   },
   "ethereum_sepolia": {
     "icon": "ETH_Testnet.png"
+  },
+  "etherlink": {
+    "icon": "XTZ.png"
   },
   "fantom": {
     "icon": "FTM.png"
@@ -1359,7 +1380,7 @@
     "icon": "MON.png"
   },
   "monad_testnet": {
-    "icon": "MON.png"
+    "icon": "MON_TESTNET.png"
   },
   "monero": {
     "icon": "XMR.png"
@@ -1378,6 +1399,9 @@
   },
   "moonbeam/erc20/usd_coin": {
     "icon": "USDC.png"
+  },
+  "moonriver": {
+    "icon": "MOVR.png"
   },
   "moonriver/erc20/frax_share_0x6f1d1ee50846fcbc3de91723e61cb68cfa6d0e98": {
     "icon": "FXS.png"
@@ -1607,6 +1631,9 @@
   "polygon/erc20/telcoin": {
     "icon": "TEL.png"
   },
+  "polygon/erc20/tlos": {
+    "icon": "TELOS.png"
+  },
   "polygon/erc20/uniswap_(pos)": {
     "icon": "UNI.png"
   },
@@ -1663,6 +1690,12 @@
   },
   "ripple": {
     "icon": "XRP.png"
+  },
+  "rsk": {
+    "icon": "RBTC.png"
+  },
+  "rsk/erc20/rootstock_smart_bitcoin_0x542fda317318ebf1d3deaf76e0b632741a7e677d": {
+    "icon": "RBTC.png"
   },
   "scroll": {
     "icon": "SCROLL.png"
@@ -1744,6 +1777,9 @@
   },
   "solana/spl/pudgy_penguins_2zmmhcvqexdtde6vsfs7s7d5ouodfjhe8vd1gnbouauv": {
     "icon": "PENGU.png"
+  },
+  "solana/spl/rbtc_8yev7nlen2pfn2uyghzsubu243wma9z4zrcwuxs6deqw": {
+    "icon": "RBTC.png"
   },
   "solana/spl/rndrizkt3mk1iimdxrdwabcf7zg7ar5t4nud4ekhbof": {
     "icon": "RNDR.png"
@@ -1885,6 +1921,9 @@
   },
   "syscoin/erc20/wrapped_bitcoin_(multichain)": {
     "icon": "WBTC.png"
+  },
+  "telos_evm": {
+    "icon": "TELOS.png"
   },
   "telos_evm/erc20/chainlink_token": {
     "icon": "LINK.png"

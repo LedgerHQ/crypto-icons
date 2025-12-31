@@ -169,6 +169,9 @@
   "BEAM": {
     "ids": ["bsc/bep20/beam", "ethereum/erc20/beam"]
   },
+  "BERACHAIN": {
+    "ids": ["berachain"]
+  },
   "BGB": {
     "ids": ["ethereum/erc20/bitgettoken_0581"]
   },
@@ -733,7 +736,10 @@
     "ids": ["base/erc20/mog_coin", "ethereum/erc20/mog_coin"]
   },
   "MON": {
-    "ids": ["monad", "monad_testnet"]
+    "ids": ["monad"]
+  },
+  "MON_TESTNET": {
+    "ids": ["monad_testnet"]
   },
   "MORPHO": {
     "ids": [
@@ -742,6 +748,9 @@
       "ethereum/erc20/morpho_token_0x58d97b57bb95320f9a05dc918aef65434969c2b2",
       "katana/erc20/morpho_token_0x1e5efca3d0db2c6d5c67a4491845c43253eb9e4e"
     ]
+  },
+  "MOVR": {
+    "ids": ["moonriver"]
   },
   "MSOL": {
     "ids": ["solana/spl/msolzycxhdygdzu16g5qsh3i5k3z3kzk7ytfqcjm7so"]
@@ -902,6 +911,16 @@
   },
   "RBN": {
     "ids": ["ethereum/erc20/ribbon"]
+  },
+  "RBTC": {
+    "ids": [
+      "rsk",
+      "arbitrum/erc20/rbtc_0x441fcb23dfe8289cf572126fedcf450974adc891",
+      "base/erc20/rbtc_0x441fcb23dfe8289cf572126fedcf450974adc891",
+      "ethereum/erc20/rbtc_0x1e44f98cc78d505a61f63b26d13b116cf51dbb87",
+      "rsk/erc20/rootstock_smart_bitcoin_0x542fda317318ebf1d3deaf76e0b632741a7e677d",
+      "solana/spl/rbtc_8yev7nlen2pfn2uyghzsubu243wma9z4zrcwuxs6deqw"
+    ]
   },
   "REQ": {
     "ids": ["ethereum/erc20/request_network", "polygon/erc20/request"]
@@ -1119,6 +1138,14 @@
       "base/erc20/telcoin_0x09be1692ca16e06f536f0038ff11d1da8524adb1",
       "ethereum/erc20/telcoin",
       "polygon/erc20/telcoin"
+    ]
+  },
+  "TELOS": {
+    "ids": [
+      "telos_evm",
+      "arbitrum/erc20/tlos",
+      "base/erc20/tlos_0x7252c865c05378ffc15120f428dd65804dd0ce63",
+      "polygon/erc20/tlos"
     ]
   },
   "THETA": {
@@ -1375,7 +1402,7 @@
     "ids": ["ripple"]
   },
   "XTZ": {
-    "ids": ["tezos"]
+    "ids": ["tezos", "etherlink"]
   },
   "YLDY": {
     "ids": ["ethereum/erc20/yieldly"]
