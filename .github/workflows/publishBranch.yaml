@@ -39,34 +39,39 @@ jobs:
       - name: Build project
         run: pnpm run build
 
-      - name: Create tarball for attestation
+      - name: Create tarball
         run: |
-          echo "TARBALL=$(pnpm pack --pack-destination dist)" >> $GITHUB_ENV
+          mkdir -p ../dist
+          echo "TARBALL=$(pnpm pack --pack-destination ../dist)" >> $GITHUB_ENV
 
       - name: Get PR name
         id: get-pr-name
         run: echo "PR_NAME=${{ github.event.inputs.branch }}" >> $GITHUB_ENV
 
       - name: Rename tarball with PR name
+        working-directory: ./dist/
         run: |
-          TARBALL=$(echo $TARBALL | sed "s/\.tgz/-${PR_NAME}.tgz/")
-          echo "TARBALL=${TARBALL}" >> $GITHUB_ENV
+          OLD_NAME=$(basename $TARBALL)
+          NEW_NAME=$(echo $OLD_NAME | sed "s/\.tgz/-${PR_NAME}.tgz/")
+          mv "$OLD_NAME" "$NEW_NAME"
+          echo "TARBALL=$(pwd)/${NEW_NAME}" >> $GITHUB_ENV
 
-      - name: Attest tarball
-        uses: LedgerHQ/actions-security/actions/attest@actions/attest-1
+      - name: Attest for npmjs.com
+        uses: LedgerHQ/actions-security/actions/attest-for-npmsjs-com@attest-npm-dir-support
         with:
-          subject-path: ./lib/dist
+          subject-path: ./dist
 
       - name: Sign tarball
         uses: LedgerHQ/actions-security/actions/sign-blob@actions/sign-blob-1
         with:
-          path: ./lib/dist
+          path: ./dist
 
       - name: Login to JFrog Ledger
         id: jfrog-login
         uses: LedgerHQ/actions-security/actions/jfrog-login@actions/jfrog-login-1
 
       - name: Setup npm config for JFrog
+        working-directory: ./dist/
         env:
           NPM_REGISTRY_TOKEN: ${{ steps.jfrog-login.outputs.oidc-token }}
         run: |
@@ -76,4 +81,5 @@ jobs:
           EOF
 
       - name: Publish package to JFrog
+        working-directory: ./dist/
         run: pnpm publish $TARBALL --no-git-checks
