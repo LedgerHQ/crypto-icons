@@ -57,7 +57,7 @@ jobs:
           echo "TARBALL=$(pwd)/${NEW_NAME}" >> $GITHUB_ENV
 
       - name: Attest for npmjs.com
-        uses: LedgerHQ/actions-security/actions/attest-for-npmsjs-com@attest-npm-dir-support
+        uses: LedgerHQ/actions-security/actions/attest-for-npmsjs-com@actions/attest-for-npmsjs-com-0
         with:
           subject-path: ./dist
 
