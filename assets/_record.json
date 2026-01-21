@@ -128,7 +128,7 @@
     ]
   },
   "AVAX": {
-    "ids": ["avalanche_c_chain", "bsc/bep20/binance-peg_avalanche_token"]
+    "ids": ["avalanche_c_chain", "avalanche_c_chain_fuji", "bsc/bep20/binance-peg_avalanche_token"]
   },
   "AXS": {
     "ids": [
@@ -177,6 +177,9 @@
   },
   "BICO": {
     "ids": ["arbitrum/erc20/biconomy_token", "ethereum/erc20/biconomy_token"]
+  },
+  "BITLAYER": {
+    "ids": ["bitlayer"]
   },
   "BLAST": {
     "ids": ["blast"]
@@ -574,7 +577,7 @@
     "ids": ["kadena"]
   },
   "KLAY": {
-    "ids": ["klaytn"]
+    "ids": ["klaytn", "klaytn_baobab"]
   },
   "KNC": {
     "ids": [
@@ -981,6 +984,9 @@
   },
   "SCROLL": {
     "ids": ["scroll"]
+  },
+  "SHAPE": {
+    "ids": ["shape"]
   },
   "SEI": {
     "ids": [
