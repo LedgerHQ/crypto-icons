@@ -236,6 +236,9 @@
   "avalanche_c_chain/erc20/wrapped_eeth_0xa3d68b74bf0528fdd07263c60d6488749044914b": {
     "icon": "WEETH.png"
   },
+  "avalanche_c_chain_fuji": {
+    "icon": "AVAX.png"
+  },
   "babylon": {
     "icon": "BABY.png"
   },
@@ -349,6 +352,9 @@
   },
   "bitcoin_testnet": {
     "icon": "BTC_Testnet.png"
+  },
+  "bitlayer": {
+    "icon": "BITLAYER.png"
   },
   "bittorrent": {
     "icon": "BTT.png"
@@ -1301,6 +1307,9 @@
   "klaytn": {
     "icon": "KLAY.png"
   },
+  "klaytn_baobab": {
+    "icon": "KLAY.png"
+  },
   "kusama": {
     "icon": "KSM.png"
   },
@@ -1714,6 +1723,9 @@
   },
   "sei_evm": {
     "icon": "SEI.png"
+  },
+  "shape": {
+    "icon": "SHAPE.png"
   },
   "siacoin": {
     "icon": "SC.png"
