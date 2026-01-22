@@ -1199,6 +1199,11 @@
       "polygon/erc20/uniswap_(pos)"
     ]
   },
+  "UNICHAIN": {
+    "ids": [
+      "unichain"
+    ]
+  },
   "USD1": {
     "ids": [
       "bsc/bep20/world_liberty_financial_usd_0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d",
