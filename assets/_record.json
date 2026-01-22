@@ -515,6 +515,9 @@
   "ETH_Testnet": {
     "ids": ["ethereum_hoodi", "ethereum_sepolia", "ethereum_holesky"]
   },
+  "ETHERLINK": {
+    "ids": ["etherlink"]
+  },
   "HOT": {
     "ids": ["ethereum/erc20/holotoken"]
   },
@@ -1408,7 +1411,7 @@
     "ids": ["ripple"]
   },
   "XTZ": {
-    "ids": ["tezos", "etherlink"]
+    "ids": ["tezos"]
   },
   "YLDY": {
     "ids": ["ethereum/erc20/yieldly"]
