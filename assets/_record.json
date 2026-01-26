@@ -128,7 +128,11 @@
     ]
   },
   "AVAX": {
-    "ids": ["avalanche_c_chain", "avalanche_c_chain_fuji", "bsc/bep20/binance-peg_avalanche_token"]
+    "ids": [
+      "avalanche_c_chain",
+      "avalanche_c_chain_fuji",
+      "bsc/bep20/binance-peg_avalanche_token"
+    ]
   },
   "AXS": {
     "ids": [
@@ -1187,6 +1191,11 @@
   },
   "TWT": {
     "ids": ["bsc/bep20/trust_wallet"]
+  },
+  "UFD": {
+    "ids": [
+      "solana/spl/unicorn_fart_dust_el5fuxj2j4ciqsmw85k5fg9dvuqjjuobhoqbi2kpump"
+    ]
   },
   "UNI": {
     "ids": [
