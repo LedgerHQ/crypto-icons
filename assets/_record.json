@@ -128,7 +128,11 @@
     ]
   },
   "AVAX": {
-    "ids": ["avalanche_c_chain", "bsc/bep20/binance-peg_avalanche_token"]
+    "ids": [
+      "avalanche_c_chain",
+      "avalanche_c_chain_fuji",
+      "bsc/bep20/binance-peg_avalanche_token"
+    ]
   },
   "AXS": {
     "ids": [
@@ -177,6 +181,9 @@
   },
   "BICO": {
     "ids": ["arbitrum/erc20/biconomy_token", "ethereum/erc20/biconomy_token"]
+  },
+  "BITLAYER": {
+    "ids": ["bitlayer"]
   },
   "BLAST": {
     "ids": ["blast"]
@@ -512,6 +519,9 @@
   "ETH_Testnet": {
     "ids": ["ethereum_hoodi", "ethereum_sepolia", "ethereum_holesky"]
   },
+  "ETHERLINK": {
+    "ids": ["etherlink"]
+  },
   "HOT": {
     "ids": ["ethereum/erc20/holotoken"]
   },
@@ -574,7 +584,7 @@
     "ids": ["kadena"]
   },
   "KLAY": {
-    "ids": ["klaytn"]
+    "ids": ["klaytn", "klaytn_baobab"]
   },
   "KNC": {
     "ids": [
@@ -982,6 +992,9 @@
   "SCROLL": {
     "ids": ["scroll"]
   },
+  "SHAPE": {
+    "ids": ["shape"]
+  },
   "SEI": {
     "ids": [
       "sei_evm",
@@ -1178,6 +1191,11 @@
   },
   "TWT": {
     "ids": ["bsc/bep20/trust_wallet"]
+  },
+  "UFD": {
+    "ids": [
+      "solana/spl/unicorn_fart_dust_el5fuxj2j4ciqsmw85k5fg9dvuqjjuobhoqbi2kpump"
+    ]
   },
   "UNI": {
     "ids": [
@@ -1402,7 +1420,7 @@
     "ids": ["ripple"]
   },
   "XTZ": {
-    "ids": ["tezos", "etherlink"]
+    "ids": ["tezos"]
   },
   "YLDY": {
     "ids": ["ethereum/erc20/yieldly"]
