@@ -77,6 +77,9 @@
   "arbitrum/erc20/graph_token": {
     "icon": "GRT.png"
   },
+  "arbitrum/erc20/kelpdao_restaked_eth": {
+    "icon": "RSETH.png"
+  },
   "arbitrum/erc20/kujira_native_asset": {
     "icon": "KUJI.png"
   },
@@ -212,6 +215,9 @@
   "avalanche_c_chain/erc20/graph_token_(bridged)": {
     "icon": "GRT.png"
   },
+  "avalanche_c_chain/erc20/kelpdao_restaked_eth_0xc430c78da6e4af49bd115f0329d154bb135f1363": {
+    "icon": "RSETH.png"
+  },
   "avalanche_c_chain/erc20/kyber_network_crystal_v2": {
     "icon": "KNC.png"
   },
@@ -289,6 +295,9 @@
   },
   "base/erc20/iotex_network": {
     "icon": "IOTX.png"
+  },
+  "base/erc20/kelpdao_restaked_eth": {
+    "icon": "RSETH.png"
   },
   "base/erc20/mog_coin": {
     "icon": "MOG.png"
@@ -371,6 +380,9 @@
   "berachain/erc20/pendle": {
     "icon": "PENDLE.png"
   },
+  "berachain/erc20/rseth": {
+    "icon": "RSETH.png"
+  },
   "berachain/erc20/stargatetoken_0x9895d81bb462a195b4922ed7de0e3acd007c32cb": {
     "icon": "STG.png"
   },
@@ -415,6 +427,9 @@
   },
   "blast/erc20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
     "icon": "ENA.png"
+  },
+  "blast/erc20/kelpdao_bridged_rseth_blast": {
+    "icon": "RSETH.png"
   },
   "blast/erc20/usde_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
     "icon": "USDE.png"
@@ -1133,6 +1148,9 @@
   "ethereum/erc20/rollbit_coin": {
     "icon": "RLB.png"
   },
+  "ethereum/erc20/rseth": {
+    "icon": "RSETH.png"
+  },
   "ethereum/erc20/runesbridge": {
     "icon": "RB.png"
   },
@@ -1430,6 +1448,9 @@
   "linea/erc20/gnosis_token": {
     "icon": "GNO.png"
   },
+  "linea/erc20/kelpdao_restaked_eth": {
+    "icon": "RSETH.png"
+  },
   "linea/erc20/kyber_network_crystal_v2": {
     "icon": "KNC.png"
   },
@@ -1597,6 +1618,9 @@
   },
   "optimism/erc20/frax_ether": {
     "icon": "FRXETH.png"
+  },
+  "optimism/erc20/kelpdao_restaked_eth": {
+    "icon": "RSETH.png"
   },
   "optimism/erc20/kujira_native_asset": {
     "icon": "KUJI.png"
@@ -1865,6 +1889,9 @@
   "scroll/erc20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
     "icon": "ENA.png"
   },
+  "scroll/erc20/kelpdao_restaked_eth": {
+    "icon": "RSETH.png"
+  },
   "scroll/erc20/stargatetoken_0x8731d54e9d02c286767d56ac03e8037c07e01e98": {
     "icon": "STG.png"
   },
@@ -1999,6 +2026,9 @@
   },
   "sonic/erc20/chainlink_token_0x71052bae71c25c78e37fd12e5ff1101a71d9018f": {
     "icon": "LINK.png"
+  },
+  "sonic/erc20/kelpdao_restaked_eth_0xd75787ba9aba324420d522bda84c08c87e5099b1": {
+    "icon": "RSETH.png"
   },
   "sonic/erc20/pendle_0xf1ef7d2d4c0c881cd634481e0586ed5d2871a74b": {
     "icon": "PENDLE.png"

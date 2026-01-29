@@ -989,6 +989,20 @@
   "ROSE": {
     "ids": ["bsc/bep20/wrapped_rose", "ethereum/erc20/oasis_labs"]
   },
+  "RSETH": {
+    "ids": [
+      "arbitrum/erc20/kelpdao_restaked_eth",
+      "avalanche_c_chain/erc20/kelpdao_restaked_eth_0xc430c78da6e4af49bd115f0329d154bb135f1363",
+      "base/erc20/kelpdao_restaked_eth",
+      "berachain/erc20/rseth",
+      "blast/erc20/kelpdao_bridged_rseth_blast",
+      "ethereum/erc20/rseth",
+      "linea/erc20/kelpdao_restaked_eth",
+      "optimism/erc20/kelpdao_restaked_eth",
+      "scroll/erc20/kelpdao_restaked_eth",
+      "sonic/erc20/kelpdao_restaked_eth_0xd75787ba9aba324420d522bda84c08c87e5099b1"
+    ]
+  },
   "RUNE": {
     "ids": ["thorchain"]
   },
