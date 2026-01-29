@@ -782,6 +782,9 @@
   "energi/erc20/loopring_0x193da10f8a969d4c081b9097b15337b1488cbbec": {
     "icon": "LRC.png"
   },
+  "energi/erc20/numeraire_0xd72922e849477a042a7e6dc84309f4bc1c1227a2": {
+    "icon": "NMR.png"
+  },
   "eos": {
     "icon": "EOS.png"
   },
@@ -1066,6 +1069,9 @@
   },
   "ethereum/erc20/nexus_mutual": {
     "icon": "nxm.png"
+  },
+  "ethereum/erc20/nmr": {
+    "icon": "NMR.png"
   },
   "ethereum/erc20/oasis_labs": {
     "icon": "ROSE.png"
@@ -1933,6 +1939,9 @@
   },
   "solana/spl/dezxaz8z7pnrnrjjz3wxborgixca6xjnb7yab1ppb263": {
     "icon": "BONK.png"
+  },
+  "solana/spl/doublezero_j6pqq3facjqewppgppwrb4nm8ju3wlyybrrlh7femfvd": {
+    "icon": "2Z.png"
   },
   "solana/spl/ekpqgsjtjmfqkz9kqansqyxrcf8fbopzlhyxdm65zcjm": {
     "icon": "WIF.png"

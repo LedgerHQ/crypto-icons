@@ -24,6 +24,11 @@
       "energi/erc20/1inch_0xdda6205dc3f47e5280eb726613b27374eee9d130"
     ]
   },
+  "2Z": {
+    "ids": [
+      "solana/spl/doublezero_j6pqq3facjqewppgppwrb4nm8ju3wlyybrrlh7femfvd"
+    ]
+  },
   "AAVE": {
     "ids": [
       "arbitrum/erc20/aave_token_0xba5ddd1f9d7f570dc94a51479a000e3bce967196",
@@ -805,6 +810,12 @@
   "NFP": {
     "ids": [
       "bsc/bep20/nfprompt_ai_token_0x551897f8203bd131b350601d3ac0679ba0fc0136"
+    ]
+  },
+  "NMR": {
+    "ids": [
+      "energi/erc20/numeraire_0xd72922e849477a042a7e6dc84309f4bc1c1227a2",
+      "ethereum/erc20/nmr"
     ]
   },
   "NOT": {
