@@ -1139,6 +1139,9 @@
   "ethereum/erc20/uniswap": {
     "icon": "UNI.png"
   },
+  "ethereum/erc20/usd__coin": {
+    "icon": "USDC.png"
+  },
   "ethereum/erc20/usd_tether__erc20_": {
     "icon": "USDT.png"
   },
