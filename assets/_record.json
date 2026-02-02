@@ -1107,6 +1107,11 @@
       "polygon/erc20/superfarm_(pos)"
     ]
   },
+  "SUSDH": {
+    "ids": [
+      "stacks/sip010/hermetica_staked_usdh_spn5akg35qzsk2m8gamr4afx45659rjhdw353hsg.susdh-token-v1::susdh"
+    ]
+  },
   "SUSDS": {
     "ids": [
       "arbitrum/erc20/savings_usds_0xddb46999f8891663a8f2828d25298f70416d7610",

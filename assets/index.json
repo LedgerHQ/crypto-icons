@@ -1853,6 +1853,9 @@
   "stacks/sip010/ethereum_wbtc_via_allbridge_sp3y2zsh8p7d50b0vbtsx11s7xsg24m1vb9yfqa4k.token-aewbtc::aewbtc": {
     "icon": "AEWBTC.png"
   },
+  "stacks/sip010/hermetica_staked_usdh_spn5akg35qzsk2m8gamr4afx45659rjhdw353hsg.susdh-token-v1::susdh": {
+    "icon": "SUSDH.png"
+  },
   "stacks/sip010/hermetica_usdh_spn5akg35qzsk2m8gamr4afx45659rjhdw353hsg.usdh-token-v1::usdh": {
     "icon": "USDH.png"
   },
