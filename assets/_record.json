@@ -1236,6 +1236,7 @@
       "avalanche_c_chain/erc20/usd_coin",
       "base/erc20/usd_coin",
       "elrond/esdt/555344432d633736663166",
+      "ethereum/erc20/usd__coin",
       "moonbeam/erc20/usd_coin",
       "optimism/erc20/usd_coin",
       "polygon/erc20/usd_coin",
