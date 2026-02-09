@@ -1610,6 +1610,9 @@
   "mantle/erc20/usdt0_0x779ded0c9e1022225f8e0630b35a9b54be713736": {
     "icon": "USDT0.png"
   },
+  "mina": {
+    "icon": "MINA.png"
+  },
   "monad": {
     "icon": "MON.png"
   },
@@ -1663,6 +1666,9 @@
   },
   "moonriver/erc20/frax_share_0x6f1d1ee50846fcbc3de91723e61cb68cfa6d0e98": {
     "icon": "FXS.png"
+  },
+  "nano": {
+    "icon": "NANO.png"
   },
   "near": {
     "icon": "NEAR.png"
