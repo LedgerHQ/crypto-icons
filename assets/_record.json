@@ -795,6 +795,9 @@
   "METIS": {
     "ids": ["bsc/bep20/metis_token", "ethereum/erc20/metis_token"]
   },
+  "MINA": {
+    "ids": ["mina"]
+  },
   "MKR": {
     "ids": [
       "avalanche_c_chain/erc20/maker",
@@ -838,6 +841,9 @@
   },
   "MYRO": {
     "ids": ["solana/spl/hhjpbhrrn4g56vsylut8dl5bv31hkxqsrahttuczezg4"]
+  },
+  "NANO": {
+    "ids": ["nano"]
   },
   "NEAR": {
     "ids": ["near"]
