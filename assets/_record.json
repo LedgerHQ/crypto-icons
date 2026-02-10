@@ -1386,6 +1386,11 @@
       "sei_evm/erc20/usdc_0xe15fc38f6d8c56af07bbcbe3baf5708a2bf42392"
     ]
   },
+  "USDCX": {
+    "ids": [
+      "stacks/sip010/usdcx_sp120sbrbqj00mcws7tm5r8wjnttkd5k0hfrc2cne.usdcx::usdcx"
+    ]
+  },
   "USDH": {
     "ids": [
       "stacks/sip010/hermetica_usdh_spn5akg35qzsk2m8gamr4afx45659rjhdw353hsg.usdh-token-v1::usdh"
