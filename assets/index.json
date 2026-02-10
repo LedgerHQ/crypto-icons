@@ -2255,6 +2255,9 @@
   "stacks/sip010/usda_sp2c2yfp12ajzb4mabjbaj55xecvs7e4pmmz89yzr.usda-token::usda": {
     "icon": "USDA.png"
   },
+  "stacks/sip010/usdcx_sp120sbrbqj00mcws7tm5r8wjnttkd5k0hfrc2cne.usdcx::usdcx": {
+    "icon": "USDC.png"
+  },
   "stacks/sip010/velar_sp1y5ystahz88xyk1vpdh24gy0hpx5j4jectmy4a1.velar-token::velar": {
     "icon": "VELAR.png"
   },

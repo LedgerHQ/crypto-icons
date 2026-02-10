@@ -1383,7 +1383,8 @@
       "canton_network/cip56/usdcx",
       "core/erc20/usd_coin_0xa4151b2b3e269645181dccf2d426ce75fcbdeca9",
       "monad/erc20/usdc_0x754704bc059f8c67012fed69bc8a327a5aafb603",
-      "sei_evm/erc20/usdc_0xe15fc38f6d8c56af07bbcbe3baf5708a2bf42392"
+      "sei_evm/erc20/usdc_0xe15fc38f6d8c56af07bbcbe3baf5708a2bf42392",
+      "stacks/sip010/usdcx_sp120sbrbqj00mcws7tm5r8wjnttkd5k0hfrc2cne.usdcx::usdcx"
     ]
   },
   "USDH": {
