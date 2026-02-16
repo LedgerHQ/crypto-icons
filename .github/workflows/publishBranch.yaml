@@ -71,7 +71,6 @@ jobs:
         uses: LedgerHQ/actions-security/actions/jfrog-login@actions/jfrog-login-1
 
       - name: Setup npm config for JFrog
-        working-directory: ./dist/
         env:
           NPM_REGISTRY_TOKEN: ${{ steps.jfrog-login.outputs.oidc-token }}
         run: |
@@ -81,5 +80,4 @@ jobs:
           EOF
 
       - name: Publish package to JFrog
-        working-directory: ./dist/
         run: pnpm publish $TARBALL --no-git-checks
