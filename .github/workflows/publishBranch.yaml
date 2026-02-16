@@ -15,7 +15,7 @@ permissions:
   attestations: write
 
 env:
-  NPM_REGISTRY: jfrog.ledgerlabs.net/artifactory/api/npm/ledgerlive-npm-prod-public
+  NPM_REGISTRY: jfrog.ledgerlabs.net/artifactory/api/npm/ledgerlive-npm-sandbox-green
 
 jobs:
   publish:
