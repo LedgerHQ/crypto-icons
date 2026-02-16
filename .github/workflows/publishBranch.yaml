@@ -52,7 +52,7 @@ jobs:
         working-directory: ./dist/
         run: |
           OLD_NAME=$(basename $TARBALL)
-          NEW_NAME=$(echo $OLD_NAME | sed "s/\.tgz/-${PR_NAME}.tgz/")
+          NEW_NAME=$(echo $OLD_NAME | sed "s/\.tgz/-${PR_NAME//\//_}.tgz/")
           mv "$OLD_NAME" "$NEW_NAME"
           echo "TARBALL=$(pwd)/${NEW_NAME}" >> $GITHUB_ENV
 
