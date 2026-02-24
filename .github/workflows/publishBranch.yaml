@@ -72,8 +72,12 @@ jobs:
           //${NPM_REGISTRY}/:_authToken=${NPM_REGISTRY_TOKEN}
           EOF
 
-      - name: Publish package to JFrog
+      - name: Publish attested tarball to JFrog
         run: pnpm publish ${{ steps.attest.outputs.tarball-path }} --no-git-checks
+
+      - name: Test publish directly from lib (without tarball-path)
+        run: pnpm publish --no-git-checks
+        continue-on-error: true
 
       - name: Upload tarball as artifact
         uses: actions/upload-artifact@v4
