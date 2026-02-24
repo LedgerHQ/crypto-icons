@@ -52,8 +52,7 @@ jobs:
         uses: LedgerHQ/actions-security/actions/attest-for-npmsjs-com@xchalle/attest-action-package-manager-support
         with:
           subject-path: ./lib
-          package-manager: pnpm
-          package-manager-version: "9.6.0"
+          package-manager: npm
 
       - name: Sign tarball
         uses: LedgerHQ/actions-security/actions/sign-blob@actions/sign-blob-1
