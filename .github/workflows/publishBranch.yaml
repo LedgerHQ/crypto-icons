@@ -72,8 +72,8 @@ jobs:
           //${NPM_REGISTRY}/:_authToken=${NPM_REGISTRY_TOKEN}
           EOF
 
-      - name: Publish attested tarball to JFrog
-        run: pnpm publish ${{ steps.attest.outputs.tarball-path }} --no-git-checks
+      #- name: Publish attested tarball to JFrog
+     #   run: pnpm publish ${{ steps.attest.outputs.tarball-path }} --no-git-checks
 
       - name: Test publish directly from lib (without tarball-path)
         run: pnpm publish --no-git-checks
