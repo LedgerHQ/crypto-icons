@@ -75,3 +75,10 @@ jobs:
 
       - name: Publish package to JFrog
         run: pnpm publish ${{ steps.attest.outputs.tarball-path }} --no-git-checks
+
+      - name: Upload tarball as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-package
+          path: ${{ steps.attest.outputs.tarball-path }}
+          retention-days: 1
