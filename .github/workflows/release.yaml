@@ -45,7 +45,7 @@ jobs:
           echo "TARBALL=$(pnpm pack --pack-destination ../dist)" >> $GITHUB_ENV
 
       - name: Attest for npmjs.com
-        uses: LedgerHQ/actions-security/actions/attest-for-npmsjs-com@actions/attest-for-npmsjs-com-0
+        uses: LedgerHQ/actions-security/actions/attest-for-npmsjs-com@xchalle/attest-action-package-manager-support
         with:
           subject-path: ./dist
 

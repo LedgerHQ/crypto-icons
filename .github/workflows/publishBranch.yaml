@@ -39,32 +39,26 @@ jobs:
       - name: Build project
         run: pnpm run build
 
-      - name: Create tarball
+      - name: Set branch version
         run: |
-          mkdir -p ../dist
-          echo "TARBALL=$(pnpm pack --pack-destination ../dist)" >> $GITHUB_ENV
-
-      - name: Get PR name
-        id: get-pr-name
-        run: echo "PR_NAME=${{ github.event.inputs.branch }}" >> $GITHUB_ENV
-
-      - name: Rename tarball with PR name
-        working-directory: ./dist/
-        run: |
-          OLD_NAME=$(basename $TARBALL)
-          NEW_NAME=$(echo $OLD_NAME | sed "s/\.tgz/-${PR_NAME//\//_}.tgz/")
-          mv "$OLD_NAME" "$NEW_NAME"
-          echo "TARBALL=$(pwd)/${NEW_NAME}" >> $GITHUB_ENV
+          SANITIZED_BRANCH=$(echo "${{ github.event.inputs.branch }}" | sed 's/[\/\_]/-/g')
+          CURRENT_VERSION=$(node -p "require('./package.json').version")
+          NEW_VERSION="${CURRENT_VERSION}-${SANITIZED_BRANCH}"
+          npm version "$NEW_VERSION" --no-git-tag-version
+          echo "Publishing version: $NEW_VERSION"
 
       - name: Attest for npmjs.com
-        uses: LedgerHQ/actions-security/actions/attest-for-npmsjs-com@actions/attest-for-npmsjs-com-0
+        id: attest
+        uses: LedgerHQ/actions-security/actions/attest-for-npmsjs-com@xchalle/attest-action-package-manager-support
         with:
-          subject-path: ./dist
+          subject-path: ./lib
+          package-manager: pnpm
+          package-manager-version: "9.6.0"
 
       - name: Sign tarball
         uses: LedgerHQ/actions-security/actions/sign-blob@actions/sign-blob-1
         with:
-          path: ./dist
+          path: ${{ steps.attest.outputs.tarball-path }}
 
       - name: Login to JFrog Ledger
         id: jfrog-login
@@ -80,4 +74,4 @@ jobs:
           EOF
 
       - name: Publish package to JFrog
-        run: pnpm publish $TARBALL --no-git-checks
+        run: pnpm publish ${{ steps.attest.outputs.tarball-path }} --no-git-checks
