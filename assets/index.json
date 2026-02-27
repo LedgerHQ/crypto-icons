@@ -119,6 +119,9 @@
   "arbitrum/erc20/pepe": {
     "icon": "PEPE.png"
   },
+  "arbitrum/erc20/polkadot_token_relay_chain_0x8d010bf9c26881788b4e6bf5fd1bdc358c8f90b8": {
+    "icon": "DOT.png"
+  },
   "arbitrum/erc20/rbtc_0x441fcb23dfe8289cf572126fedcf450974adc891": {
     "icon": "RBTC.png"
   },
@@ -263,6 +266,9 @@
   "avalanche_c_chain/erc20/usdd": {
     "icon": "USDD.png"
   },
+  "avalanche_c_chain/erc20/usde_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
+    "icon": "USDE.png"
+  },
   "avalanche_c_chain/erc20/wootrade_network": {
     "icon": "WOO.png"
   },
@@ -302,6 +308,9 @@
   "base/erc20/dai_stablecoin": {
     "icon": "DAI.png"
   },
+  "base/erc20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
+    "icon": "ENA.png"
+  },
   "base/erc20/heroes_of_mavia": {
     "icon": "MAVIA.png"
   },
@@ -328,6 +337,9 @@
   },
   "base/erc20/pancakeswap_token": {
     "icon": "CAKE.png"
+  },
+  "base/erc20/polkadot_token_relay_chain_0x8d010bf9c26881788b4e6bf5fd1bdc358c8f90b8": {
+    "icon": "DOT.png"
   },
   "base/erc20/prime": {
     "icon": "PRIME.png"
@@ -452,6 +464,9 @@
   "blast/erc20/chainlink_token_0x93202ec683288a9ea75bb829c6bacfb2bfea9013": {
     "icon": "LINK.png"
   },
+  "blast/erc20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
+    "icon": "ENA.png"
+  },
   "blast/erc20/kelpdao_bridged_rseth_blast": {
     "icon": "RSETH.png"
   },
@@ -572,6 +587,9 @@
   "bsc/bep20/decentralized_usd_0x392004bee213f1ff580c867359c246924f21e6ad": {
     "icon": "USDD.png"
   },
+  "bsc/bep20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
+    "icon": "ENA.png"
+  },
   "bsc/bep20/fetch": {
     "icon": "FET.png"
   },
@@ -676,6 +694,9 @@
   },
   "bsc/bep20/trust_wallet": {
     "icon": "TWT.png"
+  },
+  "bsc/bep20/usde_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
+    "icon": "USDE.png"
   },
   "bsc/bep20/vechain": {
     "icon": "VET.png"
@@ -829,6 +850,9 @@
   },
   "energi/erc20/numeraire_0xd72922e849477a042a7e6dc84309f4bc1c1227a2": {
     "icon": "NMR.png"
+  },
+  "energi/erc20/uniswap_0x665b3a802979ec24e076c80025bff33c18eb6007": {
+    "icon": "UNI.png"
   },
   "eos": {
     "icon": "EOS.png"
@@ -1174,6 +1198,9 @@
   },
   "ethereum/erc20/pepe": {
     "icon": "PEPE.png"
+  },
+  "ethereum/erc20/polkadot_token_relay_chain_0x8d010bf9c26881788b4e6bf5fd1bdc358c8f90b8": {
+    "icon": "DOT.png"
   },
   "ethereum/erc20/polygon_ecosystem_token": {
     "icon": "MATIC.png"
@@ -1532,6 +1559,9 @@
   "linea/erc20/dai_stablecoin": {
     "icon": "DAI.png"
   },
+  "linea/erc20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
+    "icon": "ENA.png"
+  },
   "linea/erc20/frax_share": {
     "icon": "FXS.png"
   },
@@ -1609,6 +1639,12 @@
   },
   "mantle/erc20/usdt0_0x779ded0c9e1022225f8e0630b35a9b54be713736": {
     "icon": "USDT0.png"
+  },
+  "mantle/erc20/world_liberty_financial_usd_0x111111d2bf19e43c34263401e0cad979ed1cdb61": {
+    "icon": "USD1.png"
+  },
+  "metis/erc20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
+    "icon": "ENA.png"
   },
   "mina": {
     "icon": "MINA.png"
@@ -1750,6 +1786,9 @@
   },
   "optimism/erc20/pendle": {
     "icon": "PENDLE.png"
+  },
+  "optimism/erc20/polkadot_token_relay_chain_0x8d010bf9c26881788b4e6bf5fd1bdc358c8f90b8": {
+    "icon": "DOT.png"
   },
   "optimism/erc20/rocket_pool_eth": {
     "icon": "RETH.png"
@@ -2357,6 +2396,18 @@
   "unichain/erc20/rocket_pool_eth_0x94cac393f3444cef63a651ffc18497e7e8bd036a": {
     "icon": "RETH.png"
   },
+  "unichain/erc20/uniswap_0x8f187aa05619a017077f5308904739877ce9ea21": {
+    "icon": "UNI.png"
+  },
+  "unichain/erc20/usdc_0x078d782b760474a361dda0af3839290b0ef57ad6": {
+    "icon": "USDC.png"
+  },
+  "unichain/erc20/wrapped_eeth_0x7dcc39b4d1c53cb31e1abc0e358b43987fef80f7": {
+    "icon": "WEETH.png"
+  },
+  "unichain/erc20/wrapped_liquid_staked_ether_2_0_0xc02fe7317d4eb8753a02c35fe019786854a92001": {
+    "icon": "WSTETH.png"
+  },
   "vechain": {
     "icon": "VET.png"
   },
@@ -2381,6 +2432,9 @@
   "zksync/erc20/chainlink_token_0x52869bae3e091e36b0915941577f2d47d8d8b534": {
     "icon": "LINK.png"
   },
+  "zksync/erc20/ena_0x686b311f82b407f0be842652a98e5619f64cc25f": {
+    "icon": "ENA.png"
+  },
   "zksync/erc20/kyber_network_crystal": {
     "icon": "KNC.png"
   },
@@ -2392,6 +2446,9 @@
   },
   "zksync/erc20/usdc": {
     "icon": "USDC.png"
+  },
+  "zksync/erc20/usde_0x39fe7a0dacce31bd90418e3e659fb0b5f0b3db0d": {
+    "icon": "USDE.png"
   },
   "zksync/erc20/woo": {
     "icon": "WOO.png"
