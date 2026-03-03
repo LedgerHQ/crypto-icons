@@ -47,6 +47,12 @@
   "ADA_Testnet": {
     "ids": ["cardano_testnet"]
   },
+  "ADI": {
+    "ids": [
+      "adi/erc20/chainlink_token_0x76a443768a5e3b8d1aed0105fc250877841deb40",
+      "adi/erc20/ddsc_0x1211f0cfe66739433c1330e21f4951b80e813479"
+    ]
+  },
   "AEUSDC": {
     "ids": [
       "stacks/sip010/ethereum_usdc_via_allbridge_sp3y2zsh8p7d50b0vbtsx11s7xsg24m1vb9yfqa4k.token-aeusdc::aeusdc"
