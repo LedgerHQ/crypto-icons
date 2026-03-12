@@ -275,7 +275,7 @@
   "CCD": {
     "ids": ["concordium"]
   },
-  "CCD_TESNET": {
+  "CCD_Testnet": {
     "ids": ["concordium_testnet"]
   },
   "CELO": {
