@@ -1215,6 +1215,9 @@
   "SUI": {
     "ids": ["sui"]
   },
+  "SUI_Testnet": {
+    "ids": ["sui_testnet"]
+  },
   "SUSDE": {
     "ids": [
       "ethereum/erc20/staked_usde",

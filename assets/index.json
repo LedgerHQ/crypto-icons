@@ -2342,6 +2342,9 @@
   "sui/coin/wrapped_bitcoin_0xaafb102dd0902f5055cadecd687fb5b71ca82ef0e0285d90afde828ec58ca96b::btc::btc": {
     "icon": "WBTC.png"
   },
+  "sui_testnet": {
+    "icon": "SUI_Testnet.png"
+  },
   "telos_evm": {
     "icon": "TELOS.png"
   },
