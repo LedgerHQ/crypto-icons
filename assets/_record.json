@@ -1347,6 +1347,129 @@
   "TWT": {
     "ids": ["bsc/bep20/trust_wallet"]
   },
+  "TZ_APEX": {
+    "ids": ["tezos/fa2/tz_apex_by_tz_apac_kt1lcnfdj66ttxkfbjqlqwo9j7tenbrq8aje"]
+  },
+  "TZ_clint": {
+    "ids": ["tezos/fa2/clint_kt1vfc3emlzhdzapxxyc9zforn3qas9teed7"]
+  },
+  "TZ_crDAO": {
+    "ids": ["tezos/fa2/crunchy_dao_kt1xpfjzqculsnqfkaayy8hjjey63unsgwxg"]
+  },
+  "TZ_CVZA": {
+    "ids": ["tezos/fa2/cerveza_kt1bczaq3prtkpsebkuotgzdwx6rn6we8rjj"]
+  },
+  "TZ_DEEP": {
+    "ids": ["tezos/fa2/deeploy_kt1fzw3unem7ez8tysopugwzdsou2yzkuyua"]
+  },
+  "TZ_ECN": {
+    "ids": ["tezos/fa2/ecoin_network_kt1m81krjr6txylkzkvqcpstnkgoya8xytwt"]
+  },
+  "TZ_FLAME": {
+    "ids": ["tezos/fa2/flame_kt1wa8yqrbpfcusjwgcqyjhrz7huqamfxw7j"]
+  },
+  "TZ_GECKO": {
+    "ids": ["tezos/fa2/geckocoin_kt1jberhxmbgzbafn27lsbbujdxfn12vyrrf"]
+  },
+  "TZ_GIF": {
+    "ids": ["tezos/fa2/gif_dao_kt1xtxpqvo7orcqp85likezgaz22udxhbwjv"]
+  },
+  "TZ_GONZ": {
+    "ids": ["tezos/fa2/doctagonz_kt1rtsrfbxlf6egtsxrqx1ccxcqkl3xwpuft"]
+  },
+  "TZ_HERA": {
+    "ids": ["tezos/fa2/hera_network_token_kt1jxxk3bd39ayliibdkm2cdreynvsg3bkzk"]
+  },
+  "TZ_hDAO": {
+    "ids": ["tezos/fa2/hic_et_nunc_dao_kt1afa2mwnumnd4ssuje1yyp29vd8bzejykw"]
+  },
+  "TZ_HITCH": {
+    "ids": ["tezos/fa2/hitchens_kt1sz4abj6zer1sjpg11gnvkwxsno1cak5gm"]
+  },
+  "TZ_KALAM": {
+    "ids": ["tezos/fa2/kalamint_kt1a5p4ejnlix13jtadsfv9gcnxlmnnab8ut"]
+  },
+  "TZ_KORA": {
+    "ids": ["tezos/fa2/kora_asset_kt1hzfzijxexebu9lfp5grm3yzlq7lphgtvt"]
+  },
+  "TZ_MATH": {
+    "ids": ["tezos/fa2/mathmakesart_kt18hyjnko76sbvv6tact4ku6b32mjk6jwlz"]
+  },
+  "TZ_mew": {
+    "ids": ["tezos/fa2/mew_kt1hc6kshp3pllicxukuhva62prjq8jmyacp"]
+  },
+  "TZ_PEPE": {
+    "ids": ["tezos/fa2/tezos_pepe_kt1mzg99pxmdeenwb4fi64xkqavh5d1rv8z9"]
+  },
+  "TZ_POLE": {
+    "ids": ["tezos/fa2/pole_kt1uqvedf4twf2embrckqaxn7yyuntaicttm"]
+  },
+  "TZ_RUGD": {
+    "ids": ["tezos/fa2/rugged_kt1byfak4j2aysbnoxtbrcdkeznv6ntsdesb"]
+  },
+  "TZ_OTTEZ": {
+    "ids": ["tezos/fa2/ottez_kt18oprzxcftyhu6iw2g3dufby82gryxqhjh"]
+  },
+  "TZ_PXL": {
+    "ids": ["tezos/fa2/pixel_kt1f1mn2jbqqcjcsngykvaqjvenecnmy2opk"]
+  },
+  "TZ_QUIPU": {
+    "ids": [
+      "tezos/fa2/quipuswap_governance_token_kt193d4vozynhgjqvtw7coxxqphqueewk6vb"
+    ]
+  },
+  "TZ_SEB": {
+    "ids": ["tezos/fa2/sebuh_net_kt1981tpmxh4kruqkzpqkb55krex7qgjcf3e"]
+  },
+  "TZ_TACOS": {
+    "ids": ["tezos/fa2/tacos_kt1txyzqh7aqvhjjnpaaakubwicawvvlp2pt"]
+  },
+  "TZ_tChicken": {
+    "ids": ["tezos/fa2/tchicken_kt1qodjtpkg9jmamwrpcsarr78xhdcrkydbp"]
+  },
+  "TZ_TEDv": {
+    "ids": [
+      "tezos/fa2/tezos_domains_governance_vote_kt1r4kpqxpfhakx8mkcfmdoiqtansspnjxpl"
+    ]
+  },
+  "TZ_TEIA": {
+    "ids": ["tezos/fa2/teia_dao_token_kt1qrta753msv8vgxkdrkkyjnig5jtuhhbtv"]
+  },
+  "TZ_USDt": {
+    "ids": ["tezos/fa2/tether_usd_kt1xntn74butxhfdtbmm2bgzaqfhpbvkwr8o"]
+  },
+  "TZ_tDAO": {
+    "ids": ["tezos/fa2/taco_dao_kt1cjx8hywzacake6rlwozblp8w89veaduar"]
+  },
+  "TZ_TezDAO": {
+    "ids": ["tezos/fa2/tezdao_kt1c9x9s5rpvjgxwvuhevblyedaq1qw8qdjh"]
+  },
+  "TZ_IDZ": {
+    "ids": ["tezos/fa2/tezid_kt1wapdvefqhcfqwdhwwtzstx7yxohgiprpu"]
+  },
+  "TZ_TEZINU": {
+    "ids": ["tezos/fa2/tezos_inu_kt1avad9gzxrsokzuukd5qsen44wxprgsqcn"]
+  },
+  "TZ_TKEY": {
+    "ids": ["tezos/fa2/temple_key_kt1vaesvniboa56etoek6n6bcpgh1tdx9exi"]
+  },
+  "TZ_TRASH": {
+    "ids": ["tezos/fa2/trash_kt1shjb24ttxx8m5odcrbhxqyncpmnjdxpd5"]
+  },
+  "TZ_UNO": {
+    "ids": ["tezos/fa2/unobtanium_kt1erkvqehg9jxxgug2kglw3bnm7zxhx8sdf"]
+  },
+  "TZ_VEND": {
+    "ids": ["tezos/fa2/vendcoin_kt1hihzvckhfapemxfqccrjwhs1dwayqgbtm"]
+  },
+  "TZ_YOU": {
+    "ids": [
+      "tezos/fa2/youves_you_governance_kt1xobej4mc6xgejdojohttkgbd1elmvcqul"
+    ]
+  },
+  "TZ_ZNT": {
+    "ids": ["tezos/fa2/zenith_kt1c96evxb1mkeszqczc9ki3je4ksqbhr1et"]
+  },
   "UFD": {
     "ids": [
       "solana/spl/unicorn_fart_dust_el5fuxj2j4ciqsmw85k5fg9dvuqjjuobhoqbi2kpump"
