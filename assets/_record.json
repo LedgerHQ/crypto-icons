@@ -829,7 +829,7 @@
     ]
   },
   "MNT": {
-    "ids": ["ethereum/erc20/mantle", "mantle"]
+    "ids": ["ethereum/erc20/mantle", "mantle", "mantle_sepolia"]
   },
   "MOG": {
     "ids": ["base/erc20/mog_coin", "ethereum/erc20/mog_coin"]
