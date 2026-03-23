@@ -12,7 +12,9 @@
     ]
   },
   "0x0": {
-    "ids": ["ethereum/erc20/0x0"]
+    "ids": [
+      "ethereum/erc20/0x0"
+    ]
   },
   "1INCH": {
     "ids": [
@@ -42,10 +44,14 @@
     ]
   },
   "ADA": {
-    "ids": ["cardano"]
+    "ids": [
+      "cardano"
+    ]
   },
   "ADA_Testnet": {
-    "ids": ["cardano_testnet"]
+    "ids": [
+      "cardano_testnet"
+    ]
   },
   "ADI": {
     "ids": [
@@ -64,16 +70,25 @@
     ]
   },
   "AIOZ": {
-    "ids": ["bsc/bep20/aioz_network", "ethereum/erc20/aioz_network"]
+    "ids": [
+      "bsc/bep20/aioz_network",
+      "ethereum/erc20/aioz_network"
+    ]
   },
   "AKRO": {
-    "ids": ["ethereum/erc20/akropolis"]
+    "ids": [
+      "ethereum/erc20/akropolis"
+    ]
   },
   "ALGO": {
-    "ids": ["algorand"]
+    "ids": [
+      "algorand"
+    ]
   },
   "ALT": {
-    "ids": ["ethereum/erc20/altlayer_token"]
+    "ids": [
+      "ethereum/erc20/altlayer_token"
+    ]
   },
   "AMB": {
     "ids": [
@@ -82,16 +97,24 @@
     ]
   },
   "AMP": {
-    "ids": ["ethereum/erc20/amp"]
+    "ids": [
+      "ethereum/erc20/amp"
+    ]
   },
   "ANC": {
-    "ids": ["ethereum/erc20/wrapped_anc_token"]
+    "ids": [
+      "ethereum/erc20/wrapped_anc_token"
+    ]
   },
   "ANT": {
-    "ids": ["ethereum/erc20/aragon_network_token"]
+    "ids": [
+      "ethereum/erc20/aragon_network_token"
+    ]
   },
   "APPC": {
-    "ids": ["ethereum/erc20/appcoins"]
+    "ids": [
+      "ethereum/erc20/appcoins"
+    ]
   },
   "APE": {
     "ids": [
@@ -102,31 +125,53 @@
     ]
   },
   "APT": {
-    "ids": ["aptos"]
+    "ids": [
+      "aptos"
+    ]
   },
   "AR": {
-    "ids": ["arweave", "ethereum/erc20/arweave"]
+    "ids": [
+      "arweave",
+      "ethereum/erc20/arweave"
+    ]
   },
   "ARB": {
-    "ids": ["arbitrum", "arbitrum/erc20/arbitrum", "ethereum/erc20/arbitrum"]
+    "ids": [
+      "arbitrum",
+      "arbitrum/erc20/arbitrum",
+      "ethereum/erc20/arbitrum"
+    ]
   },
   "ARKM": {
-    "ids": ["ethereum/erc20/arkham"]
+    "ids": [
+      "ethereum/erc20/arkham"
+    ]
   },
   "ASTR": {
-    "ids": ["astar"]
+    "ids": [
+      "astar"
+    ]
   },
   "ASTER": {
-    "ids": ["bsc/bep20/aster_0x000ae314e2a2172a039b26378814c252734f556a"]
+    "ids": [
+      "bsc/bep20/aster_0x000ae314e2a2172a039b26378814c252734f556a"
+    ]
   },
   "ATOM": {
-    "ids": ["bsc/bep20/binance-peg_cosmos_token", "cosmos"]
+    "ids": [
+      "bsc/bep20/binance-peg_cosmos_token",
+      "cosmos"
+    ]
   },
   "ATOM_Testnet": {
-    "ids": ["cosmos_testnet"]
+    "ids": [
+      "cosmos_testnet"
+    ]
   },
   "AUDIO": {
-    "ids": ["ethereum/erc20/audius"]
+    "ids": [
+      "ethereum/erc20/audius"
+    ]
   },
   "AUSD": {
     "ids": [
@@ -147,10 +192,14 @@
     ]
   },
   "AZERO": {
-    "ids": ["aleph_zero"]
+    "ids": [
+      "aleph_zero"
+    ]
   },
   "BABY": {
-    "ids": ["babylon"]
+    "ids": [
+      "babylon"
+    ]
   },
   "BAND": {
     "ids": [
@@ -160,7 +209,9 @@
     ]
   },
   "BASE": {
-    "ids": ["base"]
+    "ids": [
+      "base"
+    ]
   },
   "BAT": {
     "ids": [
@@ -171,37 +222,65 @@
     ]
   },
   "BCFX": {
-    "ids": ["bsc/bep20/bsc_conflux", "conflux"]
+    "ids": [
+      "bsc/bep20/bsc_conflux",
+      "conflux"
+    ]
   },
   "BCH": {
-    "ids": ["bitcoin_cash", "bsc/bep20/binance-peg_bitcoin_cash_token"]
+    "ids": [
+      "bitcoin_cash",
+      "bsc/bep20/binance-peg_bitcoin_cash_token"
+    ]
   },
   "BEAM": {
-    "ids": ["bsc/bep20/beam", "ethereum/erc20/beam"]
+    "ids": [
+      "bsc/bep20/beam",
+      "ethereum/erc20/beam"
+    ]
   },
   "BERACHAIN": {
-    "ids": ["berachain"]
+    "ids": [
+      "berachain"
+    ]
   },
   "BGB": {
-    "ids": ["ethereum/erc20/bitgettoken_0581"]
+    "ids": [
+      "ethereum/erc20/bitgettoken_0581"
+    ]
   },
   "BICO": {
-    "ids": ["arbitrum/erc20/biconomy_token", "ethereum/erc20/biconomy_token"]
+    "ids": [
+      "arbitrum/erc20/biconomy_token",
+      "ethereum/erc20/biconomy_token"
+    ]
   },
   "BITLAYER": {
-    "ids": ["bitlayer"]
+    "ids": [
+      "bitlayer"
+    ]
   },
   "BLAST": {
-    "ids": ["blast"]
+    "ids": [
+      "blast"
+    ]
   },
   "BLUR": {
-    "ids": ["ethereum/erc20/blur"]
+    "ids": [
+      "ethereum/erc20/blur"
+    ]
   },
   "BNB": {
-    "ids": ["binance_beacon_chain", "bsc", "ethereum/erc20/bnb"]
+    "ids": [
+      "binance_beacon_chain",
+      "bsc",
+      "ethereum/erc20/bnb"
+    ]
   },
   "BOBA": {
-    "ids": ["boba"]
+    "ids": [
+      "boba"
+    ]
   },
   "BONK": {
     "ids": [
@@ -218,16 +297,24 @@
     ]
   },
   "BRETT": {
-    "ids": ["base/erc20/brett"]
+    "ids": [
+      "base/erc20/brett"
+    ]
   },
   "BTC": {
-    "ids": ["bitcoin"]
+    "ids": [
+      "bitcoin"
+    ]
   },
   "BTC_Testnet": {
-    "ids": ["bitcoin_testnet"]
+    "ids": [
+      "bitcoin_testnet"
+    ]
   },
   "BTG": {
-    "ids": ["bitcoin_gold"]
+    "ids": [
+      "bitcoin_gold"
+    ]
   },
   "BTT": {
     "ids": [
@@ -250,10 +337,15 @@
     ]
   },
   "CANTON": {
-    "ids": ["canton_network"]
+    "ids": [
+      "canton_network"
+    ]
   },
   "CANTON_Testnet": {
-    "ids": ["canton_network_devnet", "canton_network_testnet"]
+    "ids": [
+      "canton_network_devnet",
+      "canton_network_testnet"
+    ]
   },
   "CBETH": {
     "ids": [
@@ -273,16 +365,25 @@
     ]
   },
   "CCD": {
-    "ids": ["concordium"]
+    "ids": [
+      "concordium"
+    ]
   },
   "CCD_Testnet": {
-    "ids": ["concordium_testnet"]
+    "ids": [
+      "concordium_testnet"
+    ]
   },
   "CELO": {
-    "ids": ["celo"]
+    "ids": [
+      "celo"
+    ]
   },
   "CFG": {
-    "ids": ["centrifuge", "ethereum/erc20/wrapped_centrifuge"]
+    "ids": [
+      "centrifuge",
+      "ethereum/erc20/wrapped_centrifuge"
+    ]
   },
   "CHARISMA": {
     "ids": [
@@ -290,19 +391,31 @@
     ]
   },
   "CHEEL": {
-    "ids": ["bsc/bep20/cheelee"]
+    "ids": [
+      "bsc/bep20/cheelee"
+    ]
   },
   "CHZ": {
-    "ids": ["ethereum/erc20/chiliz"]
+    "ids": [
+      "ethereum/erc20/chiliz"
+    ]
   },
   "CKB": {
-    "ids": ["nervos"]
+    "ids": [
+      "nervos"
+    ]
   },
   "CORE": {
-    "ids": ["core"]
+    "ids": [
+      "core"
+    ]
   },
   "CRO": {
-    "ids": ["cronos", "crypto_org", "ethereum/erc20/cro"]
+    "ids": [
+      "cronos",
+      "crypto_org",
+      "ethereum/erc20/cro"
+    ]
   },
   "CRV": {
     "ids": [
@@ -314,10 +427,14 @@
     ]
   },
   "CSPR": {
-    "ids": ["casper"]
+    "ids": [
+      "casper"
+    ]
   },
   "CVX": {
-    "ids": ["ethereum/erc20/convex_token"]
+    "ids": [
+      "ethereum/erc20/convex_token"
+    ]
   },
   "DAI": {
     "ids": [
@@ -337,16 +454,24 @@
     ]
   },
   "DASH": {
-    "ids": ["dash"]
+    "ids": [
+      "dash"
+    ]
   },
   "DCR": {
-    "ids": ["decred"]
+    "ids": [
+      "decred"
+    ]
   },
   "DENT": {
-    "ids": ["ethereum/erc20/dent"]
+    "ids": [
+      "ethereum/erc20/dent"
+    ]
   },
   "DEXE": {
-    "ids": ["ethereum/erc20/dexe"]
+    "ids": [
+      "ethereum/erc20/dexe"
+    ]
   },
   "DIKO": {
     "ids": [
@@ -354,7 +479,9 @@
     ]
   },
   "DOGE": {
-    "ids": ["dogecoin"]
+    "ids": [
+      "dogecoin"
+    ]
   },
   "DOT": {
     "ids": [
@@ -367,10 +494,15 @@
     ]
   },
   "DOT_Testnet": {
-    "ids": ["westend"]
+    "ids": [
+      "westend"
+    ]
   },
   "DYDX": {
-    "ids": ["dydx", "ethereum/erc20/dydx"]
+    "ids": [
+      "dydx",
+      "ethereum/erc20/dydx"
+    ]
   },
   "DZ": {
     "ids": [
@@ -378,10 +510,14 @@
     ]
   },
   "EGLD": {
-    "ids": ["elrond"]
+    "ids": [
+      "elrond"
+    ]
   },
   "EIGEN": {
-    "ids": ["ethereum/erc20/eigen"]
+    "ids": [
+      "ethereum/erc20/eigen"
+    ]
   },
   "EEIGEN": {
     "ids": [
@@ -389,7 +525,10 @@
     ]
   },
   "ELF": {
-    "ids": ["bsc/bep20/binance-peg_elf_token", "ethereum/erc20/elf_token"]
+    "ids": [
+      "bsc/bep20/binance-peg_elf_token",
+      "ethereum/erc20/elf_token"
+    ]
   },
   "ENA": {
     "ids": [
@@ -408,25 +547,39 @@
     ]
   },
   "ENJ": {
-    "ids": ["ethereum/erc20/enjin"]
+    "ids": [
+      "ethereum/erc20/enjin"
+    ]
   },
   "ENS": {
-    "ids": ["ethereum/erc20/ethereum_name_service"]
+    "ids": [
+      "ethereum/erc20/ethereum_name_service"
+    ]
   },
   "EOS": {
-    "ids": ["eos"]
+    "ids": [
+      "eos"
+    ]
   },
   "ETC": {
-    "ids": ["ethereum_classic"]
+    "ids": [
+      "ethereum_classic"
+    ]
   },
   "ETH": {
-    "ids": ["ethereum"]
+    "ids": [
+      "ethereum"
+    ]
   },
   "ETHW": {
-    "ids": ["ethereum_pow"]
+    "ids": [
+      "ethereum_pow"
+    ]
   },
   "FARTCOIN": {
-    "ids": ["solana/spl/fartcoin_9bb6nfecjbctnnlfko2fqvqbq8hhm13kcyycdqbgpump"]
+    "ids": [
+      "solana/spl/fartcoin_9bb6nfecjbctnnlfko2fqvqbq8hhm13kcyycdqbgpump"
+    ]
   },
   "FDUSD": {
     "ids": [
@@ -438,22 +591,39 @@
     ]
   },
   "FET": {
-    "ids": ["bsc/bep20/fetch", "ethereum/erc20/fetch", "polygon/erc20/fetch"]
+    "ids": [
+      "bsc/bep20/fetch",
+      "ethereum/erc20/fetch",
+      "polygon/erc20/fetch"
+    ]
   },
   "FIL": {
-    "ids": ["filecoin"]
+    "ids": [
+      "filecoin"
+    ]
   },
   "FLOKI": {
-    "ids": ["bsc/bep20/floki", "ethereum/erc20/floki"]
+    "ids": [
+      "bsc/bep20/floki",
+      "ethereum/erc20/floki"
+    ]
   },
   "FLOW": {
-    "ids": ["bsc/bep20/binance-peg_flow_token", "flow"]
+    "ids": [
+      "bsc/bep20/binance-peg_flow_token",
+      "flow"
+    ]
   },
   "FLR": {
-    "ids": ["flare"]
+    "ids": [
+      "flare"
+    ]
   },
   "FLUX": {
-    "ids": ["bsc/bep20/flux", "ethereum/erc20/flux_(zel)"]
+    "ids": [
+      "bsc/bep20/flux",
+      "ethereum/erc20/flux_(zel)"
+    ]
   },
   "FRAX": {
     "ids": [
@@ -481,10 +651,14 @@
     ]
   },
   "FTM": {
-    "ids": ["fantom"]
+    "ids": [
+      "fantom"
+    ]
   },
   "FTN": {
-    "ids": ["ethereum/erc20/fasttoken"]
+    "ids": [
+      "ethereum/erc20/fasttoken"
+    ]
   },
   "FTT": {
     "ids": [
@@ -507,19 +681,31 @@
     ]
   },
   "GAL": {
-    "ids": ["bsc/bep20/project_galaxy", "ethereum/erc20/project_galaxy"]
+    "ids": [
+      "bsc/bep20/project_galaxy",
+      "ethereum/erc20/project_galaxy"
+    ]
   },
   "GALA": {
-    "ids": ["ethereum/erc20/gala"]
+    "ids": [
+      "ethereum/erc20/gala"
+    ]
   },
   "GAMMA": {
-    "ids": ["ethereum/erc20/gamma"]
+    "ids": [
+      "ethereum/erc20/gamma"
+    ]
   },
   "GLM": {
-    "ids": ["ethereum/erc20/golem_network_token"]
+    "ids": [
+      "ethereum/erc20/golem_network_token"
+    ]
   },
   "GLMR": {
-    "ids": ["bsc/bep20/moonbeam", "moonbeam"]
+    "ids": [
+      "bsc/bep20/moonbeam",
+      "moonbeam"
+    ]
   },
   "GMT": {
     "ids": [
@@ -530,7 +716,10 @@
     ]
   },
   "GMX": {
-    "ids": ["arbitrum/erc20/gmx", "avalanche_c_chain/erc20/gmx"]
+    "ids": [
+      "arbitrum/erc20/gmx",
+      "avalanche_c_chain/erc20/gmx"
+    ]
   },
   "GNO": {
     "ids": [
@@ -548,28 +737,47 @@
     ]
   },
   "GT": {
-    "ids": ["ethereum/erc20/gatechaintoken"]
+    "ids": [
+      "ethereum/erc20/gatechaintoken"
+    ]
   },
   "HBAR": {
-    "ids": ["hedera"]
+    "ids": [
+      "hedera"
+    ]
   },
   "HEX": {
-    "ids": ["ethereum/erc20/hex", "polygon/erc20/hex"]
+    "ids": [
+      "ethereum/erc20/hex",
+      "polygon/erc20/hex"
+    ]
   },
   "HIVE": {
-    "ids": ["hive"]
+    "ids": [
+      "hive"
+    ]
   },
   "HNT": {
-    "ids": ["solana/spl/hntyvp6yfm1hg25tn9wglqm12b8tqmcknkrdu1oxwux"]
+    "ids": [
+      "solana/spl/hntyvp6yfm1hg25tn9wglqm12b8tqmcknkrdu1oxwux"
+    ]
   },
   "ETH_Testnet": {
-    "ids": ["ethereum_hoodi", "ethereum_sepolia", "ethereum_holesky"]
+    "ids": [
+      "ethereum_hoodi",
+      "ethereum_sepolia",
+      "ethereum_holesky"
+    ]
   },
   "ETHERLINK": {
-    "ids": ["etherlink"]
+    "ids": [
+      "etherlink"
+    ]
   },
   "HOT": {
-    "ids": ["ethereum/erc20/holotoken"]
+    "ids": [
+      "ethereum/erc20/holotoken"
+    ]
   },
   "ICP": {
     "ids": [
@@ -579,13 +787,21 @@
     ]
   },
   "ID": {
-    "ids": ["bsc/bep20/space_id", "ethereum/erc20/space_id"]
+    "ids": [
+      "bsc/bep20/space_id",
+      "ethereum/erc20/space_id"
+    ]
   },
   "ILV": {
-    "ids": ["bsc/bep20/illuvium", "ethereum/erc20/illuvium"]
+    "ids": [
+      "bsc/bep20/illuvium",
+      "ethereum/erc20/illuvium"
+    ]
   },
   "IMX": {
-    "ids": ["ethereum/erc20/immutable_x"]
+    "ids": [
+      "ethereum/erc20/immutable_x"
+    ]
   },
   "INJ": {
     "ids": [
@@ -595,19 +811,31 @@
     ]
   },
   "IOTA": {
-    "ids": ["bsc/bep20/miotac", "iota"]
+    "ids": [
+      "bsc/bep20/miotac",
+      "iota"
+    ]
   },
   "IOTX": {
-    "ids": ["base/erc20/iotex_network", "ethereum/erc20/iotex_network"]
+    "ids": [
+      "base/erc20/iotex_network",
+      "ethereum/erc20/iotex_network"
+    ]
   },
   "IP": {
-    "ids": ["story"]
+    "ids": [
+      "story"
+    ]
   },
   "JST": {
-    "ids": ["tron/trc20/tcfll5dx5zjdknwuesxxi1vpwjlvmwzzy9"]
+    "ids": [
+      "tron/trc20/tcfll5dx5zjdknwuesxxi1vpwjlvmwzzy9"
+    ]
   },
   "JTO": {
-    "ids": ["solana/spl/jtojtomepa8bep8auqc6ext5frijwffmwqx2v2f9mcl"]
+    "ids": [
+      "solana/spl/jtojtomepa8bep8auqc6ext5frijwffmwqx2v2f9mcl"
+    ]
   },
   "JITOSOL": {
     "ids": [
@@ -625,7 +853,9 @@
     ]
   },
   "KAS": {
-    "ids": ["kaspa"]
+    "ids": [
+      "kaspa"
+    ]
   },
   "KAVA": {
     "ids": [
@@ -636,13 +866,20 @@
     ]
   },
   "KCS": {
-    "ids": ["ethereum/erc20/kucoin_token"]
+    "ids": [
+      "ethereum/erc20/kucoin_token"
+    ]
   },
   "KDA": {
-    "ids": ["kadena"]
+    "ids": [
+      "kadena"
+    ]
   },
   "KLAY": {
-    "ids": ["klaytn", "klaytn_baobab"]
+    "ids": [
+      "klaytn",
+      "klaytn_baobab"
+    ]
   },
   "KNC": {
     "ids": [
@@ -659,7 +896,10 @@
     ]
   },
   "KSM": {
-    "ids": ["bsc/bep20/kusama", "kusama"]
+    "ids": [
+      "bsc/bep20/kusama",
+      "kusama"
+    ]
   },
   "KUJI": {
     "ids": [
@@ -679,7 +919,9 @@
     ]
   },
   "LEO": {
-    "ids": ["ethereum/erc20/leo_token"]
+    "ids": [
+      "ethereum/erc20/leo_token"
+    ]
   },
   "LIABTC": {
     "ids": [
@@ -697,7 +939,9 @@
     ]
   },
   "LINEA": {
-    "ids": ["linea"]
+    "ids": [
+      "linea"
+    ]
   },
   "LINK": {
     "ids": [
@@ -736,7 +980,10 @@
     ]
   },
   "LPT": {
-    "ids": ["arbitrum/erc20/livepeer_token", "ethereum/erc20/livepeer"]
+    "ids": [
+      "arbitrum/erc20/livepeer_token",
+      "ethereum/erc20/livepeer"
+    ]
   },
   "LRC": {
     "ids": [
@@ -746,7 +993,9 @@
     ]
   },
   "LSD": {
-    "ids": ["bsc/bep20/lsd"]
+    "ids": [
+      "bsc/bep20/lsd"
+    ]
   },
   "LBTC": {
     "ids": [
@@ -761,13 +1010,20 @@
     ]
   },
   "LTC": {
-    "ids": ["litecoin"]
+    "ids": [
+      "litecoin"
+    ]
   },
   "LUNA": {
-    "ids": ["terra"]
+    "ids": [
+      "terra"
+    ]
   },
   "MAGIC": {
-    "ids": ["arbitrum/erc20/magic", "ethereum/erc20/magic"]
+    "ids": [
+      "arbitrum/erc20/magic",
+      "ethereum/erc20/magic"
+    ]
   },
   "MANA": {
     "ids": [
@@ -795,7 +1051,10 @@
     ]
   },
   "MAVIA": {
-    "ids": ["base/erc20/heroes_of_mavia", "ethereum/erc20/heroes_of_mavia"]
+    "ids": [
+      "base/erc20/heroes_of_mavia",
+      "ethereum/erc20/heroes_of_mavia"
+    ]
   },
   "MEGA": {
     "ids": [
@@ -803,7 +1062,9 @@
     ]
   },
   "MEME": {
-    "ids": ["ethereum/erc20/memecoin_meme"]
+    "ids": [
+      "ethereum/erc20/memecoin_meme"
+    ]
   },
   "MEW": {
     "ids": [
@@ -811,13 +1072,21 @@
     ]
   },
   "METH": {
-    "ids": ["ethereum/erc20/meth", "mantle/erc20/mantle_staked_ether"]
+    "ids": [
+      "ethereum/erc20/meth",
+      "mantle/erc20/mantle_staked_ether"
+    ]
   },
   "METIS": {
-    "ids": ["bsc/bep20/metis_token", "ethereum/erc20/metis_token"]
+    "ids": [
+      "bsc/bep20/metis_token",
+      "ethereum/erc20/metis_token"
+    ]
   },
   "MINA": {
-    "ids": ["mina"]
+    "ids": [
+      "mina"
+    ]
   },
   "MKR": {
     "ids": [
@@ -829,16 +1098,31 @@
     ]
   },
   "MNT": {
-    "ids": ["ethereum/erc20/mantle", "mantle", "mantle_sepolia"]
+    "ids": [
+      "ethereum/erc20/mantle",
+      "mantle"
+    ]
+  },
+  "MNT_TESTNET": {
+    "ids": [
+      "mantle_sepolia"
+    ]
   },
   "MOG": {
-    "ids": ["base/erc20/mog_coin", "ethereum/erc20/mog_coin"]
+    "ids": [
+      "base/erc20/mog_coin",
+      "ethereum/erc20/mog_coin"
+    ]
   },
   "MON": {
-    "ids": ["monad"]
+    "ids": [
+      "monad"
+    ]
   },
   "MON_TESTNET": {
-    "ids": ["monad_testnet"]
+    "ids": [
+      "monad_testnet"
+    ]
   },
   "MORPHO": {
     "ids": [
@@ -849,31 +1133,52 @@
     ]
   },
   "MOVR": {
-    "ids": ["moonriver"]
+    "ids": [
+      "moonriver"
+    ]
   },
   "MSOL": {
-    "ids": ["solana/spl/msolzycxhdygdzu16g5qsh3i5k3z3kzk7ytfqcjm7so"]
+    "ids": [
+      "solana/spl/msolzycxhdygdzu16g5qsh3i5k3z3kzk7ytfqcjm7so"
+    ]
   },
   "MURA": {
-    "ids": ["bsc/bep20/murasaki"]
+    "ids": [
+      "bsc/bep20/murasaki"
+    ]
   },
   "MUST": {
-    "ids": ["ethereum/erc20/must", "polygon/erc20/must"]
+    "ids": [
+      "ethereum/erc20/must",
+      "polygon/erc20/must"
+    ]
   },
   "MYRO": {
-    "ids": ["solana/spl/hhjpbhrrn4g56vsylut8dl5bv31hkxqsrahttuczezg4"]
+    "ids": [
+      "solana/spl/hhjpbhrrn4g56vsylut8dl5bv31hkxqsrahttuczezg4"
+    ]
   },
   "NANO": {
-    "ids": ["nano"]
+    "ids": [
+      "nano"
+    ]
   },
   "NEAR": {
-    "ids": ["near"]
+    "ids": [
+      "near"
+    ]
   },
   "NEO": {
-    "ids": ["neo"]
+    "ids": [
+      "neo"
+    ]
   },
   "NEXO": {
-    "ids": ["ethereum/erc20/nexo", "fantom/erc20/nexo", "polygon/erc20/nexo"]
+    "ids": [
+      "ethereum/erc20/nexo",
+      "fantom/erc20/nexo",
+      "polygon/erc20/nexo"
+    ]
   },
   "NFP": {
     "ids": [
@@ -899,7 +1204,9 @@
     ]
   },
   "NTRN": {
-    "ids": ["neutron"]
+    "ids": [
+      "neutron"
+    ]
   },
   "OCEAN": {
     "ids": [
@@ -917,28 +1224,45 @@
     ]
   },
   "OKB": {
-    "ids": ["ethereum/erc20/okb"]
+    "ids": [
+      "ethereum/erc20/okb"
+    ]
   },
   "OMG": {
-    "ids": ["ethereum/erc20/omg"]
+    "ids": [
+      "ethereum/erc20/omg"
+    ]
   },
   "ONDO": {
-    "ids": ["ethereum/erc20/ondo"]
+    "ids": [
+      "ethereum/erc20/ondo"
+    ]
   },
   "OP": {
-    "ids": ["optimism", "optimism/erc20/optimism"]
+    "ids": [
+      "optimism",
+      "optimism/erc20/optimism"
+    ]
   },
   "OP_Testnet": {
-    "ids": ["optimism_sepolia"]
+    "ids": [
+      "optimism_sepolia"
+    ]
   },
   "ORBR": {
-    "ids": ["ethereum/erc20/orbler"]
+    "ids": [
+      "ethereum/erc20/orbler"
+    ]
   },
   "ORDI": {
-    "ids": ["solana/spl/ordinals_u9nmk5sqovm6acvcqbbq8xumpfqdpsyxdxvwxux4sjy"]
+    "ids": [
+      "solana/spl/ordinals_u9nmk5sqovm6acvcqbbq8xumpfqdpsyxdxvwxux4sjy"
+    ]
   },
   "OSMO": {
-    "ids": ["osmo"]
+    "ids": [
+      "osmo"
+    ]
   },
   "OX": {
     "ids": [
@@ -947,13 +1271,20 @@
     ]
   },
   "PAAL": {
-    "ids": ["ethereum/erc20/paal_ai"]
+    "ids": [
+      "ethereum/erc20/paal_ai"
+    ]
   },
   "PAX": {
-    "ids": ["ethereum/erc20/paxos_standard__pax_", "linea/erc20/pax_dollar"]
+    "ids": [
+      "ethereum/erc20/paxos_standard__pax_",
+      "linea/erc20/pax_dollar"
+    ]
   },
   "PAXG": {
-    "ids": ["ethereum/erc20/paxos_gold"]
+    "ids": [
+      "ethereum/erc20/paxos_gold"
+    ]
   },
   "PBTC": {
     "ids": [
@@ -975,28 +1306,47 @@
     ]
   },
   "PEPE": {
-    "ids": ["arbitrum/erc20/pepe", "ethereum/erc20/pepe", "linea/erc20/pepe"]
+    "ids": [
+      "arbitrum/erc20/pepe",
+      "ethereum/erc20/pepe",
+      "linea/erc20/pepe"
+    ]
   },
   "PIXEL": {
-    "ids": ["ethereum/erc20/_pixel"]
+    "ids": [
+      "ethereum/erc20/_pixel"
+    ]
   },
   "POL_Testnet": {
-    "ids": ["polygon_zk_evm_testnet"]
+    "ids": [
+      "polygon_zk_evm_testnet"
+    ]
   },
   "PORTAL": {
-    "ids": ["ethereum/erc20/_portal"]
+    "ids": [
+      "ethereum/erc20/_portal"
+    ]
   },
   "POWR": {
-    "ids": ["ethereum/erc20/powerledger"]
+    "ids": [
+      "ethereum/erc20/powerledger"
+    ]
   },
   "PPC": {
-    "ids": ["peercoin"]
+    "ids": [
+      "peercoin"
+    ]
   },
   "PRIME": {
-    "ids": ["base/erc20/prime", "ethereum/erc20/prime"]
+    "ids": [
+      "base/erc20/prime",
+      "ethereum/erc20/prime"
+    ]
   },
   "PYTH": {
-    "ids": ["solana/spl/hz1jovnivvgrgniiyveozevgz58xau3rkwx8eacqbct3"]
+    "ids": [
+      "solana/spl/hz1jovnivvgrgniiyveozevgz58xau3rkwx8eacqbct3"
+    ]
   },
   "PYUSD": {
     "ids": [
@@ -1006,19 +1356,29 @@
     ]
   },
   "QNT": {
-    "ids": ["ethereum/erc20/quant"]
+    "ids": [
+      "ethereum/erc20/quant"
+    ]
   },
   "QTUM": {
-    "ids": ["qtum"]
+    "ids": [
+      "qtum"
+    ]
   },
   "RAY": {
-    "ids": ["solana/spl/4k3dyjzvzp8emzwuxbbcjevwskkk59s5icnly3qrkx6r"]
+    "ids": [
+      "solana/spl/4k3dyjzvzp8emzwuxbbcjevwskkk59s5icnly3qrkx6r"
+    ]
   },
   "RB": {
-    "ids": ["ethereum/erc20/runesbridge"]
+    "ids": [
+      "ethereum/erc20/runesbridge"
+    ]
   },
   "RBN": {
-    "ids": ["ethereum/erc20/ribbon"]
+    "ids": [
+      "ethereum/erc20/ribbon"
+    ]
   },
   "RBTC": {
     "ids": [
@@ -1047,7 +1407,10 @@
     ]
   },
   "REQ": {
-    "ids": ["ethereum/erc20/request_network", "polygon/erc20/request"]
+    "ids": [
+      "ethereum/erc20/request_network",
+      "polygon/erc20/request"
+    ]
   },
   "RETH": {
     "ids": [
@@ -1060,7 +1423,9 @@
     ]
   },
   "RLB": {
-    "ids": ["ethereum/erc20/rollbit_coin"]
+    "ids": [
+      "ethereum/erc20/rollbit_coin"
+    ]
   },
   "ROO": {
     "ids": [
@@ -1075,19 +1440,30 @@
     ]
   },
   "ROSE": {
-    "ids": ["bsc/bep20/wrapped_rose", "ethereum/erc20/oasis_labs"]
+    "ids": [
+      "bsc/bep20/wrapped_rose",
+      "ethereum/erc20/oasis_labs"
+    ]
   },
   "RUNE": {
-    "ids": ["thorchain"]
+    "ids": [
+      "thorchain"
+    ]
   },
   "RVN": {
-    "ids": ["ravencoin"]
+    "ids": [
+      "ravencoin"
+    ]
   },
   "S": {
-    "ids": ["sonic"]
+    "ids": [
+      "sonic"
+    ]
   },
   "SAI": {
-    "ids": ["ethereum/erc20/dai_stablecoin_v1_0"]
+    "ids": [
+      "ethereum/erc20/dai_stablecoin_v1_0"
+    ]
   },
   "SAND": {
     "ids": [
@@ -1102,13 +1478,19 @@
     ]
   },
   "SC": {
-    "ids": ["siacoin"]
+    "ids": [
+      "siacoin"
+    ]
   },
   "SCROLL": {
-    "ids": ["scroll"]
+    "ids": [
+      "scroll"
+    ]
   },
   "SHAPE": {
-    "ids": ["shape"]
+    "ids": [
+      "shape"
+    ]
   },
   "SEI": {
     "ids": [
@@ -1117,7 +1499,10 @@
     ]
   },
   "SFP": {
-    "ids": ["bsc/bep20/safepal_token", "ethereum/erc20/safepaltoken"]
+    "ids": [
+      "bsc/bep20/safepal_token",
+      "ethereum/erc20/safepaltoken"
+    ]
   },
   "SKULL": {
     "ids": [
@@ -1132,7 +1517,9 @@
     ]
   },
   "SKL": {
-    "ids": ["ethereum/erc20/skale"]
+    "ids": [
+      "ethereum/erc20/skale"
+    ]
   },
   "SKY": {
     "ids": [
@@ -1140,7 +1527,9 @@
     ]
   },
   "SNT": {
-    "ids": ["ethereum/erc20/status_network_token"]
+    "ids": [
+      "ethereum/erc20/status_network_token"
+    ]
   },
   "SNX": {
     "ids": [
@@ -1153,16 +1542,26 @@
     ]
   },
   "SOL": {
-    "ids": ["solana", "solana/spl/so11111111111111111111111111111111111111112"]
+    "ids": [
+      "solana",
+      "solana/spl/so11111111111111111111111111111111111111112"
+    ]
   },
   "SOL_Testnet": {
-    "ids": ["solana_testnet", "solana_devnet"]
+    "ids": [
+      "solana_testnet",
+      "solana_devnet"
+    ]
   },
   "SOMI": {
-    "ids": ["somnia"]
+    "ids": [
+      "somnia"
+    ]
   },
   "SPECTRE": {
-    "ids": ["ethereum/erc20/spectre_ai"]
+    "ids": [
+      "ethereum/erc20/spectre_ai"
+    ]
   },
   "SPX6900": {
     "ids": [
@@ -1172,22 +1571,35 @@
     ]
   },
   "SSV": {
-    "ids": ["ethereum/erc20/ssv_token"]
+    "ids": [
+      "ethereum/erc20/ssv_token"
+    ]
   },
   "STETH": {
-    "ids": ["ethereum/erc20/steth"]
+    "ids": [
+      "ethereum/erc20/steth"
+    ]
   },
   "STG": {
-    "ids": ["arbitrum/erc20/stargatetoken"]
+    "ids": [
+      "arbitrum/erc20/stargatetoken"
+    ]
   },
   "STORJ": {
-    "ids": ["ethereum/erc20/storj"]
+    "ids": [
+      "ethereum/erc20/storj"
+    ]
   },
   "STRD": {
-    "ids": ["stride"]
+    "ids": [
+      "stride"
+    ]
   },
   "STRK": {
-    "ids": ["ethereum/erc20/starknet", "starknet"]
+    "ids": [
+      "ethereum/erc20/starknet",
+      "starknet"
+    ]
   },
   "STSTX": {
     "ids": [
@@ -1200,7 +1612,9 @@
     ]
   },
   "STX": {
-    "ids": ["stacks"]
+    "ids": [
+      "stacks"
+    ]
   },
   "STACKS_ALEX": {
     "ids": [
@@ -1213,10 +1627,14 @@
     ]
   },
   "SUI": {
-    "ids": ["sui"]
+    "ids": [
+      "sui"
+    ]
   },
   "SUI_Testnet": {
-    "ids": ["sui_testnet"]
+    "ids": [
+      "sui_testnet"
+    ]
   },
   "SUSDE": {
     "ids": [
@@ -1267,7 +1685,10 @@
     ]
   },
   "SWETH": {
-    "ids": ["arbitrum/erc20/sweth", "ethereum/erc20/sweth"]
+    "ids": [
+      "arbitrum/erc20/sweth",
+      "ethereum/erc20/sweth"
+    ]
   },
   "SYRUPUSDC": {
     "ids": [
@@ -1310,10 +1731,14 @@
     ]
   },
   "THETA": {
-    "ids": ["ethereum/erc20/theta_token"]
+    "ids": [
+      "ethereum/erc20/theta_token"
+    ]
   },
   "TKX": {
-    "ids": ["ethereum/erc20/tokenize_emblem"]
+    "ids": [
+      "ethereum/erc20/tokenize_emblem"
+    ]
   },
   "TON": {
     "ids": [
@@ -1323,7 +1748,10 @@
     ]
   },
   "TONCOIN": {
-    "ids": ["bsc/bep20/wrapped_ton_coin", "ethereum/erc20/wrapped_ton_coin"]
+    "ids": [
+      "bsc/bep20/wrapped_ton_coin",
+      "ethereum/erc20/wrapped_ton_coin"
+    ]
   },
   "TRUMP": {
     "ids": [
@@ -1331,7 +1759,9 @@
     ]
   },
   "TRX": {
-    "ids": ["tron"]
+    "ids": [
+      "tron"
+    ]
   },
   "TUSD": {
     "ids": [
@@ -1342,7 +1772,9 @@
     ]
   },
   "TWT": {
-    "ids": ["bsc/bep20/trust_wallet"]
+    "ids": [
+      "bsc/bep20/trust_wallet"
+    ]
   },
   "UFD": {
     "ids": [
@@ -1363,7 +1795,9 @@
     ]
   },
   "UNICHAIN": {
-    "ids": ["unichain"]
+    "ids": [
+      "unichain"
+    ]
   },
   "USD1": {
     "ids": [
@@ -1502,7 +1936,10 @@
     ]
   },
   "VET": {
-    "ids": ["bsc/bep20/vechain", "vechain"]
+    "ids": [
+      "bsc/bep20/vechain",
+      "vechain"
+    ]
   },
   "VIRTUAL": {
     "ids": [
@@ -1512,7 +1949,9 @@
     ]
   },
   "VITA": {
-    "ids": ["ethereum/erc20/vitadao_token"]
+    "ids": [
+      "ethereum/erc20/vitadao_token"
+    ]
   },
   "VLISTX": {
     "ids": [
@@ -1525,7 +1964,10 @@
     ]
   },
   "WAVES": {
-    "ids": ["ethereum/erc20/waves", "waves"]
+    "ids": [
+      "ethereum/erc20/waves",
+      "waves"
+    ]
   },
   "WELSH": {
     "ids": [
@@ -1533,10 +1975,14 @@
     ]
   },
   "WBT": {
-    "ids": ["ethereum/erc20/wbt"]
+    "ids": [
+      "ethereum/erc20/wbt"
+    ]
   },
   "WBNB": {
-    "ids": ["bsc/bep20/wrapped_bnb"]
+    "ids": [
+      "bsc/bep20/wrapped_bnb"
+    ]
   },
   "WBTC": {
     "ids": [
@@ -1577,10 +2023,15 @@
     ]
   },
   "WIF": {
-    "ids": ["solana/spl/ekpqgsjtjmfqkz9kqansqyxrcf8fbopzlhyxdm65zcjm"]
+    "ids": [
+      "solana/spl/ekpqgsjtjmfqkz9kqansqyxrcf8fbopzlhyxdm65zcjm"
+    ]
   },
   "WLD": {
-    "ids": ["ethereum/erc20/worldcoin", "optimism/erc20/worldcoin"]
+    "ids": [
+      "ethereum/erc20/worldcoin",
+      "optimism/erc20/worldcoin"
+    ]
   },
   "WLFI": {
     "ids": [
@@ -1610,55 +2061,92 @@
     ]
   },
   "XAI": {
-    "ids": ["arbitrum/erc20/xai"]
+    "ids": [
+      "arbitrum/erc20/xai"
+    ]
   },
   "XAUt": {
-    "ids": ["ethereum/erc20/tether_gold"]
+    "ids": [
+      "ethereum/erc20/tether_gold"
+    ]
   },
   "XEC": {
-    "ids": ["bsc/bep20/binance-peg_ecash_token"]
+    "ids": [
+      "bsc/bep20/binance-peg_ecash_token"
+    ]
   },
   "XEM": {
-    "ids": ["nem"]
+    "ids": [
+      "nem"
+    ]
   },
   "XLM": {
-    "ids": ["stellar"]
+    "ids": [
+      "stellar"
+    ]
   },
   "XMR": {
-    "ids": ["monero"]
+    "ids": [
+      "monero"
+    ]
   },
   "XPL": {
-    "ids": ["bsc/bep20/plasma_0x405fbc9004d857903bfd6b3357792d71a50726b0"]
+    "ids": [
+      "bsc/bep20/plasma_0x405fbc9004d857903bfd6b3357792d71a50726b0"
+    ]
   },
   "XRD": {
-    "ids": ["radix"]
+    "ids": [
+      "radix"
+    ]
   },
   "XRP": {
-    "ids": ["ripple"]
+    "ids": [
+      "ripple"
+    ]
   },
   "XTZ": {
-    "ids": ["tezos"]
+    "ids": [
+      "tezos"
+    ]
   },
   "YLDY": {
-    "ids": ["ethereum/erc20/yieldly"]
+    "ids": [
+      "ethereum/erc20/yieldly"
+    ]
   },
   "ZBU": {
-    "ids": ["base/erc20/zeebu", "bsc/bep20/zeebu"]
+    "ids": [
+      "base/erc20/zeebu",
+      "bsc/bep20/zeebu"
+    ]
   },
   "ZEC": {
-    "ids": ["zcash"]
+    "ids": [
+      "zcash"
+    ]
   },
   "ZETA": {
-    "ids": ["bsc/bep20/zeta", "ethereum/erc20/zeta"]
+    "ids": [
+      "bsc/bep20/zeta",
+      "ethereum/erc20/zeta"
+    ]
   },
   "ZIL": {
-    "ids": ["bsc/bep20/zilliqa", "zilliqa"]
+    "ids": [
+      "bsc/bep20/zilliqa",
+      "zilliqa"
+    ]
   },
   "ZKSYNC": {
-    "ids": ["zksync"]
+    "ids": [
+      "zksync"
+    ]
   },
   "nxm": {
-    "ids": ["ethereum/erc20/nexus_mutual"]
+    "ids": [
+      "ethereum/erc20/nexus_mutual"
+    ]
   },
   "WEETH": {
     "ids": [

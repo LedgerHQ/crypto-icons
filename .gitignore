@@ -1,6 +1,6 @@
 .DS_Store
 .eslintcache
-
+.lh/
 compress/*
 !compress/compress.sh
 !compress/README.md
