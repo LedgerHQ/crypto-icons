@@ -1649,6 +1649,9 @@
   "mantle/erc20/world_liberty_financial_usd_0x111111d2bf19e43c34263401e0cad979ed1cdb61": {
     "icon": "USD1.png"
   },
+  "mantle_sepolia": {
+    "icon": "MNT_TESTNET.png"
+  },
   "metis/erc20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
     "icon": "ENA.png"
   },
