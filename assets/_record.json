@@ -1435,9 +1435,6 @@
   "TZ_TEIA": {
     "ids": ["tezos/fa2/teia_dao_token_kt1qrta753msv8vgxkdrkkyjnig5jtuhhbtv"]
   },
-  "TZ_USDt": {
-    "ids": ["tezos/fa2/tether_usd_kt1xntn74butxhfdtbmm2bgzaqfhpbvkwr8o"]
-  },
   "TZ_tDAO": {
     "ids": ["tezos/fa2/taco_dao_kt1cjx8hywzacake6rlwozblp8w89veaduar"]
   },
@@ -1612,7 +1609,8 @@
       "flare/erc20/tether_usd_0x0b38e83b86d491735feaa0a791f65c2b99535396",
       "astar/erc20/tether_usd",
       "neon_evm/erc20/usdt",
-      "polygon_zk_evm/erc20/tether_usd"
+      "polygon_zk_evm/erc20/tether_usd",
+      "tezos/fa2/tether_usd_kt1xntn74butxhfdtbmm2bgzaqfhpbvkwr8o"
     ]
   },
   "USDS": {
