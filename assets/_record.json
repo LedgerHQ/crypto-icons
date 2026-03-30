@@ -69,6 +69,9 @@
   "AKRO": {
     "ids": ["ethereum/erc20/akropolis"]
   },
+  "ALEO": {
+    "ids": ["aleo", "bsc/bep20/aleo_0x6cfffa5bfd4277a04d83307feedfe2d18d944dd2"]
+  },
   "ALGO": {
     "ids": ["algorand"]
   },
