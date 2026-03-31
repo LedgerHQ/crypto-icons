@@ -5,6 +5,9 @@
   "adi/erc20/ddsc_0x1211f0cfe66739433c1330e21f4951b80e813479": {
     "icon": "ADI.png"
   },
+  "aleo": {
+    "icon": "ALEO.png"
+  },
   "aleph_zero": {
     "icon": "AZERO.png"
   },
@@ -505,6 +508,9 @@
   },
   "bsc/bep20/airdao_0x96c7957030aa8b1fd3c6e0ee3d84c4695c6eae9c": {
     "icon": "AMB.png"
+  },
+  "bsc/bep20/aleo_0x6cfffa5bfd4277a04d83307feedfe2d18d944dd2": {
+    "icon": "ALEO.png"
   },
   "bsc/bep20/apecoin": {
     "icon": "APE.png"
