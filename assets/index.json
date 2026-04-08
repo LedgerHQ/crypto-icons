@@ -35,6 +35,9 @@
   "arbitrum": {
     "icon": "ARB.png"
   },
+  "arbitrum/erc20/aave_arbitrum_weth": {
+    "icon": "WETH.png"
+  },
   "arbitrum/erc20/aave_token_0xba5ddd1f9d7f570dc94a51479a000e3bce967196": {
     "icon": "AAVE.png"
   },
@@ -100,6 +103,9 @@
   },
   "arbitrum/erc20/kyber_network_crystal_v2": {
     "icon": "KNC.png"
+  },
+  "arbitrum/erc20/layerzero": {
+    "icon": "LAYERZERO.png"
   },
   "arbitrum/erc20/lido_dao_token": {
     "icon": "LDO.png"
@@ -218,6 +224,9 @@
   "avalanche_c_chain/erc20/1inch_token_(bridged)": {
     "icon": "1INCH.png"
   },
+  "avalanche_c_chain/erc20/aave_avalanche_weth": {
+    "icon": "WETH.png"
+  },
   "avalanche_c_chain/erc20/aave_token_(bridged)": {
     "icon": "AAVE.png"
   },
@@ -247,6 +256,9 @@
   },
   "avalanche_c_chain/erc20/kyber_network_crystal_v2": {
     "icon": "KNC.png"
+  },
+  "avalanche_c_chain/erc20/layerzero": {
+    "icon": "LAYERZERO.png"
   },
   "avalanche_c_chain/erc20/maker": {
     "icon": "MKR.png"
@@ -296,11 +308,17 @@
   "base/erc20/1inch_token_0xc5fecc3a29fb57b5024eec8a2239d4621e111cbe": {
     "icon": "1INCH.png"
   },
+  "base/erc20/aave_base_weth": {
+    "icon": "WETH.png"
+  },
   "base/erc20/aave_token_0x63706e401c06ac8513145b7687a14804d17f814b": {
     "icon": "AAVE.png"
   },
   "base/erc20/base_tbtc_v2": {
     "icon": "TBTC.png"
+  },
+  "base/erc20/beldex_0x6ad12e761b438bea3ea09f6c6266556bb24c2181": {
+    "icon": "BELDEX.png"
   },
   "base/erc20/brett": {
     "icon": "BRETT.png"
@@ -331,6 +349,9 @@
   },
   "base/erc20/kelpdao_restaked_eth": {
     "icon": "RSETH.png"
+  },
+  "base/erc20/layerzero": {
+    "icon": "LAYERZERO.png"
   },
   "base/erc20/lombard_staked_bitcoin_0xecac9c5f704e954931349da37f60e39f515c11c1": {
     "icon": "LBTC.png"
@@ -521,6 +542,9 @@
   "bsc/bep20/beam": {
     "icon": "BEAM.png"
   },
+  "bsc/bep20/beldex_0x6ad12e761b438bea3ea09f6c6266556bb24c2181": {
+    "icon": "BELDEX.png"
+  },
   "bsc/bep20/binance-peg_apenft_token": {
     "icon": "NFT.png"
   },
@@ -640,6 +664,9 @@
   },
   "bsc/bep20/kusama": {
     "icon": "KSM.png"
+  },
+  "bsc/bep20/layerzero": {
+    "icon": "LAYERZERO.png"
   },
   "bsc/bep20/lombard_staked_bitcoin_0xecac9c5f704e954931349da37f60e39f515c11c1": {
     "icon": "LBTC.png"
@@ -890,6 +917,9 @@
   "ethereum/erc20/aave": {
     "icon": "AAVE.png"
   },
+  "ethereum/erc20/aave_ethereum_weth": {
+    "icon": "WETH.png"
+  },
   "ethereum/erc20/aioz_network": {
     "icon": "AIOZ.png"
   },
@@ -1105,6 +1135,9 @@
   },
   "ethereum/erc20/kyber_network_crystal_v2": {
     "icon": "KNC.png"
+  },
+  "ethereum/erc20/layerzero": {
+    "icon": "LAYERZERO.png"
   },
   "ethereum/erc20/leo_token": {
     "icon": "LEO.png"
@@ -1754,6 +1787,9 @@
   "optimism": {
     "icon": "OP.png"
   },
+  "optimism/erc20/aave_optimism_weth": {
+    "icon": "WETH.png"
+  },
   "optimism/erc20/aave_token": {
     "icon": "AAVE.png"
   },
@@ -1786,6 +1822,9 @@
   },
   "optimism/erc20/kyber_network_crystal_v2": {
     "icon": "KNC.png"
+  },
+  "optimism/erc20/layerzero": {
+    "icon": "LAYERZERO.png"
   },
   "optimism/erc20/lido_dao_token": {
     "icon": "LDO.png"
@@ -1870,6 +1909,9 @@
   },
   "polygon/erc20/aave_(pos)": {
     "icon": "AAVE.png"
+  },
+  "polygon/erc20/aave_polygon_weth": {
+    "icon": "WETH.png"
   },
   "polygon/erc20/apecoin_pos": {
     "icon": "APE.png"
@@ -2102,6 +2144,9 @@
   "solana/spl/7i5kksx2weitkry7ja4zwsuxghs5ejbejy8vvxr4pfrx": {
     "icon": "GMT.png"
   },
+  "solana/spl/beldex_cp4w2b3og2tafupye1kr8pdejwwahteskppznffn9n9d": {
+    "icon": "BELDEX.png"
+  },
   "solana/spl/cat_in_a_dogs_world_mew1gqwj3nexg2qgeriku7fafj79phvqvrequzscpp5": {
     "icon": "MEW.png"
   },
@@ -2122,6 +2167,9 @@
   },
   "solana/spl/es9vmfrzacermjfrf4h2fyd4kconky11mcce8benwnyb": {
     "icon": "USDT.png"
+  },
+  "solana/spl/eusx_token_3thdfzqkm6kryvglg48kapg5trmhymky1icra9xop1wc": {
+    "icon": "EUSX.png"
   },
   "solana/spl/fartcoin_9bb6nfecjbctnnlfko2fqvqbq8hhm13kcyycdqbgpump": {
     "icon": "FARTCOIN.png"
@@ -2197,6 +2245,9 @@
   },
   "solana/spl/usds_usdswr9apdhk5bvjkmjzff41ffux8bsxdkcr81vtwca": {
     "icon": "USDS.png"
+  },
+  "solana/spl/usx_stablecoin_6frrzdk5mqargc1tdyoyvnsyrdds1t4pbtohcd6p3tgg": {
+    "icon": "USX.png"
   },
   "solana/spl/virtual_protocol_3iql8bfs2ve7mww4ehaqqhasbmrncrpxizwat2zfyr9y": {
     "icon": "VIRTUAL.png"

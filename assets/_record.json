@@ -182,6 +182,13 @@
   "BEAM": {
     "ids": ["bsc/bep20/beam", "ethereum/erc20/beam"]
   },
+  "BELDEX": {
+    "ids": [
+      "solana/spl/beldex_cp4w2b3og2tafupye1kr8pdejwwahteskppznffn9n9d",
+      "bsc/bep20/beldex_0x6ad12e761b438bea3ea09f6c6266556bb24c2181",
+      "base/erc20/beldex_0x6ad12e761b438bea3ea09f6c6266556bb24c2181"
+    ]
+  },
   "BERACHAIN": {
     "ids": ["berachain"]
   },
@@ -428,6 +435,11 @@
   "ETHW": {
     "ids": ["ethereum_pow"]
   },
+  "EUSX": {
+    "ids": [
+      "solana/spl/eusx_token_3thdfzqkm6kryvglg48kapg5trmhymky1icra9xop1wc"
+    ]
+  },
   "FARTCOIN": {
     "ids": ["solana/spl/fartcoin_9bb6nfecjbctnnlfko2fqvqbq8hhm13kcyycdqbgpump"]
   },
@@ -670,6 +682,16 @@
       "bsc/bep20/kujira_native_asset",
       "ethereum/erc20/kuji",
       "optimism/erc20/kujira_native_asset"
+    ]
+  },
+  "LAYERZERO": {
+    "ids": [
+      "ethereum/erc20/layerzero",
+      "bsc/bep20/layerzero",
+      "avalanche_c_chain/erc20/layerzero",
+      "base/erc20/layerzero",
+      "arbitrum/erc20/layerzero",
+      "optimism/erc20/layerzero"
     ]
   },
   "LDO": {
@@ -1605,6 +1627,7 @@
       "cronos/erc20/tether_usd",
       "fantom/erc20/tether_usd",
       "algorand/asa/312769",
+      "tezos/fa2/tether_usd_kt1xntn74butxhfdtbmm2bgzaqfhpbvkwr8o",
       "linea/erc20/tether_usd",
       "celo/erc20/tether_usd_0x48065fbbe25f71c9282ddf5e1cd6d6a887483d5e",
       "rsk/erc20/usdt_0xaf368c91793cb22739386dfcbbb2f1a9e4bcbebf",
@@ -1612,8 +1635,7 @@
       "flare/erc20/tether_usd_0x0b38e83b86d491735feaa0a791f65c2b99535396",
       "astar/erc20/tether_usd",
       "neon_evm/erc20/usdt",
-      "polygon_zk_evm/erc20/tether_usd",
-      "tezos/fa2/tether_usd_kt1xntn74butxhfdtbmm2bgzaqfhpbvkwr8o"
+      "polygon_zk_evm/erc20/tether_usd"
     ]
   },
   "USDS": {
@@ -1621,6 +1643,11 @@
       "base/erc20/usds_stablecoin_0x820c137fa70c8691f0e44dc420a5e53c168921dc",
       "ethereum/erc20/usds_stablecoin_0xdc035d45d973e3ec169d2276ddab16f1e407384f",
       "solana/spl/usds_usdswr9apdhk5bvjkmjzff41ffux8bsxdkcr81vtwca"
+    ]
+  },
+  "USX": {
+    "ids": [
+      "solana/spl/usx_stablecoin_6frrzdk5mqargc1tdyoyvnsyrdds1t4pbtohcd6p3tgg"
     ]
   },
   "VELAR": {
@@ -1694,7 +1721,14 @@
       "flare/erc20/weth_0x1502fa4be69d526124d453619276faccab275d3d",
       "astar/erc20/wrapped_ether",
       "neon_evm/erc20/wrapped_eth",
-      "berachain/erc20/weth"
+      "berachain/erc20/weth",
+      "berachain/erc20/weth",
+      "ethereum/erc20/aave_ethereum_weth",
+      "avalanche_c_chain/erc20/aave_avalanche_weth",
+      "base/erc20/aave_base_weth",
+      "polygon/erc20/aave_polygon_weth",
+      "arbitrum/erc20/aave_arbitrum_weth",
+      "optimism/erc20/aave_optimism_weth"
     ]
   },
   "WBETH": {
