@@ -50,11 +50,17 @@
   "arbitrum/erc20/biconomy_token": {
     "icon": "BICO.png"
   },
+  "arbitrum/erc20/blackrock_usd_institutional_digital_liquidity_fund_0xa6525ae43edcd03dc08e775774dcabd3bb925872": {
+    "icon": "BUIDL.png"
+  },
   "arbitrum/erc20/bonk": {
     "icon": "BONK.png"
   },
   "arbitrum/erc20/chainlink_token": {
     "icon": "LINK.png"
+  },
+  "arbitrum/erc20/clbtc_0x1792865d493fe4dfdd504010d3c0f6da11e8046d": {
+    "icon": "CLBTC.png"
   },
   "arbitrum/erc20/coinbase_wrapped_btc_0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf": {
     "icon": "CBBTC.png"
@@ -122,6 +128,9 @@
   "arbitrum/erc20/morpho_token_0x40bd670a58238e6e230c430bbb5ce6ec0d40df48": {
     "icon": "MORPHO.png"
   },
+  "arbitrum/erc20/ondo_u_s_dollar_yield_0x35e050d3c0ec2d29d269a8ecea763a183bdf9a9d": {
+    "icon": "USDY.png"
+  },
   "arbitrum/erc20/pancakeswap_token": {
     "icon": "CAKE.png"
   },
@@ -136,6 +145,9 @@
   },
   "arbitrum/erc20/polkadot_token_relay_chain_0x8d010bf9c26881788b4e6bf5fd1bdc358c8f90b8": {
     "icon": "DOT.png"
+  },
+  "arbitrum/erc20/rain_0x25118290e6a5f4139381d072181157035864099d": {
+    "icon": "RAIN.png"
   },
   "arbitrum/erc20/rbtc_0x441fcb23dfe8289cf572126fedcf450974adc891": {
     "icon": "RBTC.png"
@@ -233,6 +245,9 @@
   "avalanche_c_chain/erc20/basic_attention_token_(bridged)": {
     "icon": "BAT.png"
   },
+  "avalanche_c_chain/erc20/blackrock_usd_institutional_digital_liquidity_fund_0x53fc82f14f009009b440a706e31c9021e1196a2f": {
+    "icon": "BUIDL.png"
+  },
   "avalanche_c_chain/erc20/chainlink_token_(bridged)": {
     "icon": "LINK.png"
   },
@@ -262,6 +277,9 @@
   },
   "avalanche_c_chain/erc20/maker": {
     "icon": "MKR.png"
+  },
+  "avalanche_c_chain/erc20/pepe_0xa659d083b677d6bffe1cb704e1473b896727be6d": {
+    "icon": "PEPE.png"
   },
   "avalanche_c_chain/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
     "icon": "SUSDE.png"
@@ -325,6 +343,9 @@
   },
   "base/erc20/chainlink_token_0x88fb150bdc53a65fe94dea0c9ba0a6daf8c6e196": {
     "icon": "LINK.png"
+  },
+  "base/erc20/clbtc_0x8d2757ea27aabf172da4cca4e5474c76016e3dc5": {
+    "icon": "CLBTC.png"
   },
   "base/erc20/coinbase_wrapped_btc": {
     "icon": "CBBTC.png"
@@ -488,6 +509,9 @@
   "bittorrent/erc20/decentralized_usd_bsc_0x392004bee213f1ff580c867359c246924f21e6ad": {
     "icon": "USDD.png"
   },
+  "bittorrent/erc20/trx": {
+    "icon": "TRX.png"
+  },
   "blast": {
     "icon": "BLAST.png"
   },
@@ -575,11 +599,17 @@
   "bsc/bep20/binance-peg_dai_token": {
     "icon": "DAI.png"
   },
+  "bsc/bep20/binance-peg_dogecoin": {
+    "icon": "DOGE.png"
+  },
   "bsc/bep20/binance-peg_ecash_token": {
     "icon": "XEC.png"
   },
   "bsc/bep20/binance-peg_elf_token": {
     "icon": "ELF.png"
+  },
+  "bsc/bep20/binance-peg_ethereum_token": {
+    "icon": "WETH.png"
   },
   "bsc/bep20/binance-peg_flow_token": {
     "icon": "FLOW.png"
@@ -604,6 +634,9 @@
   },
   "bsc/bep20/bittorrent": {
     "icon": "BTT.png"
+  },
+  "bsc/bep20/blackrock_usd_institutional_digital_liquidity_fund_0x2d5bdc96d9c8aabbdb38c9a27398513e7e5ef84f": {
+    "icon": "BUIDL.png"
   },
   "bsc/bep20/bonk": {
     "icon": "BONK.png"
@@ -649,6 +682,9 @@
   },
   "bsc/bep20/green_metaverse_token": {
     "icon": "GMT.png"
+  },
+  "bsc/bep20/htx": {
+    "icon": "HTX.png"
   },
   "bsc/bep20/illuvium": {
     "icon": "ILV.png"
@@ -890,6 +926,12 @@
   "energi/erc20/numeraire_0xd72922e849477a042a7e6dc84309f4bc1c1227a2": {
     "icon": "NMR.png"
   },
+  "energi/erc20/quant_0x462b35452e552a66b519ecf70aedb1835d434965": {
+    "icon": "QNT.png"
+  },
+  "energi/erc20/trx_energi_0xdc5f62055a2911f85cf16df9f7662403387c8d46": {
+    "icon": "TRX.png"
+  },
   "energi/erc20/uniswap_0x665b3a802979ec24e076c80025bff33c18eb6007": {
     "icon": "UNI.png"
   },
@@ -980,6 +1022,9 @@
   "ethereum/erc20/bittorrent": {
     "icon": "BTT.png"
   },
+  "ethereum/erc20/blackrock_usd_institutional_digital_liquidity_fund_0x7712c34205737192402172409a8f7ccef8aa2aec": {
+    "icon": "BUIDL.png"
+  },
   "ethereum/erc20/blur": {
     "icon": "BLUR.png"
   },
@@ -991,6 +1036,9 @@
   },
   "ethereum/erc20/chiliz": {
     "icon": "CHZ.png"
+  },
+  "ethereum/erc20/clbtc_0xe7ae30c03395d66f30a26c49c91edae151747911": {
+    "icon": "CLBTC.png"
   },
   "ethereum/erc20/coinbase_wrapped_btc": {
     "icon": "CBBTC.png"
@@ -1085,6 +1133,9 @@
   "ethereum/erc20/gatechaintoken": {
     "icon": "GT.png"
   },
+  "ethereum/erc20/global_dollar_0xe343167631d89b6ffc58b88d6b7fb0228795491d": {
+    "icon": "USDG.png"
+  },
   "ethereum/erc20/gnosis": {
     "icon": "GNO.png"
   },
@@ -1105,6 +1156,9 @@
   },
   "ethereum/erc20/holotoken": {
     "icon": "HOT.png"
+  },
+  "ethereum/erc20/htx": {
+    "icon": "HTX.png"
   },
   "ethereum/erc20/icp_0x00f3c42833c3170159af4e92dbb451fb3f708917": {
     "icon": "ICP.png"
@@ -1190,6 +1244,9 @@
   "ethereum/erc20/must": {
     "icon": "MUST.png"
   },
+  "ethereum/erc20/near": {
+    "icon": "NEAR.png"
+  },
   "ethereum/erc20/nexo": {
     "icon": "NEXO.png"
   },
@@ -1216,6 +1273,9 @@
   },
   "ethereum/erc20/ondo": {
     "icon": "ONDO.png"
+  },
+  "ethereum/erc20/ondo_u_s_dollar_yield": {
+    "icon": "USDY.png"
   },
   "ethereum/erc20/open_exchange_token": {
     "icon": "OX.png"
@@ -1352,6 +1412,9 @@
   "ethereum/erc20/syrup_usdc_0x80ac24aa929eaf5013f6436cda2a7ba190f5cc0b": {
     "icon": "SYRUPUSDC.png"
   },
+  "ethereum/erc20/syrup_usdt_0x356b8d89c1e1239cbbb9de4815c39a1474d5ba7d": {
+    "icon": "SYRUPUSDT.png"
+  },
   "ethereum/erc20/tbtc": {
     "icon": "TBTC.png"
   },
@@ -1369,6 +1432,9 @@
   },
   "ethereum/erc20/tokenize_emblem": {
     "icon": "TKX.png"
+  },
+  "ethereum/erc20/tron": {
+    "icon": "TRX.png"
   },
   "ethereum/erc20/trueusd": {
     "icon": "TUSD.png"
@@ -1547,6 +1613,9 @@
   "hive": {
     "icon": "HIVE.png"
   },
+  "hyperevm": {
+    "icon": "HYPE.png"
+  },
   "hyperevm/erc20/usd_0_0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb": {
     "icon": "USDT0.png"
   },
@@ -1646,11 +1715,17 @@
   "linea/erc20/uniswap": {
     "icon": "UNI.png"
   },
+  "linea/erc20/usdc_e": {
+    "icon": "USDC.png"
+  },
   "linea/erc20/usde_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
     "icon": "USDE.png"
   },
   "linea/erc20/woo_0xf3df0a31ec5ea438150987805e841f960b9471b6": {
     "icon": "WOO.png"
+  },
+  "linea/erc20/wrapped_btc": {
+    "icon": "WBTC.png"
   },
   "linea/erc20/wrapped_eeth": {
     "icon": "WEETH.png"
@@ -1675,6 +1750,12 @@
   },
   "mantle/erc20/mantle_staked_ether": {
     "icon": "METH.png"
+  },
+  "mantle/erc20/mantle_token_0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000": {
+    "icon": "MNT.png"
+  },
+  "mantle/erc20/ondo_u_s_dollar_yield": {
+    "icon": "USDY.png"
   },
   "mantle/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
     "icon": "SUSDE.png"
@@ -1793,8 +1874,14 @@
   "optimism/erc20/aave_token": {
     "icon": "AAVE.png"
   },
+  "optimism/erc20/blackrock_usd_institutional_digital_liquidity_fund_0xa1cdab15bba75a80df4089cafba013e376957cf5": {
+    "icon": "BUIDL.png"
+  },
   "optimism/erc20/chainlink_token": {
     "icon": "LINK.png"
+  },
+  "optimism/erc20/clbtc_0x1792865d493fe4dfdd504010d3c0f6da11e8046d": {
+    "icon": "CLBTC.png"
   },
   "optimism/erc20/coinbase_wrapped_staked_eth": {
     "icon": "CBETH.png"
@@ -1919,6 +2006,9 @@
   "polygon/erc20/bat": {
     "icon": "BAT.png"
   },
+  "polygon/erc20/blackrock_usd_institutional_digital_liquidity_fund_0x2893ef551b6dd69f661ac00f11d93e5dc5dc0e99": {
+    "icon": "BUIDL.png"
+  },
   "polygon/erc20/bonk": {
     "icon": "BONK.png"
   },
@@ -2016,6 +2106,9 @@
     "icon": "UNI.png"
   },
   "polygon/erc20/usd_coin": {
+    "icon": "USDC.png"
+  },
+  "polygon/erc20/usd_coin_(pos)": {
     "icon": "USDC.png"
   },
   "polygon/erc20/wootrade_network": {
@@ -2144,8 +2237,14 @@
   "solana/spl/7i5kksx2weitkry7ja4zwsuxghs5ejbejy8vvxr4pfrx": {
     "icon": "GMT.png"
   },
+  "solana/spl/a1klobrkbde8ty9qtnqutq3c2ortoc3u7twggz7seto6": {
+    "icon": "USDY.png"
+  },
   "solana/spl/beldex_cp4w2b3og2tafupye1kr8pdejwwahteskppznffn9n9d": {
     "icon": "BELDEX.png"
+  },
+  "solana/spl/binance_staked_sol_bnso1vujnh4zcfpza6986ea66p6tcp59hvtnj8b1x85": {
+    "icon": "BNSOL.png"
   },
   "solana/spl/cat_in_a_dogs_world_mew1gqwj3nexg2qgeriku7fafj79phvqvrequzscpp5": {
     "icon": "MEW.png"
@@ -2176,6 +2275,9 @@
   },
   "solana/spl/first_digital_usd_9znqrsgljnkwcuu5gq5lr8beucpzqmvmqkai3sszh54u": {
     "icon": "FDUSD.png"
+  },
+  "solana/spl/global_dollar_2u1tszseqz3qbwf3ungpfc8tzmk2tdiwknnrmwgwjgwh": {
+    "icon": "USDG.png"
   },
   "solana/spl/hhjpbhrrn4g56vsylut8dl5bv31hkxqsrahttuczezg4": {
     "icon": "MYRO.png"
@@ -2392,6 +2494,9 @@
   },
   "sui/coin/first_digital_usd_0xf16e6b723f242ec745dfd7634ad072c42d5c1d9ac9d62a39c381303eaa57693a::fdusd::fdusd": {
     "icon": "FDUSD.png"
+  },
+  "sui/coin/ondo_us_dollar_yield_0x960b531667636f39e85867775f52f6b1f220a058c4de786905bdf761e06a56bb::usdy::usdy": {
+    "icon": "USDY.png"
   },
   "sui/coin/usdc_0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::usdc": {
     "icon": "USDC.png"
