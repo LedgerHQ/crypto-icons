@@ -210,6 +210,11 @@
   "BNB": {
     "ids": ["binance_beacon_chain", "bsc", "ethereum/erc20/bnb"]
   },
+  "BNSOL": {
+    "ids": [
+      "solana/spl/binance_staked_sol_bnso1vujnh4zcfpza6986ea66p6tcp59hvtnj8b1x85"
+    ]
+  },
   "BOBA": {
     "ids": ["boba"]
   },
@@ -245,6 +250,16 @@
       "bsc/bep20/bittorrent",
       "ethereum/erc20/bittorrent",
       "tron/trc20/tafjulxivgt4qwk6uzwjqwzxtsagaqnvp4"
+    ]
+  },
+  "BUIDL": {
+    "ids": [
+      "ethereum/erc20/blackrock_usd_institutional_digital_liquidity_fund_0x7712c34205737192402172409a8f7ccef8aa2aec",
+      "bsc/bep20/blackrock_usd_institutional_digital_liquidity_fund_0x2d5bdc96d9c8aabbdb38c9a27398513e7e5ef84f",
+      "avalanche_c_chain/erc20/blackrock_usd_institutional_digital_liquidity_fund_0x53fc82f14f009009b440a706e31c9021e1196a2f",
+      "polygon/erc20/blackrock_usd_institutional_digital_liquidity_fund_0x2893ef551b6dd69f661ac00f11d93e5dc5dc0e99",
+      "arbitrum/erc20/blackrock_usd_institutional_digital_liquidity_fund_0xa6525ae43edcd03dc08e775774dcabd3bb925872",
+      "optimism/erc20/blackrock_usd_institutional_digital_liquidity_fund_0xa1cdab15bba75a80df4089cafba013e376957cf5"
     ]
   },
   "CAKE": {
@@ -308,6 +323,14 @@
   "CKB": {
     "ids": ["nervos"]
   },
+  "CLBTC": {
+    "ids": [
+      "ethereum/erc20/clbtc_0xe7ae30c03395d66f30a26c49c91edae151747911",
+      "base/erc20/clbtc_0x8d2757ea27aabf172da4cca4e5474c76016e3dc5",
+      "arbitrum/erc20/clbtc_0x1792865d493fe4dfdd504010d3c0f6da11e8046d",
+      "optimism/erc20/clbtc_0x1792865d493fe4dfdd504010d3c0f6da11e8046d"
+    ]
+  },
   "CORE": {
     "ids": ["core"]
   },
@@ -364,7 +387,7 @@
     ]
   },
   "DOGE": {
-    "ids": ["dogecoin"]
+    "ids": ["dogecoin", "bsc/bep20/binance-peg_dogecoin"]
   },
   "DOT": {
     "ids": [
@@ -576,6 +599,12 @@
   },
   "HNT": {
     "ids": ["solana/spl/hntyvp6yfm1hg25tn9wglqm12b8tqmcknkrdu1oxwux"]
+  },
+  "HTX": {
+    "ids": ["ethereum/erc20/htx", "bsc/bep20/htx"]
+  },
+  "HYPE": {
+    "ids": ["hyperevm"]
   },
   "ETH_Testnet": {
     "ids": ["ethereum_hoodi", "ethereum_sepolia", "ethereum_holesky"]
@@ -854,7 +883,11 @@
     ]
   },
   "MNT": {
-    "ids": ["ethereum/erc20/mantle", "mantle"]
+    "ids": [
+      "ethereum/erc20/mantle",
+      "mantle",
+      "mantle/erc20/mantle_token_0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000"
+    ]
   },
   "MNT_TESTNET": {
     "ids": ["mantle_sepolia"]
@@ -895,7 +928,7 @@
     "ids": ["nano"]
   },
   "NEAR": {
-    "ids": ["near"]
+    "ids": ["near", "ethereum/erc20/near"]
   },
   "NEO": {
     "ids": ["neo"]
@@ -1003,7 +1036,12 @@
     ]
   },
   "PEPE": {
-    "ids": ["arbitrum/erc20/pepe", "ethereum/erc20/pepe", "linea/erc20/pepe"]
+    "ids": [
+      "arbitrum/erc20/pepe",
+      "ethereum/erc20/pepe",
+      "linea/erc20/pepe",
+      "avalanche_c_chain/erc20/pepe_0xa659d083b677d6bffe1cb704e1473b896727be6d"
+    ]
   },
   "PIXEL": {
     "ids": ["ethereum/erc20/_pixel"]
@@ -1034,10 +1072,16 @@
     ]
   },
   "QNT": {
-    "ids": ["ethereum/erc20/quant"]
+    "ids": [
+      "ethereum/erc20/quant",
+      "energi/erc20/quant_0x462b35452e552a66b519ecf70aedb1835d434965"
+    ]
   },
   "QTUM": {
     "ids": ["qtum"]
+  },
+  "RAIN": {
+    "ids": ["arbitrum/erc20/rain_0x25118290e6a5f4139381d072181157035864099d"]
   },
   "RAY": {
     "ids": ["solana/spl/4k3dyjzvzp8emzwuxbbcjevwskkk59s5icnly3qrkx6r"]
@@ -1305,6 +1349,11 @@
       "base/erc20/syrup_usdc_0x660975730059246a68521a3e2fbd4740173100f5"
     ]
   },
+  "SYRUPUSDT": {
+    "ids": [
+      "ethereum/erc20/syrup_usdt_0x356b8d89c1e1239cbbb9de4815c39a1474d5ba7d"
+    ]
+  },
   "T": {
     "ids": [
       "base/erc20/threshold_network_token_0x26f3901ac8a79c50fb0d8289c74f0d09adc42e29",
@@ -1359,7 +1408,12 @@
     ]
   },
   "TRX": {
-    "ids": ["tron"]
+    "ids": [
+      "tron",
+      "ethereum/erc20/tron",
+      "bittorrent/erc20/trx",
+      "energi/erc20/trx_energi_0xdc5f62055a2911f85cf16df9f7662403387c8d46"
+    ]
   },
   "TUSD": {
     "ids": [
@@ -1560,7 +1614,16 @@
       "monad/erc20/usdc_0x754704bc059f8c67012fed69bc8a327a5aafb603",
       "sei_evm/erc20/usdc_0xe15fc38f6d8c56af07bbcbe3baf5708a2bf42392",
       "unichain/erc20/usdc_0x078d782b760474a361dda0af3839290b0ef57ad6",
-      "stacks/sip010/usdcx_sp120sbrbqj00mcws7tm5r8wjnttkd5k0hfrc2cne.usdcx::usdcx"
+      "stacks/sip010/usdcx_sp120sbrbqj00mcws7tm5r8wjnttkd5k0hfrc2cne.usdcx::usdcx",
+      "linea/erc20/usdc_e",
+      "polygon/erc20/usd_coin_(pos)",
+      "zksync/erc20/usdc"
+    ]
+  },
+  "USDG": {
+    "ids": [
+      "ethereum/erc20/global_dollar_0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+      "solana/spl/global_dollar_2u1tszseqz3qbwf3ungpfc8tzmk2tdiwknnrmwgwjgwh"
     ]
   },
   "USDH": {
@@ -1645,6 +1708,15 @@
       "solana/spl/usds_usdswr9apdhk5bvjkmjzff41ffux8bsxdkcr81vtwca"
     ]
   },
+  "USDY": {
+    "ids": [
+      "ethereum/erc20/ondo_u_s_dollar_yield",
+      "solana/spl/a1klobrkbde8ty9qtnqutq3c2ortoc3u7twggz7seto6",
+      "arbitrum/erc20/ondo_u_s_dollar_yield_0x35e050d3c0ec2d29d269a8ecea763a183bdf9a9d",
+      "mantle/erc20/ondo_u_s_dollar_yield",
+      "sui/coin/ondo_us_dollar_yield_0x960b531667636f39e85867775f52f6b1f220a058c4de786905bdf761e06a56bb::usdy::usdy"
+    ]
+  },
   "USX": {
     "ids": [
       "solana/spl/usx_stablecoin_6frrzdk5mqargc1tdyoyvnsyrdds1t4pbtohcd6p3tgg"
@@ -1706,7 +1778,8 @@
       "sonic/erc20/wrapped_btc_0x0555e30da8f98308edb960aa94c0db47230d2b9c",
       "berachain/erc20/wbtc",
       "monad/erc20/wrapped_btc_0x0555e30da8f98308edb960aa94c0db47230d2b9c",
-      "sei_evm/erc20/wrapped_btc_0x0555e30da8f98308edb960aa94c0db47230d2b9c"
+      "sei_evm/erc20/wrapped_btc_0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+      "linea/erc20/wrapped_btc"
     ]
   },
   "WETH": {
@@ -1728,7 +1801,8 @@
       "base/erc20/aave_base_weth",
       "polygon/erc20/aave_polygon_weth",
       "arbitrum/erc20/aave_arbitrum_weth",
-      "optimism/erc20/aave_optimism_weth"
+      "optimism/erc20/aave_optimism_weth",
+      "bsc/bep20/binance-peg_ethereum_token"
     ]
   },
   "WBETH": {
