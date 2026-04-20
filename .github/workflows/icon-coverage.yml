@@ -1,0 +1,51 @@
+name: Icon Coverage Tracker
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Every Monday at 9am UTC
+  workflow_dispatch:
+
+jobs:
+  check-coverage:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run coverage check
+        run: node .github/scripts/check-icon-coverage.mjs > /tmp/coverage-report.md
+
+      - name: Ensure label exists
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create "icon-coverage" \
+            --description "Weekly icon coverage tracking" \
+            --color "0052cc" \
+            --force 2>/dev/null || true
+
+      - name: Create or update coverage issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ISSUE_NUMBER=$(gh issue list \
+            --label "icon-coverage" \
+            --state open \
+            --json number \
+            --jq '.[0].number // empty')
+
+          if [ -z "$ISSUE_NUMBER" ]; then
+            gh issue create \
+              --title "Icon Coverage Tracker: missing ledger IDs in index.json" \
+              --body-file /tmp/coverage-report.md \
+              --label "icon-coverage"
+          else
+            gh issue edit "$ISSUE_NUMBER" \
+              --body-file /tmp/coverage-report.md
+          fi
