@@ -1567,6 +1567,9 @@
   "UNICHAIN": {
     "ids": ["unichain"]
   },
+  "USCC": {
+    "ids": ["ethereum/erc20/superstate_crypto_carry_fund"]
+  },
   "USD1": {
     "ids": [
       "ethereum/erc20/world_liberty_financial_usd_0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d",
@@ -1666,6 +1669,11 @@
       "hyperevm/erc20/usd_0_0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
       "monad/erc20/usdt0_0xe7cd86e13ac4309349f30b3435a9d337750fc82d",
       "sei_evm/erc20/usd_0_0x9151434b16b9763660705744891fa906f660ecc5"
+    ]
+  },
+  "USTB": {
+    "ids": [
+      "ethereum/erc20/superstate_short_duration_us_government_securities_fund"
     ]
   },
   "USYC": {

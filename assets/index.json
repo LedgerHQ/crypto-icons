@@ -1400,6 +1400,12 @@
   "ethereum/erc20/superfarm": {
     "icon": "SUPER.png"
   },
+  "ethereum/erc20/superstate_crypto_carry_fund": {
+    "icon": "USCC.png"
+  },
+  "ethereum/erc20/superstate_short_duration_us_government_securities_fund": {
+    "icon": "USTB.png"
+  },
   "ethereum/erc20/sushi": {
     "icon": "SUSHI.png"
   },
