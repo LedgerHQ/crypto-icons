@@ -6,9 +6,7 @@ const ASSETS_DIR = resolve(__dirname, '../../assets');
 const RECORD_PATH = resolve(ASSETS_DIR, '_record.json');
 
 describe('assets / _record consistency', () => {
-  const record: Record<string, { ids: string[] }> = JSON.parse(
-    readFileSync(RECORD_PATH, 'utf-8')
-  );
+  const record: Record<string, { ids: string[] }> = JSON.parse(readFileSync(RECORD_PATH, 'utf-8'));
   const pngTickers = new Set(
     readdirSync(ASSETS_DIR)
       .filter((f) => f.endsWith('.png'))

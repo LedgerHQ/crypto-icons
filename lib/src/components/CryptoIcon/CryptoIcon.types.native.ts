@@ -1,4 +1,4 @@
-import { DotSymbol, MediaImage } from '@ledgerhq/lumen-ui-react';
+import { DotSymbol, MediaImage } from '@ledgerhq/lumen-ui-rnative';
 import { ComponentProps } from 'react';
 
 export type CryptoIconProps = {

@@ -13,7 +13,7 @@
     "declarationMap": true,
     "declarationDir": "dist",
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "types": ["@testing-library/jest-dom"]
   },

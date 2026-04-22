@@ -16,8 +16,15 @@ describe('CryptoIcon', () => {
     resetHookCache();
   });
 
+  describe('loading state', () => {
+    it('shows skeleton on initial render before icon resolves', () => {
+      render(<CryptoIcon ledgerId="bitcoin" ticker="BTC" />);
+      expect(screen.getByTestId('skeleton')).toBeInTheDocument();
+    });
+  });
+
   describe('Ledger icon', () => {
-    it('should fetch index.json containing icon mapping and render icon from CDN', async () => {
+    it('fetches index.json and renders icon from CDN', async () => {
       render(<CryptoIcon ledgerId="bitcoin" ticker="BTC" />);
 
       await waitFor(() => {
@@ -29,7 +36,7 @@ describe('CryptoIcon', () => {
   });
 
   describe('CoinGecko fallback', () => {
-    it('should fetch from CoinGecko and render fallback icon if request to Ledger CDN fails', async () => {
+    it('renders CoinGecko icon when CDN index.json fails', async () => {
       server.use(
         rest.get(`${CRYPTO_ICONS_CDN_BASE}/index.json`, (_, res, ctx) => {
           return res(ctx.status(500));
@@ -48,7 +55,7 @@ describe('CryptoIcon', () => {
       );
     });
 
-    it('should fetch from CoinGecko and render fallback icon if not found in Ledger CDN', async () => {
+    it('renders CoinGecko icon when ledgerId not in CDN', async () => {
       render(<CryptoIcon ledgerId="decred" ticker="DCR" />);
 
       await waitFor(() => {
@@ -62,15 +69,12 @@ describe('CryptoIcon', () => {
     });
   });
 
-  describe('ticker icon fallback', () => {
-    it('should use ticker icon fallback if both Ledger and CoinGecko icons are not available', async () => {
+  describe('letter fallback', () => {
+    it('renders first letter of ticker when both CDN and CoinGecko fail', async () => {
       server.use(
         rest.get(`${CRYPTO_ICONS_CDN_BASE}/index.json`, (_, res, ctx) => {
           return res(ctx.status(500));
-        })
-      );
-
-      server.use(
+        }),
         rest.get(COINGECKO_MAPPED_ASSETS_URL, (_, res, ctx) => {
           return res(ctx.status(500));
         })
@@ -84,31 +88,50 @@ describe('CryptoIcon', () => {
 
       expect(screen.getByRole('img')).toHaveTextContent('B');
     });
-  });
 
-  describe('overridesRadius', () => {
-    it('should apply custom border radius when overridesRadius is provided', async () => {
-      render(<CryptoIcon ledgerId="bitcoin" ticker="BTC" overridesRadius="12px" />);
+    it('renders ? when ticker is empty', async () => {
+      server.use(
+        rest.get(`${CRYPTO_ICONS_CDN_BASE}/index.json`, (_, res, ctx) => {
+          return res(ctx.status(500));
+        }),
+        rest.get(COINGECKO_MAPPED_ASSETS_URL, (_, res, ctx) => {
+          return res(ctx.status(500));
+        })
+      );
+
+      render(<CryptoIcon ledgerId="bitcoin" ticker="" />);
 
       await waitFor(() => {
         expect(screen.getByRole('img')).toBeInTheDocument();
       });
 
-      const img = screen.getByRole('img');
-      const computedStyle = window.getComputedStyle(img);
-      expect(computedStyle.borderRadius).toBe('12px');
+      expect(screen.getByRole('img')).toHaveTextContent('?');
+    });
+  });
+
+  describe('network badge', () => {
+    it('renders network badge when network prop is provided', async () => {
+      render(<CryptoIcon ledgerId="bitcoin" ticker="BTC" network="arbitrum" />);
+
+      await waitFor(() => {
+        const badge = screen.getByTestId('network-badge');
+        expect(badge).toBeInTheDocument();
+      });
+
+      expect(screen.getByTestId('network-badge')).toHaveAttribute(
+        'src',
+        `${CRYPTO_ICONS_CDN_BASE}/ETH.png`
+      );
     });
 
-    it('should use default circular border radius (50%) when overridesRadius is not provided', async () => {
+    it('does not render network badge when network prop is absent', async () => {
       render(<CryptoIcon ledgerId="bitcoin" ticker="BTC" />);
 
       await waitFor(() => {
         expect(screen.getByRole('img')).toBeInTheDocument();
       });
 
-      const img = screen.getByRole('img');
-      const computedStyle = window.getComputedStyle(img);
-      expect(computedStyle.borderRadius).toBe('50%');
+      expect(screen.queryByTestId('network-badge')).not.toBeInTheDocument();
     });
   });
 });

@@ -1,9 +1,7 @@
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryContext, StoryFn } from '@storybook/react';
 import React, { useMemo, useState } from 'react';
 import iconsObj from '../../assets/index.json';
 import CryptoIcon from '../src/components/CryptoIcon';
-import type { CryptoIconProps } from '../src/components/CryptoIcon/CryptoIcon.types';
-import type { AssertExhaustive } from '../src/helpers.types';
 import {
   Theme,
   dedupeByIcon,
@@ -17,14 +15,6 @@ const meta = {
   title: 'CryptoIconList',
   component: CryptoIcon,
   argTypes: {
-    theme: {
-      control: { type: 'radio' },
-      options: ['dark', 'light'],
-      table: {
-        type: { summary: 'radio' },
-        defaultValue: { summary: 'light' },
-      },
-    },
     showLabels: {
       control: { type: 'boolean' },
       table: {
@@ -40,10 +30,11 @@ export default meta;
 
 const ICONS = Object.entries(iconsObj);
 
-const Template: StoryFn<CryptoIconProps & { showLabels?: boolean }> = ({
-  theme = 'light' as Theme,
-  showLabels = false,
-}) => {
+const Template: StoryFn<{ showLabels?: boolean }> = (
+  { showLabels = false },
+  { globals }: StoryContext
+) => {
+  const theme = (globals.theme ?? 'light') as Theme;
   const [iconList, setIconList] = useState(ICONS);
 
   return (
@@ -62,13 +53,7 @@ const Template: StoryFn<CryptoIconProps & { showLabels?: boolean }> = ({
               <div key={key}>
                 <div style={styles.iconCard}>
                   <div style={styles.iconRow} title={key}>
-                    <CryptoIcon
-                      ledgerId={key}
-                      ticker={value.icon}
-                      size="56px"
-                      theme={theme}
-                      network={network}
-                    />
+                    <CryptoIcon ledgerId={key} ticker={value.icon} size={56} network={network} />
                   </div>
                   {showLabels && (
                     <div style={themedStyles.labelContainer()}>
@@ -95,10 +80,11 @@ const Template: StoryFn<CryptoIconProps & { showLabels?: boolean }> = ({
   );
 };
 
-const NoNetworkTemplate: StoryFn<CryptoIconProps & { showLabels?: boolean }> = ({
-  theme = 'light' as Theme,
-  showLabels = false,
-}) => {
+const NoNetworkTemplate: StoryFn<{ showLabels?: boolean }> = (
+  { showLabels = false },
+  { globals }: StoryContext
+) => {
+  const theme = (globals.theme ?? 'light') as Theme;
   const [search, setSearch] = useState('');
 
   const iconList = useMemo(
@@ -123,7 +109,7 @@ const NoNetworkTemplate: StoryFn<CryptoIconProps & { showLabels?: boolean }> = (
             <div key={key}>
               <div style={styles.iconCard}>
                 <div style={styles.iconRow} title={key}>
-                  <CryptoIcon ledgerId={key} ticker={value.icon} size="56px" theme={theme} />
+                  <CryptoIcon ledgerId={key} ticker={value.icon} size={56} />
                 </div>
                 {showLabels && (
                   <div style={themedStyles.labelContainer()}>
@@ -144,10 +130,11 @@ const NoNetworkTemplate: StoryFn<CryptoIconProps & { showLabels?: boolean }> = (
   );
 };
 
-const OrderedTemplate: StoryFn<CryptoIconProps & { showLabels?: boolean }> = ({
-  theme = 'light' as Theme,
-  showLabels = false,
-}) => {
+const OrderedTemplate: StoryFn<{ showLabels?: boolean }> = (
+  { showLabels = false },
+  { globals }: StoryContext
+) => {
+  const theme = (globals.theme ?? 'light') as Theme;
   const [iconList, setIconList] = useState(ICONS);
 
   const groupedIcons = useMemo(() => groupByTickerInitial(iconList), [iconList]);
@@ -175,13 +162,7 @@ const OrderedTemplate: StoryFn<CryptoIconProps & { showLabels?: boolean }> = ({
                     <div key={key}>
                       <div style={styles.iconCard}>
                         <div style={styles.iconRow} title={key}>
-                          <CryptoIcon
-                            ledgerId={key}
-                            ticker={value.icon}
-                            size="56px"
-                            theme={theme}
-                            network={network}
-                          />
+                          <CryptoIcon ledgerId={key} ticker={value.icon} size={56} network={network} />
                         </div>
                         {showLabels && (
                           <div style={themedStyles.labelContainer()}>
@@ -205,8 +186,8 @@ const OrderedTemplate: StoryFn<CryptoIconProps & { showLabels?: boolean }> = ({
   );
 };
 
-const SingleIcon: StoryFn<typeof CryptoIcon> = (args) => {
-  const theme = (args.theme as Theme) ?? 'light';
+const SingleIcon: StoryFn<typeof CryptoIcon> = (args, { globals }: StoryContext) => {
+  const theme = (globals.theme ?? 'light') as Theme;
   return (
     <div style={styles.viewportCenter}>
       <div style={themedStyles.panel(theme)}>
@@ -222,19 +203,13 @@ const SingleIcon: StoryFn<typeof CryptoIcon> = (args) => {
             <strong>Ledger ID:</strong> {args.ledgerId || 'N/A'}
           </p>
           <p>
-            <strong>Ticker:</strong> {args.ticker || 'N/A'}
-          </p>
-          <p>
             <strong>Size:</strong> {args.size || 'N/A'}
-          </p>
-          <p>
-            <strong>Theme:</strong> {args.theme || 'N/A'}
           </p>
           <p>
             <strong>Network:</strong> {args.network || 'N/A'}
           </p>
           <div style={styles.codeBlock}>
-            {`<CryptoIcon ledgerId="${args.ledgerId}" ticker="${args.ticker}" size="${args.size}" theme="${args.theme}" ${args.network ? `network="${args.network}"` : ''} />`}
+            {`<CryptoIcon ledgerId="${args.ledgerId}" size={${args.size}}${args.network ? ` network="${args.network}"` : ''} />`}
           </div>
         </div>
       </div>
@@ -242,95 +217,37 @@ const SingleIcon: StoryFn<typeof CryptoIcon> = (args) => {
   );
 };
 
-const CRYPTO_ICON_SIZE_OPTIONS = [
-  undefined,
-  '16px',
-  '20px',
-  '24px',
-  '32px',
-  '40px',
-  '48px',
-  '56px',
-] as const satisfies CryptoIconProps['size'][];
-const _assertCryptoIconSizeOptions: AssertExhaustive<
-  (typeof CRYPTO_ICON_SIZE_OPTIONS)[number],
-  CryptoIconProps['size']
-> = true;
+const SquareIconsTemplate: StoryFn<{ showLabels?: boolean }> = (
+  { showLabels = false },
+  { globals }: StoryContext
+) => {
+  const theme = (globals.theme ?? 'light') as Theme;
+  const MAIN_CURRENCIES: Array<{ ledgerId: string; ticker: string }> = [
+    { ledgerId: 'bitcoin', ticker: 'BTC' },
+    { ledgerId: 'ethereum', ticker: 'ETH' },
+    { ledgerId: 'ripple', ticker: 'XRP' },
+    { ledgerId: 'cardano', ticker: 'ADA' },
+    { ledgerId: 'solana', ticker: 'SOL' },
+    { ledgerId: 'polkadot', ticker: 'DOT' },
+    { ledgerId: 'dogecoin', ticker: 'DOGE' },
+    { ledgerId: 'polygon', ticker: 'MATIC' },
+    { ledgerId: 'litecoin', ticker: 'LTC' },
+    { ledgerId: 'avalanche_c_chain', ticker: 'AVAX' },
+    { ledgerId: 'injective', ticker: 'INJ' },
+  ];
 
-export const AllLedgerIcons: StoryFn<typeof CryptoIcon> = Template.bind({});
-export const AllLedgerIconsWithoutNetwork: StoryFn<typeof CryptoIcon> = NoNetworkTemplate.bind({});
-AllLedgerIconsWithoutNetwork.storyName = 'All Ledger Icons (Without Network)';
-export const OrderedLedgerIcons: StoryFn<typeof CryptoIcon> = OrderedTemplate.bind({});
-export const SingleLedgerIcon: StoryFn<typeof CryptoIcon> = SingleIcon.bind({});
-SingleLedgerIcon.args = {
-  ledgerId: 'bitcoin',
-  ticker: 'BTC',
-  size: '56px',
-  theme: 'light',
-  network: undefined,
-};
-SingleLedgerIcon.argTypes = {
-  ledgerId: { control: 'text', description: 'The ledger ID of the icon to display' },
-  ticker: { control: 'text', description: 'The ticker symbol of the icon' },
-  size: {
-    control: 'select',
-    options: CRYPTO_ICON_SIZE_OPTIONS,
-    description: 'The size of the icon',
-    defaultValue: '56px',
-  },
-  theme: {
-    control: 'radio',
-    options: ['dark', 'light'],
-    description: 'The theme of the icon',
-    defaultValue: 'light',
-  },
-  network: { control: 'text', description: 'The network associated with the icon' },
-};
-
-// Main currencies without network (for square icons)
-const MAIN_CURRENCIES: Array<{ ledgerId: string; ticker: string }> = [
-  { ledgerId: 'bitcoin', ticker: 'BTC' },
-  { ledgerId: 'ethereum', ticker: 'ETH' },
-  { ledgerId: 'ripple', ticker: 'XRP' },
-  { ledgerId: 'cardano', ticker: 'ADA' },
-  { ledgerId: 'solana', ticker: 'SOL' },
-  { ledgerId: 'polkadot', ticker: 'DOT' },
-  { ledgerId: 'dogecoin', ticker: 'DOGE' },
-  { ledgerId: 'polygon', ticker: 'MATIC' },
-  { ledgerId: 'litecoin', ticker: 'LTC' },
-  { ledgerId: 'avalanche_c_chain', ticker: 'AVAX' },
-  { ledgerId: 'cosmos', ticker: 'ATOM' },
-  { ledgerId: 'algorand', ticker: 'ALGO' },
-  { ledgerId: 'stellar', ticker: 'XLM' },
-  { ledgerId: 'vechain', ticker: 'VET' },
-  { ledgerId: 'filecoin', ticker: 'FIL' },
-  { ledgerId: 'tron', ticker: 'TRX' },
-  { ledgerId: 'ethereum_classic', ticker: 'ETC' },
-  { ledgerId: 'tezos', ticker: 'XTZ' },
-];
-
-const SquareIconsTemplate: StoryFn<CryptoIconProps & { showLabels?: boolean }> = ({
-  theme = 'light' as Theme,
-  showLabels = false,
-}) => {
   return (
     <div style={themedStyles.pageBg(theme)}>
       <div style={styles.pageMargin}>
         <h2 style={{ ...themedStyles.headingColor(theme), marginBottom: '20px', marginTop: '40px' }}>
-          Square Icons (16px radius) - Main Currencies
+          Square Icons — Main Currencies
         </h2>
         <div style={styles.iconGrid}>
           {MAIN_CURRENCIES.map(({ ledgerId, ticker }) => (
             <div key={ledgerId}>
               <div style={styles.iconCard}>
                 <div style={styles.iconRow} title={ledgerId}>
-                  <CryptoIcon
-                    ledgerId={ledgerId}
-                    ticker={ticker}
-                    size="56px"
-                    theme={theme}
-                    overridesRadius="16px"
-                  />
+                  <CryptoIcon ledgerId={ledgerId} ticker={ticker} size={56} shape="square" />
                 </div>
                 {showLabels && (
                   <div style={themedStyles.labelContainer()}>
@@ -351,5 +268,34 @@ const SquareIconsTemplate: StoryFn<CryptoIconProps & { showLabels?: boolean }> =
   );
 };
 
-export const SquareIcons: StoryFn<typeof CryptoIcon> = SquareIconsTemplate.bind({});
+export const AllLedgerIcons: StoryFn<{ showLabels?: boolean }> = Template.bind({});
+export const AllLedgerIconsWithoutNetwork: StoryFn<{ showLabels?: boolean }> = NoNetworkTemplate.bind({});
+AllLedgerIconsWithoutNetwork.storyName = 'All Ledger Icons (Without Network)';
+export const OrderedLedgerIcons: StoryFn<{ showLabels?: boolean }> = OrderedTemplate.bind({});
+export const SingleLedgerIcon: StoryFn<typeof CryptoIcon> = SingleIcon.bind({});
+SingleLedgerIcon.args = {
+  ledgerId: 'bitcoin',
+  size: 56,
+  network: undefined,
+  ticker: 'BTC',
+};
+SingleLedgerIcon.argTypes = {
+  ledgerId: { control: 'text', description: 'The ledger ID of the icon to display' },
+  ticker: { control: 'text', description: 'The ticker of the icon to display' },
+  size: {
+    control: 'select',
+    options: [12, 16, 20, 24, 32, 40, 48, 56, 64],
+    description: 'The size of the icon',
+    defaultValue: 56,
+  },
+  network: { control: 'text', description: 'The network associated with the icon' },
+  badgePosition: {
+    control: 'select',
+    options: ['top-start', 'top-end', 'bottom-start', 'bottom-end'],
+    description: 'Position of the network badge',
+    defaultValue: 'bottom-end',
+  },
+};
+
+export const SquareIcons: StoryFn<{ showLabels?: boolean }> = SquareIconsTemplate.bind({});
 SquareIcons.storyName = 'Square Icons (Main Currencies)';

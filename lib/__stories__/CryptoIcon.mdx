@@ -1,0 +1,132 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as CryptoIconStories from './CryptoIcon.stories';
+
+<Meta of={CryptoIconStories} />
+
+# 🪙 CryptoIcon
+
+## Introduction
+
+Displays a cryptocurrency icon resolved from the Ledger CDN or CoinGecko.
+Optionally overlays a network badge at any corner. Shows a letter fallback when no icon URL resolves.
+
+## Anatomy
+
+<Canvas of={CryptoIconStories.Base} />
+
+- **`ledgerId` (required)**: Ledger internal identifier, e.g. `"bitcoin"` or `"ethereum/erc20/usdc"`
+- **`ticker` (required)**: Ticker symbol (e.g. `"BTC"`). First letter is used as the fallback letter when no icon resolves.
+- **`size` (optional)**: Icon size in pixels — `12 | 16 | 20 | 24 | 32 | 40 | 48 | 56 | 64` (default `48`)
+- **`shape` (optional)**: `"circle"` (default) or `"square"`
+- **`network` (optional)**: Ledger ID of the chain to show as a badge overlay
+- **`badgePosition` (optional)**: Corner of the badge — `"bottom-end"` by default
+
+## Properties
+
+### Overview
+
+<Canvas of={CryptoIconStories.Base} />
+<Controls of={CryptoIconStories.Base} />
+
+### Size
+
+<Canvas of={CryptoIconStories.SizeShowcase} />
+
+### Shape
+
+<Canvas of={CryptoIconStories.ShapeShowcase} />
+
+### Network Badge
+
+<Canvas of={CryptoIconStories.NetworkBadgeShowcase} />
+
+### Badge Pin Positions
+
+<Canvas of={CryptoIconStories.PinShowcase} />
+
+### Fallback Letter
+
+When no icon URL can be resolved (neither CDN nor CoinGecko), the first letter of `ticker` is shown.
+
+<Canvas of={CryptoIconStories.FallbackShowcase} />
+
+## Implementation
+
+### 1. Install
+
+```bash
+# crypto-icons itself
+npm install @ledgerhq/crypto-icons
+
+# Peer dependencies — Lumen components and Tailwind preset
+npm install @ledgerhq/lumen-ui-react @ledgerhq/lumen-design-core
+```
+
+### 2. Configure Tailwind
+
+Add the Lumen preset and include the Lumen component dist in your `tailwind.config`:
+
+```ts
+import { ledgerLivePreset } from '@ledgerhq/lumen-design-core';
+
+export default {
+  content: [
+    './src/**/*.{ts,tsx}',
+    './node_modules/@ledgerhq/lumen-ui-react/dist/**/*.{js,ts,jsx,tsx}',
+  ],
+  presets: [ledgerLivePreset],
+};
+```
+
+### 3. Wrap with ThemeProvider
+
+All Lumen components require a `ThemeProvider` at the root of your app:
+
+```tsx
+import { ThemeProvider } from '@ledgerhq/lumen-ui-react';
+import { ledgerLiveThemes } from '@ledgerhq/lumen-design-core';
+
+export function App() {
+  return (
+    <ThemeProvider themes={ledgerLiveThemes} colorScheme="system">
+      {/* your app */}
+    </ThemeProvider>
+  );
+}
+```
+
+### 4. Use
+
+```tsx
+import { CryptoIcon, type CryptoIconProps } from '@ledgerhq/crypto-icons';
+
+<CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
+```
+
+### With Network Badge
+
+```tsx
+<CryptoIcon
+  ledgerId="ethereum/erc20/usdc"
+  ticker="USDC"
+  network="ethereum"
+  badgePosition="bottom-end"
+  size={56}
+/>
+```
+
+### Square Shape
+
+```tsx
+<CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} shape="square" />
+```
+
+### Typing a wrapper component
+
+```tsx
+import { CryptoIcon, type CryptoIconProps } from '@ledgerhq/crypto-icons';
+
+const MyIcon = (props: CryptoIconProps) => (
+  <CryptoIcon {...props} />
+);
+```
