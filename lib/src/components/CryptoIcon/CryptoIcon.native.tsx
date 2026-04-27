@@ -1,4 +1,4 @@
-import { Box, DotSymbol, MediaImage, Skeleton } from '@ledgerhq/lumen-ui-rnative';
+import { Box, DotSymbol, MediaImage, Skeleton, mediaImageDotSizeMap } from '@ledgerhq/lumen-ui-rnative';
 import React, { FC } from 'react';
 import { useCryptoIcon } from '../../hooks/useCryptoIcon';
 import { getBorderRadiusToken } from '../../utils/borderRadius';
@@ -37,7 +37,7 @@ const CryptoIcon: FC<CryptoIconProps> = ({
   if (networkUrl) {
     return (
       <Box lx={{ position: 'relative' }} style={{ width: size, height: size }}>
-        <DotSymbol src={networkUrl} pin={badgePosition}>
+        <DotSymbol src={networkUrl} pin={badgePosition} size={mediaImageDotSizeMap[size]}>
           {image}
         </DotSymbol>
       </Box>

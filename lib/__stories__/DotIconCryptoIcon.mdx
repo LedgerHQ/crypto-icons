@@ -55,14 +55,14 @@ See [CryptoIcon → Implementation](?path=/docs/communication-cryptoicon--docs#i
 
 ```tsx
 import { CryptoIcon } from '@ledgerhq/crypto-icons';
-import { DotIcon } from '@ledgerhq/lumen-ui-react';
+import { DotIcon, mediaImageDotIconSizeMap } from '@ledgerhq/lumen-ui-react';
 import { Check, Clock, Close } from '@ledgerhq/lumen-ui-react/symbols';
 ```
 
 ### Success (confirmed)
 
 ```tsx
-<DotIcon icon={Check} appearance="success" size={20}>
+<DotIcon icon={Check} appearance="success" size={mediaImageDotIconSizeMap[56]}>
   <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
 </DotIcon>
 ```
@@ -78,7 +78,7 @@ import { Check, Clock, Close } from '@ledgerhq/lumen-ui-react/symbols';
 ### Error (failed)
 
 ```tsx
-<DotIcon icon={Close} appearance="error" size={20} pin="top-end">
+<DotIcon icon={Close} appearance="error" size={mediaImageDotIconSizeMap[56]} pin="top-end">
   <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
 </DotIcon>
 ```

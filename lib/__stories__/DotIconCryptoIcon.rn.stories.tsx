@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { Text, View } from 'react-native';
-import { DotIcon } from '@ledgerhq/lumen-ui-rnative';
+import { DotIcon, mediaImageDotIconSizeMap } from '@ledgerhq/lumen-ui-rnative';
 import { Check, Clock, Close } from '@ledgerhq/lumen-ui-rnative/symbols';
 import CryptoIcon from '../src/components/CryptoIcon/CryptoIcon.native';
 
@@ -51,7 +51,7 @@ export const Base: Story = {
     icon: Check,
     appearance: 'success',
     pin: 'bottom-end',
-    size: 20,
+    size: mediaImageDotIconSizeMap[56],
   },
   render: (args) => (
     <DotIcon {...args}>
@@ -62,7 +62,7 @@ export const Base: Story = {
     docs: {
       source: {
         code: `
-<DotIcon icon={Check} appearance="success" size={20}>
+<DotIcon icon={Check} appearance="success" size={mediaImageDotIconSizeMap[56]}>
   <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
 </DotIcon>`,
       },
@@ -79,7 +79,7 @@ export const AppearanceShowcase: Story = {
         { icon: Close, appearance: 'error' as const, label: 'error' },
       ].map(({ icon, appearance, label }) => (
         <View key={label} style={{ alignItems: 'center', gap: 8 }}>
-          <DotIcon icon={icon} appearance={appearance} size={20}>
+          <DotIcon icon={icon} appearance={appearance} size={mediaImageDotIconSizeMap[56]}>
             <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
           </DotIcon>
           <Text style={{ fontSize: 11, color: '#888' }}>{label}</Text>
@@ -94,7 +94,12 @@ export const PinShowcase: Story = {
     <View style={{ flexDirection: 'row', gap: 32, alignItems: 'center' }}>
       {(['top-start', 'top-end', 'bottom-start', 'bottom-end'] as const).map((pin) => (
         <View key={pin} style={{ alignItems: 'center', gap: 8 }}>
-          <DotIcon icon={Check} appearance="success" size={20} pin={pin}>
+          <DotIcon
+            icon={Check}
+            appearance="success"
+            size={mediaImageDotIconSizeMap[56]}
+            pin={pin}
+          >
             <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
           </DotIcon>
           <Text style={{ fontSize: 11, color: '#888' }}>{pin}</Text>
@@ -124,7 +129,7 @@ export const Playground: Story = {
     icon: Check,
     appearance: 'success',
     pin: 'bottom-end',
-    size: 20,
+    size: mediaImageDotIconSizeMap[56],
     shape: 'circle',
   },
   render: (args) => (

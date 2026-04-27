@@ -10,6 +10,7 @@ type MediaImageProps = {
 type DotSymbolProps = {
   src: string;
   pin?: string;
+  size?: number;
   children: ReactNode;
 } & ComponentPropsWithRef<'div'>;
 
@@ -26,6 +27,18 @@ export const DotSymbol = ({ children, src }: DotSymbolProps) => (
     <img src={src} role="img" data-testid="network-badge" />
   </div>
 );
+
+export const mediaImageDotSizeMap = {
+  12: 8,
+  16: 8,
+  20: 8,
+  24: 10,
+  32: 12,
+  40: 16,
+  48: 20,
+  56: 24,
+  64: 24,
+} as const;
 
 export const Skeleton = (props: SkeletonProps) => <div data-testid="skeleton" {...props} />;
 
@@ -46,3 +59,10 @@ export const DotIcon = ({ children, icon: Icon, appearance }: DotIconProps) => (
     <Icon size={16} />
   </div>
 );
+
+export const mediaImageDotIconSizeMap = {
+  40: 16,
+  48: 20,
+  56: 24,
+  64: 24,
+} as const;

@@ -1,4 +1,4 @@
-import { DotSymbol, MediaImage, Skeleton } from '@ledgerhq/lumen-ui-react';
+import { DotSymbol, MediaImage, Skeleton, mediaImageDotSizeMap } from '@ledgerhq/lumen-ui-react';
 import React, { FC } from 'react';
 import { useCryptoIcon } from '../../hooks/useCryptoIcon';
 import { getBorderRadius } from '../../utils/borderRadius';
@@ -40,7 +40,7 @@ const CryptoIcon: FC<CryptoIconProps> = ({
 
   if (networkUrl) {
     return (
-      <DotSymbol src={networkUrl} pin={badgePosition}>
+      <DotSymbol src={networkUrl} pin={badgePosition} size={mediaImageDotSizeMap[size]}>
         {image}
       </DotSymbol>
     );

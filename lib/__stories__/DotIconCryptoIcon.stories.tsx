@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { DotIcon } from '@ledgerhq/lumen-ui-react';
+import { DotIcon, mediaImageDotIconSizeMap } from '@ledgerhq/lumen-ui-react';
 import { Check, Clock, Close } from '@ledgerhq/lumen-ui-react/symbols';
 import CryptoIcon from '../src/components/CryptoIcon';
 
@@ -50,7 +50,7 @@ export const Base: Story = {
     icon: Check,
     appearance: 'success',
     pin: 'bottom-end',
-    size: 20,
+    size: mediaImageDotIconSizeMap[56],
   },
   render: (args) => (
     <DotIcon {...args}>
@@ -61,7 +61,7 @@ export const Base: Story = {
     docs: {
       source: {
         code: `
-<DotIcon icon={Check} appearance="success" size={20}>
+<DotIcon icon={Check} appearance="success" size={mediaImageDotIconSizeMap[56]}>
   <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
 </DotIcon>`,
       },
@@ -78,7 +78,7 @@ export const AppearanceShowcase: Story = {
         { icon: Close, appearance: 'error' as const, label: 'error' },
       ].map(({ icon, appearance, label }) => (
         <div key={label} className="flex flex-col items-center gap-2">
-          <DotIcon icon={icon} appearance={appearance} size={20}>
+          <DotIcon icon={icon} appearance={appearance} size={mediaImageDotIconSizeMap[56]}>
             <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
           </DotIcon>
           <span style={{ fontSize: 11, color: '#888' }}>{label}</span>
@@ -93,7 +93,12 @@ export const PinShowcase: Story = {
     <div className="flex gap-8 items-center">
       {(['top-start', 'top-end', 'bottom-start', 'bottom-end'] as const).map((pin) => (
         <div key={pin} className="flex flex-col items-center gap-2">
-          <DotIcon icon={Check} appearance="success" size={20} pin={pin}>
+          <DotIcon
+            icon={Check}
+            appearance="success"
+            size={mediaImageDotIconSizeMap[56]}
+            pin={pin}
+          >
             <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
           </DotIcon>
           <span style={{ fontSize: 11, color: '#888' }}>{pin}</span>
@@ -123,7 +128,7 @@ export const Playground: Story = {
     icon: Check,
     appearance: 'success',
     pin: 'bottom-end',
-    size: 20,
+    size: mediaImageDotIconSizeMap[56],
     shape: 'circle',
   },
   render: (args) => (
