@@ -1,189 +1,249 @@
 # @ledgerhq/crypto-icons
 
-A package which provides a `<CryptoIcon />` component that can be consumed by Ledger applications in a React environment and used with a `ledgerId` to render icons.
+A React / React Native component that resolves crypto-currency icons from the Ledger CDN or CoinGecko and renders them using the [Lumen](https://github.com/LedgerHQ/lumen) design system.
+
+> **v2.0.0 — breaking change.** This version replaces `styled-components` with Lumen components and introduces a revised prop API. See the [migration notes](#migrating-from-v1) below.
+
+---
 
 ## Installation
 
 ```bash
+# Package
 npm install @ledgerhq/crypto-icons
+
+# Required peer dependencies
+npm install @ledgerhq/lumen-ui-react @ledgerhq/lumen-design-core   # React
+npm install @ledgerhq/lumen-ui-rnative                              # React Native
 ```
 
-## Usage example
+> Lumen packages are hosted on the Ledger JFrog registry. Add the scope to your `.npmrc`:
+> ```
+> @ledgerhq:registry=https://jfrog.ledgerlabs.net/artifactory/api/npm/ldls-npm-prod-public/
+> //jfrog.ledgerlabs.net/...:_authToken=${JFROG_TOKEN}
+> ```
 
-```JSX
+---
+
+## Setup
+
+### 1 — Tailwind (React web only)
+
+Add the Lumen preset to your `tailwind.config`:
+
+```ts
+import { ledgerLivePreset } from '@ledgerhq/lumen-design-core';
+
+export default {
+  content: [
+    './src/**/*.{ts,tsx}',
+    './node_modules/@ledgerhq/lumen-ui-react/dist/**/*.{js,ts,jsx,tsx}',
+  ],
+  presets: [ledgerLivePreset],
+};
+```
+
+### 2 — ThemeProvider (React & React Native)
+
+Wrap your app root with Lumen's `ThemeProvider`. All Lumen components — including those used internally by `CryptoIcon` — throw without it.
+
+```tsx
+// React
+import { ThemeProvider } from '@ledgerhq/lumen-ui-react';
+import { ledgerLiveThemes } from '@ledgerhq/lumen-design-core';
+
+<ThemeProvider themes={ledgerLiveThemes} colorScheme="system">
+  <App />
+</ThemeProvider>
+```
+
+```tsx
+// React Native
+import { ThemeProvider } from '@ledgerhq/lumen-ui-rnative';
+import { ledgerLiveThemes } from '@ledgerhq/lumen-design-core';
+
+<ThemeProvider themes={ledgerLiveThemes} colorScheme="light">
+  <App />
+</ThemeProvider>
+```
+
+---
+
+## React usage
+
+```tsx
+import { CryptoIcon, type CryptoIconProps } from '@ledgerhq/crypto-icons';
+
+<CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
+
+<CryptoIcon
+  ledgerId="ethereum/erc20/usdc"
+  ticker="USDC"
+  network="ethereum"
+  badgePosition="bottom-end"
+  size={56}
+/>
+```
+
+### Props
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `ledgerId` | `string` | — | Ledger internal currency identifier |
+| `ticker` | `string` | — | Ticker symbol — first letter shown as fallback |
+| `size` | `12\|16\|20\|24\|32\|40\|48\|56\|64` | `48` | Icon size in px |
+| `shape` | `'circle'\|'square'` | `'circle'` | Icon shape |
+| `network` | `string?` | — | Ledger ID of the chain for the badge overlay |
+| `badgePosition` | `'top-start'\|'top-end'\|'bottom-start'\|'bottom-end'` | `'bottom-end'` | Badge corner |
+| `alt` | `string?` | — | Accessibility label for the image |
+| `testID` | `string?` | — | Forwarded as `data-testid` to the root element |
+
+---
+
+## React Native usage
+
+Import from the `/native` sub-path. Metro reads the `react-native` field in `package.json` automatically; explicit imports also work.
+
+```tsx
+import CryptoIcon, { type CryptoIconProps } from '@ledgerhq/crypto-icons/native';
+
+<CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
+```
+
+Props are identical to the React version. `testID` is forwarded as the native `testID` prop.
+
+---
+
+## With DotIcon (status badge)
+
+Use Lumen's `DotIcon` to overlay a status indicator. Use `mediaImageDotSizeMap` (React) or `mediaImageDotIconSizeMap` (React Native) to automatically derive the correct badge size from the icon size.
+
+```tsx
+// React
 import { CryptoIcon } from '@ledgerhq/crypto-icons';
+import { DotIcon, mediaImageDotSizeMap } from '@ledgerhq/lumen-ui-react';
+import { Check, Clock, Close } from '@ledgerhq/lumen-ui-react/symbols';
 
-const Page = () => {
-  return (
-    <>
-      <CryptoIcon ledgerId="bitcoin" ticker="BTC" />
-      <CryptoIcon ledgerId="ethereum" ticker="ETH" size="32px" />
-      <CryptoIcon ledgerId="solana" ticker="SOL" size="48px" theme="light" />
-      <CryptoIcon ledgerId="ethereum/erc20/usd_tether__erc20_" ticker="USDT" network="ethereum"/>
-    </>
-  )
-}
+<DotIcon icon={Check} appearance="success" size={mediaImageDotSizeMap[56]}>
+  <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
+</DotIcon>
 ```
 
-## React Native Usage
-
-The package supports React Native through platform-specific components and automatic resolution:
-
-### Automatic Import (Recommended)
-
-```JSX
-import { CryptoIcon } from '@ledgerhq/crypto-icons';
-
-const MyComponent = () => {
-  return (
-    <>
-      <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={32} />
-      <CryptoIcon ledgerId="ethereum" ticker="ETH" size={48} theme="dark" />
-      <CryptoIcon ledgerId="ethereum/erc20/usd_tether__erc20_" ticker="USDT" network="ethereum"/>
-      {/* Custom background color for network badge (React Native only) */}
-      <CryptoIcon ledgerId="ethereum/erc20/usd_tether__erc20_" ticker="USDT" network="ethereum" backgroundColor="#FF6B6B"/>
-    </>
-  )
-}
-```
-
-### Explicit React Native Import
-
-```JSX
+```tsx
+// React Native
 import CryptoIcon from '@ledgerhq/crypto-icons/native';
+import { DotIcon, mediaImageDotIconSizeMap } from '@ledgerhq/lumen-ui-rnative';
+import { Check } from '@ledgerhq/lumen-ui-rnative/symbols';
 
-const MyComponent = () => {
-  return (
-    <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={32} theme="light" />
-  )
-}
+<DotIcon icon={Check} appearance="success" size={mediaImageDotIconSizeMap[56]}>
+  <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
+</DotIcon>
 ```
 
-## Icon sources
+---
 
-The component's primary source of icons is Ledger's CDN which contains the [assets](../assets/index.json) from this repository. It attempts to fetch a [mapping from Ledger's CDN](https://crypto-icons.ledger.com/index.json) and if the ledgerId that is passed in as a prop to the component is found, the URL for that key is used as the image source. You can see an up-to-date list of all available Ledger icons in this [Storybook](https://crypto-icons-storybook.pages.dev).
+## Icon resolution
 
-Otherwise, a request to the [Ledger mapping service](https://ledgerhq.atlassian.net/wiki/spaces/BE/pages/3973022073/Mapping+Service) is made to retrieve a [CoinGecko mapping](https://mapping-service.api.ledger.com/v1/coingecko/mapped-assets) as a fallback. If a match for an icon is found using the ledgerId then it is used as the image source.
+Icons are resolved in order:
 
-If neither mapping has a match, a `<FallbackIcon />` component is returned with the first letter of the currency ticker as its content e.g. B for BTC.
+1. **Ledger CDN** — fetches `https://crypto-icons.ledger.com/index.json` and looks up `ledgerId`.
+2. **CoinGecko mapping** — fetches the [Ledger mapping service](https://mapping-service.api.ledger.com/v1/coingecko/mapped-assets) as a fallback.
+3. **Letter fallback** — if neither source has a match, the first letter of `ticker` is shown inside a muted circle.
 
 ```mermaid
 flowchart TD
-  A[getIconUrl with ledgerId] --> B{ledgerMapping is null?}
-  B --> |Yes| C[setLedgerIconMapping] --> D[fetchIconMapping from Ledger CDN] --> E{success?}
-  E --> |Yes| F[cache data in ledgerMapping] --> G
-  E --> |No| I{coinGeckoMapping is null?}
-  B --> |No| G{ledgerId in ledgerMapping?}
-  G --> |Yes| H[return URL]
-  G --> |No| I{coinGeckoMapping is null?}
-  I --> |Yes| J[setCoinGeckoIconMapping] --> K[fetchIconMapping from CoinGecko] --> L{success?}
-  I --> |No| O
-  L --> |Yes| M[cache data in coinGeckoMapping] --> O{ledgerId in coinGeckoMapping?}
-  L --> |No| N[return null]
-  O --> |Yes| P[return URL]
-  O --> |No| R[return null]
+  A[getIconUrl with ledgerId] --> B{ledgerMapping cached?}
+  B -->|No| C[fetch Ledger CDN index.json] --> D{success?}
+  D -->|Yes| E[cache] --> F
+  D -->|No| G
+  B -->|Yes| F{ledgerId in mapping?}
+  F -->|Yes| H[return CDN URL]
+  F -->|No| G{coinGeckoMapping cached?}
+  G -->|No| I[fetch CoinGecko mapping] --> J{success?}
+  J -->|Yes| K[cache] --> L
+  J -->|No| M[return null → fallback letter]
+  G -->|Yes| L{ledgerId in mapping?}
+  L -->|Yes| N[return CoinGecko URL]
+  L -->|No| M
 ```
+
+---
+
+## Migrating from v1
+
+| v1 | v2 |
+|---|---|
+| `size="56px"` (string) | `size={56}` (number) |
+| `theme="dark"` | removed — use Lumen `ThemeProvider` |
+| `overridesRadius="16px"` | `shape="square"` |
+| `ticker` optional | `ticker` **required** |
+| `backgroundColor` (RN) | removed |
+| Default shape: implicit circle | `shape='circle'` explicit default |
+
+---
 
 ## Contributing
 
-Make sure you're in the correct directory:
-
 ```bash
 cd lib
-```
-
-### Install dependencies
-
-```bash
 pnpm i
 ```
 
-### Run tests
+### Development
+
+```bash
+pnpm dev:web       # watch & rebuild React bundle
+pnpm dev:native    # watch & rebuild React Native bundle
+```
+
+### Tests & lint
 
 ```bash
 pnpm test
-# or
-pnpm test:watch # to run in watch mode
+pnpm lint
+pnpm lint:fix
 ```
 
-### Run storybook
+### Storybook
 
 ```bash
-# React Web Storybook
-pnpm storybook:react
-
-# React Native Storybook
-pnpm storybook:native
+pnpm storybook:react    # port 6006
+pnpm storybook:native   # port 6007
 ```
 
-### Adding New Icons
-
-1. **Prepare the PNG**
-
-   - Size: **144×144 px**
-   - Format: **PNG**
-   - Artwork should **fill the entire canvas** (no padding or borders).
-
-2. **Lossless compression**
-
-   - Place the PNGs in the `/compress/` folder.
-   - Run:
-
-     ```bash
-     pnpm compress
-     ```
-
-     ⚠️ _The compression algorithm is very thorough and can be quite slow, especially when processing multiple files._
-
-   - Optimized files will be output to `/compress/out/`.
-
-3. **Move to assets**
-
-   - Copy the optimized PNGs into the `/assets/` directory.
-
-4. **Register the icons**
-
-   - Add the corresponding entries to `/assets/_record.json` so the new files are indexed.
-
-5. **Regenerate the index**
-
-   - Run:
-     ```bash
-     pnpm generate:index
-     ```
-   - This updates `/assets/index.json` with the new records.
-
-6. **Verify**
-   - Start Storybook and check the **All Ledger Icons** stories to ensure:
-     - The icons render correctly.
-     - The background is filled.
-     - They appear under the expected ledger IDs.
-
-### Lint
+### Build
 
 ```bash
-pnpm lint # to find issues
-# or
-pnpm lint:fix # to find and fix issues
+pnpm build         # both platforms
+pnpm build:web     # React only
+pnpm build:native  # React Native only
 ```
 
-### Build package with Rollup
+### Local development against another repo
 
-```bash
-# Build both platforms
-pnpm build
+Add to the consuming repo's root `package.json`:
 
-# Build web only
-pnpm build:web
-
-# Build React Native only
-pnpm build:native
+```json
+{
+  "pnpm": {
+    "overrides": {
+      "@ledgerhq/crypto-icons": "file:../crypto-icons/lib"
+    }
+  }
+}
 ```
 
-### Test locally
+Then `pnpm install` in the consuming repo. Run `pnpm dev:web` / `pnpm dev:native` in this repo to keep the build up to date.
 
-Package can be tested locally with `pnpm-link` or `file:` protocol. Details can be found here: [https://pnpm.io/cli/link#whats-the-difference-between-pnpm-link-and-using-the-file-protocol](https://pnpm.io/cli/link#whats-the-difference-between-pnpm-link-and-using-the-file-protocol).
+### Adding new icons
 
-### Disclaimer
+1. **Prepare** — 144×144 px PNG, artwork filling the full canvas.
+2. **Compress** — place in `/compress/`, run `pnpm compress`, collect output from `/compress/out/`.
+3. **Move** — copy optimised PNGs into `/assets/`.
+4. **Register** — add entries to `/assets/_record.json`.
+5. **Index** — run `pnpm generate:index` to update `/assets/index.json`.
+6. **Verify** — check the **All Ledger Icons** story in Storybook.
 
-Some of the icons provided are trademarks: they are the property of their respective owners.
+---
+
+> Some icons provided are trademarks and are the property of their respective owners.
