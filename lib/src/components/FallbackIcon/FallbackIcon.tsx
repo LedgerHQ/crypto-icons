@@ -1,12 +1,12 @@
-import { MediaImage } from '@ledgerhq/lumen-ui-react';
-import React, { ComponentProps, FC } from 'react';
+import React, { FC } from 'react';
+import type { MediaImageProps } from '@ledgerhq/lumen-ui-react';
 import { getBorderRadius } from '../../utils/borderRadius';
 import { getFontSize } from '../../utils/fontSize';
 
 type FallbackIconProps = {
   letter: string;
-  size?: ComponentProps<typeof MediaImage>['size'];
-  shape?: ComponentProps<typeof MediaImage>['shape'];
+  size?: MediaImageProps['size'];
+  shape?: MediaImageProps['shape'];
   testID?: string;
 };
 

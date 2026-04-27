@@ -1,13 +1,12 @@
-import { DotSymbol, MediaImage } from '@ledgerhq/lumen-ui-react';
-import { ComponentProps } from 'react';
+import type { DotSymbolProps, MediaImageProps } from '@ledgerhq/lumen-ui-react';
 
 export type CryptoIconProps = {
   ledgerId: string;
   ticker: string;
   network?: string;
-  badgePosition?: ComponentProps<typeof DotSymbol>['pin'];
-  size?: ComponentProps<typeof MediaImage>['size'];
-  shape?: ComponentProps<typeof MediaImage>['shape'];
+  badgePosition?: DotSymbolProps['pin'];
+  size?: MediaImageProps['size'];
+  shape?: MediaImageProps['shape'];
   alt?: string;
   testID?: string;
 };

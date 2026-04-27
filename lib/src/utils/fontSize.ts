@@ -1,9 +1,5 @@
-import type { MediaImageSize } from './borderRadius';
+import type { MediaImageSize } from './borderRadius.shared';
 
-/**
- * Font size mapping for the FallbackIcon letter, sourced from the original
- * Figma spec (Symbol Library, node 8926-685).
- */
 export const fontSizeMap: Record<MediaImageSize, number> = {
   12: 10,
   16: 10,

@@ -1,9 +1,9 @@
-import { Box, DotSymbol, MediaImage, Skeleton, mediaImageDotSizeMap } from '@ledgerhq/lumen-ui-rnative';
 import React, { FC } from 'react';
+import { Box, DotSymbol, MediaImage, Skeleton, mediaImageDotSizeMap } from '@ledgerhq/lumen-ui-rnative';
 import { useCryptoIcon } from '../../hooks/useCryptoIcon';
-import { getBorderRadiusToken } from '../../utils/borderRadius';
+import { getBorderRadiusToken } from '../../utils/borderRadius.native';
 import FallbackIconNative from '../FallbackIcon/FallbackIcon.native';
-import { CryptoIconProps } from './CryptoIcon.types.native';
+import type { CryptoIconProps } from './CryptoIcon.types.native';
 
 const CryptoIcon: FC<CryptoIconProps> = ({
   ledgerId,

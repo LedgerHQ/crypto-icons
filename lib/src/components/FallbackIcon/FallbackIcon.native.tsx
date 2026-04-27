@@ -1,15 +1,16 @@
-import { Box, MediaImage, Text } from '@ledgerhq/lumen-ui-rnative';
-import React, { ComponentProps, FC } from 'react';
-import { getBorderRadiusToken } from '../../utils/borderRadius';
+import React, { FC } from 'react';
+import { Box, type MediaImageProps, Text } from '@ledgerhq/lumen-ui-rnative';
+import { getBorderRadiusToken } from '../../utils/borderRadius.native';
 import { getFontSize } from '../../utils/fontSize';
 
 type FallbackIconProps = {
   letter: string;
-  size?: ComponentProps<typeof MediaImage>['size'];
-  shape?: ComponentProps<typeof MediaImage>['shape'];
+  size?: MediaImageProps['size'];
+  shape?: MediaImageProps['shape'];
   testID?: string;
 };
 
+// This component will be removed in the future once Lumen exposes the fallback mechanism
 const FallbackIconNative: FC<FallbackIconProps> = ({
   letter,
   size = 48,

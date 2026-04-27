@@ -1,7 +1,8 @@
-import type { MediaImageProps } from '@ledgerhq/lumen-ui-react';
+import type { MediaImageProps } from '@ledgerhq/lumen-ui-rnative';
 import {
   borderRadiusTokenMap as sharedBorderRadiusTokenMap,
   getBorderRadiusBase,
+  getBorderRadiusTokenBase,
 } from './borderRadius.shared';
 
 export type MediaImageSize = NonNullable<MediaImageProps['size']>;
@@ -12,3 +13,8 @@ export const borderRadiusTokenMap: Record<MediaImageSize, 'xs' | 'sm' | 'md' | '
 
 export const getBorderRadius = (size: MediaImageSize, shape: MediaImageShape): number =>
   getBorderRadiusBase(size, shape);
+
+export const getBorderRadiusToken = (
+  size: MediaImageSize,
+  shape: MediaImageShape
+): 'xs' | 'sm' | 'md' | 'lg' | 'full' => getBorderRadiusTokenBase(size, shape);

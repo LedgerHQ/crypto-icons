@@ -1,9 +1,9 @@
-import { DotSymbol, MediaImage, Skeleton, mediaImageDotSizeMap } from '@ledgerhq/lumen-ui-react';
 import React, { FC } from 'react';
+import { DotSymbol, MediaImage, Skeleton, mediaImageDotSizeMap } from '@ledgerhq/lumen-ui-react';
 import { useCryptoIcon } from '../../hooks/useCryptoIcon';
 import { getBorderRadius } from '../../utils/borderRadius';
 import FallbackIcon from '../FallbackIcon/FallbackIcon';
-import { CryptoIconProps } from './CryptoIcon.types';
+import type { CryptoIconProps } from './CryptoIcon.types';
 
 const CryptoIcon: FC<CryptoIconProps> = ({
   ledgerId,
