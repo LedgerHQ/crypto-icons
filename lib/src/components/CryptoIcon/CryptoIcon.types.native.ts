@@ -1,4 +1,4 @@
-import type { DotSymbolProps, MediaImageProps } from '@ledgerhq/lumen-ui-react';
+import type { DotSymbolProps, MediaImageProps } from '@ledgerhq/lumen-ui-rnative';
 
 export type CryptoIconProps = {
   ledgerId: string;

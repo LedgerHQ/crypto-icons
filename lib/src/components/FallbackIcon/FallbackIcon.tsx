@@ -1,46 +1,32 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
-import { CryptoIconProps } from '../CryptoIcon/CryptoIcon.types';
+import type { MediaImageProps } from '@ledgerhq/lumen-ui-react';
+import { getBorderRadius } from '../../utils/borderRadius';
+import { getFontSize } from '../../utils/fontSize';
 
-type FallbackIconProps = Pick<CryptoIconProps, 'ticker' | 'size' | 'overridesRadius'>;
-
-const iconSizeToFontSize: {
-  [key in NonNullable<FallbackIconProps['size']>]: string;
-} = {
-  '16px': '10px',
-  '20px': '12px',
-  '24px': '14px',
-  '32px': '16px',
-  '40px': '18px',
-  '48px': '24px',
-  '56px': '24px',
+type FallbackIconProps = {
+  letter: string;
+  size?: MediaImageProps['size'];
+  shape?: MediaImageProps['shape'];
+  testID?: string;
 };
 
-const Icon = styled.div<Partial<FallbackIconProps>>`
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: ${({ size }) => iconSizeToFontSize[size!]};
-  font-family: 'Inter', sans-serif;
-`;
-
-const IconWrapper = styled.div<Pick<FallbackIconProps, 'overridesRadius'>>`
-  height: 100%;
-  width: 100%;
-  border-radius: ${({ overridesRadius }) => (overridesRadius ? overridesRadius : '50%')};
-  background-color: #757575;
-`;
-
-const FallbackIcon: FC<FallbackIconProps> = ({ ticker, size, overridesRadius }) => (
-  <IconWrapper overridesRadius={overridesRadius}>
-    <Icon size={size} role="img">
-      {ticker[0]}
-    </Icon>
-  </IconWrapper>
+// This component will be removed in the future once Lumen exposes the fallback mechanism
+const FallbackIcon: FC<FallbackIconProps> = ({ letter, size = 48, shape = 'circle', testID }) => (
+  <div
+    className="flex items-center justify-center select-none text-base bg-muted"
+    style={{
+      width: size,
+      height: size,
+      borderRadius: getBorderRadius(size, shape),
+      fontSize: getFontSize(size),
+      fontWeight: 500,
+    }}
+    role="img"
+    aria-label={letter}
+    data-testid={testID}
+  >
+    {letter}
+  </div>
 );
 
 export default FallbackIcon;

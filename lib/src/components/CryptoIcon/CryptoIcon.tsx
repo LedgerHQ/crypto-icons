@@ -1,57 +1,52 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
+import { DotSymbol, MediaImage, Skeleton, mediaImageDotSizeMap } from '@ledgerhq/lumen-ui-react';
 import { useCryptoIcon } from '../../hooks/useCryptoIcon';
+import { getBorderRadius } from '../../utils/borderRadius';
 import FallbackIcon from '../FallbackIcon/FallbackIcon';
-import IconWrapper, { RoundedIcon, Skeleton } from '../IconWrapper/IconWrapper';
-import { CryptoIconProps } from './CryptoIcon.types';
-
-const Icon = styled(RoundedIcon)<
-  { $hasNetwork: boolean } & Pick<CryptoIconProps, 'overridesRadius'>
->`
-  height: 100%;
-  width: 100%;
-  ${({ $hasNetwork }) =>
-    $hasNetwork
-      ? 'mask-image: radial-gradient(circle closest-side at 81.5% 81.5%, transparent 125%, white 130%);'
-      : ''}
-`;
-
-const NetworkIcon = styled(RoundedIcon)<Pick<CryptoIconProps, 'size'>>`
-  height: calc(${({ size }) => size} / 2.8);
-  width: calc(${({ size }) => size} / 2.8);
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-`;
+import type { CryptoIconProps } from './CryptoIcon.types';
 
 const CryptoIcon: FC<CryptoIconProps> = ({
   ledgerId,
   ticker,
-  size = '16px',
-  theme = 'dark',
   network,
-  overridesRadius,
+  badgePosition = 'bottom-end',
+  size = 48,
+  shape = 'circle',
+  alt,
+  testID,
 }) => {
   const { iconUrl, networkUrl, loading } = useCryptoIcon({ ledgerId, network });
+  const fallbackLetter = (ticker[0] ?? '?').toUpperCase();
+  const testProps = testID !== undefined ? { 'data-testid': testID } : {};
 
-  if (loading) return <Skeleton size={size} theme={theme} overridesRadius={overridesRadius} />;
+  if (loading) {
+    return (
+      <Skeleton
+        style={{
+          width: size,
+          height: size,
+          borderRadius: shape === 'circle' ? '50%' : getBorderRadius(size, shape),
+        }}
+        {...testProps}
+      />
+    );
+  }
 
-  return (
-    <IconWrapper size={size} theme={theme}>
-      {iconUrl ? (
-        <Icon
-          theme={theme}
-          src={iconUrl}
-          alt={ticker}
-          $hasNetwork={!!networkUrl}
-          overridesRadius={overridesRadius}
-        />
-      ) : (
-        <FallbackIcon ticker={ticker} size={size} overridesRadius={overridesRadius} />
-      )}
-      {networkUrl ? <NetworkIcon theme={theme} src={networkUrl} size={size} /> : null}
-    </IconWrapper>
+  const image = iconUrl ? (
+    <MediaImage src={iconUrl} size={size} shape={shape} alt={alt} {...testProps} />
+  ) : (
+    <FallbackIcon letter={fallbackLetter} size={size} shape={shape} testID={testID} />
   );
+
+  if (networkUrl) {
+    return (
+      <DotSymbol src={networkUrl} pin={badgePosition} size={mediaImageDotSizeMap[size]}>
+        {image}
+      </DotSymbol>
+    );
+  }
+
+  return image;
 };
 
 export default CryptoIcon;

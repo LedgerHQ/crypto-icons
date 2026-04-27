@@ -1,0 +1,84 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as DotIconStories from './DotIconCryptoIcon.stories';
+
+<Meta of={DotIconStories} />
+
+# 🔴 DotCryptoIcon
+
+## Introduction
+
+Wraps a `CryptoIcon` with a Lumen `DotIcon` badge to communicate transaction or account status.
+The badge overlays a small icon (with a semantic colour) at any corner of the wrapped component.
+
+## Anatomy
+
+<Canvas of={DotIconStories.Base} />
+
+- **`icon` (required)**: A Lumen symbol component (e.g. `Check`, `Clock`, `Close`) rendered inside the badge
+- **`appearance` (required)**: Semantic badge colour — `"success"` · `"muted"` · `"error"`
+- **`size` (optional)**: Dot diameter — `16 | 20 | 24` (default `20`)
+- **`pin` (optional)**: Corner placement — `"bottom-end"` by default
+- **`shape` (optional)**: `"circle"` (default) or `"square"`
+- **`children`**: The component the badge is attached to (typically `CryptoIcon`)
+
+## Properties
+
+### Overview
+
+<Canvas of={DotIconStories.Base} />
+<Controls of={DotIconStories.Base} />
+
+### Appearance
+
+<Canvas of={DotIconStories.AppearanceShowcase} />
+
+### Pin Positions
+
+<Canvas of={DotIconStories.PinShowcase} />
+
+### Dot Size
+
+<Canvas of={DotIconStories.SizeShowcase} />
+
+## Implementation
+
+### 1. Install
+
+```bash
+# crypto-icons + Lumen peer dependencies (≥ 0.1.24)
+npm install @ledgerhq/crypto-icons @ledgerhq/lumen-ui-react @ledgerhq/lumen-design-core
+```
+
+See [CryptoIcon → Implementation](?path=/docs/communication-cryptoicon--docs#implementation) for the Tailwind and ThemeProvider setup steps.
+
+### 2. Use
+
+```tsx
+import { CryptoIcon } from '@ledgerhq/crypto-icons';
+import { DotIcon, mediaImageDotIconSizeMap } from '@ledgerhq/lumen-ui-react';
+import { Check, Clock, Close } from '@ledgerhq/lumen-ui-react/symbols';
+```
+
+### Success (confirmed)
+
+```tsx
+<DotIcon icon={Check} appearance="success" size={mediaImageDotIconSizeMap[56]}>
+  <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
+</DotIcon>
+```
+
+### Muted (pending)
+
+```tsx
+<DotIcon icon={Clock} appearance="muted" size={mediaImageDotIconSizeMap[56]}>
+  <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
+</DotIcon>
+```
+
+### Error (failed)
+
+```tsx
+<DotIcon icon={Close} appearance="error" size={mediaImageDotIconSizeMap[56]} pin="top-end">
+  <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
+</DotIcon>
+```

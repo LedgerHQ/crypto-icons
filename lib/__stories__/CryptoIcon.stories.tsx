@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { Text, View } from 'react-native';
-import CryptoIcon from '../src/components/CryptoIcon/CryptoIcon.native';
+import CryptoIcon from '../src/components/CryptoIcon';
 
 const meta: Meta<typeof CryptoIcon> = {
   component: CryptoIcon,
@@ -55,55 +54,55 @@ export const Base: Story = {
 
 export const SizeShowcase: Story = {
   render: () => (
-    <View style={{ flexDirection: 'row', gap: 4, alignItems: 'flex-end' }}>
+    <div className="flex gap-4 items-end">
       {([12, 16, 20, 24, 32, 40, 48, 56, 64] as const).map((s) => (
-        <View key={s} style={{ alignItems: 'center', gap: 2 }}>
+        <div key={s} className="flex flex-col items-center gap-2">
           <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={s} />
-          <Text style={{ fontSize: 10, color: '#888' }}>{s}</Text>
-        </View>
+          <span style={{ fontSize: 10, color: '#888' }}>{s}</span>
+        </div>
       ))}
-    </View>
+    </div>
   ),
 };
 
 export const ShapeShowcase: Story = {
   render: () => (
-    <View style={{ flexDirection: 'row', gap: 32, alignItems: 'center' }}>
+    <div className="flex gap-8 items-center">
       {(['circle', 'square'] as const).map((shape) => (
-        <View key={shape} style={{ alignItems: 'center', gap: 8 }}>
+        <div key={shape} className="flex flex-col items-center gap-2">
           <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} shape={shape} />
-          <Text style={{ fontSize: 11, color: '#888' }}>{shape}</Text>
-        </View>
+          <span style={{ fontSize: 11, color: '#888' }}>{shape}</span>
+        </div>
       ))}
-    </View>
+    </div>
   ),
 };
 
 export const NetworkBadgeShowcase: Story = {
   render: () => (
-    <View style={{ flexDirection: 'row', gap: 32, alignItems: 'center' }}>
-      <View style={{ alignItems: 'center', gap: 8 }}>
+    <div className="flex gap-8 items-center">
+      <div className="flex flex-col items-center gap-2">
         <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
-        <Text style={{ fontSize: 11, color: '#888' }}>no badge</Text>
-      </View>
-      <View style={{ alignItems: 'center', gap: 8 }}>
+        <span style={{ fontSize: 11, color: '#888' }}>no badge</span>
+      </div>
+      <div className="flex flex-col items-center gap-2">
         <CryptoIcon
           ledgerId="ethereum/erc20/usd__coin"
           ticker="USDC"
           network="ethereum"
           size={56}
         />
-        <Text style={{ fontSize: 11, color: '#888' }}>with badge</Text>
-      </View>
-    </View>
+        <span style={{ fontSize: 11, color: '#888' }}>with badge</span>
+      </div>
+    </div>
   ),
 };
 
 export const PinShowcase: Story = {
   render: () => (
-    <View style={{ flexDirection: 'row', gap: 32, alignItems: 'center' }}>
+    <div className="flex gap-8 items-center">
       {(['top-start', 'top-end', 'bottom-start', 'bottom-end'] as const).map((pin) => (
-        <View key={pin} style={{ alignItems: 'center', gap: 8 }}>
+        <div key={pin} className="flex flex-col items-center gap-2">
           <CryptoIcon
             ledgerId="ethereum/erc20/usd__coin"
             ticker="USDC"
@@ -111,39 +110,39 @@ export const PinShowcase: Story = {
             badgePosition={pin}
             size={56}
           />
-          <Text style={{ fontSize: 11, color: '#888' }}>{pin}</Text>
-        </View>
+          <span style={{ fontSize: 11, color: '#888' }}>{pin}</span>
+        </div>
       ))}
-    </View>
+    </div>
   ),
 };
 
 export const FallbackShowcase: Story = {
   render: () => (
-    <View style={{ gap: 32 }}>
-      <View style={{ flexDirection: 'row', gap: 4, alignItems: 'flex-end' }}>
+    <div className="flex flex-col gap-8">
+      <div className="flex gap-4 items-end">
         {([12, 16, 20, 24, 32, 40, 48, 56, 64] as const).map((s) => (
-          <View key={s} style={{ alignItems: 'center', gap: 8 }}>
+          <div key={s} className="flex flex-col items-center gap-2">
             <CryptoIcon ledgerId="not_a_real_coin" ticker="BTC" size={s} />
-            <Text style={{ fontSize: 10, color: '#888' }}>{s}</Text>
-          </View>
+            <span style={{ fontSize: 10, color: '#888' }}>{s}</span>
+          </div>
         ))}
-      </View>
-      <View style={{ flexDirection: 'row', gap: 32, alignItems: 'center' }}>
-        <View style={{ alignItems: 'center', gap: 8 }}>
+      </div>
+      <div className="flex gap-8 items-center">
+        <div className="flex flex-col items-center gap-2">
           <CryptoIcon ledgerId="not_a_real_coin" ticker="BTC" size={56} shape="circle" />
-          <Text style={{ fontSize: 11, color: '#888' }}>circle</Text>
-        </View>
-        <View style={{ alignItems: 'center', gap: 8 }}>
+          <span style={{ fontSize: 11, color: '#888' }}>circle</span>
+        </div>
+        <div className="flex flex-col items-center gap-2">
           <CryptoIcon ledgerId="not_a_real_coin" ticker="BTC" size={56} shape="square" />
-          <Text style={{ fontSize: 11, color: '#888' }}>square</Text>
-        </View>
-        <View style={{ alignItems: 'center', gap: 8 }}>
+          <span style={{ fontSize: 11, color: '#888' }}>square</span>
+        </div>
+        <div className="flex flex-col items-center gap-2">
           <CryptoIcon ledgerId="not_a_real_coin" ticker="BTC" network="ethereum" size={56} />
-          <Text style={{ fontSize: 11, color: '#888' }}>+ badge</Text>
-        </View>
-      </View>
-    </View>
+          <span style={{ fontSize: 11, color: '#888' }}>+ badge</span>
+        </div>
+      </div>
+    </div>
   ),
 };
 
