@@ -1,6 +1,6 @@
 {
   "name": "@ledgerhq/crypto-icons",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Crypto icons by Ledger",
   "license": "MIT",
   "main": "dist/index.js",
@@ -107,7 +107,7 @@
     "@ledgerhq/lumen-ui-rnative": ">=0.1.25",
     "react": ">=18",
     "react-dom": ">=18",
-    "react-native": ">=0.70"
+    "react-native": ">=0.77"
   },
   "peerDependenciesMeta": {
     "@ledgerhq/lumen-design-core": {

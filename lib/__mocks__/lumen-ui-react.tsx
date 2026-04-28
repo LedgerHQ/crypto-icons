@@ -44,6 +44,17 @@ export const Skeleton = (props: SkeletonProps) => <div data-testid="skeleton" {.
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => <>{children}</>;
 
+export const useTheme = () => ({
+  theme: {
+    colors: {
+      border: {
+        icon: '#000000',
+      },
+    },
+  },
+  colorScheme: 'light',
+});
+
 type DotIconProps = {
   icon: React.ComponentType<{ size?: number; className?: string }>;
   appearance: 'success' | 'muted' | 'error';

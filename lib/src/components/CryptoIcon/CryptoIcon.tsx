@@ -1,5 +1,11 @@
+import {
+  DotSymbol,
+  MediaImage,
+  Skeleton,
+  mediaImageDotSizeMap,
+  useTheme,
+} from '@ledgerhq/lumen-ui-react';
 import React, { FC } from 'react';
-import { DotSymbol, MediaImage, Skeleton, mediaImageDotSizeMap } from '@ledgerhq/lumen-ui-react';
 import { useCryptoIcon } from '../../hooks/useCryptoIcon';
 import { getBorderRadius } from '../../utils/borderRadius';
 import FallbackIcon from '../FallbackIcon/FallbackIcon';
@@ -15,6 +21,7 @@ const CryptoIcon: FC<CryptoIconProps> = ({
   alt,
   testID,
 }) => {
+  const theme = useTheme();
   const { iconUrl, networkUrl, loading } = useCryptoIcon({ ledgerId, network });
   const fallbackLetter = (ticker[0] ?? '?').toUpperCase();
   const testProps = testID !== undefined ? { 'data-testid': testID } : {};
@@ -33,7 +40,14 @@ const CryptoIcon: FC<CryptoIconProps> = ({
   }
 
   const image = iconUrl ? (
-    <MediaImage src={iconUrl} size={size} shape={shape} alt={alt} {...testProps} />
+    <MediaImage
+      src={iconUrl}
+      size={size}
+      shape={shape}
+      alt={alt}
+      style={{ outline: `1px solid ${theme.theme.colors.border.icon}`, outlineOffset: -1 }}
+      {...testProps}
+    />
   ) : (
     <FallbackIcon letter={fallbackLetter} size={size} shape={shape} testID={testID} />
   );
