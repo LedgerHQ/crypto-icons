@@ -39,19 +39,17 @@ jobs:
       - name: Build project
         run: pnpm run build
 
-      - name: Create tarball for attestation
-        run: |
-          echo "TARBALL=$(pnpm pack --pack-destination dist)" >> $GITHUB_ENV
-
-      - name: Attest tarball
-        uses: LedgerHQ/actions-security/actions/attest@actions/attest-1
+      - name: Attest for npmjs.com
+        id: attest
+        uses: LedgerHQ/actions-security/actions/attest-for-npmsjs-com@actions/attest-for-npmsjs-com-0.1.2
         with:
-          subject-path: ./lib/dist
+          subject-path: lib
+          package-manager: npm
 
       - name: Sign tarball
         uses: LedgerHQ/actions-security/actions/sign-blob@actions/sign-blob-1
         with:
-          path: ./lib/dist
+          path: ${{ steps.attest.outputs.tarball-path }}
 
       - name: Login to JFrog Ledger
         id: jfrog-login
@@ -67,4 +65,4 @@ jobs:
           EOF
 
       - name: Publish package to JFrog
-        run: pnpm publish $TARBALL --no-git-checks
+        run: pnpm publish "${{ steps.attest.outputs.tarball-path }}" --no-git-checks
