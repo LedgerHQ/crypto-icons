@@ -30,7 +30,10 @@ const FallbackIconNative: FC<FallbackIconProps> = ({
     accessibilityRole="image"
     testID={testID}
   >
-    <Text lx={{ color: "base" }} style={{ fontWeight: 500, fontSize: getFontSize(size), lineHeight: 32 }}>
+    <Text
+      lx={{ color: 'base' }}
+      style={{ fontWeight: 500, fontSize: getFontSize(size), lineHeight: 0 }}
+    >
       {letter}
     </Text>
   </Box>
