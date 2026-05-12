@@ -43,8 +43,15 @@
     "storybook:native": "storybook dev -p 6007 -c .storybook-rn",
     "storybook:react": "storybook dev -p 6006",
     "test:watch": "jest --watch",
-    "test": "jest"
+    "test": "jest",
+    "size": "size-limit"
   },
+  "size-limit": [
+    { "path": "dist/index.js", "name": "CJS (web)" },
+    { "path": "dist/index.esm.js", "name": "ESM (web)" },
+    { "path": "dist/index.native.js", "name": "CJS (native)" },
+    { "path": "dist/index.native.esm.js", "name": "ESM (native)" }
+  ],
   "devDependencies": {
     "@ledgerhq/lumen-design-core": "^0.1.11",
     "@ledgerhq/lumen-ui-react": "^0.1.24",
@@ -54,6 +61,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-url": "^8.0.2",
+    "@size-limit/file": "^12.1.0",
     "@storybook/addon-controls": "8.2.6",
     "@storybook/addon-essentials": "8.2.6",
     "@storybook/addon-react-native-web": "^0.0.21",
@@ -91,6 +99,7 @@
     "rollup": "^4.19.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.36.0",
+    "size-limit": "^12.1.0",
     "storybook": "^8.2.6",
     "style-loader": "^4.0.0",
     "tailwindcss": "^3.4.0",
