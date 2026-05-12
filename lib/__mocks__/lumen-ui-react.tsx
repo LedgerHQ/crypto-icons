@@ -5,6 +5,9 @@ type MediaImageProps = {
   size?: number;
   shape?: string;
   alt?: string;
+  loading?: boolean;
+  fallback?: string;
+  imgLoading?: string;
 } & ComponentPropsWithRef<'div'>;
 
 type DotSymbolProps = {
@@ -18,8 +21,19 @@ type SkeletonProps = {
   component?: string;
 } & ComponentPropsWithRef<'div'>;
 
-export const MediaImage = ({ src, alt }: MediaImageProps) =>
-  src ? <img src={src} alt={alt} role="img" /> : <div role="img" />;
+export const MediaImage = ({ src, alt, loading, fallback }: MediaImageProps) => {
+  if (loading) {
+    return (
+      <div role="img">
+        <Skeleton />
+      </div>
+    );
+  }
+  if (src) {
+    return <img src={src} alt={alt} role="img" />;
+  }
+  return <div role="img">{fallback ? fallback[0]?.toUpperCase() : null}</div>;
+};
 
 export const DotSymbol = ({ children, src }: DotSymbolProps) => (
   <div>

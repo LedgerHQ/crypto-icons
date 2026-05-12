@@ -28,10 +28,8 @@ describe('CryptoIcon', () => {
       render(<CryptoIcon ledgerId="bitcoin" ticker="BTC" />);
 
       await waitFor(() => {
-        expect(screen.getByRole('img')).toBeInTheDocument();
+        expect(screen.getByRole('img')).toHaveAttribute('src', `${CRYPTO_ICONS_CDN_BASE}/BTC.png`);
       });
-
-      expect(screen.getByRole('img')).toHaveAttribute('src', `${CRYPTO_ICONS_CDN_BASE}/BTC.png`);
     });
   });
 
@@ -46,26 +44,22 @@ describe('CryptoIcon', () => {
       render(<CryptoIcon ledgerId="bitcoin" ticker="BTC" />);
 
       await waitFor(() => {
-        expect(screen.getByRole('img')).toBeInTheDocument();
+        expect(screen.getByRole('img')).toHaveAttribute(
+          'src',
+          coinGeckoMock?.find((i) => i.ledgerId === 'bitcoin')?.data.img
+        );
       });
-
-      expect(screen.getByRole('img')).toHaveAttribute(
-        'src',
-        coinGeckoMock?.find((i) => i.ledgerId === 'bitcoin')?.data.img
-      );
     });
 
     it('renders CoinGecko icon when ledgerId not in CDN', async () => {
       render(<CryptoIcon ledgerId="decred" ticker="DCR" />);
 
       await waitFor(() => {
-        expect(screen.getByRole('img')).toBeInTheDocument();
+        expect(screen.getByRole('img')).toHaveAttribute(
+          'src',
+          coinGeckoMock?.find((i) => i.ledgerId === 'decred')?.data.img
+        );
       });
-
-      expect(screen.getByRole('img')).toHaveAttribute(
-        'src',
-        coinGeckoMock?.find((i) => i.ledgerId === 'decred')?.data.img
-      );
     });
   });
 
@@ -83,10 +77,8 @@ describe('CryptoIcon', () => {
       render(<CryptoIcon ledgerId="bitcoin" ticker="BTC" />);
 
       await waitFor(() => {
-        expect(screen.getByRole('img')).toBeInTheDocument();
+        expect(screen.getByRole('img')).toHaveTextContent('B');
       });
-
-      expect(screen.getByRole('img')).toHaveTextContent('B');
     });
 
     it('renders ? when ticker is empty', async () => {
@@ -102,10 +94,8 @@ describe('CryptoIcon', () => {
       render(<CryptoIcon ledgerId="bitcoin" ticker="" />);
 
       await waitFor(() => {
-        expect(screen.getByRole('img')).toBeInTheDocument();
+        expect(screen.getByRole('img')).toHaveTextContent('?');
       });
-
-      expect(screen.getByRole('img')).toHaveTextContent('?');
     });
   });
 
