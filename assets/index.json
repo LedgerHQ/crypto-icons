@@ -158,6 +158,9 @@
   "arbitrum/erc20/savings_usds_0xddb46999f8891663a8f2828d25298f70416d7610": {
     "icon": "SUSDS.png"
   },
+  "arbitrum/erc20/spiko_eu_t_bills_money_market_fund_0xcbeb19549054cc0a6257a77736fc78c367216ce7": {
+    "icon": "EUTBL.png"
+  },
   "arbitrum/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
     "icon": "SUSDE.png"
   },
@@ -311,6 +314,9 @@
   "avalanche_c_chain/erc20/wootrade_network": {
     "icon": "WOO.png"
   },
+  "avalanche_c_chain/erc20/wrapped_bitcoin_0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
+    "icon": "WBTC.png"
+  },
   "avalanche_c_chain/erc20/wrapped_eeth_0xa3d68b74bf0528fdd07263c60d6488749044914b": {
     "icon": "WEETH.png"
   },
@@ -403,6 +409,9 @@
   },
   "base/erc20/savings_usds_0x5875eee11cf8398102fdad704c9e96607675467a": {
     "icon": "SUSDS.png"
+  },
+  "base/erc20/spiko_eu_t_bills_money_market_fund_0xa0769f7a8fc65e47de93797b4e21c073c117fc80": {
+    "icon": "EUTBL.png"
   },
   "base/erc20/spx6900": {
     "icon": "SPX6900.png"
@@ -923,6 +932,9 @@
   "energi/erc20/loopring_0x193da10f8a969d4c081b9097b15337b1488cbbec": {
     "icon": "LRC.png"
   },
+  "energi/erc20/nexo_0x04640dc771edd73cbeb934fb5461674830baea11": {
+    "icon": "NEXO.png"
+  },
   "energi/erc20/numeraire_0xd72922e849477a042a7e6dc84309f4bc1c1227a2": {
     "icon": "NMR.png"
   },
@@ -1034,6 +1046,9 @@
   "ethereum/erc20/bonk": {
     "icon": "BONK.png"
   },
+  "ethereum/erc20/centrifuge_0xcccccccccc33d538dbc2ee4feab0a7a1ff4e8a94": {
+    "icon": "CFG.png"
+  },
   "ethereum/erc20/chiliz": {
     "icon": "CHZ.png"
   },
@@ -1096,6 +1111,9 @@
   },
   "ethereum/erc20/ethereum_name_service": {
     "icon": "ENS.png"
+  },
+  "ethereum/erc20/falcon_usd_0xfa2b947eec368f42195f24f36d2af29f7c24cec2": {
+    "icon": "USDF.png"
   },
   "ethereum/erc20/fasttoken": {
     "icon": "FTN.png"
@@ -1337,6 +1355,9 @@
   "ethereum/erc20/ribbon": {
     "icon": "RBN.png"
   },
+  "ethereum/erc20/rlusd_0x8292bb45bf1ee4d140127049757c2e0ff06317ed": {
+    "icon": "RLUSD.png"
+  },
   "ethereum/erc20/rocket_pool_eth": {
     "icon": "RETH.png"
   },
@@ -1375,6 +1396,9 @@
   },
   "ethereum/erc20/spectre_ai": {
     "icon": "SPECTRE.png"
+  },
+  "ethereum/erc20/spiko_eu_t_bills_money_market_fund": {
+    "icon": "EUTBL.png"
   },
   "ethereum/erc20/spx6900": {
     "icon": "SPX6900.png"
@@ -1500,7 +1524,7 @@
     "icon": "WBTC.png"
   },
   "ethereum/erc20/wrapped_centrifuge": {
-    "icon": "CFG.png"
+    "icon": "WCFG.png"
   },
   "ethereum/erc20/wrapped_eeth": {
     "icon": "WEETH.png"
@@ -1540,6 +1564,9 @@
   },
   "etherlink/erc20/lombard_staked_bitcoin_0xecac9c5f704e954931349da37f60e39f515c11c1": {
     "icon": "LBTC.png"
+  },
+  "etherlink/erc20/spiko_eu_t_bills_money_market_fund_0xa0769f7a8fc65e47de93797b4e21c073c117fc80": {
+    "icon": "EUTBL.png"
   },
   "etherlink/erc20/usdc": {
     "icon": "USDC.png"
@@ -1786,6 +1813,9 @@
   },
   "monad": {
     "icon": "MON.png"
+  },
+  "monad/erc20/coinbase_wrapped_btc_0xd18b7ec58cdf4876f6afebd3ed1730e4ce10414b": {
+    "icon": "CBBTC.png"
   },
   "monad/erc20/usdc_0x754704bc059f8c67012fed69bc8a327a5aafb603": {
     "icon": "USDC.png"
@@ -2093,6 +2123,9 @@
   "polygon/erc20/sand": {
     "icon": "SAND.png"
   },
+  "polygon/erc20/spiko_eu_t_bills_money_market_fund": {
+    "icon": "EUTBL.png"
+  },
   "polygon/erc20/superfarm_(pos)": {
     "icon": "SUPER.png"
   },
@@ -2155,6 +2188,9 @@
   },
   "polygon_zk_evm_testnet": {
     "icon": "POL_Testnet.png"
+  },
+  "pulsechain/erc20/wrapped_btc_0x2260fac5e5542a773aa44fbcfedf7c193bc2c599": {
+    "icon": "WBTC.png"
   },
   "qtum": {
     "icon": "QTUM.png"
@@ -2336,6 +2372,9 @@
   "solana/spl/staked_usde_eh6xephswolv5wfapukmnavshq6sanod9bmgmwqon2sn": {
     "icon": "SUSDE.png"
   },
+  "solana/spl/superstate_short_duration_us_government_securities_fund_ccz3sgvzifelyk2xfestkiqjfykjaswb2gcabysvcjo2": {
+    "icon": "USTB.png"
+  },
   "solana/spl/syrup_usdc_avzzf1yazdzipy2rck4ojrrvrbn3mtd9nl24hpeazeuj": {
     "icon": "SYRUPUSDC.png"
   },
@@ -2362,6 +2401,9 @@
   },
   "solana/spl/world_liberty_financial_wlfinev6ypjkczcs83fzqfpgfzywqxutrbxge7oc16g": {
     "icon": "WLFI.png"
+  },
+  "solana/spl/wrapped_bitcoin_5xzw2lktyrfvfiskj78ampackrjpcycif1whuspduvqq": {
+    "icon": "WBTC.png"
   },
   "solana/spl/wrapped_ftt_sollet_agfead2et2zjif9jagpdmixqqvw5i81abdvke7phnfz3": {
     "icon": "FTT.png"
@@ -2687,6 +2729,9 @@
   "unichain/erc20/chainlink_token_0xef66491eab4bbb582c57b14778afd8dfb70d8a1a": {
     "icon": "LINK.png"
   },
+  "unichain/erc20/jupiter_0xbe51a5e8fa434f09663e8fb4cce79d0b2381afad": {
+    "icon": "JUP.png"
+  },
   "unichain/erc20/kelpdao_restaked_eth_0xc3eacf0612346366db554c991d7858716db09f58": {
     "icon": "RSETH.png"
   },
@@ -2698,6 +2743,9 @@
   },
   "unichain/erc20/usdc_0x078d782b760474a361dda0af3839290b0ef57ad6": {
     "icon": "USDC.png"
+  },
+  "unichain/erc20/wrapped_bitcoin_0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
+    "icon": "WBTC.png"
   },
   "unichain/erc20/wrapped_eeth_0x7dcc39b4d1c53cb31e1abc0e358b43987fef80f7": {
     "icon": "WEETH.png"
@@ -2725,6 +2773,9 @@
   },
   "zksync": {
     "icon": "ZKSYNC.png"
+  },
+  "zksync/erc20/blockchain_capital_token_0x57fd71a86522dc06d6255537521886057c1772a3": {
+    "icon": "BCAP.png"
   },
   "zksync/erc20/chainlink_token_0x52869bae3e091e36b0915941577f2d47d8d8b534": {
     "icon": "LINK.png"
