@@ -192,8 +192,7 @@ pnpm i
 ### Development
 
 ```bash
-pnpm dev:web       # watch & rebuild React bundle
-pnpm dev:native    # watch & rebuild React Native bundle
+pnpm dev           # watch & rebuild both bundles
 ```
 
 ### Tests & lint
@@ -214,9 +213,7 @@ pnpm storybook:native   # port 6007
 ### Build
 
 ```bash
-pnpm build         # both platforms
-pnpm build:web     # React only
-pnpm build:native  # React Native only
+pnpm build         # both platforms (React + React Native)
 ```
 
 ### Local development against another repo
@@ -233,7 +230,7 @@ Add to the consuming repo's root `package.json`:
 }
 ```
 
-Then `pnpm install` in the consuming repo. Run `pnpm dev:web` / `pnpm dev:native` in this repo to keep the build up to date.
+Then `pnpm install` in the consuming repo. Run `pnpm dev` in this repo to keep the build up to date.
 
 ### Adding new icons
 
