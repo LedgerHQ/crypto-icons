@@ -173,6 +173,11 @@
       "polygon/erc20/bat"
     ]
   },
+  "BCAP": {
+    "ids": [
+      "zksync/erc20/blockchain_capital_token_0x57fd71a86522dc06d6255537521886057c1772a3"
+    ]
+  },
   "BCFX": {
     "ids": ["bsc/bep20/bsc_conflux", "conflux"]
   },
@@ -294,7 +299,8 @@
       "ethereum/erc20/coinbase_wrapped_btc",
       "solana/spl/coinbase_wrapped_btc_cbbtcf3aa214zxhbiazqwf4122fbybrandfqgw4imij",
       "base/erc20/coinbase_wrapped_btc",
-      "arbitrum/erc20/coinbase_wrapped_btc_0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf"
+      "arbitrum/erc20/coinbase_wrapped_btc_0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
+      "monad/erc20/coinbase_wrapped_btc_0xd18b7ec58cdf4876f6afebd3ed1730e4ce10414b"
     ]
   },
   "CCD": {
@@ -307,7 +313,10 @@
     "ids": ["celo"]
   },
   "CFG": {
-    "ids": ["centrifuge", "ethereum/erc20/wrapped_centrifuge"]
+    "ids": [
+      "centrifuge",
+      "ethereum/erc20/centrifuge_0xcccccccccc33d538dbc2ee4feab0a7a1ff4e8a94"
+    ]
   },
   "CHARISMA": {
     "ids": [
@@ -461,6 +470,15 @@
   "EUSX": {
     "ids": [
       "solana/spl/eusx_token_3thdfzqkm6kryvglg48kapg5trmhymky1icra9xop1wc"
+    ]
+  },
+  "EUTBL": {
+    "ids": [
+      "ethereum/erc20/spiko_eu_t_bills_money_market_fund",
+      "base/erc20/spiko_eu_t_bills_money_market_fund_0xa0769f7a8fc65e47de93797b4e21c073c117fc80",
+      "polygon/erc20/spiko_eu_t_bills_money_market_fund",
+      "arbitrum/erc20/spiko_eu_t_bills_money_market_fund_0xcbeb19549054cc0a6257a77736fc78c367216ce7",
+      "etherlink/erc20/spiko_eu_t_bills_money_market_fund_0xa0769f7a8fc65e47de93797b4e21c073c117fc80"
     ]
   },
   "FARTCOIN": {
@@ -665,7 +683,8 @@
       "bsc/bep20/bsc_wrapped_jupiter",
       "ethereum/erc20/jupiter",
       "solana/spl/jupyiwryjfskupiha7hker8vutaefosybkedznsdvcn",
-      "solana/spl/27g8mtk7vttcchkpasjsddkwwyfoqt6ggeukidvjidd4"
+      "solana/spl/27g8mtk7vttcchkpasjsddkwwyfoqt6ggeukidvjidd4",
+      "unichain/erc20/jupiter_0xbe51a5e8fa434f09663e8fb4cce79d0b2381afad"
     ]
   },
   "KAS": {
@@ -934,7 +953,12 @@
     "ids": ["neo"]
   },
   "NEXO": {
-    "ids": ["ethereum/erc20/nexo", "fantom/erc20/nexo", "polygon/erc20/nexo"]
+    "ids": [
+      "ethereum/erc20/nexo",
+      "fantom/erc20/nexo",
+      "polygon/erc20/nexo",
+      "energi/erc20/nexo_0x04640dc771edd73cbeb934fb5461674830baea11"
+    ]
   },
   "NFP": {
     "ids": [
@@ -1133,6 +1157,9 @@
   },
   "RLB": {
     "ids": ["ethereum/erc20/rollbit_coin"]
+  },
+  "RLUSD": {
+    "ids": ["ethereum/erc20/rlusd_0x8292bb45bf1ee4d140127049757c2e0ff06317ed"]
   },
   "ROO": {
     "ids": [
@@ -1661,6 +1688,11 @@
       "hyperevm/erc20/usdeoft_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
     ]
   },
+  "USDF": {
+    "ids": [
+      "ethereum/erc20/falcon_usd_0xfa2b947eec368f42195f24f36d2af29f7c24cec2"
+    ]
+  },
   "USDT0": {
     "ids": [
       "mantle/erc20/usdt0_0x779ded0c9e1022225f8e0630b35a9b54be713736",
@@ -1673,7 +1705,8 @@
   },
   "USTB": {
     "ids": [
-      "ethereum/erc20/superstate_short_duration_us_government_securities_fund"
+      "ethereum/erc20/superstate_short_duration_us_government_securities_fund",
+      "solana/spl/superstate_short_duration_us_government_securities_fund_ccz3sgvzifelyk2xfestkiqjfykjaswb2gcabysvcjo2"
     ]
   },
   "USYC": {
@@ -1787,7 +1820,11 @@
       "berachain/erc20/wbtc",
       "monad/erc20/wrapped_btc_0x0555e30da8f98308edb960aa94c0db47230d2b9c",
       "sei_evm/erc20/wrapped_btc_0x0555e30da8f98308edb960aa94c0db47230d2b9c",
-      "linea/erc20/wrapped_btc"
+      "linea/erc20/wrapped_btc",
+      "solana/spl/wrapped_bitcoin_5xzw2lktyrfvfiskj78ampackrjpcycif1whuspduvqq",
+      "avalanche_c_chain/erc20/wrapped_bitcoin_0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+      "pulsechain/erc20/wrapped_btc_0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "unichain/erc20/wrapped_bitcoin_0x0555e30da8f98308edb960aa94c0db47230d2b9c"
     ]
   },
   "WETH": {
@@ -1818,6 +1855,9 @@
       "ethereum/erc20/wrapped_binance_beacon_eth",
       "bsc/bep20/wrapped_binance_beacon_eth"
     ]
+  },
+  "WCFG": {
+    "ids": ["ethereum/erc20/wrapped_centrifuge"]
   },
   "WIF": {
     "ids": ["solana/spl/ekpqgsjtjmfqkz9kqansqyxrcf8fbopzlhyxdm65zcjm"]
