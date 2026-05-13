@@ -8,35 +8,31 @@
     "url": "https://github.com/LedgerHQ/crypto-icons"
   },
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "react-native": "dist/index.native.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.esm.js",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.js",
       "default": "./dist/index.js"
     },
     "./native": {
-      "types": "./native.d.ts",
-      "require": "./native.js",
-      "default": "./native.js"
+      "types": "./dist/index.native.d.ts",
+      "import": "./dist/index.native.mjs",
+      "require": "./dist/index.native.js",
+      "default": "./dist/index.native.js"
     }
   },
   "files": [
-    "dist",
-    "native.js",
-    "native.d.ts"
+    "dist"
   ],
   "scripts": {
     "build-storybook:native": "storybook build -c .storybook-rn",
     "build-storybook:react": "storybook build",
-    "build:native": "rollup -c rollup.config.native.mjs",
-    "build:web": "rollup -c rollup.config.mjs",
-    "build": "pnpm build:web && pnpm build:native",
-    "dev:web": "rollup -c rollup.config.mjs --watch",
-    "dev:native": "rollup -c rollup.config.native.mjs --watch",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "check:mapping": "node scripts/checkMapping.js",
     "compress": "bash ../compress/compress.sh",
     "generate:index:help": "echo \"Generates the index.json file from the '_record.json' file\"",
@@ -56,10 +52,6 @@
     "@ledgerhq/lumen-ui-react": "^0.1.31",
     "@ledgerhq/lumen-ui-rnative": "^0.1.32",
     "@ledgerhq/wallet-api-client": "^1.5.9",
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-url": "^8.0.2",
     "@storybook/addon-controls": "8.2.6",
     "@storybook/addon-essentials": "8.2.6",
     "@storybook/addon-react-native-web": "^0.0.21",
@@ -95,13 +87,11 @@
     "react": "^18",
     "react-dom": "^18",
     "react-native-web": "^0.20.0",
-    "rollup": "^4.19.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-typescript2": "^0.36.0",
     "storybook": "^8.2.6",
     "style-loader": "^4.0.0",
     "tailwindcss": "4.1.18",
     "ts-jest": "^29.2.3",
+    "tsdown": "^0.22.0",
     "tsx": "^4.20.5",
     "typescript": "^5.5.4",
     "whatwg-fetch": "^3.6.20",
