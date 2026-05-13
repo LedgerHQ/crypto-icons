@@ -1,8 +1,6 @@
+import { DotSymbol, MediaImage, mediaImageDotSizeMap } from '@ledgerhq/lumen-ui-react';
 import React, { FC } from 'react';
-import { DotSymbol, MediaImage, Skeleton, mediaImageDotSizeMap } from '@ledgerhq/lumen-ui-react';
 import { useCryptoIcon } from '../../hooks/useCryptoIcon';
-import { getBorderRadius } from '../../utils/borderRadius';
-import FallbackIcon from '../FallbackIcon/FallbackIcon';
 import type { CryptoIconProps } from './CryptoIcon.types';
 
 const CryptoIcon: FC<CryptoIconProps> = ({
@@ -19,34 +17,28 @@ const CryptoIcon: FC<CryptoIconProps> = ({
   const fallbackLetter = (ticker[0] ?? '?').toUpperCase();
   const testProps = testID !== undefined ? { 'data-testid': testID } : {};
 
-  if (loading) {
-    return (
-      <Skeleton
-        style={{
-          width: size,
-          height: size,
-          borderRadius: shape === 'circle' ? '50%' : getBorderRadius(size, shape),
-        }}
-        {...testProps}
-      />
-    );
-  }
-
-  const image = iconUrl ? (
-    <MediaImage src={iconUrl} size={size} shape={shape} alt={alt} {...testProps} />
-  ) : (
-    <FallbackIcon letter={fallbackLetter} size={size} shape={shape} testID={testID} />
+  const Image = (
+    <MediaImage
+      loading={loading}
+      fallback={fallbackLetter}
+      src={iconUrl ?? undefined}
+      size={size}
+      shape={shape}
+      imgLoading="lazy"
+      alt={alt}
+      {...testProps}
+    />
   );
 
   if (networkUrl) {
     return (
       <DotSymbol src={networkUrl} pin={badgePosition} size={mediaImageDotSizeMap[size]}>
-        {image}
+        {Image}
       </DotSymbol>
     );
   }
 
-  return image;
+  return Image;
 };
 
 export default CryptoIcon;

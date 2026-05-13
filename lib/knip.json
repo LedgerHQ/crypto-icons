@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": ["src/index.native.ts", "scripts/*.{ts,js}"],
+  "project": ["src/**/*.{ts,tsx}"],
+  "ignoreDependencies": [
+    "@storybook/addon-controls",
+    "@storybook/addon-react-native-web",
+    "@typescript-eslint/parser",
+    "babel-loader",
+    "css-loader",
+    "postcss-loader",
+    "react-native-web",
+    "style-loader",
+    "zopflipng-bin"
+  ],
+  "ignoreBinaries": ["sb-rn-get-stories"],
+  "rules": {
+    "optionalPeerDependencies": "off"
+  }
+}

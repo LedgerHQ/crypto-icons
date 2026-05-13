@@ -7,7 +7,7 @@ export type LedgerMapping = {
   };
 } | null;
 
-export type CoinGeckoMapping = Record<string, string> | null;
+type CoinGeckoMapping = Record<string, string> | null;
 
 type CoinGeckoRawData = Array<{
   ledgerId: Currency['id'];
