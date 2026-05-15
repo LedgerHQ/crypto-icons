@@ -704,6 +704,11 @@
   "KDA": {
     "ids": ["kadena"]
   },
+  "KHYPE": {
+    "ids": [
+      "hyperevm/erc20/kinetiq_staked_hype_0xfd739d4e423301ce9385c1fb8850539d657c296d"
+    ]
+  },
   "KLAY": {
     "ids": ["klaytn", "klaytn_baobab"]
   },
@@ -1780,6 +1785,11 @@
   },
   "VITA": {
     "ids": ["ethereum/erc20/vitadao_token"]
+  },
+  "VKHYPE": {
+    "ids": [
+      "hyperevm/erc20/kinetiq_earn_vault_0x9ba2edc44e0a4632eb4723e81d4142353e1bb160"
+    ]
   },
   "VLISTX": {
     "ids": [

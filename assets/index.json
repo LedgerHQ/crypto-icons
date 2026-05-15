@@ -1649,6 +1649,12 @@
   "hyperevm": {
     "icon": "HYPE.png"
   },
+  "hyperevm/erc20/kinetiq_earn_vault_0x9ba2edc44e0a4632eb4723e81d4142353e1bb160": {
+    "icon": "VKHYPE.png"
+  },
+  "hyperevm/erc20/kinetiq_staked_hype_0xfd739d4e423301ce9385c1fb8850539d657c296d": {
+    "icon": "KHYPE.png"
+  },
   "hyperevm/erc20/usd_0_0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb": {
     "icon": "USDT0.png"
   },
