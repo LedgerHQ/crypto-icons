@@ -11,19 +11,29 @@ async function main() {
   const assets = await assetsRes.json();
   const index = await indexRes.json();
 
-  const rankedIds = assets.currenciesOrder?.currenciesIds ?? [];
-  const mappedIds = new Set(Object.keys(index));
+  const cryptoAssets = assets.cryptoAssets ?? {};
+  const metaCurrencyIds = assets.currenciesOrder?.metaCurrencyIds ?? [];
 
-  const missing = rankedIds.filter((id) => !mappedIds.has(id));
-  const covered = rankedIds.length - missing.length;
-
-  // Build a ledgerId → { name, ticker } lookup from the assets response
+  // Build a ledgerId → { name, ticker } lookup, and expand the ranked
+  // meta-currency list into its underlying ledger IDs (preserving rank order).
   const idToInfo = {};
-  for (const asset of Object.values(assets.cryptoAssets ?? {})) {
+  const rankedIds = [];
+  const seen = new Set();
+  for (const metaId of metaCurrencyIds) {
+    const asset = cryptoAssets[metaId];
+    if (!asset) continue;
     for (const ledgerId of Object.values(asset.assetsIds ?? {})) {
       idToInfo[ledgerId] = { name: asset.name ?? 'N/A', ticker: asset.ticker ?? 'N/A' };
+      if (!seen.has(ledgerId)) {
+        seen.add(ledgerId);
+        rankedIds.push(ledgerId);
+      }
     }
   }
+
+  const mappedIds = new Set(Object.keys(index));
+  const missing = rankedIds.filter((id) => !mappedIds.has(id));
+  const covered = rankedIds.length - missing.length;
 
   const date = new Date().toISOString().split('T')[0];
   const rows = missing.map((id) => {
