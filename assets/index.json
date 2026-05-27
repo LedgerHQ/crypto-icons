@@ -2606,6 +2606,12 @@
   "tezos/fa2/ecoin_network_kt1m81krjr6txylkzkvqcpstnkgoya8xytwt": {
     "icon": "TZ_ECN.png"
   },
+  "tezos/fa2/energy_kt1erkvqehg9jxxgug2kglw3bnm7zxhx8sdf_2": {
+    "icon": "TZ_ENR.png"
+  },
+  "tezos/fa2/ethereum_usdc_kt1ussfaxyqcjsvpeid7u1bwgky3tayn7nwy_2": {
+    "icon": "USDC.png"
+  },
   "tezos/fa2/flame_kt1wa8yqrbpfcusjwgcqyjhrz7huqamfxw7j": {
     "icon": "TZ_FLAME.png"
   },
@@ -2629,6 +2635,9 @@
   },
   "tezos/fa2/kora_asset_kt1hzfzijxexebu9lfp5grm3yzlq7lphgtvt": {
     "icon": "TZ_KORA.png"
+  },
+  "tezos/fa2/machinery_kt1erkvqehg9jxxgug2kglw3bnm7zxhx8sdf_3": {
+    "icon": "TZ_MCH.png"
   },
   "tezos/fa2/mathmakesart_kt18hyjnko76sbvv6tact4ku6b32mjk6jwlz": {
     "icon": "TZ_MATH.png"
@@ -2698,6 +2707,30 @@
   },
   "tezos/fa2/vendcoin_kt1hihzvckhfapemxfqccrjwhs1dwayqgbtm": {
     "icon": "TZ_VEND.png"
+  },
+  "tezos/fa2/wrapped_busd_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_1": {
+    "icon": "TZ_wBUSD.png"
+  },
+  "tezos/fa2/wrapped_dai_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_5": {
+    "icon": "TZ_wDAI.png"
+  },
+  "tezos/fa2/wrapped_link_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_10": {
+    "icon": "TZ_wLINK.png"
+  },
+  "tezos/fa2/wrapped_matic_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_11": {
+    "icon": "TZ_wMATIC.png"
+  },
+  "tezos/fa2/wrapped_usdc_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_17": {
+    "icon": "TZ_wUSDC.png"
+  },
+  "tezos/fa2/wrapped_usdt_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_18": {
+    "icon": "TZ_wUSDT.png"
+  },
+  "tezos/fa2/wrapped_wbtc_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_19": {
+    "icon": "TZ_wWBTC.png"
+  },
+  "tezos/fa2/wrapped_weth_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_20": {
+    "icon": "TZ_wWETH.png"
   },
   "tezos/fa2/youves_you_governance_kt1xobej4mc6xgejdojohttkgbd1elmvcqul": {
     "icon": "TZ_YOU.png"
