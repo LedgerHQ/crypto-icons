@@ -113,6 +113,12 @@
   "ARB": {
     "ids": ["arbitrum", "arbitrum/erc20/arbitrum", "ethereum/erc20/arbitrum"]
   },
+  "ARC": {
+    "ids": ["arc"]
+  },
+  "ARC_Testnet": {
+    "ids": ["arc_testnet"]
+  },
   "ARKM": {
     "ids": ["ethereum/erc20/arkham"]
   },

@@ -206,6 +206,12 @@
   "arbitrum/erc20/xai": {
     "icon": "XAI.png"
   },
+  "arc": {
+    "icon": "ARC.png"
+  },
+  "arc_testnet": {
+    "icon": "ARC_Testnet.png"
+  },
   "arweave": {
     "icon": "AR.png"
   },
