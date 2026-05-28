@@ -77,7 +77,7 @@ function validateId(id) {
     const encodedId = encodeURIComponent(id);
     // Use currencies endpoint for native chains, tokens endpoint for tokens
     const endpoint = isCurrency(id) ? CURRENCIES_ENDPOINT : TOKENS_ENDPOINT;
-    const url = `${endpoint}?id=${encodedId}&limit=1&output=id`;
+    const url = `${endpoint}?id=${encodedId}&limit=1&output=id&ref=branch:next`;
 
     https
       .get(url, (res) => {
