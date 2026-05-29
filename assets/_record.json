@@ -1482,6 +1482,9 @@
   "TZ_ECN": {
     "ids": ["tezos/fa2/ecoin_network_kt1m81krjr6txylkzkvqcpstnkgoya8xytwt"]
   },
+  "TZ_ENR": {
+    "ids": ["tezos/fa2/energy_kt1erkvqehg9jxxgug2kglw3bnm7zxhx8sdf_2"]
+  },
   "TZ_FLAME": {
     "ids": ["tezos/fa2/flame_kt1wa8yqrbpfcusjwgcqyjhrz7huqamfxw7j"]
   },
@@ -1511,6 +1514,9 @@
   },
   "TZ_MATH": {
     "ids": ["tezos/fa2/mathmakesart_kt18hyjnko76sbvv6tact4ku6b32mjk6jwlz"]
+  },
+  "TZ_MCH": {
+    "ids": ["tezos/fa2/machinery_kt1erkvqehg9jxxgug2kglw3bnm7zxhx8sdf_3"]
   },
   "TZ_mew": {
     "ids": ["tezos/fa2/mew_kt1hc6kshp3pllicxukuhva62prjq8jmyacp"]
@@ -1575,6 +1581,30 @@
   },
   "TZ_VEND": {
     "ids": ["tezos/fa2/vendcoin_kt1hihzvckhfapemxfqccrjwhs1dwayqgbtm"]
+  },
+  "TZ_wBUSD": {
+    "ids": ["tezos/fa2/wrapped_busd_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_1"]
+  },
+  "TZ_wDAI": {
+    "ids": ["tezos/fa2/wrapped_dai_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_5"]
+  },
+  "TZ_wLINK": {
+    "ids": ["tezos/fa2/wrapped_link_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_10"]
+  },
+  "TZ_wMATIC": {
+    "ids": ["tezos/fa2/wrapped_matic_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_11"]
+  },
+  "TZ_wUSDC": {
+    "ids": ["tezos/fa2/wrapped_usdc_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_17"]
+  },
+  "TZ_wUSDT": {
+    "ids": ["tezos/fa2/wrapped_usdt_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_18"]
+  },
+  "TZ_wWBTC": {
+    "ids": ["tezos/fa2/wrapped_wbtc_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_19"]
+  },
+  "TZ_wWETH": {
+    "ids": ["tezos/fa2/wrapped_weth_kt18fp5rctw7mbwdmzfwjlduhs5mejmagdsz_20"]
   },
   "TZ_YOU": {
     "ids": [
@@ -1658,7 +1688,8 @@
       "stacks/sip010/usdcx_sp120sbrbqj00mcws7tm5r8wjnttkd5k0hfrc2cne.usdcx::usdcx",
       "linea/erc20/usdc_e",
       "polygon/erc20/usd_coin_(pos)",
-      "zksync/erc20/usdc"
+      "zksync/erc20/usdc",
+      "tezos/fa2/ethereum_usdc_kt1ussfaxyqcjsvpeid7u1bwgky3tayn7nwy_2"
     ]
   },
   "USDG": {
