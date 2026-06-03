@@ -49,8 +49,8 @@
   },
   "devDependencies": {
     "@ledgerhq/lumen-design-core": "^0.1.13",
-    "@ledgerhq/lumen-ui-react": "^0.1.31",
-    "@ledgerhq/lumen-ui-rnative": "^0.1.32",
+    "@ledgerhq/lumen-ui-react": "^0.1.36",
+    "@ledgerhq/lumen-ui-rnative": "^0.1.37",
     "@ledgerhq/wallet-api-client": "^1.5.9",
     "@storybook/addon-controls": "8.2.6",
     "@storybook/addon-essentials": "8.2.6",
@@ -100,8 +100,8 @@
   },
   "peerDependencies": {
     "@ledgerhq/lumen-design-core": ">=0.1.13",
-    "@ledgerhq/lumen-ui-react": ">=0.1.31",
-    "@ledgerhq/lumen-ui-rnative": ">=0.1.32",
+    "@ledgerhq/lumen-ui-react": ">=0.1.36",
+    "@ledgerhq/lumen-ui-rnative": ">=0.1.37",
     "react": ">=18",
     "react-dom": ">=18",
     "react-native": ">=0.70"

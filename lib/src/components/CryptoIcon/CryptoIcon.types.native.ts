@@ -8,5 +8,6 @@ export type CryptoIconProps = {
   size?: MediaImageProps['size'];
   shape?: MediaImageProps['shape'];
   alt?: string;
+  disabled?: boolean;
   testID?: string;
 };

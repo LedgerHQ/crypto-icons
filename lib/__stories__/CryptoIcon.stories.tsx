@@ -31,6 +31,7 @@ const meta: Meta<typeof CryptoIcon> = {
       control: 'radio',
       options: ['circle', 'square'],
     },
+    disabled: { control: 'boolean' },
   },
 };
 
@@ -117,6 +118,37 @@ export const PinShowcase: Story = {
   ),
 };
 
+export const DisabledShowcase: Story = {
+  render: () => (
+    <div className="flex flex-col gap-8">
+      <div className="flex gap-8 items-center">
+        <div className="flex flex-col items-center gap-2">
+          <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
+          <span style={{ fontSize: 11, color: '#888' }}>enabled</span>
+        </div>
+        <div className="flex flex-col items-center gap-2">
+          <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} disabled />
+          <span style={{ fontSize: 11, color: '#888' }}>disabled</span>
+        </div>
+        <div className="flex flex-col items-center gap-2">
+          <CryptoIcon
+            ledgerId="ethereum/erc20/usd__coin"
+            ticker="USDC"
+            network="ethereum"
+            size={56}
+            disabled
+          />
+          <span style={{ fontSize: 11, color: '#888' }}>disabled + badge</span>
+        </div>
+        <div className="flex flex-col items-center gap-2">
+          <CryptoIcon ledgerId="not_a_real_coin" ticker="BTC" size={56} disabled />
+          <span style={{ fontSize: 11, color: '#888' }}>disabled fallback</span>
+        </div>
+      </div>
+    </div>
+  ),
+};
+
 export const FallbackShowcase: Story = {
   render: () => (
     <div className="flex flex-col gap-8">
@@ -154,5 +186,6 @@ export const Playground: Story = {
     badgePosition: 'bottom-end',
     size: 56,
     shape: 'circle',
+    disabled: false,
   },
 };
