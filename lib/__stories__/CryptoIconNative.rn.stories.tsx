@@ -32,6 +32,7 @@ const meta: Meta<typeof CryptoIcon> = {
       control: 'radio',
       options: ['circle', 'square'],
     },
+    disabled: { control: 'boolean' },
   },
 };
 
@@ -118,6 +119,35 @@ export const PinShowcase: Story = {
   ),
 };
 
+export const DisabledShowcase: Story = {
+  render: () => (
+    <View style={{ flexDirection: 'row', gap: 32, alignItems: 'center' }}>
+      <View style={{ alignItems: 'center', gap: 8 }}>
+        <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
+        <Text style={{ fontSize: 11, color: '#888' }}>enabled</Text>
+      </View>
+      <View style={{ alignItems: 'center', gap: 8 }}>
+        <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} disabled />
+        <Text style={{ fontSize: 11, color: '#888' }}>disabled</Text>
+      </View>
+      <View style={{ alignItems: 'center', gap: 8 }}>
+        <CryptoIcon
+          ledgerId="ethereum/erc20/usd__coin"
+          ticker="USDC"
+          network="ethereum"
+          size={56}
+          disabled
+        />
+        <Text style={{ fontSize: 11, color: '#888' }}>disabled + badge</Text>
+      </View>
+      <View style={{ alignItems: 'center', gap: 8 }}>
+        <CryptoIcon ledgerId="not_a_real_coin" ticker="BTC" size={56} disabled />
+        <Text style={{ fontSize: 11, color: '#888' }}>disabled fallback</Text>
+      </View>
+    </View>
+  ),
+};
+
 export const FallbackShowcase: Story = {
   render: () => (
     <View style={{ gap: 32 }}>
@@ -155,5 +185,6 @@ export const Playground: Story = {
     badgePosition: 'bottom-end',
     size: 56,
     shape: 'circle',
+    disabled: false,
   },
 };

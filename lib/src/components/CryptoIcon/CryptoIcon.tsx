@@ -11,6 +11,7 @@ const CryptoIcon: FC<CryptoIconProps> = ({
   size = 48,
   shape = 'circle',
   alt,
+  disabled = false,
   testID,
 }) => {
   const { iconUrl, networkUrl, loading } = useCryptoIcon({ ledgerId, network });
@@ -26,13 +27,19 @@ const CryptoIcon: FC<CryptoIconProps> = ({
       shape={shape}
       imgLoading="lazy"
       alt={alt}
+      disabled={disabled}
       {...testProps}
     />
   );
 
   if (networkUrl) {
     return (
-      <DotSymbol src={networkUrl} pin={badgePosition} size={mediaImageDotSizeMap[size]}>
+      <DotSymbol
+        src={networkUrl}
+        pin={badgePosition}
+        size={mediaImageDotSizeMap[size]}
+        disabled={disabled}
+      >
         {Image}
       </DotSymbol>
     );
