@@ -38,6 +38,7 @@ export const mediaImageDotSizeMap = {
   48: 20,
   56: 24,
   64: 24,
+  72: 32,
 } as const;
 
 export const Skeleton = (_props: SkeletonProps) => <div data-testid="skeleton" />;
@@ -67,4 +68,5 @@ export const mediaImageDotIconSizeMap = {
   48: 20,
   56: 24,
   64: 24,
+  72: 32,
 } as const;
