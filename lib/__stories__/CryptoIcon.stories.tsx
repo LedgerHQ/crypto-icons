@@ -25,7 +25,7 @@ const meta: Meta<typeof CryptoIcon> = {
     },
     size: {
       control: 'select',
-      options: [12, 16, 20, 24, 32, 40, 48, 56, 64],
+      options: [12, 16, 20, 24, 32, 40, 48, 56, 64, 72],
     },
     shape: {
       control: 'radio',
@@ -56,7 +56,7 @@ export const Base: Story = {
 export const SizeShowcase: Story = {
   render: () => (
     <div className="flex gap-4 items-end">
-      {([12, 16, 20, 24, 32, 40, 48, 56, 64] as const).map((s) => (
+      {([12, 16, 20, 24, 32, 40, 48, 56, 64, 72] as const).map((s) => (
         <div key={s} className="flex flex-col items-center gap-2">
           <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={s} />
           <span style={{ fontSize: 10, color: '#888' }}>{s}</span>
@@ -153,7 +153,7 @@ export const FallbackShowcase: Story = {
   render: () => (
     <div className="flex flex-col gap-8">
       <div className="flex gap-4 items-end">
-        {([12, 16, 20, 24, 32, 40, 48, 56, 64] as const).map((s) => (
+        {([12, 16, 20, 24, 32, 40, 48, 56, 64, 72] as const).map((s) => (
           <div key={s} className="flex flex-col items-center gap-2">
             <CryptoIcon ledgerId="not_a_real_coin" ticker="BTC" size={s} />
             <span style={{ fontSize: 10, color: '#888' }}>{s}</span>

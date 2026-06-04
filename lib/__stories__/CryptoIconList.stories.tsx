@@ -284,7 +284,7 @@ SingleLedgerIcon.argTypes = {
   ticker: { control: 'text', description: 'The ticker of the icon to display' },
   size: {
     control: 'select',
-    options: [12, 16, 20, 24, 32, 40, 48, 56, 64],
+    options: [12, 16, 20, 24, 32, 40, 48, 56, 64, 72],
     description: 'The size of the icon',
     defaultValue: 56,
   },
