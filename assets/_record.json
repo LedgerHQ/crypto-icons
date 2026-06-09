@@ -247,7 +247,7 @@
     "ids": ["base/erc20/brett"]
   },
   "BTC": {
-    "ids": ["bitcoin"]
+    "ids": ["bitcoin", "bsc/bep20/binance-peg_btcb_token"]
   },
   "BTC_Testnet": {
     "ids": ["bitcoin_testnet"]
@@ -611,6 +611,11 @@
   },
   "GT": {
     "ids": ["ethereum/erc20/gatechaintoken"]
+  },
+  "H": {
+    "ids": [
+      "bsc/bep20/humanity_0x44f161ae29361e332dea039dfa2f404e0bc5b5cc"
+    ]
   },
   "HBAR": {
     "ids": ["hedera"]
@@ -1399,6 +1404,13 @@
       "optimism/erc20/threshold_network_token_0x747e42eb0591547a0ab429b3627816208c734ea7"
     ]
   },
+  "TAO": {
+    "ids": [
+      "bittensor",
+      "ethereum/erc20/wrapped_tao",
+      "solana/spl/wrapped_tao_9wakgc8zxwsgangtkoneffkafubkw4bfuuupkrx6nrqq"
+    ]
+  },
   "TBTC": {
     "ids": [
       "arbitrum/erc20/arbitrum_tbtc_v2",
@@ -1831,6 +1843,11 @@
   "VLISTX": {
     "ids": [
       "stacks/sip010/vlistx_sm26nbc8sfhnw4p1y4dfh27974p56wn86c92hpehh.token-vlqstx::vlqstx"
+    ]
+  },
+  "VVV": {
+    "ids": [
+      "base/erc20/venice_token_0xacfe6019ed1a7dc6f7b508c02d1b04ec88cc21bf"
     ]
   },
   "WAL": {
