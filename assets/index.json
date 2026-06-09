@@ -452,6 +452,9 @@
   "base/erc20/usds_stablecoin_0x820c137fa70c8691f0e44dc420a5e53c168921dc": {
     "icon": "USDS.png"
   },
+  "base/erc20/venice_token_0xacfe6019ed1a7dc6f7b508c02d1b04ec88cc21bf": {
+    "icon": "VVV.png"
+  },
   "base/erc20/virtual_protocol": {
     "icon": "VIRTUAL.png"
   },
@@ -517,6 +520,9 @@
   },
   "bitlayer/erc20/chainlink_token_0x56b275c0ec034a229a1ded8db17089544bc276d9": {
     "icon": "LINK.png"
+  },
+  "bittensor": {
+    "icon": "TAO.png"
   },
   "bittorrent": {
     "icon": "BTT.png"
@@ -598,6 +604,9 @@
   },
   "bsc/bep20/binance-peg_basic_attention_token": {
     "icon": "BAT.png"
+  },
+  "bsc/bep20/binance-peg_bitcoin_cash_abc": {
+    "icon": "BTC.png"
   },
   "bsc/bep20/binance-peg_bitcoin_cash_token": {
     "icon": "BCH.png"
@@ -700,6 +709,9 @@
   },
   "bsc/bep20/htx": {
     "icon": "HTX.png"
+  },
+  "bsc/bep20/humanity_0x44f161ae29361e332dea039dfa2f404e0bc5b5cc": {
+    "icon": "H.png"
   },
   "bsc/bep20/illuvium": {
     "icon": "ILV.png"
