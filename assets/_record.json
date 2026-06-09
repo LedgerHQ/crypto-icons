@@ -247,7 +247,7 @@
     "ids": ["base/erc20/brett"]
   },
   "BTC": {
-    "ids": ["bitcoin", "bsc/bep20/binance-peg_bitcoin_cash_abc"]
+    "ids": ["bitcoin", "bsc/bep20/binance-peg_btcb_token"]
   },
   "BTC_Testnet": {
     "ids": ["bitcoin_testnet"]
@@ -1405,7 +1405,11 @@
     ]
   },
   "TAO": {
-    "ids": ["bittensor"]
+    "ids": [
+      "bittensor",
+      "ethereum/erc20/wrapped_tao",
+      "solana/spl/wrapped_tao_9wakgc8zxwsgangtkoneffkafubkw4bfuuupkrx6nrqq"
+    ]
   },
   "TBTC": {
     "ids": [

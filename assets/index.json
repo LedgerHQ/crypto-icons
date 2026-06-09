@@ -605,14 +605,14 @@
   "bsc/bep20/binance-peg_basic_attention_token": {
     "icon": "BAT.png"
   },
-  "bsc/bep20/binance-peg_bitcoin_cash_abc": {
-    "icon": "BTC.png"
-  },
   "bsc/bep20/binance-peg_bitcoin_cash_token": {
     "icon": "BCH.png"
   },
   "bsc/bep20/binance-peg_bsc-usd": {
     "icon": "USDT.png"
+  },
+  "bsc/bep20/binance-peg_btcb_token": {
+    "icon": "BTC.png"
   },
   "bsc/bep20/binance-peg_chainlink_token": {
     "icon": "LINK.png"
@@ -1547,6 +1547,9 @@
   "ethereum/erc20/wrapped_eeth": {
     "icon": "WEETH.png"
   },
+  "ethereum/erc20/wrapped_tao": {
+    "icon": "TAO.png"
+  },
   "ethereum/erc20/wrapped_ton_coin": {
     "icon": "TONCOIN.png"
   },
@@ -2431,6 +2434,9 @@
   },
   "solana/spl/wrapped_ftt_sollet_agfead2et2zjif9jagpdmixqqvw5i81abdvke7phnfz3": {
     "icon": "FTT.png"
+  },
+  "solana/spl/wrapped_tao_9wakgc8zxwsgangtkoneffkafubkw4bfuuupkrx6nrqq": {
+    "icon": "TAO.png"
   },
   "solana_devnet": {
     "icon": "SOL_Testnet.png"
