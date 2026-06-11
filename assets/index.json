@@ -212,6 +212,9 @@
   "arc": {
     "icon": "ARC.png"
   },
+  "arc/erc20/usdc_0x0000000000000000000000000000000000000000": {
+    "icon": "USDC.png"
+  },
   "arc_testnet": {
     "icon": "ARC_Testnet.png"
   },
@@ -367,6 +370,9 @@
   },
   "base/erc20/coinbase_wrapped_staked_eth": {
     "icon": "CBETH.png"
+  },
+  "base/erc20/curve_dao_token_0x8ee73c484a26e0a5df2ee2a4960b789967dd0415": {
+    "icon": "CRV.png"
   },
   "base/erc20/dai_stablecoin": {
     "icon": "DAI.png"
@@ -776,6 +782,9 @@
   "bsc/bep20/project_galaxy": {
     "icon": "GAL.png"
   },
+  "bsc/bep20/pudgy_penguins_0x6418c0dd099a9fda397c766304cdd918233e8847": {
+    "icon": "PENGU.png"
+  },
   "bsc/bep20/safepal_token": {
     "icon": "SFP.png"
   },
@@ -946,6 +955,9 @@
   },
   "energi/erc20/chainlink_0x68ca48ca2626c415a89756471d4ade2cc9034008": {
     "icon": "LINK.png"
+  },
+  "energi/erc20/curve_dao_token_0xd3319eaf3c4743ac75aace77befcfa445ed6e69e": {
+    "icon": "CRV.png"
   },
   "energi/erc20/ftx_token_0xda79dcf81c948dfb85cbda738bc898195a2ba861": {
     "icon": "FTT.png"
@@ -1586,6 +1598,9 @@
   "etherlink/erc20/chainlink_0x8ce7618e8f8e514d13889283f58ff03b794e6cc3": {
     "icon": "LINK.png"
   },
+  "etherlink/erc20/curve_dao_token_0x004a476b5b76738e34c86c7144554b9d34402f13": {
+    "icon": "CRV.png"
+  },
   "etherlink/erc20/lombard_staked_bitcoin_0xecac9c5f704e954931349da37f60e39f515c11c1": {
     "icon": "LBTC.png"
   },
@@ -1909,6 +1924,9 @@
   },
   "neo": {
     "icon": "NEO.png"
+  },
+  "neon_evm/erc20/bonk_0xd4b6520f7fb78e1ee75639f3376c581a71bcdb0e": {
+    "icon": "BONK.png"
   },
   "neon_evm/erc20/jito_staked_sol_0xfa8fb7e3bd299b2a9693b1bfdcf5dd13ab57007e": {
     "icon": "JITOSOL.png"
@@ -2381,6 +2399,9 @@
   "solana/spl/ordinals_u9nmk5sqovm6acvcqbbq8xumpfqdpsyxdxvwxux4sjy": {
     "icon": "ORDI.png"
   },
+  "solana/spl/pancakeswap_token_4qqez5lwsz6huupuu8jctgxyw1myqcnbfaw1swzp89hl": {
+    "icon": "CAKE.png"
+  },
   "solana/spl/paypal_usd_2b1kv6dkpanxd5ixfnxcpjxmkwqjjaymczfhsfu24gxo": {
     "icon": "PYUSD.png"
   },
@@ -2791,6 +2812,9 @@
   },
   "unichain": {
     "icon": "UNICHAIN.png"
+  },
+  "unichain/erc20/bonk_0xbbe97f3522101e5b6976cbf77376047097ba837f": {
+    "icon": "BONK.png"
   },
   "unichain/erc20/chainlink_token_0xef66491eab4bbb582c57b14778afd8dfb70d8a1a": {
     "icon": "LINK.png"

@@ -235,7 +235,9 @@
       "bsc/bep20/bonk",
       "ethereum/erc20/bonk",
       "polygon/erc20/bonk",
-      "solana/spl/dezxaz8z7pnrnrjjz3wxborgixca6xjnb7yab1ppb263"
+      "solana/spl/dezxaz8z7pnrnrjjz3wxborgixca6xjnb7yab1ppb263",
+      "neon_evm/erc20/bonk_0xd4b6520f7fb78e1ee75639f3376c581a71bcdb0e",
+      "unichain/erc20/bonk_0xbbe97f3522101e5b6976cbf77376047097ba837f"
     ]
   },
   "BRC20-TRIO": {
@@ -282,7 +284,8 @@
       "ethereum/erc20/pancakeswap_token",
       "linea/erc20/pancakeswap_token",
       "polygon_zk_evm/erc20/pancakeswap_token_0x0d1e753a25ebda689453309112904807625befbe",
-      "zksync/erc20/pancakeswap_token_0x3a287a06c66f9e95a56327185ca2bdf5f031cecd"
+      "zksync/erc20/pancakeswap_token_0x3a287a06c66f9e95a56327185ca2bdf5f031cecd",
+      "solana/spl/pancakeswap_token_4qqez5lwsz6huupuu8jctgxyw1myqcnbfaw1swzp89hl"
     ]
   },
   "CANTON": {
@@ -358,7 +361,10 @@
       "ethereum/erc20/curve_dao_token",
       "fantom/erc20/curve_dao",
       "optimism/erc20/curve_dao_token",
-      "polygon/erc20/crv_(pos)"
+      "polygon/erc20/crv_(pos)",
+      "base/erc20/curve_dao_token_0x8ee73c484a26e0a5df2ee2a4960b789967dd0415",
+      "energi/erc20/curve_dao_token_0xd3319eaf3c4743ac75aace77befcfa445ed6e69e",
+      "etherlink/erc20/curve_dao_token_0x004a476b5b76738e34c86c7144554b9d34402f13"
     ]
   },
   "CSPR": {
@@ -1072,7 +1078,8 @@
   "PENGU": {
     "ids": [
       "ethereum/erc20/pudgy_penguins_0x6418c0dd099a9fda397c766304cdd918233e8847",
-      "solana/spl/pudgy_penguins_2zmmhcvqexdtde6vsfs7s7d5ouodfjhe8vd1gnbouauv"
+      "solana/spl/pudgy_penguins_2zmmhcvqexdtde6vsfs7s7d5ouodfjhe8vd1gnbouauv",
+      "bsc/bep20/pudgy_penguins_0x6418c0dd099a9fda397c766304cdd918233e8847"
     ]
   },
   "PEPE": {
@@ -1701,7 +1708,8 @@
       "linea/erc20/usdc_e",
       "polygon/erc20/usd_coin_(pos)",
       "zksync/erc20/usdc",
-      "tezos/fa2/ethereum_usdc_kt1ussfaxyqcjsvpeid7u1bwgky3tayn7nwy_2"
+      "tezos/fa2/ethereum_usdc_kt1ussfaxyqcjsvpeid7u1bwgky3tayn7nwy_2",
+      "arc/erc20/usdc_0x0000000000000000000000000000000000000000"
     ]
   },
   "USDG": {
