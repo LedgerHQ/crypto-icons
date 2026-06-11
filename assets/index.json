@@ -35,6 +35,9 @@
   "arbitrum": {
     "icon": "ARB.png"
   },
+  "arbitrum/erc20/aave_arbitrum_arb": {
+    "icon": "ARB.png"
+  },
   "arbitrum/erc20/aave_arbitrum_weth": {
     "icon": "WETH.png"
   },

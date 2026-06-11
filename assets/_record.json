@@ -111,7 +111,7 @@
     "ids": ["arweave", "ethereum/erc20/arweave"]
   },
   "ARB": {
-    "ids": ["arbitrum", "arbitrum/erc20/arbitrum", "ethereum/erc20/arbitrum"]
+    "ids": ["arbitrum", "arbitrum/erc20/arbitrum", "arbitrum/erc20/aave_arbitrum_arb", "ethereum/erc20/arbitrum"]
   },
   "ARC": {
     "ids": ["arc"]
