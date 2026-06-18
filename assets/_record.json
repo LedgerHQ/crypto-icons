@@ -1197,6 +1197,12 @@
       "solana/spl/rndrizkt3mk1iimdxrdwabcf7zg7ar5t4nud4ekhbof"
     ]
   },
+  "ROBINHOOD": {
+    "ids": ["robinhood"]
+  },
+  "ROBINHOOD_Testnet": {
+    "ids": ["robinhood_testnet"]
+  },
   "ROSE": {
     "ids": ["bsc/bep20/wrapped_rose", "ethereum/erc20/oasis_labs"]
   },
