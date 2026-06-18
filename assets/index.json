@@ -2276,6 +2276,12 @@
   "ripple": {
     "icon": "XRP.png"
   },
+  "robinhood": {
+    "icon": "ROBINHOOD.png"
+  },
+  "robinhood_testnet": {
+    "icon": "ROBINHOOD_Testnet.png"
+  },
   "rsk": {
     "icon": "RBTC.png"
   },
