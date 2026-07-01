@@ -647,7 +647,7 @@
     "ids": ["ethereum/erc20/htx", "bsc/bep20/htx"]
   },
   "HYPE": {
-    "ids": ["hyperevm"]
+    "ids": ["hyperevm", "hypercore"]
   },
   "ETH_Testnet": {
     "ids": ["ethereum_hoodi", "ethereum_sepolia", "ethereum_holesky"]
