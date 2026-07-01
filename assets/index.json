@@ -1706,6 +1706,9 @@
   "hive": {
     "icon": "HIVE.png"
   },
+  "hypercore": {
+    "icon": "HYPE.png"
+  },
   "hyperevm": {
     "icon": "HYPE.png"
   },
