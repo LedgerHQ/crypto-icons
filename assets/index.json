@@ -855,7 +855,7 @@
     "icon": "ROSE.png"
   },
   "bsc/bep20/wrapped_ton_coin": {
-    "icon": "TONCOIN.png"
+    "icon": "GRAM.png"
   },
   "bsc/bep20/zeebu": {
     "icon": "ZBU.png"
@@ -1587,7 +1587,7 @@
     "icon": "TAO.png"
   },
   "ethereum/erc20/wrapped_ton_coin": {
-    "icon": "TONCOIN.png"
+    "icon": "GRAM.png"
   },
   "ethereum/erc20/wsteth": {
     "icon": "WSTETH.png"
@@ -2814,7 +2814,7 @@
     "icon": "RUNE.png"
   },
   "ton": {
-    "icon": "TON.png"
+    "icon": "GRAM.png"
   },
   "ton/jetton/eqcxe6mutqjkfngfarotkot1lzbdiix1kcixrv7nw2id_sds": {
     "icon": "USDT.png"
