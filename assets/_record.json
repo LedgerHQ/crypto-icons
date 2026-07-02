@@ -607,6 +607,13 @@
       "linea/erc20/gnosis_token"
     ]
   },
+  "GRAM": {
+    "ids": [
+      "ton",
+      "ethereum/erc20/wrapped_ton_coin",
+      "bsc/bep20/wrapped_ton_coin"
+    ]
+  },
   "GRT": {
     "ids": [
       "arbitrum/erc20/graph_token",
@@ -1459,13 +1466,6 @@
   },
   "TKX": {
     "ids": ["ethereum/erc20/tokenize_emblem"]
-  },
-  "TON": {
-    "ids": [
-      "ton",
-      "ethereum/erc20/wrapped_ton_coin",
-      "bsc/bep20/wrapped_ton_coin"
-    ]
   },
   "TONCOIN": {
     "ids": ["bsc/bep20/wrapped_ton_coin", "ethereum/erc20/wrapped_ton_coin"]
