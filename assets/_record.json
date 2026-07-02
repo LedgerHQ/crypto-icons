@@ -1467,9 +1467,6 @@
   "TKX": {
     "ids": ["ethereum/erc20/tokenize_emblem"]
   },
-  "TONCOIN": {
-    "ids": ["bsc/bep20/wrapped_ton_coin", "ethereum/erc20/wrapped_ton_coin"]
-  },
   "TRUMP": {
     "ids": [
       "solana/spl/official_trump_6p6xghyf7aee6tzksmfsko444wqop15icusqi2jfgipn"

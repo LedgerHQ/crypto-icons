@@ -855,7 +855,7 @@
     "icon": "ROSE.png"
   },
   "bsc/bep20/wrapped_ton_coin": {
-    "icon": "TONCOIN.png"
+    "icon": "GRAM.png"
   },
   "bsc/bep20/zeebu": {
     "icon": "ZBU.png"
@@ -1587,7 +1587,7 @@
     "icon": "TAO.png"
   },
   "ethereum/erc20/wrapped_ton_coin": {
-    "icon": "TONCOIN.png"
+    "icon": "GRAM.png"
   },
   "ethereum/erc20/wsteth": {
     "icon": "WSTETH.png"
