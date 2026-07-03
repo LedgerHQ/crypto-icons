@@ -2888,6 +2888,9 @@
   "westend": {
     "icon": "DOT_Testnet.png"
   },
+  "xion": {
+    "icon": "VERONA.png"
+  },
   "zcash": {
     "icon": "ZEC.png"
   },
