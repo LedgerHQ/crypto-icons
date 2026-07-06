@@ -401,6 +401,9 @@
   "base/erc20/iotex_network": {
     "icon": "IOTX.png"
   },
+  "base/erc20/jito_staked_sol_0x97be14dd8f994a5364573bc035d85309e7cb34de": {
+    "icon": "JITOSOL.png"
+  },
   "base/erc20/kelpdao_restaked_eth": {
     "icon": "RSETH.png"
   },
@@ -823,6 +826,9 @@
   },
   "bsc/bep20/trust_wallet": {
     "icon": "TWT.png"
+  },
+  "bsc/bep20/us_yield_coin_0x8d0fa28f221eb5735bc71d3a0da67ee5bc821311": {
+    "icon": "USYC.png"
   },
   "bsc/bep20/usde_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
     "icon": "USDE.png"
@@ -2281,6 +2287,21 @@
   },
   "robinhood": {
     "icon": "ROBINHOOD.png"
+  },
+  "robinhood/erc20/ethena_0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
+    "icon": "ENA.png"
+  },
+  "robinhood/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
+    "icon": "SUSDE.png"
+  },
+  "robinhood/erc20/usde_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
+    "icon": "USDE.png"
+  },
+  "robinhood/erc20/weth_0x0bd7d308f8e1639fab988df18a8011f41eacad73": {
+    "icon": "WETH.png"
+  },
+  "robinhood/erc20/wrapped_eeth_0x2dc99af320bc317c567f24ee95811dcbd5983dfd": {
+    "icon": "WEETH.png"
   },
   "robinhood_testnet": {
     "icon": "ROBINHOOD_Testnet.png"
