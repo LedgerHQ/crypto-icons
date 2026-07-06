@@ -458,7 +458,8 @@
       "linea/erc20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133",
       "scroll/erc20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133",
       "zksync/erc20/ena_0x686b311f82b407f0be842652a98e5619f64cc25f",
-      "metis/erc20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133"
+      "metis/erc20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133",
+      "robinhood/erc20/ethena_0x58538e6a46e07434d7e7375bc268d3cb839c0133"
     ]
   },
   "ENJ": {
@@ -700,7 +701,8 @@
     "ids": [
       "solana/spl/j1toso1uck3rlmjorhttrvwy9hj7x8v9yyac6y7kgcpn",
       "neon_evm/erc20/jito_staked_sol_0xfa8fb7e3bd299b2a9693b1bfdcf5dd13ab57007e",
-      "katana/erc20/jito_staked_sol_0x6c16e26013f2431e8b2e1ba7067ecccad0db6c52"
+      "katana/erc20/jito_staked_sol_0x6c16e26013f2431e8b2e1ba7067ecccad0db6c52",
+      "base/erc20/jito_staked_sol_0x97be14dd8f994a5364573bc035d85309e7cb34de"
     ]
   },
   "JUP": {
@@ -1371,7 +1373,8 @@
       "linea/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
       "scroll/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
       "zksync/erc20/staked_usde_0xad17da2f6ac76746ef261e835c50b2651ce36da8",
-      "berachain/erc20/susde"
+      "berachain/erc20/susde",
+      "robinhood/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2"
     ]
   },
   "SUPER": {
@@ -1717,7 +1720,7 @@
       "polygon/erc20/usd_coin_(pos)",
       "zksync/erc20/usdc",
       "tezos/fa2/ethereum_usdc_kt1ussfaxyqcjsvpeid7u1bwgky3tayn7nwy_2",
-      "arc/erc20/usdc_0x0000000000000000000000000000000000000000"
+      "arc/erc20/usdc_0x3600000000000000000000000000000000000000"
     ]
   },
   "USDG": {
@@ -1755,7 +1758,8 @@
       "scroll/erc20/usde_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
       "zksync/erc20/usde_0x39fe7a0dacce31bd90418e3e659fb0b5f0b3db0d",
       "berachain/erc20/usde",
-      "hyperevm/erc20/usdeoft_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      "hyperevm/erc20/usdeoft_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+      "robinhood/erc20/usde_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
     ]
   },
   "USDF": {
@@ -1782,7 +1786,8 @@
   "USYC": {
     "ids": [
       "ethereum/erc20/us_yield_coin_0x136471a34f6ef19fe571effc1ca711fdb8e49f2b",
-      "solana/spl/us_yield_coin_7lwanzteuktvfjv4mhygkxxdaucqyfpjysl9pxxdrqgn"
+      "solana/spl/us_yield_coin_7lwanzteuktvfjv4mhygkxxdaucqyfpjysl9pxxdrqgn",
+      "bsc/bep20/us_yield_coin_0x8d0fa28f221eb5735bc71d3a0da67ee5bc821311"
     ]
   },
   "USDT": {
@@ -1930,7 +1935,8 @@
       "polygon/erc20/aave_polygon_weth",
       "arbitrum/erc20/aave_arbitrum_weth",
       "optimism/erc20/aave_optimism_weth",
-      "bsc/bep20/binance-peg_ethereum_token"
+      "bsc/bep20/binance-peg_ethereum_token",
+      "robinhood/erc20/weth_0x0bd7d308f8e1639fab988df18a8011f41eacad73"
     ]
   },
   "WBETH": {
@@ -2040,7 +2046,8 @@
       "zksync/erc20/wrapped_eeth_0xc1fa6e2e8667d9be0ca938a54c7e0285e9df924a",
       "sonic/erc20/wrapped_eeth_0xa3d68b74bf0528fdd07263c60d6488749044914b",
       "berachain/erc20/weeth",
-      "unichain/erc20/wrapped_eeth_0x7dcc39b4d1c53cb31e1abc0e358b43987fef80f7"
+      "unichain/erc20/wrapped_eeth_0x7dcc39b4d1c53cb31e1abc0e358b43987fef80f7",
+      "robinhood/erc20/wrapped_eeth_0x2dc99af320bc317c567f24ee95811dcbd5983dfd"
     ]
   }
 }
