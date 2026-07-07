@@ -8,6 +8,12 @@
   "aleo": {
     "icon": "ALEO.png"
   },
+  "aleo/arc22/usad": {
+    "icon": "USAD.png"
+  },
+  "aleo/arc22/usdcx": {
+    "icon": "USDC.png"
+  },
   "aleph_zero": {
     "icon": "AZERO.png"
   },
