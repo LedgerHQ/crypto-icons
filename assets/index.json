@@ -1,4 +1,7 @@
 {
+  "adi": {
+    "icon": "ADI.png"
+  },
   "adi/erc20/chainlink_token_0x76a443768a5e3b8d1aed0105fc250877841deb40": {
     "icon": "ADI.png"
   },
@@ -1039,6 +1042,9 @@
   },
   "ethereum/erc20/aave_ethereum_weth": {
     "icon": "WETH.png"
+  },
+  "ethereum/erc20/adi_0x8b1484d57abbe239bb280661377363b03c89caea": {
+    "icon": "ADI.png"
   },
   "ethereum/erc20/aioz_network": {
     "icon": "AIOZ.png"
@@ -2297,6 +2303,9 @@
   "robinhood/erc20/ethena_0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
     "icon": "ENA.png"
   },
+  "robinhood/erc20/global_dollar_0x5fc5360d0400a0fd4f2af552add042d716f1d168": {
+    "icon": "USDG.png"
+  },
   "robinhood/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
     "icon": "SUSDE.png"
   },
@@ -2307,6 +2316,9 @@
     "icon": "WETH.png"
   },
   "robinhood/erc20/wrapped_eeth_0x2dc99af320bc317c567f24ee95811dcbd5983dfd": {
+    "icon": "WEETH.png"
+  },
+  "robinhood/erc20/wrapped_eeth_0xa3d68b74bf0528fdd07263c60d6488749044914b": {
     "icon": "WEETH.png"
   },
   "robinhood_testnet": {
@@ -2389,6 +2401,9 @@
   },
   "solana/spl/a1klobrkbde8ty9qtnqutq3c2ortoc3u7twggz7seto6": {
     "icon": "USDY.png"
+  },
+  "solana/spl/aave_aave1kkknespw4murjmj9jzs9qzee8cpxq3viczudfc1": {
+    "icon": "AAVE.png"
   },
   "solana/spl/beldex_cp4w2b3og2tafupye1kr8pdejwwahteskppznffn9n9d": {
     "icon": "BELDEX.png"

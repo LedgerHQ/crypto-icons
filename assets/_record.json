@@ -33,7 +33,8 @@
       "arbitrum/erc20/aave_token_0xba5ddd1f9d7f570dc94a51479a000e3bce967196",
       "optimism/erc20/aave_token",
       "fantom/erc20/aave",
-      "energi/erc20/aave_0xa7f2f790355e0c32cab03f92f6eb7f488e6f049a"
+      "energi/erc20/aave_0xa7f2f790355e0c32cab03f92f6eb7f488e6f049a",
+      "solana/spl/aave_aave1kkknespw4murjmj9jzs9qzee8cpxq3viczudfc1"
     ]
   },
   "ABTC": {
@@ -49,8 +50,10 @@
   },
   "ADI": {
     "ids": [
+      "adi",
       "adi/erc20/chainlink_token_0x76a443768a5e3b8d1aed0105fc250877841deb40",
-      "adi/erc20/ddsc_0x1211f0cfe66739433c1330e21f4951b80e813479"
+      "adi/erc20/ddsc_0x1211f0cfe66739433c1330e21f4951b80e813479",
+      "ethereum/erc20/adi_0x8b1484d57abbe239bb280661377363b03c89caea"
     ]
   },
   "AEUSDC": {
@@ -1730,6 +1733,7 @@
   "USDG": {
     "ids": [
       "ethereum/erc20/global_dollar_0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+      "robinhood/erc20/global_dollar_0x5fc5360d0400a0fd4f2af552add042d716f1d168",
       "solana/spl/global_dollar_2u1tszseqz3qbwf3ungpfc8tzmk2tdiwknnrmwgwjgwh"
     ]
   },
@@ -2051,7 +2055,8 @@
       "sonic/erc20/wrapped_eeth_0xa3d68b74bf0528fdd07263c60d6488749044914b",
       "berachain/erc20/weeth",
       "unichain/erc20/wrapped_eeth_0x7dcc39b4d1c53cb31e1abc0e358b43987fef80f7",
-      "robinhood/erc20/wrapped_eeth_0x2dc99af320bc317c567f24ee95811dcbd5983dfd"
+      "robinhood/erc20/wrapped_eeth_0x2dc99af320bc317c567f24ee95811dcbd5983dfd",
+      "robinhood/erc20/wrapped_eeth_0xa3d68b74bf0528fdd07263c60d6488749044914b"
     ]
   }
 }
