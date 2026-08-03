@@ -196,6 +196,9 @@
   "BEAM": {
     "ids": ["bsc/bep20/beam", "ethereum/erc20/beam", "avalanche_c_chain/erc20/beam", "base/erc20/beam_0x2a66d51407b84b82b5aff3dec4d49f72cbcd322a"]
   },
+  "BEAT": {
+    "ids": ["bsc/bep20/beat_token_0xcf3232b85b43bca90e51d38cc06cc8bb8c8a3e36"]
+  },
   "BELDEX": {
     "ids": [
       "solana/spl/beldex_cp4w2b3og2tafupye1kr8pdejwwahteskppznffn9n9d",
@@ -483,6 +486,13 @@
   "ETHW": {
     "ids": ["ethereum_pow"]
   },
+  "EURSAFO": {
+    "ids": [
+      "ethereum/erc20/spiko_amundi_overnight_swap_fund_eur_0x0990b149e915cb08e2143a5c6f669c907eddc8b0",
+      "base/erc20/spiko_amundi_overnight_swap_fund_eur_0xd879846cbe20751bde8a9342a3cca00a3e56ca47",
+      "arbitrum/erc20/spiko_amundi_overnight_swap_fund_eur_0x1412632f2b89e87bfa20c1318a43ced25f1d7b76"
+    ]
+  },
   "EUSX": {
     "ids": [
       "solana/spl/eusx_token_3thdfzqkm6kryvglg48kapg5trmhymky1icra9xop1wc"
@@ -700,6 +710,13 @@
   "JTO": {
     "ids": ["solana/spl/jtojtomepa8bep8auqc6ext5frijwffmwqx2v2f9mcl"]
   },
+  "JTRSY": {
+    "ids": [
+      "ethereum/erc20/janus_henderson_anemoy_treasury_fund_0x8c213ee79581ff4984583c6a801e5263418c4b86",
+      "base/erc20/anemoy_liquid_treasury_fund_1_0x8c213ee79581ff4984583c6a801e5263418c4b86",
+      "monad/erc20/janus_henderson_anemoy_treasury_fund_token_0xc18e6f730896971a79d748e8dea61067a9bc6040"
+    ]
+  },
   "JITOSOL": {
     "ids": [
       "solana/spl/j1toso1uck3rlmjorhttrvwy9hj7x8v9yyac6y7kgcpn",
@@ -904,6 +921,14 @@
   },
   "MAVIA": {
     "ids": ["base/erc20/heroes_of_mavia", "ethereum/erc20/heroes_of_mavia"]
+  },
+  "MBTC": {
+    "ids": [
+      "ethereum/erc20/merlin_btc_0x2f913c820ed3beb3a67391a6eff64e70c4b20b19",
+      "bsc/bep20/merlin_btc_0x9bfa177621119e64cecbeabe184ab9993e2ef727",
+      "linea/erc20/merlin_btc",
+      "zksync/erc20/merlin_btc_0xe757355edba7ced7b8c0271bba4efda184ad75ab"
+    ]
   },
   "MEGA": {
     "ids": [
@@ -1120,6 +1145,9 @@
   },
   "PRIME": {
     "ids": ["base/erc20/prime", "ethereum/erc20/prime"]
+  },
+  "PUMP": {
+    "ids": ["solana/spl/pump_pumpcmxqmfrsakq5r49wcjnrayyrqmxz6ae8h7h9dfn"]
   },
   "PYTH": {
     "ids": ["solana/spl/hz1jovnivvgrgniiyveozevgz58xau3rkwx8eacqbct3", "neon_evm/erc20/pyth_network_0x0575dd4afd93b7522fee4e0179f243eca3856137"]
@@ -1736,6 +1764,9 @@
       "robinhood/erc20/global_dollar_0x5fc5360d0400a0fd4f2af552add042d716f1d168",
       "solana/spl/global_dollar_2u1tszseqz3qbwf3ungpfc8tzmk2tdiwknnrmwgwjgwh"
     ]
+  },
+  "USDGO": {
+    "ids": ["solana/spl/usdgo_72pult71h93z9czhubrtwfpl4tg3wzuhnocc7p8gxigu"]
   },
   "USDH": {
     "ids": [
