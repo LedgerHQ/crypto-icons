@@ -271,6 +271,12 @@
       "tron/trc20/tafjulxivgt4qwk6uzwjqwzxtsagaqnvp4"
     ]
   },
+  "BTW": {
+    "ids": [
+      "ethereum/erc20/bitway_token_0x3a63de3572c69a1307ff08394f3ee7702c16d25d",
+      "bsc/bep20/bitway_token_0x444045b0ee1ee319a660a5e3d604ca0ffa35acaa"
+    ]
+  },
   "BUIDL": {
     "ids": [
       "ethereum/erc20/blackrock_usd_institutional_digital_liquidity_fund_0x7712c34205737192402172409a8f7ccef8aa2aec",
@@ -465,7 +471,8 @@
       "scroll/erc20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133",
       "zksync/erc20/ena_0x686b311f82b407f0be842652a98e5619f64cc25f",
       "metis/erc20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133",
-      "robinhood/erc20/ethena_0x58538e6a46e07434d7e7375bc268d3cb839c0133"
+      "robinhood/erc20/ethena_0x58538e6a46e07434d7e7375bc268d3cb839c0133",
+      "solana/spl/ethena_72qvbvwpxqmheepfacwwswqefsuy3rhwt6jhqbmntwd1"
     ]
   },
   "ENJ": {
@@ -490,7 +497,9 @@
     "ids": [
       "ethereum/erc20/spiko_amundi_overnight_swap_fund_eur_0x0990b149e915cb08e2143a5c6f669c907eddc8b0",
       "base/erc20/spiko_amundi_overnight_swap_fund_eur_0xd879846cbe20751bde8a9342a3cca00a3e56ca47",
-      "arbitrum/erc20/spiko_amundi_overnight_swap_fund_eur_0x1412632f2b89e87bfa20c1318a43ced25f1d7b76"
+      "arbitrum/erc20/spiko_amundi_overnight_swap_fund_eur_0x1412632f2b89e87bfa20c1318a43ced25f1d7b76",
+      "polygon/erc20/spiko_amundi_overnight_swap_fund_eur_0x272ea767712cc4839f4a27ee35eb73116158c8a2",
+      "etherlink/erc20/spiko_amundi_overnight_swap_fund_eur_0x35dfec1813c43d82e6b87c682f560bbb8ea0c121"
     ]
   },
   "EUSX": {
@@ -547,7 +556,8 @@
       "moonbeam/erc20/frax",
       "optimism/erc20/frax",
       "polygon/erc20/frax",
-      "polygon_zk_evm/erc20/frax"
+      "polygon_zk_evm/erc20/frax",
+      "moonriver/erc20/frax_0x1a93b23281cc1cde4c4741353f3064709a16197d"
     ]
   },
   "FRXETH": {
@@ -597,6 +607,15 @@
   "GAMMA": {
     "ids": ["ethereum/erc20/gamma"]
   },
+  "GHO": {
+    "ids": [
+      "ethereum/erc20/gho_token",
+      "avalanche_c_chain/erc20/gho_token_0xfc421ad3c883bf9e7c4f42de845c4e4405799e73",
+      "base/erc20/gho_token_0x6bb7a212910682dcfdbd5bcbb3e28fb4e8da10ee",
+      "monad/erc20/gho_token_0xfc421ad3c883bf9e7c4f42de845c4e4405799e73",
+      "arbitrum/erc20/gho_token"
+    ]
+  },
   "GLM": {
     "ids": ["ethereum/erc20/golem_network_token"]
   },
@@ -618,7 +637,8 @@
     "ids": [
       "arbitrum/erc20/gnosis_token",
       "ethereum/erc20/gnosis",
-      "linea/erc20/gnosis_token"
+      "linea/erc20/gnosis_token",
+      "energi/erc20/gnosis_0xf452bff8e958c6f335f06fc3aac427ee195366fe"
     ]
   },
   "GRAM": {
@@ -704,6 +724,19 @@
   "IP": {
     "ids": ["story"]
   },
+  "JAAA": {
+    "ids": [
+      "ethereum/erc20/janus_henderson_anemoy_aaa_clo_fund_token_0x5a0f93d040de44e78f251b03c43be9cf317dcf64",
+      "solana/spl/janus_henderson_anemoy_aaa_clo_fund_aaajxegjpku7w3x4qtsu4pm1wbj4g2lpcdg7a6xjllyg",
+      "bsc/bep20/janus_henderson_anemoy_aaa_clo_fund_token_0x58f93d6b1ef2f44ec379cb975657c132cbed3b6b",
+      "avalanche_c_chain/erc20/janus_henderson_anemoy_aaa_clo_fund_token_0x58f93d6b1ef2f44ec379cb975657c132cbed3b6b",
+      "base/erc20/janus_henderson_anemoy_aaa_clo_fund_token_0x5a0f93d040de44e78f251b03c43be9cf317dcf64",
+      "monad/erc20/janus_henderson_anemoy_aaa_clo_fund_token_0xad48f183e586e92a591a610397ebf534609df797"
+    ]
+  },
+  "JASMY": {
+    "ids": ["ethereum/erc20/jasmycoin", "bsc/bep20/jasmycoin"]
+  },
   "JST": {
     "ids": ["tron/trc20/tcfll5dx5zjdknwuesxxi1vpwjlvmwzzy9"]
   },
@@ -714,7 +747,8 @@
     "ids": [
       "ethereum/erc20/janus_henderson_anemoy_treasury_fund_0x8c213ee79581ff4984583c6a801e5263418c4b86",
       "base/erc20/anemoy_liquid_treasury_fund_1_0x8c213ee79581ff4984583c6a801e5263418c4b86",
-      "monad/erc20/janus_henderson_anemoy_treasury_fund_token_0xc18e6f730896971a79d748e8dea61067a9bc6040"
+      "monad/erc20/janus_henderson_anemoy_treasury_fund_token_0xc18e6f730896971a79d748e8dea61067a9bc6040",
+      "avalanche_c_chain/erc20/janus_henderson_anemoy_treasury_fund_0xa5d465251fbcc907f5dd6bb2145488dfc6a2627b"
     ]
   },
   "JITOSOL": {
@@ -743,6 +777,12 @@
       "ethereum/erc20/kava",
       "kava_evm",
       "kava_evm_testnet"
+    ]
+  },
+  "KBTC": {
+    "ids": [
+      "optimism/erc20/kraken_wrapped_bitcoin_0x73e0c0d45e048d25fc26fa3159b0aa04bfa4db98",
+      "unichain/erc20/kraken_wrapped_bitcoin_0x73e0c0d45e048d25fc26fa3159b0aa04bfa4db98"
     ]
   },
   "KCS": {
@@ -872,6 +912,12 @@
   },
   "LSD": {
     "ids": ["bsc/bep20/lsd"]
+  },
+  "LSETH": {
+    "ids": [
+      "ethereum/erc20/liquid_staked_eth",
+      "base/erc20/liquid_staked_eth_0xb29749498954a3a821ec37bde86e386df3ce30b6"
+    ]
   },
   "LBTC": {
     "ids": [
@@ -1037,6 +1083,9 @@
       "tron/trc20/tfczxzphnthnsqr5by8tvxsdcfrrz6cpnq"
     ]
   },
+  "NIGHT": {
+    "ids": ["bsc/bep20/night_0xfe930c2d63aed9b82fc4dbc801920dd2c1a3224f"]
+  },
   "NMR": {
     "ids": [
       "ethereum/erc20/nmr",
@@ -1069,6 +1118,12 @@
   },
   "ONDO": {
     "ids": ["ethereum/erc20/ondo"]
+  },
+  "ONE": {
+    "ids": [
+      "bsc/bep20/harmony_one",
+      "energi/erc20/harmony_0xd001188ee1830425fd2b0fb21f6f3bb79bab161e"
+    ]
   },
   "OP": {
     "ids": ["optimism", "optimism/erc20/optimism"]
@@ -1329,6 +1384,24 @@
   "SOL_Testnet": {
     "ids": ["solana_testnet", "solana_devnet"]
   },
+  "SOLVBTC": {
+    "ids": [
+      "ethereum/erc20/solv_btc",
+      "solana/spl/solvbtc_solvhdfvstc74jr9enltdog4gosusn1renmjntfkzvw",
+      "bsc/bep20/solv_btc",
+      "avalanche_c_chain/erc20/solv_btc",
+      "base/erc20/solv_btc_0x3b86ad95859b6ab773f55f8d94b4b9d443ee931f",
+      "polygon/erc20/solv_btc_0xae4efbc7736f963982aacb17efa37fcbab924cb3",
+      "arbitrum/erc20/solv_btc",
+      "mantle/erc20/solv_btc_0xa68d25fc2af7278db4bcdcaabce31814252642a9",
+      "rsk/erc20/solv_btc_0x541fd749419ca806a8bc7da8ac23d346f2df8b77",
+      "zksync/erc20/solv_btc_0x74ed17608cc2b5f30a59d6af07c9ad1b1ab3a5b1",
+      "sonic/erc20/solv_btc_0x541fd749419ca806a8bc7da8ac23d346f2df8b77",
+      "berachain/erc20/solv_btc_0x541fd749419ca806a8bc7da8ac23d346f2df8b77",
+      "monad/erc20/solv_btc_0xae4efbc7736f963982aacb17efa37fcbab924cb3",
+      "sei_evm/erc20/solv_btc_0x541fd749419ca806a8bc7da8ac23d346f2df8b77"
+    ]
+  },
   "SOMI": {
     "ids": ["somnia"]
   },
@@ -1351,6 +1424,9 @@
   },
   "STG": {
     "ids": ["arbitrum/erc20/stargatetoken"]
+  },
+  "STONKBROKER": {
+    "ids": ["robinhood/erc20/stonkbroker_0xe934e36a439c94017b64a3fece66af12099abf50"]
   },
   "STORJ": {
     "ids": ["ethereum/erc20/storj"]
@@ -1405,7 +1481,8 @@
       "scroll/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
       "zksync/erc20/staked_usde_0xad17da2f6ac76746ef261e835c50b2651ce36da8",
       "berachain/erc20/susde",
-      "robinhood/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2"
+      "robinhood/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+      "monad/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2"
     ]
   },
   "SUPER": {
@@ -1452,7 +1529,8 @@
   },
   "SYRUPUSDT": {
     "ids": [
-      "ethereum/erc20/syrup_usdt_0x356b8d89c1e1239cbbb9de4815c39a1474d5ba7d"
+      "ethereum/erc20/syrup_usdt_0x356b8d89c1e1239cbbb9de4815c39a1474d5ba7d",
+      "bsc/bep20/syrup_usdt_0x8e9d4cea39299323fe8eda678cad449718556c4e"
     ]
   },
   "T": {
@@ -1701,6 +1779,14 @@
   },
   "USCC": {
     "ids": ["ethereum/erc20/superstate_crypto_carry_fund"]
+  },
+  "USD0": {
+    "ids": [
+      "ethereum/erc20/usual_usd",
+      "bsc/bep20/usual_usd_0x758a3e0b1f842c9306b783f8a4078c6c8c03a270",
+      "base/erc20/usual_usd_0x758a3e0b1f842c9306b783f8a4078c6c8c03a270",
+      "arbitrum/erc20/usual_usd_0x35f1c5cb7fb977e669fd244c567da99d8a3a6850"
+    ]
   },
   "USD1": {
     "ids": [
