@@ -1715,6 +1715,9 @@
   "ethereum/erc20/wrapped_eeth": {
     "icon": "WEETH.png"
   },
+  "ethereum/erc20/wrapped_gonka_0x972a7a92d92796a98801a8818bcf91f1648f2f68": {
+    "icon": "GNK.png"
+  },
   "ethereum/erc20/wrapped_tao": {
     "icon": "TAO.png"
   },
