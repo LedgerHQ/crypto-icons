@@ -633,6 +633,9 @@
   "GMX": {
     "ids": ["arbitrum/erc20/gmx", "avalanche_c_chain/erc20/gmx"]
   },
+  "GNK": {
+    "ids": ["ethereum/erc20/wrapped_gonka_0x972a7a92d92796a98801a8818bcf91f1648f2f68"]
+  },
   "GNO": {
     "ids": [
       "arbitrum/erc20/gnosis_token",
