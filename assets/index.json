@@ -1832,6 +1832,9 @@
   "flow": {
     "icon": "FLOW.png"
   },
+  "gonka": {
+    "icon": "GNK.png"
+  },
   "hedera": {
     "icon": "HBAR.png"
   },
