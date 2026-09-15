@@ -42,7 +42,7 @@ export const DotSymbol = ({ children, src }: DotSymbolProps) => (
   </div>
 );
 
-export const mediaImageDotSizeMap = {
+const DOT_SYMBOL_SIZE = {
   12: 8,
   16: 8,
   20: 8,
@@ -54,6 +54,11 @@ export const mediaImageDotSizeMap = {
   64: 24,
   72: 32,
 } as const;
+
+export const getDotSymbolProps = (
+  _context: 'mediaImage' | 'spot',
+  variant: keyof typeof DOT_SYMBOL_SIZE
+) => ({ size: DOT_SYMBOL_SIZE[variant] });
 
 export const Skeleton = (props: SkeletonProps) => <div data-testid="skeleton" {...props} />;
 
@@ -75,10 +80,15 @@ export const DotIcon = ({ children, icon: Icon, appearance }: DotIconProps) => (
   </div>
 );
 
-export const mediaImageDotIconSizeMap = {
+const DOT_ICON_SIZE = {
   40: 16,
   48: 20,
   56: 24,
   64: 24,
   72: 32,
 } as const;
+
+export const getDotIconProps = (
+  _context: 'mediaImage' | 'spot',
+  variant: keyof typeof DOT_ICON_SIZE
+) => ({ size: DOT_ICON_SIZE[variant] });

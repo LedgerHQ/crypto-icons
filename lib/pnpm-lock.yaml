@@ -13,14 +13,14 @@ importers:
         version: 0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1)
     devDependencies:
       '@ledgerhq/lumen-design-core':
-        specifier: ^0.1.13
-        version: 0.1.13
+        specifier: ^0.1.28
+        version: 0.1.28
       '@ledgerhq/lumen-ui-react':
-        specifier: ^0.1.37
-        version: 0.1.37(xpny4otipu7d2tymwiixclmydi)
+        specifier: ^0.1.58
+        version: 0.1.58(ugrrwknssr3rjaskeiewungiui)
       '@ledgerhq/lumen-ui-rnative':
-        specifier: ^0.1.38
-        version: 0.1.38(7r4zkh63tihn7r53ro3d3ddg4e)
+        specifier: ^0.1.61
+        version: 0.1.61(vivo6fw3pd4ijisgq7dj5xelt4)
       '@ledgerhq/wallet-api-client':
         specifier: ^1.5.9
         version: 1.14.0(@ton/crypto@3.3.0)
@@ -1437,14 +1437,14 @@ packages:
   '@ledgerhq/logs@6.17.0':
     resolution: {integrity: sha512-yra33g5q/AU7+PwAws+GaVpQGUuxnDREjVBnviJjcaJLVKuLzI4pnj8Bd3nY3fypM5k1yZEYKEXfUuGFUjP2+w==}
 
-  '@ledgerhq/lumen-design-core@0.1.13':
-    resolution: {integrity: sha512-E7rJM+zDxQHDoVreAhTaOyF1n4LkutbRW7Yl2ORFGO0DGcnQiQqYm1PZ5p0IsWruJzanLDGL1S5rhsZFnOaZPQ==}
+  '@ledgerhq/lumen-design-core@0.1.28':
+    resolution: {integrity: sha512-N+Llwr1/3irD1RPIIJWG1T1/qHzgcJeghxpJqsmG2buiCRbBpGqEoTSVzQ5etsP3JVU23aTArtN0D2A/olK6IQ==}
 
-  '@ledgerhq/lumen-ui-react@0.1.37':
-    resolution: {integrity: sha512-ZysOEIY1QL0nJJd+oA/i73p4Cevm+rosa/+avr4zBvXr4lof6cULKfCBjXPhC5A/TvWdiMAXPNXYjJUtk0bFvQ==}
+  '@ledgerhq/lumen-ui-react@0.1.58':
+    resolution: {integrity: sha512-8M0N68FStHsSuMl34ug8/P5cMPtQLvpTY0hf+zbHfnIi4GPQAKThCoF/TL+hF/6UEUR87mNeoXF7lVOGYxeQDw==}
     peerDependencies:
       '@base-ui/react': ^1.3.0
-      '@ledgerhq/lumen-design-core': 0.1.16
+      '@ledgerhq/lumen-design-core': 0.1.28
       '@radix-ui/react-checkbox': ^1.3.2
       '@radix-ui/react-dialog': ^1.1.15
       '@radix-ui/react-slot': ^1.2.3
@@ -1457,23 +1457,30 @@ packages:
       react-dom: ^18.0.0 || ^19.0.0
       tailwind-merge: ^2.6.0
 
-  '@ledgerhq/lumen-ui-rnative@0.1.38':
-    resolution: {integrity: sha512-KbzdRmID/jCDkaIt7ZWe4ptcZLYZFUKXdJ2NVqLp7cNI7wT2JlMDVdxcN4zxXcOWON3CY+EJjpDvdA8A0OBqog==}
+  '@ledgerhq/lumen-ui-rnative@0.1.61':
+    resolution: {integrity: sha512-VEePkf9KAEJKRBKo7pDV69llR1QOpdqz+e+M5LpK2lBRCewTiXQjd7yLXNREy08y19boGTGa6JI+WXOg69RGZg==}
     peerDependencies:
       '@gorhom/bottom-sheet': ^5.0.0
-      '@ledgerhq/lumen-design-core': 0.1.16
+      '@ledgerhq/lumen-design-core': 0.1.28
       '@sbaiahmed1/react-native-blur': ^4.5.5
       '@types/react': ^19.0.0
-      expo: '>=53.0.0'
-      expo-haptics: ~14.1.4
+      expo: '>=54.0.0'
+      expo-haptics: ~15.0.8
       react: ^19.0.0
-      react-native: ~0.79.7
+      react-native: ~0.81.6
+      react-native-gesture-handler: '>=2.0.0'
       react-native-reanimated: ^4.1.0
       react-native-safe-area-context: ^4.0.0 || ^5.0.0
       react-native-svg: ^15.0.0
+      react-native-worklets: '>=0.5.0'
+    peerDependenciesMeta:
+      react-native-gesture-handler:
+        optional: true
+      react-native-worklets:
+        optional: true
 
-  '@ledgerhq/lumen-utils-shared@0.1.5':
-    resolution: {integrity: sha512-JmjgL2mdOs1/5hdwLQWAhAAV2+a1IcbZq7yl/LCgD6+vzfESvrtm5MGNbEm2WkenhNb4wiq+6AtYv2Q9U+N/QA==}
+  '@ledgerhq/lumen-utils-shared@0.1.12':
+    resolution: {integrity: sha512-4MQEp7DH5lqrwyRRQO8Bg3VDuq1u7C0NRdtDn+ThHchF2jNyCIJazKp1CMxmHeHMDq72eYiHdmY3AlcfYygnKA==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
 
@@ -2731,6 +2738,18 @@ packages:
   '@types/cookie@0.4.1':
     resolution: {integrity: sha512-XW/Aa8APYr6jSVVA1y/DEIZX0/GMKLEVekNG727R8cs56ahETkRAy/3DR7+fJyh7oUgGwNQaRfXCun0+KbWY7Q==}
 
+  '@types/d3-path@3.1.1':
+    resolution: {integrity: sha512-VMZBYyQvbGmWyWVea0EHs/BwLgxc+MKi1zLDCONksozI4YJMcTt8ZEuIR4Sb1MMTE8MMW49v0IwI5+b7RmfWlg==}
+
+  '@types/d3-scale@4.0.9':
+    resolution: {integrity: sha512-dLmtwB8zkAeO/juAMfnV+sItKjlsw2lKdZVVy6LRr0cBmegxSABiLEpGVmSJJ8O08i4+sGR6qQtb6WtuwJdvVw==}
+
+  '@types/d3-shape@3.2.0':
+    resolution: {integrity: sha512-kVd74ta9eof3eJOvbNd1vGKS/XERRyQbT26Og63hIsvDO84cjD5gEOhsXf26w3FSoNlPVz84DOFcKv/oou+fMw==}
+
+  '@types/d3-time@3.0.4':
+    resolution: {integrity: sha512-yuzZug1nkAAaBlBBikKZTgzCeA+k1uy4ZFwWANOfKw5z5LRhV0gNA7gNkKm7HoK+HRN0wX3EkxGk0fpbWhmB7g==}
+
   '@types/debug@4.1.13':
     resolution: {integrity: sha512-KSVgmQmzMwPlmtljOomayoR89W4FynCAi3E8PPs7vmDVPe84hT+vGPKkJfThkmXs0x0jAaa9U8uW8bbfyS2fWw==}
 
@@ -3062,6 +3081,7 @@ packages:
   '@xmldom/xmldom@0.9.10':
     resolution: {integrity: sha512-A9gOqLdi6cV4ibazAjcQufGj0B1y/vDqYrcuP6d/6x8P27gRS8643Dj9o1dEKtB6O7fwxb2FgBmJS2mX7gpvdw==}
     engines: {node: '>=14.6'}
+    deprecated: this version has critical issues, please update to the latest version
 
   '@xtuc/ieee754@1.2.0':
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
@@ -3781,6 +3801,42 @@ packages:
 
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
+
+  d3-array@3.2.4:
+    resolution: {integrity: sha512-tdQAmyA18i4J7wprpYq8ClcxZy3SC31QMeByyCFyRt7BVHdREQZ5lpzoe5mFEYZUWe+oq8HBvk9JjpibyEV4Jg==}
+    engines: {node: '>=12'}
+
+  d3-color@3.1.0:
+    resolution: {integrity: sha512-zg/chbXyeBtMQ1LbD/WSoW2DpC3I0mpmPdW+ynRTj/x2DAWYrIY7qeZIHidozwV24m4iavr15lNwIwLxRmOxhA==}
+    engines: {node: '>=12'}
+
+  d3-format@3.1.2:
+    resolution: {integrity: sha512-AJDdYOdnyRDV5b6ArilzCPPwc1ejkHcoyFarqlPqT7zRYjhavcT3uSrqcMvsgh2CgoPbK3RCwyHaVyxYcP2Arg==}
+    engines: {node: '>=12'}
+
+  d3-interpolate@3.0.1:
+    resolution: {integrity: sha512-3bYs1rOD33uo8aqJfKP3JWPAibgw8Zm2+L9vBKEHJ2Rg+viTR7o5Mmv5mZcieN+FRYaAOWX5SJATX6k1PWz72g==}
+    engines: {node: '>=12'}
+
+  d3-path@3.1.0:
+    resolution: {integrity: sha512-p3KP5HCf/bvjBSSKuXid6Zqijx7wIfNW+J/maPs+iwR35at5JCbLUT0LzF1cnjbCHWhqzQTIN2Jpe8pRebIEFQ==}
+    engines: {node: '>=12'}
+
+  d3-scale@4.0.2:
+    resolution: {integrity: sha512-GZW464g1SH7ag3Y7hXjf8RoUuAFIqklOAq3MRl4OaWabTFJY9PN/E1YklhXLh+OQ3fM9yS2nOkCoS+WLZ6kvxQ==}
+    engines: {node: '>=12'}
+
+  d3-shape@3.2.0:
+    resolution: {integrity: sha512-SaLBuwGm3MOViRq2ABk3eLoxwZELpH6zhl3FbAoJ7Vm1gofKx6El1Ib5z23NUEhF9AsGl7y+dzLe5Cw2AArGTA==}
+    engines: {node: '>=12'}
+
+  d3-time-format@4.1.0:
+    resolution: {integrity: sha512-dJxPBlzC7NugB2PDLwo9Q8JiTR3M3e4/XANkreKSUxF8vvXKqm1Yfq4Q5dl8budlunRVlUUaDUgFt7eA8D6NLg==}
+    engines: {node: '>=12'}
+
+  d3-time@3.1.0:
+    resolution: {integrity: sha512-VqKjzBLejbSMT4IgbmVgDjpkYrNWUYJnbCGo874u7MMKIWsILRX+OpX/gTk8MqjpT1A/c6HY2dCA77ZN0lkQ2Q==}
+    engines: {node: '>=12'}
 
   data-urls@3.0.2:
     resolution: {integrity: sha512-Jy/tj3ldjZJo63sVAvg6LHt2mHvl4V6AgRAmNDtLdm7faqtsx+aJG42rsyCo9JCoRVKwPFzKlIPx3DIibwSIaQ==}
@@ -4913,6 +4969,10 @@ packages:
   internal-slot@1.1.0:
     resolution: {integrity: sha512-4gd7VpWNQNB4UKKCFFVcp1AVv+FMOgs9NKzjHKusc8jTMhd5eL1NqQqOpE0KzMds804/yHlglp3uxgluOqAPLw==}
     engines: {node: '>= 0.4'}
+
+  internmap@2.0.3:
+    resolution: {integrity: sha512-5Hh7Y1wQbvY5ooGgPbDaL5iYLAPzMTUrjMulskHLH6wnv/A+1q5rgEaiuqEjB+oxGXIVZs1FF+R/KPN3ZSQYYg==}
+    engines: {node: '>=12'}
 
   into-stream@3.1.0:
     resolution: {integrity: sha512-TcdjPibTksa1NQximqep2r17ISRiNE9fwlfbg3F8ANdvP5/yrFTew86VcO//jk4QTaMlbjypPBq76HN2zaKfZQ==}
@@ -9294,24 +9354,28 @@ snapshots:
 
   '@ledgerhq/logs@6.17.0': {}
 
-  '@ledgerhq/lumen-design-core@0.1.13':
+  '@ledgerhq/lumen-design-core@0.1.28':
     dependencies:
       tailwindcss: 4.1.18
       tslib: 2.8.1
 
-  '@ledgerhq/lumen-ui-react@0.1.37(xpny4otipu7d2tymwiixclmydi)':
+  '@ledgerhq/lumen-ui-react@0.1.58(ugrrwknssr3rjaskeiewungiui)':
     dependencies:
       '@base-ui/react': 1.4.1(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@ledgerhq/lumen-design-core': 0.1.13
-      '@ledgerhq/lumen-utils-shared': 0.1.5(react@18.3.1)
+      '@ledgerhq/lumen-design-core': 0.1.28
+      '@ledgerhq/lumen-utils-shared': 0.1.12(react@18.3.1)
       '@radix-ui/react-checkbox': 1.3.3(@types/react-dom@18.3.7(@types/react@18.3.28))(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-dialog': 1.1.15(@types/react-dom@18.3.7(@types/react@18.3.28))(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-slot': 1.2.4(@types/react@18.3.28)(react@18.3.1)
       '@radix-ui/react-switch': 1.2.6(@types/react-dom@18.3.7(@types/react@18.3.28))(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-tooltip': 1.2.8(@types/react-dom@18.3.7(@types/react@18.3.28))(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tanstack/react-table': 8.21.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/d3-scale': 4.0.9
+      '@types/d3-shape': 3.2.0
       class-variance-authority: 0.7.1
       clsx: 2.1.1
+      d3-scale: 4.0.2
+      d3-shape: 3.2.0
       i18next: 23.16.8
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -9320,13 +9384,17 @@ snapshots:
     transitivePeerDependencies:
       - react-native
 
-  '@ledgerhq/lumen-ui-rnative@0.1.38(7r4zkh63tihn7r53ro3d3ddg4e)':
+  '@ledgerhq/lumen-ui-rnative@0.1.61(vivo6fw3pd4ijisgq7dj5xelt4)':
     dependencies:
       '@gorhom/bottom-sheet': 5.2.14(@types/react@18.3.28)(react-native-gesture-handler@2.31.2(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1))(react-native-reanimated@4.3.1(react-native-worklets@0.8.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1))(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1))(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1)
-      '@ledgerhq/lumen-design-core': 0.1.13
-      '@ledgerhq/lumen-utils-shared': 0.1.5(react@18.3.1)
+      '@ledgerhq/lumen-design-core': 0.1.28
+      '@ledgerhq/lumen-utils-shared': 0.1.12(react@18.3.1)
       '@sbaiahmed1/react-native-blur': 4.6.2(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1)
+      '@types/d3-scale': 4.0.9
+      '@types/d3-shape': 3.2.0
       '@types/react': 18.3.28
+      d3-scale: 4.0.2
+      d3-shape: 3.2.0
       expo: 55.0.23(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@18.3.1(react@18.3.1))(react-native-worklets@0.8.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1))(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1)(typescript@5.9.3)
       expo-haptics: 14.1.4(expo@55.0.23(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@18.3.1(react@18.3.1))(react-native-worklets@0.8.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1))(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1)(typescript@5.9.3))
       i18next: 23.16.8
@@ -9336,10 +9404,13 @@ snapshots:
       react-native-reanimated: 4.3.1(react-native-worklets@0.8.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1))(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1)
       react-native-safe-area-context: 5.7.0(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1)
       react-native-svg: 15.15.5(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1)
+    optionalDependencies:
+      react-native-gesture-handler: 2.31.2(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1)
+      react-native-worklets: 0.8.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(react-native@0.85.3(@babel/core@7.29.0)(@react-native/metro-config@0.85.3(@babel/core@7.29.0))(@types/react@18.3.28)(react@18.3.1))(react@18.3.1)
     transitivePeerDependencies:
       - react-dom
 
-  '@ledgerhq/lumen-utils-shared@0.1.5(react@18.3.1)':
+  '@ledgerhq/lumen-utils-shared@0.1.12(react@18.3.1)':
     dependencies:
       clsx: 2.1.1
       react: 18.3.1
@@ -10695,6 +10766,18 @@ snapshots:
 
   '@types/cookie@0.4.1': {}
 
+  '@types/d3-path@3.1.1': {}
+
+  '@types/d3-scale@4.0.9':
+    dependencies:
+      '@types/d3-time': 3.0.4
+
+  '@types/d3-shape@3.2.0':
+    dependencies:
+      '@types/d3-path': 3.1.1
+
+  '@types/d3-time@3.0.4': {}
+
   '@types/debug@4.1.13':
     dependencies:
       '@types/ms': 2.1.0
@@ -11901,6 +11984,40 @@ snapshots:
       cssom: 0.3.8
 
   csstype@3.2.3: {}
+
+  d3-array@3.2.4:
+    dependencies:
+      internmap: 2.0.3
+
+  d3-color@3.1.0: {}
+
+  d3-format@3.1.2: {}
+
+  d3-interpolate@3.0.1:
+    dependencies:
+      d3-color: 3.1.0
+
+  d3-path@3.1.0: {}
+
+  d3-scale@4.0.2:
+    dependencies:
+      d3-array: 3.2.4
+      d3-format: 3.1.2
+      d3-interpolate: 3.0.1
+      d3-time: 3.1.0
+      d3-time-format: 4.1.0
+
+  d3-shape@3.2.0:
+    dependencies:
+      d3-path: 3.1.0
+
+  d3-time-format@4.1.0:
+    dependencies:
+      d3-time: 3.1.0
+
+  d3-time@3.1.0:
+    dependencies:
+      d3-array: 3.2.4
 
   data-urls@3.0.2:
     dependencies:
@@ -13305,6 +13422,8 @@ snapshots:
       es-errors: 1.3.0
       hasown: 2.0.3
       side-channel: 1.1.0
+
+  internmap@2.0.3: {}
 
   into-stream@3.1.0:
     dependencies:

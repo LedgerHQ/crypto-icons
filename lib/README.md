@@ -116,15 +116,15 @@ Props are identical to the React version. `testID` is forwarded as the native `t
 
 ## With DotIcon (status badge)
 
-Use Lumen's `DotIcon` to overlay a status indicator. Use `mediaImageDotSizeMap` (React) or `mediaImageDotIconSizeMap` (React Native) to automatically derive the correct badge size from the icon size.
+Use Lumen's `DotIcon` to overlay a status indicator. Use `getDotIconProps('mediaImage', size)` to derive the correct badge size from the icon size.
 
 ```tsx
 // React
 import { CryptoIcon } from '@ledgerhq/crypto-icons';
-import { DotIcon, mediaImageDotSizeMap } from '@ledgerhq/lumen-ui-react';
-import { Check, Clock, Close } from '@ledgerhq/lumen-ui-react/symbols';
+import { DotIcon, getDotIconProps } from '@ledgerhq/lumen-ui-react';
+import { Check } from '@ledgerhq/lumen-ui-react/symbols';
 
-<DotIcon icon={Check} appearance="success" size={mediaImageDotSizeMap[56]}>
+<DotIcon icon={Check} appearance="success" {...getDotIconProps('mediaImage', 56)}>
   <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
 </DotIcon>
 ```
@@ -132,10 +132,10 @@ import { Check, Clock, Close } from '@ledgerhq/lumen-ui-react/symbols';
 ```tsx
 // React Native
 import CryptoIcon from '@ledgerhq/crypto-icons/native';
-import { DotIcon, mediaImageDotIconSizeMap } from '@ledgerhq/lumen-ui-rnative';
+import { DotIcon, getDotIconProps } from '@ledgerhq/lumen-ui-rnative';
 import { Check } from '@ledgerhq/lumen-ui-rnative/symbols';
 
-<DotIcon icon={Check} appearance="success" size={mediaImageDotIconSizeMap[56]}>
+<DotIcon icon={Check} appearance="success" {...getDotIconProps('mediaImage', 56)}>
   <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
 </DotIcon>
 ```
