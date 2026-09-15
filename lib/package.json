@@ -48,7 +48,7 @@
     "format": "prettier --write 'src/**/*.{ts,tsx}'"
   },
   "devDependencies": {
-    "@ledgerhq/lumen-design-core": "^0.1.13",
+    "@ledgerhq/lumen-design-core": "^0.1.28",
     "@ledgerhq/lumen-ui-react": "^0.1.58",
     "@ledgerhq/lumen-ui-rnative": "^0.1.61",
     "@ledgerhq/wallet-api-client": "^1.5.9",

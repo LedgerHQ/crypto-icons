@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import React from 'react';
+
 import { DotIcon, getDotIconProps } from '@ledgerhq/lumen-ui-react';
 import { Check, Clock, Close } from '@ledgerhq/lumen-ui-react/symbols';
 import CryptoIcon from '../src/components/CryptoIcon';
