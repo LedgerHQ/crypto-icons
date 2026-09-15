@@ -99,7 +99,7 @@
     "zopflipng-bin": "^7.1.0"
   },
   "peerDependencies": {
-    "@ledgerhq/lumen-design-core": ">=0.1.13",
+    "@ledgerhq/lumen-design-core": ">=0.1.28",
     "@ledgerhq/lumen-ui-react": ">=0.1.58",
     "@ledgerhq/lumen-ui-rnative": ">=0.1.61",
     "react": ">=18",
