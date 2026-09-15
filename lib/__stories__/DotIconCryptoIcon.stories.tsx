@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
-import { DotIcon, mediaImageDotIconSizeMap } from '@ledgerhq/lumen-ui-react';
+import { DotIcon, getDotIconProps } from '@ledgerhq/lumen-ui-react';
 import { Check, Clock, Close } from '@ledgerhq/lumen-ui-react/symbols';
 import CryptoIcon from '../src/components/CryptoIcon';
 
@@ -50,7 +49,7 @@ export const Base: Story = {
     icon: Check,
     appearance: 'success',
     pin: 'bottom-end',
-    size: mediaImageDotIconSizeMap[56],
+    ...getDotIconProps('mediaImage', 56),
   },
   render: (args) => (
     <DotIcon {...args}>
@@ -61,7 +60,7 @@ export const Base: Story = {
     docs: {
       source: {
         code: `
-<DotIcon icon={Check} appearance="success" size={mediaImageDotIconSizeMap[56]}>
+<DotIcon icon={Check} appearance="success" {...getDotIconProps('mediaImage', 56)}>
   <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
 </DotIcon>`,
       },
@@ -78,7 +77,7 @@ export const AppearanceShowcase: Story = {
         { icon: Close, appearance: 'error' as const, label: 'error' },
       ].map(({ icon, appearance, label }) => (
         <div key={label} className="flex flex-col items-center gap-2">
-          <DotIcon icon={icon} appearance={appearance} size={mediaImageDotIconSizeMap[56]}>
+          <DotIcon icon={icon} appearance={appearance} {...getDotIconProps('mediaImage', 56)}>
             <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
           </DotIcon>
           <span style={{ fontSize: 11, color: '#888' }}>{label}</span>
@@ -96,7 +95,7 @@ export const PinShowcase: Story = {
           <DotIcon
             icon={Check}
             appearance="success"
-            size={mediaImageDotIconSizeMap[56]}
+            {...getDotIconProps('mediaImage', 56)}
             pin={pin}
           >
             <CryptoIcon ledgerId="bitcoin" ticker="BTC" size={56} />
@@ -128,7 +127,7 @@ export const Playground: Story = {
     icon: Check,
     appearance: 'success',
     pin: 'bottom-end',
-    size: mediaImageDotIconSizeMap[56],
+    ...getDotIconProps('mediaImage', 56),
     shape: 'circle',
   },
   render: (args) => (

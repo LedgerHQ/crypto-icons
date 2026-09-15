@@ -1,4 +1,4 @@
-import { DotSymbol, MediaImage, mediaImageDotSizeMap } from '@ledgerhq/lumen-ui-react';
+import { DotSymbol, MediaImage, getDotSymbolProps } from '@ledgerhq/lumen-ui-react';
 import React, { FC } from 'react';
 import { useCryptoIcon } from '../../hooks/useCryptoIcon';
 import type { CryptoIconProps } from './CryptoIcon.types';
@@ -37,7 +37,7 @@ const CryptoIcon: FC<CryptoIconProps> = ({
       <DotSymbol
         src={networkUrl}
         pin={badgePosition}
-        size={mediaImageDotSizeMap[size]}
+        {...getDotSymbolProps('mediaImage', size)}
         disabled={disabled}
       >
         {Image}
