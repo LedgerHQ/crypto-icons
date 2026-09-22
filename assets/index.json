@@ -53,6 +53,9 @@
   "arbitrum/erc20/aave_token_0xba5ddd1f9d7f570dc94a51479a000e3bce967196": {
     "icon": "AAVE.png"
   },
+  "arbitrum/erc20/apecoin_0x7f9fbf9bdd3f4105c478b996b648fe6e828a1e98": {
+    "icon": "APE.png"
+  },
   "arbitrum/erc20/arbitrum": {
     "icon": "ARB.png"
   },
@@ -341,6 +344,9 @@
   "avalanche_c_chain/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
     "icon": "SUSDE.png"
   },
+  "avalanche_c_chain/erc20/superverse_0x09fa58228bb791ea355c90da1e4783452b9bd8c3": {
+    "icon": "SUPER.png"
+  },
   "avalanche_c_chain/erc20/sushitoken_(bridged)": {
     "icon": "SUSHI.png"
   },
@@ -508,6 +514,9 @@
   },
   "base/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
     "icon": "SUSDE.png"
+  },
+  "base/erc20/superverse_0x391359ab0ccef572dcac78f74e47d7c06db0b982": {
+    "icon": "SUPER.png"
   },
   "base/erc20/sushitoken": {
     "icon": "SUSHI.png"
@@ -983,6 +992,9 @@
   "canton_network_testnet": {
     "icon": "CANTON_Testnet.png"
   },
+  "canton_network_testnet/cip56/usdcx": {
+    "icon": "USDC.png"
+  },
   "cardano": {
     "icon": "ADA.png"
   },
@@ -1111,6 +1123,9 @@
   },
   "energi/erc20/the_graph_0x771513ba693d457df3678c951c448701f2eaaad5": {
     "icon": "GRT.png"
+  },
+  "energi/erc20/trust_wallet_token_0xfaa02b262130431b44c929fdd960e202ffeabfe3": {
+    "icon": "TWT.png"
   },
   "energi/erc20/trx_energi_0xdc5f62055a2911f85cf16df9f7662403387c8d46": {
     "icon": "TRX.png"
@@ -2048,6 +2063,9 @@
   "monad": {
     "icon": "MON.png"
   },
+  "monad/erc20/apecoin_0x6a7e3f839382fbb6a6131d4aae864aaeb362292d": {
+    "icon": "APE.png"
+  },
   "monad/erc20/chainlink_token_0x76f257b1dda5cc71bee4ef637fbdde4c801310a9": {
     "icon": "LINK.png"
   },
@@ -2486,6 +2504,9 @@
   "robinhood": {
     "icon": "ROBINHOOD.png"
   },
+  "robinhood/erc20/apecoin_0x8f86a15ec17cb3369d8b3e666dadbc11daa82b79": {
+    "icon": "APE.png"
+  },
   "robinhood/erc20/chainlink_0x492641f648a4986844848e0befe66d14817bce34": {
     "icon": "LINK.png"
   },
@@ -2494,6 +2515,9 @@
   },
   "robinhood/erc20/global_dollar_0x5fc5360d0400a0fd4f2af552add042d716f1d168": {
     "icon": "USDG.png"
+  },
+  "robinhood/erc20/pendle_0x5e49e1f85813f2b65858860a3fa231b4186f2e0e": {
+    "icon": "PENDLE.png"
   },
   "robinhood/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
     "icon": "SUSDE.png"

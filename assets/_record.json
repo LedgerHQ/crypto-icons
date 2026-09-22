@@ -104,7 +104,10 @@
       "bsc/bep20/apecoin",
       "ethereum/erc20/apecoin",
       "linea/erc20/apecoin",
-      "polygon/erc20/apecoin_pos"
+      "polygon/erc20/apecoin_pos",
+      "arbitrum/erc20/apecoin_0x7f9fbf9bdd3f4105c478b996b648fe6e828a1e98",
+      "robinhood/erc20/apecoin_0x8f86a15ec17cb3369d8b3e666dadbc11daa82b79",
+      "monad/erc20/apecoin_0x6a7e3f839382fbb6a6131d4aae864aaeb362292d"
     ]
   },
   "APT": {
@@ -1182,7 +1185,8 @@
       "base/erc20/pendle_0xa99f6e6785da0f5d6fb42495fe424bce029eeb3e",
       "sonic/erc20/pendle_0xf1ef7d2d4c0c881cd634481e0586ed5d2871a74b",
       "berachain/erc20/pendle",
-      "monad/erc20/pendle_0x5e49e1f85813f2b65858860a3fa231b4186f2e0e"
+      "monad/erc20/pendle_0x5e49e1f85813f2b65858860a3fa231b4186f2e0e",
+      "robinhood/erc20/pendle_0x5e49e1f85813f2b65858860a3fa231b4186f2e0e"
     ]
   },
   "PENGU": {
@@ -1506,7 +1510,9 @@
     "ids": [
       "bsc/bep20/super-erc20",
       "ethereum/erc20/superfarm",
-      "polygon/erc20/superfarm_(pos)"
+      "polygon/erc20/superfarm_(pos)",
+      "avalanche_c_chain/erc20/superverse_0x09fa58228bb791ea355c90da1e4783452b9bd8c3",
+      "base/erc20/superverse_0x391359ab0ccef572dcac78f74e47d7c06db0b982"
     ]
   },
   "SUSDH": {
@@ -1620,7 +1626,10 @@
     ]
   },
   "TWT": {
-    "ids": ["bsc/bep20/trust_wallet"]
+    "ids": [
+      "bsc/bep20/trust_wallet",
+      "energi/erc20/trust_wallet_token_0xfaa02b262130431b44c929fdd960e202ffeabfe3"
+    ]
   },
   "TZ_APEX": {
     "ids": ["tezos/fa2/tz_apex_by_tz_apac_kt1lcnfdj66ttxkfbjqlqwo9j7tenbrq8aje"]
@@ -1860,7 +1869,8 @@
       "zksync/erc20/usdc",
       "tezos/fa2/ethereum_usdc_kt1ussfaxyqcjsvpeid7u1bwgky3tayn7nwy_2",
       "arc/erc20/usdc_0x3600000000000000000000000000000000000000",
-      "aleo/arc22/usdcx"
+      "aleo/arc22/usdcx",
+      "canton_network_testnet/cip56/usdcx"
     ]
   },
   "USDG": {
