@@ -404,6 +404,9 @@
   "base/erc20/beldex_0x6ad12e761b438bea3ea09f6c6266556bb24c2181": {
     "icon": "BELDEX.png"
   },
+  "base/erc20/bittensor_0xf3081494b87e8d5fb7960f066e931d1d0e6e3d67": {
+    "icon": "TAO.png"
+  },
   "base/erc20/brett": {
     "icon": "BRETT.png"
   },
@@ -424,6 +427,9 @@
   },
   "base/erc20/dai_stablecoin": {
     "icon": "DAI.png"
+  },
+  "base/erc20/eigen_0x2081ab0d9ec9e4303234ab26d86b20b3367946ee": {
+    "icon": "EIGEN.png"
   },
   "base/erc20/ena_0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
     "icon": "ENA.png"
@@ -469,6 +475,9 @@
   },
   "base/erc20/pancakeswap_token": {
     "icon": "CAKE.png"
+  },
+  "base/erc20/pendle_0xa99f6e6785da0f5d6fb42495fe424bce029eeb3e": {
+    "icon": "PENDLE.png"
   },
   "base/erc20/polkadot_token_relay_chain_0x8d010bf9c26881788b4e6bf5fd1bdc358c8f90b8": {
     "icon": "DOT.png"
@@ -559,6 +568,9 @@
   },
   "berachain/erc20/ohm": {
     "icon": "OHM.png"
+  },
+  "berachain/erc20/pendle": {
+    "icon": "PENDLE.png"
   },
   "berachain/erc20/rseth": {
     "icon": "RSETH.png"
@@ -1060,6 +1072,12 @@
   },
   "energi/erc20/aave_0xa7f2f790355e0c32cab03f92f6eb7f488e6f049a": {
     "icon": "AAVE.png"
+  },
+  "energi/erc20/axie_infinity_0x7cd3d51bee45434dd80822c5d58b999333b69ffb": {
+    "icon": "AXS.png"
+  },
+  "energi/erc20/basic_attention_token_0xe8ba8d7765bd33ba7ff3b19b9020c15bf14123b6": {
+    "icon": "BAT.png"
   },
   "energi/erc20/chainlink_0x68ca48ca2626c415a89756471d4ade2cc9034008": {
     "icon": "LINK.png"
@@ -2030,6 +2048,9 @@
   "monad": {
     "icon": "MON.png"
   },
+  "monad/erc20/chainlink_token_0x76f257b1dda5cc71bee4ef637fbdde4c801310a9": {
+    "icon": "LINK.png"
+  },
   "monad/erc20/coinbase_wrapped_btc_0xd18b7ec58cdf4876f6afebd3ed1730e4ce10414b": {
     "icon": "CBBTC.png"
   },
@@ -2042,11 +2063,17 @@
   "monad/erc20/janus_henderson_anemoy_treasury_fund_token_0xc18e6f730896971a79d748e8dea61067a9bc6040": {
     "icon": "JTRSY.png"
   },
+  "monad/erc20/pendle_0x5e49e1f85813f2b65858860a3fa231b4186f2e0e": {
+    "icon": "PENDLE.png"
+  },
   "monad/erc20/solv_btc_0xae4efbc7736f963982aacb17efa37fcbab924cb3": {
     "icon": "SOLVBTC.png"
   },
   "monad/erc20/staked_usde_0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
     "icon": "SUSDE.png"
+  },
+  "monad/erc20/syrup_usdc_0xab6e5a0c3799d020c790d34f7b2c02639e238af7": {
+    "icon": "SYRUPUSDC.png"
   },
   "monad/erc20/usdc_0x754704bc059f8c67012fed69bc8a327a5aafb603": {
     "icon": "USDC.png"
@@ -2197,6 +2224,9 @@
   },
   "optimism/erc20/ocean_token": {
     "icon": "OCEAN.png"
+  },
+  "optimism/erc20/olympus_0x060cb087a9730e13aa191f31a6d86bff8dfcdcc0": {
+    "icon": "OHM.png"
   },
   "optimism/erc20/optimism": {
     "icon": "OP.png"
@@ -2456,6 +2486,9 @@
   "robinhood": {
     "icon": "ROBINHOOD.png"
   },
+  "robinhood/erc20/chainlink_0x492641f648a4986844848e0befe66d14817bce34": {
+    "icon": "LINK.png"
+  },
   "robinhood/erc20/ethena_0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
     "icon": "ENA.png"
   },
@@ -2470,6 +2503,9 @@
   },
   "robinhood/erc20/usde_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
     "icon": "USDE.png"
+  },
+  "robinhood/erc20/virtuals_protocol_0xc6911796042b15d7fa4f6cde69e245ddcd3d9c31": {
+    "icon": "VIRTUAL.png"
   },
   "robinhood/erc20/weth_0x0bd7d308f8e1639fab988df18a8011f41eacad73": {
     "icon": "WETH.png"
@@ -2570,6 +2606,9 @@
   "solana/spl/aave_aave1kkknespw4murjmj9jzs9qzee8cpxq3viczudfc1": {
     "icon": "AAVE.png"
   },
+  "solana/spl/basic_attention_token_wormhole_epeufdghrxs9xxepval6kfgqvcon7jmawkvuhuux1tpz": {
+    "icon": "BAT.png"
+  },
   "solana/spl/beldex_cp4w2b3og2tafupye1kr8pdejwwahteskppznffn9n9d": {
     "icon": "BELDEX.png"
   },
@@ -2641,6 +2680,9 @@
   },
   "solana/spl/official_trump_6p6xghyf7aee6tzksmfsko444wqop15icusqi2jfgipn": {
     "icon": "TRUMP.png"
+  },
+  "solana/spl/olympus_2xva1nelrubfdk41geuxqgewtnkkdve9pkecnmepng6k": {
+    "icon": "OHM.png"
   },
   "solana/spl/ordinals_u9nmk5sqovm6acvcqbbq8xumpfqdpsyxdxvwxux4sjy": {
     "icon": "ORDI.png"
@@ -2740,6 +2782,9 @@
   },
   "sonic/erc20/lombard_staked_btc_0xecac9c5f704e954931349da37f60e39f515c11c1": {
     "icon": "LBTC.png"
+  },
+  "sonic/erc20/pendle_0xf1ef7d2d4c0c881cd634481e0586ed5d2871a74b": {
+    "icon": "PENDLE.png"
   },
   "sonic/erc20/solv_btc_0x541fd749419ca806a8bc7da8ac23d346f2df8b77": {
     "icon": "SOLVBTC.png"
