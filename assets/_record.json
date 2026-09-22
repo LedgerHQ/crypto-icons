@@ -155,7 +155,8 @@
   "AXS": {
     "ids": [
       "bsc/bep20/binance-peg_axie_infinity_shard_token",
-      "ethereum/erc20/axie_infinity_shard"
+      "ethereum/erc20/axie_infinity_shard",
+      "energi/erc20/axie_infinity_0x7cd3d51bee45434dd80822c5d58b999333b69ffb"
     ]
   },
   "AZERO": {
@@ -179,7 +180,9 @@
       "avalanche_c_chain/erc20/basic_attention_token_(bridged)",
       "bsc/bep20/binance-peg_basic_attention_token",
       "ethereum/erc20/bat",
-      "polygon/erc20/bat"
+      "polygon/erc20/bat",
+      "energi/erc20/basic_attention_token_0xe8ba8d7765bd33ba7ff3b19b9020c15bf14123b6",
+      "solana/spl/basic_attention_token_wormhole_epeufdghrxs9xxepval6kfgqvcon7jmawkvuhuux1tpz"
     ]
   },
   "BCAP": {
@@ -447,7 +450,10 @@
     "ids": ["elrond"]
   },
   "EIGEN": {
-    "ids": ["ethereum/erc20/eigen"]
+    "ids": [
+      "ethereum/erc20/eigen",
+      "base/erc20/eigen_0x2081ab0d9ec9e4303234ab26d86b20b3367946ee"
+    ]
   },
   "EEIGEN": {
     "ids": [
@@ -895,7 +901,9 @@
       "sonic/erc20/chainlink_token_0x71052bae71c25c78e37fd12e5ff1101a71d9018f",
       "bitlayer/erc20/chainlink_token_0x56b275c0ec034a229a1ded8db17089544bc276d9",
       "core/erc20/chainlink_token_0x3902228d6a3d2dc44731fd9d45fee6a61c722d0b",
-      "unichain/erc20/chainlink_token_0xef66491eab4bbb582c57b14778afd8dfb70d8a1a"
+      "unichain/erc20/chainlink_token_0xef66491eab4bbb582c57b14778afd8dfb70d8a1a",
+      "monad/erc20/chainlink_token_0x76f257b1dda5cc71bee4ef637fbdde4c801310a9",
+      "robinhood/erc20/chainlink_0x492641f648a4986844848e0befe66d14817bce34"
     ]
   },
   "LIQUIDETH": {
@@ -1110,7 +1118,9 @@
     "ids": [
       "base/erc20/olympus_0x060cb087a9730e13aa191f31a6d86bff8dfcdcc0",
       "berachain/erc20/ohm",
-      "ethereum/erc20/olympus"
+      "ethereum/erc20/olympus",
+      "solana/spl/olympus_2xva1nelrubfdk41geuxqgewtnkkdve9pkecnmepng6k",
+      "optimism/erc20/olympus_0x060cb087a9730e13aa191f31a6d86bff8dfcdcc0"
     ]
   },
   "OKB": {
@@ -1168,7 +1178,11 @@
       "arbitrum/erc20/pendle",
       "bsc/bep20/pendle",
       "ethereum/erc20/pendle",
-      "optimism/erc20/pendle"
+      "optimism/erc20/pendle",
+      "base/erc20/pendle_0xa99f6e6785da0f5d6fb42495fe424bce029eeb3e",
+      "sonic/erc20/pendle_0xf1ef7d2d4c0c881cd634481e0586ed5d2871a74b",
+      "berachain/erc20/pendle",
+      "monad/erc20/pendle_0x5e49e1f85813f2b65858860a3fa231b4186f2e0e"
     ]
   },
   "PENGU": {
@@ -1527,7 +1541,8 @@
       "ethereum/erc20/syrup_usdc_0x80ac24aa929eaf5013f6436cda2a7ba190f5cc0b",
       "solana/spl/syrup_usdc_avzzf1yazdzipy2rck4ojrrvrbn3mtd9nl24hpeazeuj",
       "arbitrum/erc20/syrup_usdc_0x41ca7586cc1311807b4605fbb748a3b8862b42b5",
-      "base/erc20/syrup_usdc_0x660975730059246a68521a3e2fbd4740173100f5"
+      "base/erc20/syrup_usdc_0x660975730059246a68521a3e2fbd4740173100f5",
+      "monad/erc20/syrup_usdc_0xab6e5a0c3799d020c790d34f7b2c02639e238af7"
     ]
   },
   "SYRUPUSDT": {
@@ -1547,7 +1562,8 @@
     "ids": [
       "bittensor",
       "ethereum/erc20/wrapped_tao",
-      "solana/spl/wrapped_tao_9wakgc8zxwsgangtkoneffkafubkw4bfuuupkrx6nrqq"
+      "solana/spl/wrapped_tao_9wakgc8zxwsgangtkoneffkafubkw4bfuuupkrx6nrqq",
+      "base/erc20/bittensor_0xf3081494b87e8d5fb7960f066e931d1d0e6e3d67"
     ]
   },
   "TBTC": {
@@ -1981,7 +1997,8 @@
     "ids": [
       "base/erc20/virtual_protocol",
       "ethereum/erc20/virtual_protocol",
-      "solana/spl/virtual_protocol_3iql8bfs2ve7mww4ehaqqhasbmrncrpxizwat2zfyr9y"
+      "solana/spl/virtual_protocol_3iql8bfs2ve7mww4ehaqqhasbmrncrpxizwat2zfyr9y",
+      "robinhood/erc20/virtuals_protocol_0xc6911796042b15d7fa4f6cde69e245ddcd3d9c31"
     ]
   },
   "VITA": {
