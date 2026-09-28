@@ -239,6 +239,9 @@
   "arc": {
     "icon": "ARC.png"
   },
+  "arc/erc20/chainlink_token_0x76a443768a5e3b8d1aed0105fc250877841deb40": {
+    "icon": "LINK.png"
+  },
   "arc/erc20/usdc_0x3600000000000000000000000000000000000000": {
     "icon": "USDC.png"
   },
