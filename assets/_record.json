@@ -497,7 +497,7 @@
     "ids": ["ethereum_classic"]
   },
   "ETH": {
-    "ids": ["ethereum"]
+    "ids": ["aleo/arc20/eth", "ethereum"]
   },
   "ETHW": {
     "ids": ["ethereum_pow"]
@@ -1401,7 +1401,11 @@
     ]
   },
   "SOL": {
-    "ids": ["solana", "solana/spl/so11111111111111111111111111111111111111112"]
+    "ids": [
+      "aleo/arc20/sol",
+      "solana",
+      "solana/spl/so11111111111111111111111111111111111111112"
+    ]
   },
   "SOL_Testnet": {
     "ids": ["solana_testnet", "solana_devnet"]
@@ -1947,6 +1951,7 @@
   },
   "USDT": {
     "ids": [
+      "aleo/arc20/usdt",
       "ethereum/erc20/usd_tether__erc20_",
       "solana/spl/es9vmfrzacermjfrf4h2fyd4kconky11mcce8benwnyb",
       "bsc/bep20/binance-peg_bsc-usd",
@@ -2051,6 +2056,7 @@
   },
   "WBTC": {
     "ids": [
+      "aleo/arc20/wbtc",
       "ethereum/erc20/wrapped_bitcoin",
       "bsc/bep20/wrapped_btc_0x0555e30da8f98308edb960aa94c0db47230d2b9c",
       "base/erc20/wrapped_btc_0x0555e30da8f98308edb960aa94c0db47230d2b9c",

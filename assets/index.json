@@ -11,6 +11,18 @@
   "aleo": {
     "icon": "ALEO.png"
   },
+  "aleo/arc20/eth": {
+    "icon": "ETH.png"
+  },
+  "aleo/arc20/sol": {
+    "icon": "SOL.png"
+  },
+  "aleo/arc20/usdt": {
+    "icon": "USDT.png"
+  },
+  "aleo/arc20/wbtc": {
+    "icon": "WBTC.png"
+  },
   "aleo/arc22/usad": {
     "icon": "USAD.png"
   },
