@@ -257,6 +257,9 @@
   "arc/erc20/usdc_0x3600000000000000000000000000000000000000": {
     "icon": "USDC.png"
   },
+  "arc/erc20/virtuals_protocol_0x8c4252c87081c88c6ad57d6dd97e1cafebf842b7": {
+    "icon": "VIRTUAL.png"
+  },
   "arc_testnet": {
     "icon": "ARC_Testnet.png"
   },
@@ -2524,6 +2527,9 @@
   },
   "robinhood/erc20/chainlink_0x492641f648a4986844848e0befe66d14817bce34": {
     "icon": "LINK.png"
+  },
+  "robinhood/erc20/coinbase_wrapped_btc_0xcec185eb182c47d1ba1efc84e6959e18cd620be4": {
+    "icon": "CBBTC.png"
   },
   "robinhood/erc20/ethena_0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
     "icon": "ENA.png"
