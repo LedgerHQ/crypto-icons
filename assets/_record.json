@@ -327,7 +327,8 @@
       "solana/spl/coinbase_wrapped_btc_cbbtcf3aa214zxhbiazqwf4122fbybrandfqgw4imij",
       "base/erc20/coinbase_wrapped_btc",
       "arbitrum/erc20/coinbase_wrapped_btc_0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
-      "monad/erc20/coinbase_wrapped_btc_0xd18b7ec58cdf4876f6afebd3ed1730e4ce10414b"
+      "monad/erc20/coinbase_wrapped_btc_0xd18b7ec58cdf4876f6afebd3ed1730e4ce10414b",
+      "robinhood/erc20/coinbase_wrapped_btc_0xcec185eb182c47d1ba1efc84e6959e18cd620be4"
     ]
   },
   "CCD": {
@@ -2014,7 +2015,8 @@
       "base/erc20/virtual_protocol",
       "ethereum/erc20/virtual_protocol",
       "solana/spl/virtual_protocol_3iql8bfs2ve7mww4ehaqqhasbmrncrpxizwat2zfyr9y",
-      "robinhood/erc20/virtuals_protocol_0xc6911796042b15d7fa4f6cde69e245ddcd3d9c31"
+      "robinhood/erc20/virtuals_protocol_0xc6911796042b15d7fa4f6cde69e245ddcd3d9c31",
+      "arc/erc20/virtuals_protocol_0x8c4252c87081c88c6ad57d6dd97e1cafebf842b7"
     ]
   },
   "VITA": {
