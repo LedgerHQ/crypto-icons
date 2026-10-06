@@ -236,6 +236,9 @@
   "arbitrum/erc20/wootrade_network": {
     "icon": "WOO.png"
   },
+  "arbitrum/erc20/wrapped_0g_0x418176040912d11d9445dd4aec322772a42f2a59": {
+    "icon": "W0G.png"
+  },
   "arbitrum/erc20/wrapped_btc": {
     "icon": "WBTC.png"
   },
@@ -574,6 +577,9 @@
   },
   "base/erc20/virtual_protocol": {
     "icon": "VIRTUAL.png"
+  },
+  "base/erc20/wrapped_0g_0x23cd099eb438cca50349ee2bc809196b1ae00861": {
+    "icon": "W0G.png"
   },
   "base/erc20/wrapped_btc_0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
     "icon": "WBTC.png"
@@ -970,6 +976,9 @@
   },
   "bsc/bep20/world_liberty_financial_usd_0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d": {
     "icon": "USD1.png"
+  },
+  "bsc/bep20/wrapped_0g_0x2c2d4d99f95643c8ec2ebd1d73a6fd0273068b1e": {
+    "icon": "W0G.png"
   },
   "bsc/bep20/wrapped_binance_beacon_eth": {
     "icon": "WBETH.png"
@@ -1751,6 +1760,9 @@
   "ethereum/erc20/worldcoin": {
     "icon": "WLD.png"
   },
+  "ethereum/erc20/wrapped_0g_0x4c1dab3be86347977f3dfc4b9688224ef2272939": {
+    "icon": "W0G.png"
+  },
   "ethereum/erc20/wrapped_anc_token": {
     "icon": "ANC.png"
   },
@@ -2119,6 +2131,9 @@
   },
   "monad/erc20/world_liberty_financial_usd_0x111111d2bf19e43c34263401e0cad979ed1cdb61": {
     "icon": "USD1.png"
+  },
+  "monad/erc20/wrapped_0g_0xb267cc10fa4c54db1fd5a6e9cafbb98c16cc9b97": {
+    "icon": "W0G.png"
   },
   "monad/erc20/wrapped_btc_0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
     "icon": "WBTC.png"
@@ -2555,6 +2570,9 @@
   "robinhood/erc20/weth_0x0bd7d308f8e1639fab988df18a8011f41eacad73": {
     "icon": "WETH.png"
   },
+  "robinhood/erc20/wrapped_0g_0x32003cc8357938bcf615c1222a349c58f2b30698": {
+    "icon": "W0G.png"
+  },
   "robinhood/erc20/wrapped_eeth_0x2dc99af320bc317c567f24ee95811dcbd5983dfd": {
     "icon": "WEETH.png"
   },
@@ -2794,6 +2812,9 @@
   },
   "solana/spl/world_liberty_financial_wlfinev6ypjkczcs83fzqfpgfzywqxutrbxge7oc16g": {
     "icon": "WLFI.png"
+  },
+  "solana/spl/wrapped_0g_gnyjys9pqt33o4y4l3gdwzaf2xhgprcbrquaiczstme": {
+    "icon": "W0G.png"
   },
   "solana/spl/wrapped_bitcoin_5xzw2lktyrfvfiskj78ampackrjpcycif1whuspduvqq": {
     "icon": "WBTC.png"
@@ -3214,6 +3235,9 @@
   },
   "zero_gravity": {
     "icon": "0G.png"
+  },
+  "zero_gravity/erc20/wrapped_0g_0x1cd0690ff9a693f5ef2dd976660a8dafc81a109c": {
+    "icon": "W0G.png"
   },
   "zilliqa": {
     "icon": "ZIL.png"
