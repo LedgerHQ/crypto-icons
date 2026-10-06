@@ -2037,6 +2037,18 @@
       "base/erc20/venice_token_0xacfe6019ed1a7dc6f7b508c02d1b04ec88cc21bf"
     ]
   },
+  "W0G": {
+    "ids": [
+      "ethereum/erc20/wrapped_0g_0x4c1dab3be86347977f3dfc4b9688224ef2272939",
+      "solana/spl/wrapped_0g_gnyjys9pqt33o4y4l3gdwzaf2xhgprcbrquaiczstme",
+      "base/erc20/wrapped_0g_0x23cd099eb438cca50349ee2bc809196b1ae00861",
+      "arbitrum/erc20/wrapped_0g_0x418176040912d11d9445dd4aec322772a42f2a59",
+      "bsc/bep20/wrapped_0g_0x2c2d4d99f95643c8ec2ebd1d73a6fd0273068b1e",
+      "monad/erc20/wrapped_0g_0xb267cc10fa4c54db1fd5a6e9cafbb98c16cc9b97",
+      "robinhood/erc20/wrapped_0g_0x32003cc8357938bcf615c1222a349c58f2b30698",
+      "zero_gravity/erc20/wrapped_0g_0x1cd0690ff9a693f5ef2dd976660a8dafc81a109c"
+    ]
+  },
   "WAL": {
     "ids": [
       "sui/coin/wal_token_0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59::wal::wal"
@@ -2101,18 +2113,6 @@
       "optimism/erc20/aave_optimism_weth",
       "bsc/bep20/binance-peg_ethereum_token",
       "robinhood/erc20/weth_0x0bd7d308f8e1639fab988df18a8011f41eacad73"
-    ]
-  },
-  "W0G": {
-    "ids": [
-      "ethereum/erc20/wrapped_0g_0x4c1dab3be86347977f3dfc4b9688224ef2272939",
-      "solana/spl/wrapped_0g_gnyjys9pqt33o4y4l3gdwzaf2xhgprcbrquaiczstme",
-      "base/erc20/wrapped_0g_0x23cd099eb438cca50349ee2bc809196b1ae00861",
-      "arbitrum/erc20/wrapped_0g_0x418176040912d11d9445dd4aec322772a42f2a59",
-      "bsc/bep20/wrapped_0g_0x2c2d4d99f95643c8ec2ebd1d73a6fd0273068b1e",
-      "monad/erc20/wrapped_0g_0xb267cc10fa4c54db1fd5a6e9cafbb98c16cc9b97",
-      "robinhood/erc20/wrapped_0g_0x32003cc8357938bcf615c1222a349c58f2b30698",
-      "zero_gravity/erc20/wrapped_0g_0x1cd0690ff9a693f5ef2dd976660a8dafc81a109c"
     ]
   },
   "WBETH": {
