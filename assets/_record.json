@@ -1545,6 +1545,9 @@
       "polygon/erc20/sushitoken_(pos)"
     ]
   },
+  "SWAPKIT": {
+    "ids": ["swapkit"]
+  },
   "SWETH": {
     "ids": ["arbitrum/erc20/sweth", "ethereum/erc20/sweth"]
   },

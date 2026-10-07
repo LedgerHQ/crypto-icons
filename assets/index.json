@@ -2981,6 +2981,9 @@
   "sui_testnet": {
     "icon": "SUI_Testnet.png"
   },
+  "swapkit": {
+    "icon": "SWAPKIT.png"
+  },
   "telos_evm": {
     "icon": "TELOS.png"
   },
