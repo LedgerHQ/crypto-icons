@@ -50,52 +50,27 @@ When no icon URL can be resolved (neither CDN nor CoinGecko), the first letter o
 
 <Canvas of={CryptoIconStories.FallbackShowcase} />
 
+### Icon Group
+
+To display several crypto icons as an overlapping group, use Lumen's `MediaImageGroup` with `renderItem` returning a `CryptoIcon`.
+The reference documentation lives in Lumen: see the [Custom items section](https://ldls.vercel.app/?path=/docs/react-mediaimagegroup--docs#custom-items).
+
+<Canvas of={CryptoIconStories.GroupShowcase} />
+
 ## Implementation
 
 ### 1. Install
 
 ```bash
-# crypto-icons itself
 npm install @ledgerhq/crypto-icons
-
-# Peer dependencies — Lumen components and Tailwind preset
-npm install @ledgerhq/lumen-ui-react @ledgerhq/lumen-design-core
 ```
 
-### 2. Configure Tailwind
+### 2. Set up
 
-Add the Lumen preset and include the Lumen component dist in your `tailwind.config`:
+Install the peer dependencies and configure Tailwind and the Lumen `ThemeProvider` by following the
+[setup guide](https://github.com/LedgerHQ/crypto-icons/blob/main/lib/README.md#installation).
 
-```ts
-import { ledgerLivePreset } from '@ledgerhq/lumen-design-core';
-
-export default {
-  content: [
-    './src/**/*.{ts,tsx}',
-    './node_modules/@ledgerhq/lumen-ui-react/dist/**/*.{js,ts,jsx,tsx}',
-  ],
-  presets: [ledgerLivePreset],
-};
-```
-
-### 3. Wrap with ThemeProvider
-
-All Lumen components require a `ThemeProvider` at the root of your app:
-
-```tsx
-import { ThemeProvider } from '@ledgerhq/lumen-ui-react';
-import { ledgerLiveThemes } from '@ledgerhq/lumen-design-core';
-
-export function App() {
-  return (
-    <ThemeProvider themes={ledgerLiveThemes} colorScheme="system">
-      {/* your app */}
-    </ThemeProvider>
-  );
-}
-```
-
-### 4. Use
+### 3. Use
 
 ```tsx
 import { CryptoIcon, type CryptoIconProps } from '@ledgerhq/crypto-icons';
