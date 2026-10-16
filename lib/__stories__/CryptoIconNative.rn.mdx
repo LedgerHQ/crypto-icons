@@ -56,6 +56,17 @@ When no icon URL can be resolved (neither CDN nor CoinGecko), the first letter o
 To display several crypto icons as an overlapping group, use Lumen's `MediaImageGroup` with `renderItem` returning a `CryptoIcon`.
 The reference documentation lives in Lumen: see the [Custom items section](https://lumen-ldls.vercel.app/?path=/docs/rnative-mediaimagegroup--docs#custom-items).
 
+```tsx
+import { MediaImageGroup } from '@ledgerhq/lumen-ui-rnative';
+import CryptoIcon from '@ledgerhq/crypto-icons/native';
+
+<MediaImageGroup
+  data={assets} // [{ id: 'bitcoin', ledgerId: 'bitcoin', ticker: 'BTC' }, ...]
+  renderItem={(asset, { size, shape }) => (
+    <CryptoIcon ledgerId={asset.ledgerId} ticker={asset.ticker} size={size} shape={shape} />
+  )}
+/>
+```
 
 ## Implementation
 
