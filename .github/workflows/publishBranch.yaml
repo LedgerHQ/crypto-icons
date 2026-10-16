@@ -64,7 +64,7 @@ jobs:
 
       - name: Login to JFrog Ledger
         id: jfrog-login
-        uses: LedgerHQ/actions-security/actions/jfrog-login@actions/jfrog-login-1
+        uses: LedgerHQ/actions-security/actions/jfrog-login@5e1e158bc84b65cd0cb3b5b28733c3066ea93ed8 # actions/jfrog-login-1.4.1
 
       - name: Setup npm config for JFrog
         env:
