@@ -908,7 +908,8 @@
       "core/erc20/chainlink_token_0x3902228d6a3d2dc44731fd9d45fee6a61c722d0b",
       "unichain/erc20/chainlink_token_0xef66491eab4bbb582c57b14778afd8dfb70d8a1a",
       "monad/erc20/chainlink_token_0x76f257b1dda5cc71bee4ef637fbdde4c801310a9",
-      "robinhood/erc20/chainlink_0x492641f648a4986844848e0befe66d14817bce34"
+      "robinhood/erc20/chainlink_0x492641f648a4986844848e0befe66d14817bce34",
+      "berachain/erc20/chainlink_token_0x71052bae71c25c78e37fd12e5ff1101a71d9018f"
     ]
   },
   "LIQUIDETH": {
@@ -1883,7 +1884,8 @@
     "ids": [
       "ethereum/erc20/global_dollar_0xe343167631d89b6ffc58b88d6b7fb0228795491d",
       "robinhood/erc20/global_dollar_0x5fc5360d0400a0fd4f2af552add042d716f1d168",
-      "solana/spl/global_dollar_2u1tszseqz3qbwf3ungpfc8tzmk2tdiwknnrmwgwjgwh"
+      "solana/spl/global_dollar_2u1tszseqz3qbwf3ungpfc8tzmk2tdiwknnrmwgwjgwh",
+      "arbitrum/erc20/global_dollar_0x004b506865409877c9fa29bfb1eba929984b9bbc"
     ]
   },
   "USDGO": {
@@ -1975,7 +1977,8 @@
       "flare/erc20/tether_usd_0x0b38e83b86d491735feaa0a791f65c2b99535396",
       "astar/erc20/tether_usd",
       "neon_evm/erc20/usdt",
-      "polygon_zk_evm/erc20/tether_usd"
+      "polygon_zk_evm/erc20/tether_usd",
+      "optimism/erc20/usd_0_0x01bff41798a0bcf287b996046ca68b395dbc1071"
     ]
   },
   "USDS": {
@@ -2224,7 +2227,8 @@
       "berachain/erc20/weeth",
       "unichain/erc20/wrapped_eeth_0x7dcc39b4d1c53cb31e1abc0e358b43987fef80f7",
       "robinhood/erc20/wrapped_eeth_0x2dc99af320bc317c567f24ee95811dcbd5983dfd",
-      "robinhood/erc20/wrapped_eeth_0xa3d68b74bf0528fdd07263c60d6488749044914b"
+      "robinhood/erc20/wrapped_eeth_0xa3d68b74bf0528fdd07263c60d6488749044914b",
+      "monad/erc20/wrapped_eeth_0xa3d68b74bf0528fdd07263c60d6488749044914b"
     ]
   }
 }

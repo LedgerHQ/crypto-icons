@@ -122,6 +122,9 @@
   "arbitrum/erc20/gho_token": {
     "icon": "GHO.png"
   },
+  "arbitrum/erc20/global_dollar_0x004b506865409877c9fa29bfb1eba929984b9bbc": {
+    "icon": "USDG.png"
+  },
   "arbitrum/erc20/gmx": {
     "icon": "GMX.png"
   },
@@ -595,6 +598,9 @@
   },
   "berachain": {
     "icon": "BERACHAIN.png"
+  },
+  "berachain/erc20/chainlink_token_0x71052bae71c25c78e37fd12e5ff1101a71d9018f": {
+    "icon": "LINK.png"
   },
   "berachain/erc20/lbtc": {
     "icon": "LBTC.png"
@@ -2138,6 +2144,9 @@
   "monad/erc20/wrapped_btc_0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
     "icon": "WBTC.png"
   },
+  "monad/erc20/wrapped_eeth_0xa3d68b74bf0528fdd07263c60d6488749044914b": {
+    "icon": "WEETH.png"
+  },
   "monad/erc20/wrapped_liquid_staked_ether_2_0_0x10aeaf63194db8d453d4d85a06e5efe1dd0b5417": {
     "icon": "WSTETH.png"
   },
@@ -2311,6 +2320,9 @@
   },
   "optimism/erc20/uniswap": {
     "icon": "UNI.png"
+  },
+  "optimism/erc20/usd_0_0x01bff41798a0bcf287b996046ca68b395dbc1071": {
+    "icon": "USDT.png"
   },
   "optimism/erc20/usd_coin": {
     "icon": "USDC.png"
