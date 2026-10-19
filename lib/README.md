@@ -35,12 +35,16 @@ Add the Lumen preset to your `tailwind.config`:
 import { ledgerLivePreset } from '@ledgerhq/lumen-design-core';
 
 export default {
-  content: [
-    './src/**/*.{ts,tsx}',
-    './node_modules/@ledgerhq/lumen-ui-react/dist/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./src/**/*.{ts,tsx}'],
   presets: [ledgerLivePreset],
 };
+```
+
+Then register Lumen's compiled components as a Tailwind source in your CSS, after the Tailwind import:
+
+```css
+@import 'tailwindcss';
+@import '@ledgerhq/lumen-ui-react/tailwind.css';
 ```
 
 ### 2 — ThemeProvider (React & React Native)

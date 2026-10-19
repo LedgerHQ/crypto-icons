@@ -1,3 +1,4 @@
 @import 'tailwindcss';
+@import '@ledgerhq/lumen-ui-react/tailwind.css';
 
 @config '../tailwind.config.ts';
