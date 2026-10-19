@@ -40,7 +40,7 @@ export default {
 };
 ```
 
-Then register Lumen's compiled components as a Tailwind source in your CSS, after the Tailwind import:
+Then register Lumen's compiled components as a Tailwind source in your CSS, after the Tailwind import. Also add an `@config` directive pointing to the configuration file above, using a path relative to your stylesheet (for example, `@config '../tailwind.config.ts';` for `src/styles.css` and a root-level `tailwind.config.ts`). Tailwind 4 does not automatically discover JavaScript/TypeScript configuration files:
 
 ```css
 @import 'tailwindcss';
