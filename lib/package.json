@@ -1,6 +1,6 @@
 {
   "name": "@ledgerhq/crypto-icons",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "Crypto icons by Ledger",
   "license": "MIT",
   "repository": {
@@ -48,9 +48,9 @@
     "format": "prettier --write 'src/**/*.{ts,tsx}'"
   },
   "devDependencies": {
-    "@ledgerhq/lumen-design-core": "^0.1.28",
-    "@ledgerhq/lumen-ui-react": "^0.1.58",
-    "@ledgerhq/lumen-ui-rnative": "^0.1.61",
+    "@ledgerhq/lumen-design-core": "^0.1.34",
+    "@ledgerhq/lumen-ui-react": "^0.1.66",
+    "@ledgerhq/lumen-ui-rnative": "^0.1.69",
     "@ledgerhq/wallet-api-client": "^1.5.9",
     "@storybook/addon-controls": "8.2.6",
     "@storybook/addon-essentials": "8.2.6",
