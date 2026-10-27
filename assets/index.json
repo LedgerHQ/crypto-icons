@@ -1091,6 +1091,9 @@
   "cronos/erc20/usd_coin": {
     "icon": "USDC.png"
   },
+  "cronos/erc20/usdc_0x3d7f2c478aafdb65542bcb44bceec05849999d2d": {
+    "icon": "USDC.png"
+  },
   "crypto_org": {
     "icon": "CRO.png"
   },
@@ -1733,6 +1736,9 @@
   "ethereum/erc20/usde": {
     "icon": "USDE.png"
   },
+  "ethereum/erc20/usdgo_0x4cf5920df52f5b1f246e2e38e1786ae1cf03ecf5": {
+    "icon": "USDGO.png"
+  },
   "ethereum/erc20/usds_stablecoin_0xdc035d45d973e3ec169d2276ddab16f1e407384f": {
     "icon": "USDS.png"
   },
@@ -2059,6 +2065,9 @@
   },
   "mantle/erc20/ena": {
     "icon": "ENA.png"
+  },
+  "mantle/erc20/global_dollar_0x063c1d1ef6e9099ce3e8e9ad5c6173d12c49c086": {
+    "icon": "USDG.png"
   },
   "mantle/erc20/kelpdao_restaked_eth_0x4186bfc76e2e237523cbc30fd220fe055156b41f": {
     "icon": "RSETH.png"
@@ -2446,6 +2455,9 @@
   },
   "polygon/erc20/polygon_tbtc_v2": {
     "icon": "TBTC.png"
+  },
+  "polygon/erc20/pyusd0_0x99af3eea856556646c98c8b9b2548fe815240750": {
+    "icon": "PYUSD.png"
   },
   "polygon/erc20/render_token": {
     "icon": "RNDR.png"

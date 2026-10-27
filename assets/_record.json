@@ -1235,7 +1235,8 @@
     "ids": [
       "arbitrum/erc20/paypal_usd_0x46850ad61c2b7d64d08c9c754f45254596696984",
       "ethereum/erc20/paypal_usd",
-      "solana/spl/paypal_usd_2b1kv6dkpanxd5ixfnxcpjxmkwqjjaymczfhsfu24gxo"
+      "solana/spl/paypal_usd_2b1kv6dkpanxd5ixfnxcpjxmkwqjjaymczfhsfu24gxo",
+      "polygon/erc20/pyusd0_0x99af3eea856556646c98c8b9b2548fe815240750"
     ]
   },
   "QNT": {
@@ -1877,7 +1878,8 @@
       "tezos/fa2/ethereum_usdc_kt1ussfaxyqcjsvpeid7u1bwgky3tayn7nwy_2",
       "arc/erc20/usdc_0x3600000000000000000000000000000000000000",
       "aleo/arc22/usdcx",
-      "canton_network_testnet/cip56/usdcx"
+      "canton_network_testnet/cip56/usdcx",
+      "cronos/erc20/usdc_0x3d7f2c478aafdb65542bcb44bceec05849999d2d"
     ]
   },
   "USDG": {
@@ -1885,11 +1887,15 @@
       "ethereum/erc20/global_dollar_0xe343167631d89b6ffc58b88d6b7fb0228795491d",
       "robinhood/erc20/global_dollar_0x5fc5360d0400a0fd4f2af552add042d716f1d168",
       "solana/spl/global_dollar_2u1tszseqz3qbwf3ungpfc8tzmk2tdiwknnrmwgwjgwh",
-      "arbitrum/erc20/global_dollar_0x004b506865409877c9fa29bfb1eba929984b9bbc"
+      "arbitrum/erc20/global_dollar_0x004b506865409877c9fa29bfb1eba929984b9bbc",
+      "mantle/erc20/global_dollar_0x063c1d1ef6e9099ce3e8e9ad5c6173d12c49c086"
     ]
   },
   "USDGO": {
-    "ids": ["solana/spl/usdgo_72pult71h93z9czhubrtwfpl4tg3wzuhnocc7p8gxigu"]
+    "ids": [
+      "solana/spl/usdgo_72pult71h93z9czhubrtwfpl4tg3wzuhnocc7p8gxigu",
+      "ethereum/erc20/usdgo_0x4cf5920df52f5b1f246e2e38e1786ae1cf03ecf5"
+    ]
   },
   "USDH": {
     "ids": [
