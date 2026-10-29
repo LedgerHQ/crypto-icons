@@ -5,7 +5,6 @@
   "ignoreDependencies": [
     "@storybook/addon-controls",
     "@storybook/addon-react-native-web",
-    "@typescript-eslint/parser",
     "babel-loader",
     "css-loader",
     "postcss-loader",
