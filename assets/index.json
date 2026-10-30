@@ -41,6 +41,9 @@
   "algorand/asa/31566704": {
     "icon": "USDC.png"
   },
+  "alpen_testnet": {
+    "icon": "ALPEN_Testnet.png"
+  },
   "aptos": {
     "icon": "APT.png"
   },
