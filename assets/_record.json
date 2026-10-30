@@ -78,6 +78,9 @@
   "ALGO": {
     "ids": ["algorand"]
   },
+  "ALPEN_Testnet": {
+    "ids": ["alpen_testnet"]
+  },
   "ALT": {
     "ids": ["ethereum/erc20/altlayer_token"]
   },
