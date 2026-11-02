@@ -2,7 +2,10 @@
 import { agent, allTools, plan, retryShellSlot, task, variable } from "@cairn/plan";
 import { z } from "zod";
 
-const verifyCommand = "cd lib && pnpm build && pnpm knip && pnpm lint && pnpm test";
+// Slack runs don't always run the config's setup, so the plan installs its own deps.
+// corepack pnpm needs no global shim and picks the packageManager version.
+const pnpm = "COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack pnpm";
+const verifyCommand = `cd lib && ${pnpm} build && ${pnpm} knip && ${pnpm} lint && ${pnpm} test`;
 
 const prUrl = variable("prUrl", z.string().url(), {
   description: "Pull request URL opened by the upgrade.",
@@ -30,6 +33,7 @@ const upgrader = agent("upgrader")
   .prompt(
     `You upgrade the @ledgerhq/lumen-* packages in lib/.
 Fix only what the failing checks report. Keep behavior and unrelated code unchanged.
+Run pnpm as "corepack pnpm": there is no global pnpm.
 Never edit lib/pnpm-lock.yaml by hand and never downgrade a Lumen package.`,
   )
   .tools(allTools())
@@ -44,8 +48,10 @@ const createBranchTask = task("create-branch")
   .uses(upgrader)
   .createBranch({ name: "chore/lumen-upgrade" });
 
+const installTask = task("install").runs(`cd lib && ${pnpm} install --frozen-lockfile`);
+
 const bumpTask = task("bump").runs(
-  "cd lib && pnpm up @ledgerhq/lumen-ui-react@latest @ledgerhq/lumen-ui-rnative@latest @ledgerhq/lumen-design-core@latest",
+  `cd lib && ${pnpm} up @ledgerhq/lumen-ui-react@latest @ledgerhq/lumen-ui-rnative@latest @ledgerhq/lumen-design-core@latest`,
 );
 
 const commitTask = task("commit").uses(upgrader).commit({ message: "chore(deps): upgrade Lumen" });
@@ -79,6 +85,7 @@ const recordFailureTask = task("record-failure")
 export default plan("lumen-upgrade")
   .input(z.object({}))
   .do(createBranchTask)
+  .do(installTask)
   .do(bumpTask)
   .retryShell("verify", {
     max: 3,
