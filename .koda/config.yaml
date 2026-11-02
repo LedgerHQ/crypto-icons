@@ -1,0 +1,8 @@
+snapshot: node-24-small
+setup: |
+  corepack enable
+  cd lib && pnpm install --frozen-lockfile
+lint: cd lib && pnpm lint
+test: cd lib && pnpm test
+github:
+  draft_pull_requests: true
