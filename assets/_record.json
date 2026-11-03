@@ -79,7 +79,10 @@
     "ids": ["algorand"]
   },
   "ALPEN_Testnet": {
-    "ids": ["alpen_testnet"]
+    "ids": [
+      "alpen_testnet",
+      "alpen_testnet/erc20/wrapped_alpen_btc_0xa2903243f20eede1839cb07ee5ce6b2ba5820000"
+    ]
   },
   "ALT": {
     "ids": ["ethereum/erc20/altlayer_token"]

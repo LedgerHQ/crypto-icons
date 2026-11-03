@@ -44,6 +44,9 @@
   "alpen_testnet": {
     "icon": "ALPEN_Testnet.png"
   },
+  "alpen_testnet/erc20/wrapped_alpen_btc_0xa2903243f20eede1839cb07ee5ce6b2ba5820000": {
+    "icon": "ALPEN_Testnet.png"
+  },
   "aptos": {
     "icon": "APT.png"
   },
