@@ -1,0 +1,8 @@
+snapshot: node-24-small
+sandbox:
+  image: jfrog.ledgerlabs.net/daytona-oci-internal-green/node/daytona:24
+setup: cd lib && COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack pnpm install --frozen-lockfile
+lint: cd lib && corepack pnpm lint
+test: cd lib && corepack pnpm test
+github:
+  draft_pull_requests: true
