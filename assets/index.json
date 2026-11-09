@@ -3266,6 +3266,15 @@
   "zero_gravity": {
     "icon": "0G.png"
   },
+  "zero_gravity/erc20/ascend_staked_0g_0x4b3c2f55fa67679b382c979a082df1b32079b4cb": {
+    "icon": "A0G.png"
+  },
+  "zero_gravity/erc20/infinite_ai_0xc77fbd3824cc68e612b26114d176879addc29463": {
+    "icon": "IAI.png"
+  },
+  "zero_gravity/erc20/usdz_0xd4d54bd7379e799417563b1bb42426c9bd4ccb2a": {
+    "icon": "USDZ.png"
+  },
   "zero_gravity/erc20/wrapped_0g_0x1cd0690ff9a693f5ef2dd976660a8dafc81a109c": {
     "icon": "W0G.png"
   },
