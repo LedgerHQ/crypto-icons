@@ -1943,6 +1943,9 @@
   "hyperevm/erc20/usd_0_0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb": {
     "icon": "USDT0.png"
   },
+  "hyperevm/erc20/usdc_0xb88339cb7199b77e23db6e890353e22632ba630f": {
+    "icon": "USDC.png"
+  },
   "hyperevm/erc20/usdeoft_0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
     "icon": "USDE.png"
   },
@@ -1973,11 +1976,17 @@
   "kava_evm": {
     "icon": "KAVA.png"
   },
+  "kava_evm/erc20/tetherusdt_0x919c1c267bc06a7039e03fcc2ef738525769109c": {
+    "icon": "USDT.png"
+  },
   "kava_evm_testnet": {
     "icon": "KAVA.png"
   },
   "klaytn": {
     "icon": "KLAY.png"
+  },
+  "klaytn/erc20/tether_usd_0xd077a400968890eacc75cdc901f0356c943e4fdb": {
+    "icon": "USDT.png"
   },
   "klaytn_baobab": {
     "icon": "KLAY.png"
@@ -2243,6 +2252,9 @@
   "neutron": {
     "icon": "NTRN.png"
   },
+  "okbchain/erc20/usdc_0xb6ceceab302e2e4948951ee7843fc24e92933061": {
+    "icon": "USDC.png"
+  },
   "optimism": {
     "icon": "OP.png"
   },
@@ -2365,6 +2377,9 @@
   },
   "peercoin": {
     "icon": "PPC.png"
+  },
+  "plume/erc20/usdc_0x222365ef19f7947e5484218551b56bb3965aa7af": {
+    "icon": "USDC.png"
   },
   "polkadot": {
     "icon": "DOT.png"
@@ -3256,6 +3271,9 @@
   },
   "westend": {
     "icon": "DOT_Testnet.png"
+  },
+  "xdc/erc20/usdc_0xfa2958cb79b0491cc627c1557f441ef849ca8eb1": {
+    "icon": "USDC.png"
   },
   "xion": {
     "icon": "VERONA.png"
