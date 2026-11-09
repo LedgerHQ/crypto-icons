@@ -24,6 +24,11 @@
       "energi/erc20/1inch_0xdda6205dc3f47e5280eb726613b27374eee9d130"
     ]
   },
+  "A0G": {
+    "ids": [
+      "zero_gravity/erc20/ascend_staked_0g_0x4b3c2f55fa67679b382c979a082df1b32079b4cb"
+    ]
+  },
   "AAVE": {
     "ids": [
       "ethereum/erc20/aave",
@@ -710,6 +715,11 @@
   },
   "HOT": {
     "ids": ["ethereum/erc20/holotoken"]
+  },
+  "IAI": {
+    "ids": [
+      "zero_gravity/erc20/infinite_ai_0xc77fbd3824cc68e612b26114d176879addc29463"
+    ]
   },
   "ICP": {
     "ids": [
@@ -2007,6 +2017,11 @@
       "arbitrum/erc20/ondo_u_s_dollar_yield_0x35e050d3c0ec2d29d269a8ecea763a183bdf9a9d",
       "mantle/erc20/ondo_u_s_dollar_yield",
       "sui/coin/ondo_us_dollar_yield_0x960b531667636f39e85867775f52f6b1f220a058c4de786905bdf761e06a56bb::usdy::usdy"
+    ]
+  },
+  "USDZ": {
+    "ids": [
+      "zero_gravity/erc20/usdz_0xd4d54bd7379e799417563b1bb42426c9bd4ccb2a"
     ]
   },
   "USX": {
