@@ -1885,7 +1885,11 @@
       "arc/erc20/usdc_0x3600000000000000000000000000000000000000",
       "aleo/arc22/usdcx",
       "canton_network_testnet/cip56/usdcx",
-      "cronos/erc20/usdc_0x3d7f2c478aafdb65542bcb44bceec05849999d2d"
+      "cronos/erc20/usdc_0x3d7f2c478aafdb65542bcb44bceec05849999d2d",
+      "okbchain/erc20/usdc_0xb6ceceab302e2e4948951ee7843fc24e92933061",
+      "xdc/erc20/usdc_0xfa2958cb79b0491cc627c1557f441ef849ca8eb1",
+      "hyperevm/erc20/usdc_0xb88339cb7199b77e23db6e890353e22632ba630f",
+      "plume/erc20/usdc_0x222365ef19f7947e5484218551b56bb3965aa7af"
     ]
   },
   "USDG": {
@@ -1990,7 +1994,9 @@
       "astar/erc20/tether_usd",
       "neon_evm/erc20/usdt",
       "polygon_zk_evm/erc20/tether_usd",
-      "optimism/erc20/usd_0_0x01bff41798a0bcf287b996046ca68b395dbc1071"
+      "optimism/erc20/usd_0_0x01bff41798a0bcf287b996046ca68b395dbc1071",
+      "kava_evm/erc20/tetherusdt_0x919c1c267bc06a7039e03fcc2ef738525769109c",
+      "klaytn/erc20/tether_usd_0xd077a400968890eacc75cdc901f0356c943e4fdb"
     ]
   },
   "USDS": {
