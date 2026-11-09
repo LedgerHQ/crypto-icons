@@ -3014,6 +3014,9 @@
   "sui/coin/first_digital_usd_0xf16e6b723f242ec745dfd7634ad072c42d5c1d9ac9d62a39c381303eaa57693a::fdusd::fdusd": {
     "icon": "FDUSD.png"
   },
+  "sui/coin/hashi_btc_0xd30fb3f8914efdbeb7b8e85fae1d65dc584b44a1281f66737b92bb9f03a59d06::btc::btc": {
+    "icon": "SUI_HBTC.png"
+  },
   "sui/coin/ondo_us_dollar_yield_0x960b531667636f39e85867775f52f6b1f220a058c4de786905bdf761e06a56bb::usdy::usdy": {
     "icon": "USDY.png"
   },
