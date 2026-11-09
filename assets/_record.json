@@ -83,6 +83,9 @@
   "ALGO": {
     "ids": ["algorand"]
   },
+  "ALPEN": {
+    "ids": ["alpen"]
+  },
   "ALPEN_Testnet": {
     "ids": [
       "alpen_testnet",
