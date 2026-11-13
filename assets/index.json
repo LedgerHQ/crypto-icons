@@ -509,6 +509,9 @@
   "base/erc20/morpho_token_0xbaa5cc21fd487b8fcc2f632f3f4e8d37262a0842": {
     "icon": "MORPHO.png"
   },
+  "base/erc20/mr_lightspeed_0xf0cb96a4011a0a6f73d100c7080bf8020d10f87a": {
+    "icon": "MR_LIGHTSPEED.png"
+  },
   "base/erc20/olympus_0x060cb087a9730e13aa191f31a6d86bff8dfcdcc0": {
     "icon": "OHM.png"
   },

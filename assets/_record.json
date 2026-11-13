@@ -1073,6 +1073,11 @@
   "MOVR": {
     "ids": ["moonriver"]
   },
+  "MR_LIGHTSPEED": {
+    "ids": [
+      "base/erc20/mr_lightspeed_0xf0cb96a4011a0a6f73d100c7080bf8020d10f87a"
+    ]
+  },
   "MSOL": {
     "ids": ["solana/spl/msolzycxhdygdzu16g5qsh3i5k3z3kzk7ytfqcjm7so"]
   },
