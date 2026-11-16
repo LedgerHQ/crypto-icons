@@ -54,6 +54,21 @@ const bumpTask = task("bump").runs(
   `cd lib && ${pnpm} up @ledgerhq/lumen-ui-react@latest @ledgerhq/lumen-ui-rnative@latest @ledgerhq/lumen-design-core@latest`,
 );
 
+// Always `@latest`: the index only knows the releases published before the CLI version.
+const migrationsCli = "npx @ledgerhq/lumen-migrations@latest";
+
+// The bump is not committed yet, so `git diff` on lib/package.json shows the installed → target range.
+const migrateTask = task("migrate")
+  .uses(upgrader)
+  .message(
+    `Apply the Lumen migrations for the upgrade range with the migrations CLI.
+1. Run \`git diff -- lib/package.json\` to get the previous and new version of each bumped @ledgerhq/lumen-* package.
+2. For each of them, run \`${migrationsCli} list --package <name> --from <previous> --to <new> --json\`.
+3. For each migration listed, run \`${migrationsCli} show <id>\` and follow it (Before → after, Decide).
+4. For each package, run \`${migrationsCli} check --cwd lib --package <name> --from <previous>\`. Exit code 1 means \`expect: none\` patterns still have hits: fix them and run it again. Hits it lists as review are for a human: do not edit them.
+5. List what you cannot decide for a human.`,
+  );
+
 const commitTask = task("commit").uses(upgrader).commit({ message: "chore(deps): upgrade Lumen" });
 
 const pushTask = task("push").uses(upgrader).push();
@@ -87,6 +102,7 @@ export default plan("lumen-upgrade")
   .do(createBranchTask)
   .do(installTask)
   .do(bumpTask)
+  .do(migrateTask)
   .retryShell("verify", {
     max: 3,
     command: verifyCommand,
