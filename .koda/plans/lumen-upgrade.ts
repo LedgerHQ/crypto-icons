@@ -147,7 +147,17 @@ export default plan("lumen-upgrade")
   .if(
     openPrExitCode.eq(1),
     (b) => b.do(reuseBranchTask),
-    (b) => b.do(createBranchTask),
+    (b) =>
+      b.if(
+        openPrExitCode.eq(0),
+        (c) => c.do(createBranchTask),
+        (c) =>
+          c.do(
+            task("fail-open-pr-check").runs(
+              "echo 'Unable to check for an open Lumen upgrade PR' >&2; exit 2",
+            ),
+          ),
+      ),
   )
   .do(installTask)
   .do(bumpTask)
