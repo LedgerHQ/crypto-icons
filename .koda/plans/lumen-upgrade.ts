@@ -44,6 +44,32 @@ const recorder = agent("recorder")
   .tools("read")
   .limits({ maxTurns: 4, timeoutMinutes: 5 });
 
+// An open upgrade PR is updated, never duplicated: `createBranch` adds a unique suffix to every
+// branch, so without this each run would open another PR.
+// TODO: if someone other than koda-bot committed to the open PR's branch, comment on the PR and
+// return `skipped` instead of pushing onto it.
+const openPrExitCode = variable("openPrExitCode", z.number());
+const openPr = variable("openPr", z.string(), {
+  description: "The open upgrade PR as JSON, with its url and headRefName. Empty when none is open.",
+});
+
+// Exit 0: no open upgrade PR. Exit 1: one is open (stdout is its JSON). Exit 2: `gh` failed.
+const checkOpenPrTask = task("check-open-pr")
+  .runs(
+    `open=$(gh pr list --state open --json url,headRefName --jq '[.[] | select(.headRefName | startswith("chore/lumen-upgrade"))] | first // empty') || exit 2; [ -z "$open" ] || { echo "$open"; exit 1; }`,
+  )
+  .continueOnError()
+  .writes({ exit_code: openPrExitCode, stdout: openPr });
+
+const reuseBranchTask = task("reuse-branch")
+  .uses(upgrader)
+  .message(
+    `An upgrade PR is already open: its url and branch (headRefName) are in openPr. Update that PR instead of opening a new one.
+Run git fetch, check out that branch, and merge the default branch (origin/HEAD) into it.
+On a conflict in lib/package.json or lib/pnpm-lock.yaml take the default branch's version: the next steps redo the bump.`,
+  )
+  .with({ openPr });
+
 const createBranchTask = task("create-branch")
   .uses(upgrader)
   .createBranch({ name: "chore/lumen-upgrade" });
@@ -91,6 +117,24 @@ const recordPrCreatedTask = task("record-pr-created")
   .with({ prUrl, verify })
   .writes(result);
 
+const recordPrUpdatedTask = task("record-pr-updated")
+  .uses(recorder)
+  .message("Write the terminal result as pr-created: the open PR in openPr was updated. Give a one-sentence summary and its url as prUrl.")
+  .with({ openPr, verify })
+  .writes(result);
+
+// Nothing to commit when Lumen was already at the latest version.
+const changesExitCode = variable("changesExitCode", z.number());
+const checkChangesTask = task("check-changes")
+  .runs('test -n "$(git status --porcelain)"')
+  .continueOnError()
+  .writes({ exit_code: changesExitCode });
+
+const recordUpToDateTask = task("record-up-to-date")
+  .uses(recorder)
+  .message("Write the terminal result as skipped: the upgrade changed nothing because Lumen is already up to date.")
+  .writes(result);
+
 const recordFailureTask = task("record-failure")
   .uses(recorder)
   .message("Write the terminal result as skipped. Give the failing check from the verify output as the reason.")
@@ -99,7 +143,22 @@ const recordFailureTask = task("record-failure")
 
 export default plan("lumen-upgrade")
   .input(z.object({}))
-  .do(createBranchTask)
+  .do(checkOpenPrTask)
+  .if(
+    openPrExitCode.eq(1),
+    (b) => b.do(reuseBranchTask),
+    (b) =>
+      b.if(
+        openPrExitCode.eq(0),
+        (c) => c.do(createBranchTask),
+        (c) =>
+          c.do(
+            task("fail-open-pr-check").runs(
+              "echo 'Unable to check for an open Lumen upgrade PR' >&2; exit 2",
+            ),
+          ),
+      ),
+  )
   .do(installTask)
   .do(bumpTask)
   .do(migrateTask)
@@ -112,7 +171,18 @@ export default plan("lumen-upgrade")
         .message("Checks failed after the Lumen upgrade. Fix them.")
         .with({ stdout: shellOutput.field("stdout"), stderr: shellOutput.field("stderr") }),
   })
-  .if(verify.field("exit_code").eq(0), (b) =>
-    b.do(commitTask).do(pushTask).do(createPrTask).do(recordPrCreatedTask),
-  )
-  .else((b) => b.do(recordFailureTask));
+  .if(
+    verify.field("exit_code").eq(0),
+    (b) =>
+      b.do(checkChangesTask).if(
+        changesExitCode.eq(0),
+        (c) =>
+          c.do(commitTask).do(pushTask).if(
+            openPrExitCode.eq(1),
+            (d) => d.do(recordPrUpdatedTask),
+            (d) => d.do(createPrTask).do(recordPrCreatedTask),
+          ),
+        (c) => c.do(recordUpToDateTask),
+      ),
+    (b) => b.do(recordFailureTask),
+  );
