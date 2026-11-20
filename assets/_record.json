@@ -2018,6 +2018,7 @@
       "avalanche_c_chain/erc20/uniswap_(bridged)",
       "polygon/erc20/uniswap_(pos)",
       "arbitrum/erc20/uniswap",
+      "base/erc20/uniswap_0xc3de830ea07524a0761646a6a4e4be0e114a3c83",
       "optimism/erc20/uniswap",
       "linea/erc20/uniswap",
       "energi/erc20/uniswap_0x665b3a802979ec24e076c80025bff33c18eb6007",

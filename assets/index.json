@@ -575,6 +575,9 @@
   "base/erc20/tlos_0x7252c865c05378ffc15120f428dd65804dd0ce63": {
     "icon": "TELOS.png"
   },
+  "base/erc20/uniswap_0xc3de830ea07524a0761646a6a4e4be0e114a3c83": {
+    "icon": "UNI.png"
+  },
   "base/erc20/usd_coin": {
     "icon": "USDC.png"
   },
