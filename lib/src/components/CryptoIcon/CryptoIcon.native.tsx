@@ -36,6 +36,7 @@ const CryptoIcon: FC<CryptoIconProps> = ({
         <DotSymbol
           src={networkUrl}
           pin={badgePosition}
+          shape="square"
           {...getDotSymbolProps('mediaImage', size)}
           disabled={disabled}
         >
