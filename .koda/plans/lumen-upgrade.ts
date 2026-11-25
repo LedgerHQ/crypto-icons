@@ -88,7 +88,7 @@ const createBranchTask = task("create-branch")
 const rebaseCommand = `set -e
 test ! -d .git/rebase-merge
 test ! -d .git/rebase-apply
-GIT_TERMINAL_PROMPT=0 timeout 300 git fetch --quiet origin ${settings.baseBranch}
+GIT_TERMINAL_PROMPT=0 timeout 300 git fetch --quiet origin "+${settings.baseBranch}:refs/remotes/origin/${settings.baseBranch}"
 git rebase origin/${settings.baseBranch}`;
 
 const resolveConflictsTask = shellOutput =>
@@ -142,8 +142,12 @@ const fixChecksTask = shellOutput =>
     .with({ stdout: shellOutput.field("stdout"), stderr: shellOutput.field("stderr") });
 
 /** Cairn's `commit()` fails on a clean tree, and a rebase alone leaves nothing to commit. */
-const commitTask = task("commit").runs(
-  `git add -A\ngit diff --cached --quiet || git commit --quiet -m "${settings.commitMessage}"`,
+const commitIfChanged = `git add -A\ngit diff --cached --quiet || git commit --quiet -m "${settings.commitMessage}"`;
+const commitTask = task("commit").runs(commitIfChanged);
+
+/** For repo tools that read committed files, like a changeset generator. Commits what they change. */
+const afterCommitTask = task("after-commit").runs(
+  `set -e\n${settings.afterCommitCommand}\n${commitIfChanged}`,
 );
 
 /** Cairn's `push()` never forces, and a rebased branch needs it. The lease keeps others' pushes. */
@@ -185,13 +189,16 @@ const migrateAndPublish = b =>
       onMaxIterations: "panic",
     })
     .do(commitTask)
+    .do(afterCommitTask)
     .do(pushTask)
     .do(createPrTask)
     .do(labelsTask)
     .do(updatePrBodyTask, { when: openBranch.ne("") })
     .do(recordPrTask);
 
+/** Cairn requires an input schema; the plan takes no input. */
 export default plan("lumen-upgrade")
+  .input(z.object({}))
   .do(checkoutOpenPrTask)
   .do(createBranchTask, { when: openBranch.eq("") })
   .retryShell("rebase", {

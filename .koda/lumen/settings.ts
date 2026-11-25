@@ -15,4 +15,6 @@ export const settings = {
   verifyCommand: "cd lib && COREPACK_ENABLE_DOWNLOAD_PROMPT=0 timeout 1200 corepack pnpm lint",
   /** Runs after the bump, before the migrations. Empty to skip. */
   afterBumpCommand: "",
+  /** Runs after the commit; what it changes is committed too. Empty to skip. */
+  afterCommitCommand: "",
 };
