@@ -4,6 +4,8 @@ export const settings = {
   branchPrefix: "chore/lumen-upgrade",
   commitMessage: "chore(deps): upgrade Lumen",
   prTitle: "chore(deps): upgrade Lumen",
+  /** Added to the PR on top of Cairn's `cairn` label. */
+  labels: [],
   agentGuidance:
     "The only package is lib/ (@ledgerhq/crypto-icons): read lib/README.md, and run pnpm from lib/ as `COREPACK_ENABLE_DOWNLOAD_PROMPT=0 corepack pnpm` (there is no global pnpm). The add-icon skill in .claude/skills is for adding icons and does not apply.",
   /** Updates the lockfile and installs after the bump. */

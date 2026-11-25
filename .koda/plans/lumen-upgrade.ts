@@ -2,19 +2,9 @@
 /**
  * Upgrades Lumen to latest (Lumen ADR 027). Continues the open upgrade PR when there is one:
  * rebases it on the base branch, then bumps and migrates again. Opens a new PR otherwise.
- * Generic: copied unchanged from LedgerHQ/lumen. Repo specifics live in `.koda/lumen/settings.ts`.
+ * Repo specifics live in `.koda/lumen/settings.ts`.
  */
-import {
-  agent,
-  allTools,
-  input,
-  inputsOf,
-  literal,
-  plan,
-  retryShellSlot,
-  task,
-  variable,
-} from "@cairn/plan";
+import { agent, allTools, input, literal, plan, task, variable } from "@cairn/plan";
 import { z } from "zod";
 import { settings } from "../lumen/settings.ts";
 
@@ -30,24 +20,14 @@ Automated Lumen upgrade, run by Koda from \`.koda/plans/lumen-upgrade.ts\`. Each
 
 - **ADR**: [ADR 027: Automated Lumen upgrades in consumer repos](https://ledgerhq.atlassian.net/wiki/spaces/DLS/pages/7689666642)`;
 
-/** What the Lumen workflow sends, plus `dryRun` to stop before committing. All optional. */
-const planInput = z
-  .object({
-    dryRun: z.boolean(),
-    targetVersions: z.record(z.string(), z.string()),
-    pr: z.object({ title: z.string(), labels: z.array(z.string()) }),
-    changeset: z.boolean(),
-    upstreamPackages: z.array(z.object({ package: z.string(), repo: z.string() })),
-  })
-  .partial();
-const inputs = inputsOf(planInput);
+/** `dryRun` stops before committing. Everything else comes from the repo's settings. */
+const planInput = z.object({ dryRun: z.boolean() }).partial();
 
 const openBranch = variable("openBranch", z.string(), {
   description: "Branch of the open upgrade PR this run continues. Empty when a new PR is opened.",
 });
-const humanReview = variable("humanReview", z.array(z.string()), {
-  description:
-    "What the migrations leave for a human to decide, one item per entry, with the file paths. Empty when nothing.",
+const versions = variable("versions", z.string(), {
+  description: "Diff of the Lumen versions between the base branch and the working tree.",
 });
 const prBody = variable("prBody", z.object({ body: z.string() }), {
   description: "The pull request body, in Markdown.",
@@ -66,12 +46,9 @@ const result = variable(
       status: z.literal("skipped"),
       reason: z.string().describe("Why nothing was pushed."),
     }),
-    z.object({ status: z.literal("failed"), reason: z.string().describe("The failing step.") }),
   ]),
   { description: "Terminal result returned by run-plan." },
 );
-const rebase = retryShellSlot("rebase");
-const verify = retryShellSlot("verify");
 
 const upgrader = agent("upgrader")
   .prompt(
@@ -127,7 +104,9 @@ const resolveConflictsTask = shellOutput =>
     )
     .with({ stdout: shellOutput.field("stdout"), stderr: shellOutput.field("stderr") });
 
-const bumpTask = task("bump").runs(`set -e\nnode .koda/lumen/bump.mjs\n${settings.relockCommand}`);
+const bumpTask = task("bump").runs(
+  `set -e\nnode .koda/lumen/bump.mjs\n${settings.relockCommand}\n${settings.afterBumpCommand}`,
+);
 
 /** Exit code 0 when the branch differs from the open PR, or from the base branch when there is none. */
 const checkChangesTask = task("check-changes")
@@ -137,20 +116,27 @@ const checkChangesTask = task("check-changes")
   .continueOnError()
   .writes({ exit_code: changesExitCode });
 
+/** Every Lumen version line that differs from the base branch, wherever the manifests are. */
+const versionsTask = task("versions")
+  .runs(
+    `git diff -U0 -G'@ledgerhq/lumen-' origin/${settings.baseBranch} -- '*package.json' pnpm-workspace.yaml`,
+  )
+  .writes({ stdout: versions });
+
 /** Always `@latest`: the index only knows releases published before the CLI version. */
 const migrationsCli = "npx --yes @ledgerhq/lumen-migrations@latest";
 
 const migrateTask = task("migrate")
   .uses(upgrader)
   .message(
-    `Apply the Lumen migrations for the upgrade range with the migrations CLI.
-1. Get the previous version of each bumped @ledgerhq/lumen-* package from origin/${settings.baseBranch}: from the package.json files that declare it, or from the pnpm catalog in pnpm-workspace.yaml (\`git show origin/${settings.baseBranch}:<path>\`), without a leading ^ or ~. The new version is in the working tree, the same way. When files declare different previous versions, use the lowest.
-2. For each of them, run \`${migrationsCli} list --package <name> --from <previous> --to <new> --json\`.
-3. For each migration listed, run \`${migrationsCli} show <id>\` and follow it (Before → after, Decide). A previous run on this branch may have applied some already: leave those as they are.
-4. For each package, run \`${migrationsCli} check --package <name> --from <previous> --to <new>\` from the repo root, so every package using Lumen is scanned. Exit code 1 means \`expect: none\` patterns still have hits: fix them and run it again. Hits listed as review are for a human: do not edit them.
-5. Write what you cannot decide, and every review hit, as humanReview.`,
+    `Apply the Lumen migrations for this upgrade with the migrations CLI. In versions, \`-\` lines hold each @ledgerhq/lumen-* package's previous version and \`+\` lines its new one. Drop any leading ^ or ~, and when files disagree, use the lowest previous version.
+1. For each package, run \`${migrationsCli} list --package <name> --from <previous> --to <new> --json\`.
+2. For each migration listed, run \`${migrationsCli} show <id>\` and follow it (Before → after, Decide). A previous run on this branch may have applied some already: leave those as they are.
+3. For each package, run \`${migrationsCli} check --package <name> --from <previous> --to <new>\` from the repo root, so every package using Lumen is scanned. Exit code 1 means \`expect: none\` patterns still have hits: fix them and run it again. Hits listed as review are for a human: do not edit them.
+4. Write prBody: the template with <humanReview> replaced by a Markdown list of what you could not decide and every review hit, with the file paths, or by \`Nothing.\` when there is none. Change nothing else.`,
   )
-  .writes(humanReview);
+  .with({ versions, template: literal(prBodyTemplate) })
+  .writes(prBody);
 
 const fixChecksTask = shellOutput =>
   task("fix")
@@ -166,37 +152,20 @@ const commitTask = task("commit").runs(
 /** Cairn's `push()` never forces, and a rebased branch needs it. The lease keeps others' pushes. */
 const pushTask = task("push").runs("git push --quiet --force-with-lease -u origin HEAD");
 
-const prBodyTask = task("pr-body")
-  .uses(recorder)
-  .message(
-    "Write prBody: the template with <humanReview> replaced by humanReview as a Markdown list, or by `Nothing.` when it is empty. Change nothing else.",
-  )
-  .with({ template: literal(prBodyTemplate), humanReview })
-  .writes(prBody);
-
+/** Opens the PR, or returns the branch's open one. */
 const createPrTask = task("create-pr")
   .uses(upgrader)
   .createPr({ title: settings.prTitle, body: prBody.field("body") })
   .writes({ url: prUrl });
 
-/** A separate step: `createPr` has no labels option. */
-const labelsTask = task("labels")
-  .uses(upgrader)
-  .message(
-    "If pr.labels is not empty, add them to prUrl with `gh pr edit <prUrl> --add-label <label>`, one flag per label. Skip a label the repo doesn't have.",
-  )
-  .with({ prUrl, pr: inputs.pr });
+const labelFlags = settings.labels.map(label => `--add-label "${label}"`).join(" ");
+const labelsTask = task("labels").runs(labelFlags ? `gh pr edit ${labelFlags}` : "true");
 
-const openPrUrlTask = task("open-pr-url")
-  .runs('printf %s "$(gh pr view --json url --jq .url)"')
-  .writes({ stdout: prUrl });
-
+/** `createPr` leaves an existing PR's body as it was. */
 const updatePrBodyTask = task("update-pr-body")
   .uses(upgrader)
-  .message(
-    "Add humanReview to the `Needs a human` list in prUrl's body, keeping its items and replacing `Nothing.`, with `gh pr edit <prUrl> --body-file`. Change nothing else.",
-  )
-  .with({ prUrl, humanReview });
+  .message("Replace prUrl's body with prBody.body, using `gh pr edit <prUrl> --body-file`.")
+  .with({ prUrl, prBody });
 
 const recordPrTask = record(
   "record-pr",
@@ -205,54 +174,47 @@ const recordPrTask = record(
 );
 const recordDryRunTask = record(
   "record-dry-run",
-  "Write the terminal result as skipped: a dry run, nothing committed or pushed. As the reason, say whether it would have updated openBranch or opened a new PR, and list humanReview.",
-  { openBranch, humanReview },
+  "Write the terminal result as skipped: a dry run, nothing committed or pushed. As the reason, say whether it would have updated openBranch or opened a new PR, and give the PR body's `Needs a human` list.",
+  { openBranch, prBody },
 );
 const recordUpToDateTask = record(
   "record-up-to-date",
   "Write the terminal result as skipped: the branch is already up to date with the base branch and the latest Lumen.",
-);
-const recordRebaseFailedTask = record(
-  "record-rebase-failed",
-  "Write the terminal result as failed: the rebase conflicts could not be resolved. Give the conflicting files from the rebase output as the reason.",
-  { rebase },
-);
-const recordVerifyFailedTask = record(
-  "record-verify-failed",
-  "Write the terminal result as failed. Give the failing check from the verify output as the reason.",
-  { verify },
 );
 
 const publish = b =>
   b
     .do(commitTask)
     .do(pushTask)
-    .if(openBranch.eq(""), c => c.do(prBodyTask).do(createPrTask).do(labelsTask))
-    .else(c => c.do(openPrUrlTask).do(updatePrBodyTask))
+    .do(createPrTask)
+    .do(labelsTask)
+    .do(updatePrBodyTask, { when: openBranch.ne("") })
     .do(recordPrTask);
 
 const migrateAndVerify = b =>
   b
+    .do(versionsTask)
     .do(migrateTask)
-    .retryShell("verify", { max: 3, command: settings.verifyCommand, fixer: fixChecksTask })
-    .if(verify.field("exit_code").ne(0), c => c.do(recordVerifyFailedTask))
-    .elseif(input("dryRun").eq(true), c => c.do(recordDryRunTask))
+    .retryShell("verify", {
+      max: 3,
+      command: settings.verifyCommand,
+      fixer: fixChecksTask,
+      onMaxIterations: "panic",
+    })
+    .if(input("dryRun").eq(true), c => c.do(recordDryRunTask))
     .else(publish);
-
-/** Bumps, runs the repo's after-bump step when it has one, then migrates if anything moved. */
-const upgrade = b => {
-  const bumped = b.do(bumpTask);
-  const afterBump = settings.afterBumpCommand;
-  return (afterBump ? bumped.do(task("after-bump").runs(afterBump)) : bumped)
-    .do(checkChangesTask)
-    .if(changesExitCode.eq(0), migrateAndVerify)
-    .else(c => c.do(recordUpToDateTask));
-};
 
 export default plan("lumen-upgrade")
   .input(planInput)
   .do(checkoutOpenPrTask)
   .do(createBranchTask, { when: openBranch.eq("") })
-  .retryShell("rebase", { max: 3, command: rebaseCommand, fixer: resolveConflictsTask })
-  .if(rebase.field("exit_code").eq(0), upgrade)
-  .else(b => b.do(recordRebaseFailedTask));
+  .retryShell("rebase", {
+    max: 3,
+    command: rebaseCommand,
+    fixer: resolveConflictsTask,
+    onMaxIterations: "panic",
+  })
+  .do(bumpTask)
+  .do(checkChangesTask)
+  .if(changesExitCode.eq(0), migrateAndVerify)
+  .else(b => b.do(recordUpToDateTask));
