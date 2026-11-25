@@ -129,9 +129,11 @@ const resolveConflictsTask = shellOutput =>
 
 const bumpTask = task("bump").runs(`set -e\nnode .koda/lumen/bump.mjs\n${settings.relockCommand}`);
 
-/** Exit code 0 when the bump changed files: a newer Lumen is out. */
+/** Exit code 0 when the branch differs from the open PR, or from the base branch when there is none. */
 const checkChangesTask = task("check-changes")
-  .runs('test -n "$(git status --porcelain)"')
+  .runs(
+    'test -n "$(git diff --name-only "origin/$(git branch --show-current)" 2>/dev/null || git diff --name-only HEAD)"',
+  )
   .continueOnError()
   .writes({ exit_code: changesExitCode });
 
@@ -156,7 +158,10 @@ const fixChecksTask = shellOutput =>
     .message("Checks failed after the Lumen upgrade. Fix them.")
     .with({ stdout: shellOutput.field("stdout"), stderr: shellOutput.field("stderr") });
 
-const commitTask = task("commit").uses(upgrader).commit({ message: settings.commitMessage });
+/** Cairn's `commit()` fails on a clean tree, and a rebase alone leaves nothing to commit. */
+const commitTask = task("commit").runs(
+  `git add -A\ngit diff --cached --quiet || git commit --quiet -m "${settings.commitMessage}"`,
+);
 
 /** Cairn's `push()` never forces, and a rebased branch needs it. The lease keeps others' pushes. */
 const pushTask = task("push").runs("git push --quiet --force-with-lease -u origin HEAD");
@@ -205,7 +210,7 @@ const recordDryRunTask = record(
 );
 const recordUpToDateTask = record(
   "record-up-to-date",
-  "Write the terminal result as skipped: Lumen is already at the latest version on this branch.",
+  "Write the terminal result as skipped: the branch is already up to date with the base branch and the latest Lumen.",
 );
 const recordRebaseFailedTask = record(
   "record-rebase-failed",
