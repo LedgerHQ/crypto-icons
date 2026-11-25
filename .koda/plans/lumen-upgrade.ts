@@ -97,7 +97,7 @@ const record = (name, message, context) => {
 const checkoutOpenPrTask = task("checkout-open-pr")
   .runs(
     `set -eo pipefail
-branch=$(gh pr list --state open --limit 100 --json headRefName --jq '[.[].headRefName | select(startswith("${settings.branchPrefix}"))][0] // ""')
+branch=$(gh pr list --state open --author app/koda-apps --json headRefName --jq '[.[].headRefName | select(startswith("${settings.branchPrefix}"))][0] // ""')
 if [ -n "$branch" ]; then
   GIT_TERMINAL_PROMPT=0 timeout 300 git fetch --quiet origin "$branch:refs/remotes/origin/$branch"
   git checkout --quiet -B "$branch" "origin/$branch"
