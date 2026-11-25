@@ -4,7 +4,7 @@
  * rebases it on the base branch, then bumps and migrates again. Opens a new PR otherwise.
  * Repo specifics live in `.koda/lumen/settings.ts`.
  */
-import { agent, allTools, input, literal, plan, task, variable } from "@cairn/plan";
+import { agent, allTools, literal, plan, task, variable } from "@cairn/plan";
 import { z } from "zod";
 import { settings } from "../lumen/settings.ts";
 
@@ -19,9 +19,6 @@ Automated Lumen upgrade, run by Koda from \`.koda/plans/lumen-upgrade.ts\`. Each
 ### 🔗 Context
 
 - **ADR**: [ADR 027: Automated Lumen upgrades in consumer repos](https://ledgerhq.atlassian.net/wiki/spaces/DLS/pages/7689666642)`;
-
-/** `dryRun` stops before committing. Everything else comes from the repo's settings. */
-const planInput = z.object({ dryRun: z.boolean() }).partial();
 
 const openBranch = variable("openBranch", z.string(), {
   description: "Branch of the open upgrade PR this run continues. Empty when a new PR is opened.",
@@ -172,26 +169,12 @@ const recordPrTask = record(
   "Write the terminal result as pr-created when openBranch is empty, pr-updated otherwise, with a one-sentence summary and prUrl.",
   { openBranch, prUrl },
 );
-const recordDryRunTask = record(
-  "record-dry-run",
-  "Write the terminal result as skipped: a dry run, nothing committed or pushed. As the reason, say whether it would have updated openBranch or opened a new PR, and give the PR body's `Needs a human` list.",
-  { openBranch, prBody },
-);
 const recordUpToDateTask = record(
   "record-up-to-date",
   "Write the terminal result as skipped: the branch is already up to date with the base branch and the latest Lumen.",
 );
 
-const publish = b =>
-  b
-    .do(commitTask)
-    .do(pushTask)
-    .do(createPrTask)
-    .do(labelsTask)
-    .do(updatePrBodyTask, { when: openBranch.ne("") })
-    .do(recordPrTask);
-
-const migrateAndVerify = b =>
+const migrateAndPublish = b =>
   b
     .do(versionsTask)
     .do(migrateTask)
@@ -201,11 +184,14 @@ const migrateAndVerify = b =>
       fixer: fixChecksTask,
       onMaxIterations: "panic",
     })
-    .if(input("dryRun").eq(true), c => c.do(recordDryRunTask))
-    .else(publish);
+    .do(commitTask)
+    .do(pushTask)
+    .do(createPrTask)
+    .do(labelsTask)
+    .do(updatePrBodyTask, { when: openBranch.ne("") })
+    .do(recordPrTask);
 
 export default plan("lumen-upgrade")
-  .input(planInput)
   .do(checkoutOpenPrTask)
   .do(createBranchTask, { when: openBranch.eq("") })
   .retryShell("rebase", {
@@ -216,5 +202,5 @@ export default plan("lumen-upgrade")
   })
   .do(bumpTask)
   .do(checkChangesTask)
-  .if(changesExitCode.eq(0), migrateAndVerify)
+  .if(changesExitCode.eq(0), migrateAndPublish)
   .else(b => b.do(recordUpToDateTask));
