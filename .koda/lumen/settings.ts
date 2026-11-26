@@ -3,7 +3,6 @@ export const settings = {
   baseBranch: "main",
   branchPrefix: "chore/lumen-upgrade",
   commitMessage: "chore(deps): upgrade Lumen",
-  prTitle: "chore(deps): upgrade Lumen",
   /** Added to the PR on top of Cairn's `cairn` label. */
   labels: [],
   agentGuidance:
