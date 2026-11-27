@@ -1,0 +1,3 @@
+# Koda Lumen upgrade (ADR 027)
+/.koda/plans/lumen-upgrade.ts  @LedgerHQ/design-language-system
+/.koda/lumen/                  @LedgerHQ/design-language-system
